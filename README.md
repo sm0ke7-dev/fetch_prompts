@@ -37,10 +37,11 @@ fetch_prompt/
 ├── tsconfig.json              # TypeScript configuration
 ├── test_services.js           # Service layer test script
 ├── src/
-│   ├── app.ts                 # Main application setup (empty)
-│   ├── server.ts              # Server configuration (empty)
-│   ├── controllers/           # Request handlers
-│   │   └── index.ts           # Controller exports (empty)
+│   ├── app.ts                 # Express application setup with middleware
+│   ├── server.ts              # Server startup and configuration
+│   ├── controllers/           # HTTP request handlers
+│   │   ├── index.ts           # Controller exports (exports promptController)
+│   │   └── prompt_controller.ts # Prompt HTTP request handling
 │   ├── models/                # Data models and interfaces
 │   │   ├── index.ts           # Model exports (exports all models)
 │   │   ├── fetch_prompts_model.ts # Prompt configuration interfaces
@@ -52,7 +53,8 @@ fetch_prompt/
 │   │   │   └── prompts.json   # AI prompt configuration data
 │   │   └── fetch_prompt.ts    # Prompt fetching functionality
 │   ├── routes/                # API route definitions
-│   │   └── index.ts           # Route exports (empty)
+│   │   ├── index.ts           # Route exports (exports promptRoutes)
+│   │   └── prompt_routes.ts   # API endpoint definitions
 │   └── services/              # Business logic layer
 │       ├── index.ts           # Service exports (exports all services)
 │       ├── process_input.ts   # Input processing and variable substitution
@@ -174,16 +176,20 @@ This project uses a three-branch workflow:
 - ✅ **Prompt Fetching**: Successfully loads `prompts.json` configurations
 - ✅ **Input Processing**: Variable substitution works correctly
 - ✅ **AI Integration**: Generates structured JSON responses (6 SEO sections in 439 tokens)
+- ✅ **HTTP API**: Complete endpoint working at `POST /api/v1/text?prompt_name=prompts`
+- ✅ **Real-world Test**: Successfully generated 6 SEO sections about "Raccoon Removal Houston" (612 tokens)
 
-### 🔄 In Progress
-- **Controller Layer**: HTTP endpoint handlers (next phase)
-- **Route Layer**: API route definitions (next phase)
+### ✅ **HTTP API Layer (Fully Implemented)**
+- **Controller Layer**: `prompt_controller.ts` - Handles HTTP requests and responses
+- **Route Layer**: `prompt_routes.ts` - Defines API endpoint patterns
+- **Express Setup**: `app.ts` - Middleware, CORS, and route configuration
+- **Server Startup**: `server.ts` - Environment loading and server initialization
 
 ### 📋 Planned Features
-- **HTTP API Endpoints**: RESTful endpoints for prompt processing
-- **Multiple Prompt Support**: Add more prompt configurations
-- **Validation Middleware**: Request validation and sanitization
+- **Multiple Prompt Support**: Add more prompt configurations to `/data/` folder
+- **Validation Middleware**: Enhanced request validation and sanitization
 - **Rate Limiting**: API usage limits and monitoring
+- **Authentication**: API key management for production use
 
 ## 📚 API Documentation
 
@@ -192,9 +198,61 @@ This project uses a three-branch workflow:
 http://localhost:3000/api
 ```
 
-### Endpoints
+### Available Endpoints
 
-*Documentation will be added as endpoints are implemented*
+#### **POST /api/v1/text**
+Generate AI-powered content based on prompt configurations.
+
+**URL Parameters:**
+- `prompt_name` (query parameter): The name of the prompt configuration to use
+
+**Request Body:**
+```json
+{
+  "keyword": "Raccoon Removal Houston"
+}
+```
+
+**Example Request:**
+```bash
+curl -X POST "http://localhost:3000/api/v1/text?prompt_name=prompts" \
+  -H "Content-Type: application/json" \
+  -d '{"keyword":"Raccoon Removal Houston"}'
+```
+
+**Success Response (200):**
+```json
+{
+  "success": true,
+  "data": {
+    "content": "{\"sections\":[{\"header\":\"Understanding Raccoon Behavior\",\"description\":\"Raccoons are highly adaptable creatures...\"}]}",
+    "usage": {
+      "prompt_tokens": 49,
+      "completion_tokens": 563,
+      "total_tokens": 612
+    },
+    "prompt_name": "prompts",
+    "keyword": "Raccoon Removal Houston"
+  },
+  "message": "Text generation completed successfully"
+}
+```
+
+**Error Responses:**
+- `400` - Missing required parameters
+- `500` - OpenAI API or processing errors
+
+#### **GET /health**
+Health check endpoint to verify API status.
+
+**Response:**
+```json
+{
+  "success": true,
+  "message": "Fetch Prompts API is running",
+  "timestamp": "2025-08-07T13:14:48.916Z"
+}
+```
 
 ### Response Format
 
