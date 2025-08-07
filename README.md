@@ -33,19 +33,21 @@ fetch_prompt/
 ├── .local.env                 # Local environment variables (not tracked)
 ├── package.json               # Project dependencies and scripts
 ├── src/
-│   ├── app.ts                 # Main application setup
-│   ├── server.ts              # Server configuration
+│   ├── app.ts                 # Main application setup (empty)
+│   ├── server.ts              # Server configuration (empty)
 │   ├── controllers/           # Request handlers
-│   │   └── index.ts
+│   │   └── index.ts           # Controller exports (empty)
 │   ├── models/                # Data models and interfaces
-│   │   └── index.ts
+│   │   ├── index.ts           # Model exports (exports fetch_prompts_model)
+│   │   └── fetch_prompts_model.ts # Prompt configuration interfaces
 │   ├── repositories/          # Data access layer
 │   │   ├── data/
-│   │   │   └── prompts.json   # Data storage
-│   │   └── fetch_prompt.ts
+│   │   │   └── prompts.json   # AI prompt configuration data
+│   │   └── fetch_prompt.ts    # Prompt fetching functionality
 │   ├── routes/                # API route definitions
-│   │   └── index.ts
+│   │   └── index.ts           # Route exports (empty)
 │   └── services/              # Business logic layer
+│       └── index.ts           # Service exports (empty)
 └── README.md                  # This file
 ```
 
