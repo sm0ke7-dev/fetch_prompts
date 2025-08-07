@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { processInputs, submitPrompt } from '../services';
+import { fetchPromptByName } from '../repositories/fetch_prompt';
 
 /**
  * Controller for handling prompt-related HTTP requests
@@ -36,7 +37,21 @@ export class PromptController {
         return;
       }
 
-      // Step 1: Process inputs using our service layer
+      // Step 1: Fetch the prompt configuration
+      const promptConfigResult = await fetchPromptByName(prompt_name as string);
+      
+      if (!promptConfigResult.success || !promptConfigResult.data) {
+        res.status(400).json({
+          success: false,
+          error: 'PROMPT_NOT_FOUND',
+          message: promptConfigResult.message
+        });
+        return;
+      }
+
+      const promptConfig = promptConfigResult.data;
+
+      // Step 2: Process inputs using our service layer
       const processResult = await processInputs({
         userInput: { keyword },
         promptName: prompt_name as string
@@ -51,16 +66,17 @@ export class PromptController {
         return;
       }
 
-      // Step 2: Submit to OpenAI using our service layer
+      // Step 3: Submit to OpenAI using our service layer
       const submitResult = await submitPrompt({
         processedInput: processResult.data,
         promptConfig: {
-          model: 'gpt-4o-mini', // We'll get this from the prompt config later
-          temperature: 0.5,
-          max_tokens: 1000,
-          top_p: 1,
-          frequency_penalty: 0,
-          presence_penalty: 0
+          model: promptConfig.model,
+          temperature: promptConfig.temperature,
+          max_tokens: promptConfig.max_tokens,
+          top_p: promptConfig.top_p,
+          frequency_penalty: promptConfig.frequency_penalty,
+          presence_penalty: promptConfig.presence_penalty,
+          outputSchema: promptConfig['output-schema']
         }
       });
 
@@ -73,7 +89,7 @@ export class PromptController {
         return;
       }
 
-      // Step 3: Return the structured response
+      // Step 4: Return the structured response
       res.status(200).json({
         success: true,
         data: {
