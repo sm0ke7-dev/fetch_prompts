@@ -15,7 +15,7 @@ A Node.js application for managing and fetching prompts with a structured API ar
 
 ## 🎯 Project Overview
 
-This project provides a RESTful API for managing and retrieving prompts. It follows a clean architecture pattern with separate layers for controllers, services, repositories, and models.
+This project provides a RESTful API for managing and retrieving prompts with AI integration. It follows a clean architecture pattern with separate layers for controllers, services, repositories, and models. The application can fetch prompt configurations, process user inputs with variable substitution, and submit requests to OpenAI API for structured responses.
 
 ## 🛠 Tech Stack
 
@@ -23,6 +23,8 @@ This project provides a RESTful API for managing and retrieving prompts. It foll
 - **Language:** TypeScript
 - **Architecture:** MVC Pattern with Repository Layer
 - **Data Storage:** JSON files (can be extended to database)
+- **AI Integration:** OpenAI API with structured function calling
+- **Environment Management:** dotenv for configuration
 - **Version Control:** Git with GitHub
 
 ## 📁 Project Structure
@@ -32,14 +34,19 @@ fetch_prompt/
 ├── .gitignore                 # Git ignore rules
 ├── .local.env                 # Local environment variables (not tracked)
 ├── package.json               # Project dependencies and scripts
+├── tsconfig.json              # TypeScript configuration
+├── test_services.js           # Service layer test script
 ├── src/
 │   ├── app.ts                 # Main application setup (empty)
 │   ├── server.ts              # Server configuration (empty)
 │   ├── controllers/           # Request handlers
 │   │   └── index.ts           # Controller exports (empty)
 │   ├── models/                # Data models and interfaces
-│   │   ├── index.ts           # Model exports (exports fetch_prompts_model)
-│   │   └── fetch_prompts_model.ts # Prompt configuration interfaces
+│   │   ├── index.ts           # Model exports (exports all models)
+│   │   ├── fetch_prompts_model.ts # Prompt configuration interfaces
+│   │   └── services/          # Service-specific models
+│   │       ├── process_input.model.ts # Input processing interfaces
+│   │       └── submit_prompt.model.ts # OpenAI API interfaces
 │   ├── repositories/          # Data access layer
 │   │   ├── data/
 │   │   │   └── prompts.json   # AI prompt configuration data
@@ -47,7 +54,9 @@ fetch_prompt/
 │   ├── routes/                # API route definitions
 │   │   └── index.ts           # Route exports (empty)
 │   └── services/              # Business logic layer
-│       └── index.ts           # Service exports (empty)
+│       ├── index.ts           # Service exports (exports all services)
+│       ├── process_input.ts   # Input processing and variable substitution
+│       └── submit_prompt.ts   # OpenAI API integration
 └── README.md                  # This file
 ```
 
@@ -142,6 +151,40 @@ This project uses a three-branch workflow:
 | `git push -u origin [name]` | Push new branch to GitHub |
 | `git branch -a` | List all branches (local + remote) |
 
+## 🚀 Current Implementation Status
+
+### ✅ Completed Features
+
+#### **Service Layer (Fully Implemented)**
+- **Repository Layer**: `fetch_prompt.ts` - Fetches prompt configurations from JSON files
+- **Service Layer**: 
+  - `process_input.ts` - Handles variable substitution in prompts
+  - `submit_prompt.ts` - Integrates with OpenAI API using function calling
+- **Model Layer**: Complete TypeScript interfaces for all data structures
+
+#### **Key Capabilities**
+- ✅ **Prompt Configuration Management**: Load AI model configurations from JSON files
+- ✅ **Variable Substitution**: Replace `{{variable}}` placeholders with user input
+- ✅ **OpenAI Integration**: Make API calls with structured function calling
+- ✅ **Structured Output**: Return JSON responses matching defined schemas
+- ✅ **Error Handling**: Comprehensive error handling and validation
+- ✅ **Type Safety**: Full TypeScript support with proper interfaces
+
+#### **Test Results**
+- ✅ **Prompt Fetching**: Successfully loads `prompts.json` configurations
+- ✅ **Input Processing**: Variable substitution works correctly
+- ✅ **AI Integration**: Generates structured JSON responses (6 SEO sections in 439 tokens)
+
+### 🔄 In Progress
+- **Controller Layer**: HTTP endpoint handlers (next phase)
+- **Route Layer**: API route definitions (next phase)
+
+### 📋 Planned Features
+- **HTTP API Endpoints**: RESTful endpoints for prompt processing
+- **Multiple Prompt Support**: Add more prompt configurations
+- **Validation Middleware**: Request validation and sanitization
+- **Rate Limiting**: API usage limits and monitoring
+
 ## 📚 API Documentation
 
 ### Base URL
@@ -174,7 +217,8 @@ Create a `.local.env` file in the root directory with the following variables:
 PORT=3000
 NODE_ENV=development
 
-# Add other environment variables as needed
+# OpenAI Configuration
+OPENAI_API_KEY=your_openai_api_key_here
 ```
 
 **Note:** The `.local.env` file is ignored by Git for security reasons.
