@@ -29,11 +29,12 @@ This project provides a RESTful API for managing and retrieving prompts. It foll
 
 ```
 fetch_prompt/
+├── .gitignore                 # Git ignore rules
+├── .local.env                 # Local environment variables (not tracked)
+├── package.json               # Project dependencies and scripts
 ├── src/
 │   ├── app.ts                 # Main application setup
 │   ├── server.ts              # Server configuration
-│   ├── .gitignore             # Git ignore rules
-│   ├── .local.env             # Local environment variables (not tracked)
 │   ├── controllers/           # Request handlers
 │   │   └── index.ts
 │   ├── models/                # Data models and interfaces
@@ -164,7 +165,7 @@ All API responses follow a standard format:
 
 ## 🔧 Environment Variables
 
-Create a `.local.env` file in the `src/` directory with the following variables:
+Create a `.local.env` file in the root directory with the following variables:
 
 ```env
 # Server Configuration

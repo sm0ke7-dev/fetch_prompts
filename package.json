@@ -1,0 +1,25 @@
+{
+  "name": "fetch_prompts",
+  "version": "1.0.0",
+  "description": "A Node.js application for managing and fetching prompts with a structured API architecture",
+  "main": "src/server.ts",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "nodemon src/server.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["api", "prompts", "typescript", "nodejs"],
+  "author": "sm0ke7-dev",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.0",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.2"
+  }
+}
