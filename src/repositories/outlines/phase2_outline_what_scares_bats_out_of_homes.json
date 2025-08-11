@@ -1,0 +1,50 @@
+{
+  "keyword": "what scares bats out of homes",
+  "generated_at": "2025-08-11T10:30:00.000Z",
+  "phase": 2,
+  "outline": {
+    "sections": [
+      {
+        "header": "Understanding Bats in Your Home",
+        "description": "Explore the reasons why bats may choose to roost in your home and the benefits they provide to the ecosystem."
+      },
+      {
+        "header": "Common Signs of Bat Infestation",
+        "description": "Learn how to identify the signs of bats in your home, including droppings, noises, and entry points."
+      },
+      {
+        "header": "What Scares Bats Away?",
+        "description": "Discover various methods and deterrents that can effectively scare bats out of your home."
+      },
+      {
+        "header": "Natural Ways to Keep Bats Away",
+        "description": "Examine natural repellents and environmental modifications that can help keep bats away from your property."
+      },
+      {
+        "header": "Professional Bat Removal Services",
+        "description": "Understand when it's necessary to call in professionals for bat removal and what to expect from the process."
+      },
+      {
+        "header": "Preventing Bats from Returning",
+        "description": "Learn about preventive measures to ensure bats do not return to your home after removal."
+      },
+      {
+        "header": "Benefits of Keeping Bats Nearby",
+        "description": "Discuss the ecological benefits of having bats in your area and how to attract them safely without inviting them into your home."
+      },
+      {
+        "header": "Conclusion: Managing Bats Effectively",
+        "description": "Summarize the best practices for managing bat populations around your home while ensuring safety and ecological balance."
+      }
+    ]
+  },
+  "metadata": {
+    "processing_time_ms": 6599,
+    "token_usage": {
+      "prompt_tokens": 218,
+      "completion_tokens": 287,
+      "total_tokens": 505
+    },
+    "term_matches": 40
+  }
+}

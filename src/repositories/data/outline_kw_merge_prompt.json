@@ -1,0 +1,56 @@
+{
+    "model": "gpt-4o-mini",
+    "temperature": 0.5,
+    "max_tokens": 1000,
+    "top_p": 1,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "system": "You are a helpful assistant that merges article outlines with SEO body terms to create a detailed, term-optimized outline. For each section, identify the most relevant body terms and suggest content structure that incorporates these terms naturally.",
+    "user": "article_outline: {{article_outline}} Heading Terms: {{body_terms}}",
+    "variables": {
+        "article_outline": "{{article_outline}}",
+        "body_terms": "{{body_terms}}"  
+    },
+    "output-schema": {
+        "name": "outline_merge",
+        "description": "Generates a list of sections with structured data for Phase 4 content generation.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sections": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "headline": {
+                    "type": "string",
+                    "description": "A short, descriptive title for the section."
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "A brief explanation or summary of the section content."
+                  },
+                  "header-terms": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "List of relevant header terms that should be used in this section."
+                  },
+                  "content-terms": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "List of relevant content terms that should be used in this section."
+                  }
+                },
+                "required": ["headline", "description", "header-terms", "content-terms"]
+              },
+              "description": "An array of sections each containing structured data for Phase 4."
+            }
+          },
+          "required": ["sections"]
+        }
+      }
+}
