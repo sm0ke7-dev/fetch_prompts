@@ -160,12 +160,21 @@ This project uses a three-branch workflow:
 
 ## 🚀 Current Implementation Status
 
-### ✅ **Phase 1: Get Optimization Terms (COMPLETED)**
-- **NeuronWriter API Integration**: Full connection and authentication working
-- **Query Management**: Create, fetch, and wait for queries with async processing
-- **Structured Output Implementation**: Clean JSON schema for Phase 2 consumption
-- **Credit Management**: Logic to reuse existing queries (partial implementation)
-- **Data Structure Understanding**: Correctly mapped all API response fields
+- **Phase 1: NeuronWriter Terms (Complete)**
+  - Structured output schema (headings, body terms, entities, questions)
+  - Credit-friendly flow reuses existing ready queries when available
+  - Output saved to `src/repositories/optimization_terms/<sanitized_keyword>.json`
+- **Phase 2: Article Outline (Complete)**
+  - Outline generated from NeuronWriter heading terms via OpenAI function calling
+  - Auto-saves to `src/repositories/outlines/phase2_outline_<sanitized_keyword>.json`
+- **Phase 3: Merge Outline with Body Terms (Complete)**
+  - Merges Phase 2 outline with NW body terms using `outline_kw_merge_prompt.json`
+  - Output schema updated to: `headline`, `header-terms[]`, `content-terms[]`
+  - Saved to `src/repositories/outlines/phase3_merged_outline_<sanitized_keyword>.json`
+- **Phase 4: Generate Section Content (Complete)**
+  - Uses `loop_prompt.json` and loops through merged sections to generate content blocks
+  - Output schema: `headline`, `content[] (type: paragraph|ordered-list|unordered-list|headline-3)`
+  - Saved to `src/repositories/articles/phase4_article_<sanitized_keyword>.json`
 
 #### **Latest Test Results** (August 2025):
 Successfully extracted structured data from "what scares squirrels" query:
@@ -222,39 +231,42 @@ Successfully extracted structured data from "what scares squirrels" query:
 - **Express Setup**: `app.ts` - Middleware, CORS, and route configuration
 - **Server Startup**: `server.ts` - Environment loading and server initialization
 
-### 🎯 **Current Status: Phase 2 Complete - Ready for Phase 3**
+### 🎯 **Current Status: Phase 4 Complete - Ready for Phase 5**
 
-**Where We Are Now (August 2025):**
-- ✅ **Phase 1 Complete**: Structured optimization terms extraction working
-- ✅ **Phase 2 Complete**: Article outline generation from NeuronWriter terms working
-- ✅ **End-to-End Flow**: Keyword → SERP analysis → SEO-optimized outline
-- ✅ **OpenAI Integration**: Custom prompts with structured function calling
-- ✅ **Term Verification**: Confirmed outline uses actual NeuronWriter heading terms (40 matches across 8 sections)
-- 🔄 **Credit Management**: Partial implementation (reuses existing queries but needs refinement)
-- 🎯 **Next Step**: Phase 3 - Flesh out outline with detailed content structure
+- ✅ Phase 1: NW structured terms extraction and file save working
+- ✅ Phase 2: Outline generation working; now auto-saves to outlines folder
+- ✅ Phase 3: Merge with body terms working; saved to outlines folder
+- ✅ Phase 4: Section content generation working; saved to articles folder
+- 🎯 Next Step: Phase 5 – Render final article (compile content blocks to final HTML/Markdown)
 
-**Phase 2 Test Results (August 2025):**
-Successfully generated 8-section article outline for "what scares bats out of homes":
-- **Processing Time**: 6.6 seconds
-- **Token Usage**: 505 tokens (218 prompt + 287 completion)
-- **Output Quality**: SEO-optimized sections using high-ranking SERP terms
-- **Term Integration**: 40 direct matches with NeuronWriter heading terms
-- **Integration**: Perfect data flow from Phase 1 → Phase 2
+**Latest Test Results:**
+- Phase 1: Generated `keep_rats_away.json` (terms) in ~94s (ready query flows faster)
+- Phase 2: 8-section outline generated in ~6–11s; auto-saved to `phase2_outline_keep_rats_away.json`
+- Phase 3: 8 merged sections; term lists populated per section; saved to `phase3_merged_outline_*.json`
+- Phase 4: 29–38 content blocks across 8 sections; saved to `phase4_article_*.json`
 
 **Key Files for Phase 3:**
-- `src/repositories/optimization_terms/what_scares_bats_out_of_homes.json` - Structured NeuronWriter data
-- `src/services/outline_submit_retrieve_output.ts` - Complete outline generation service
-- `src/repositories/data/outline_creation_prompt.json` - Custom OpenAI prompt template
-- `test_phase2_generate_outline_from_terms.js` - Ready-to-present test script for Phase 2
+- `src/repositories/outlines/phase2_outline_<keyword>.json` (input)
+- `src/repositories/optimization_terms/<keyword>.json` (input)
+- `src/repositories/merge_outline.ts`
+- `src/models/repositories/merge_outline.model.ts`
+- `src/services/merge_outline_with_nw_terms.ts`
+- `src/services/merge_outline_submit_pull.ts`
+- `src/repositories/data/outline_kw_merge_prompt.json`
+- `test_phase3_merge_outline.js` (end-to-end test)
+
+**Key Files for Phase 4:**
+- `src/repositories/data/loop_prompt.json` (prompt for section content)
+- `src/repositories/loop_section.ts` (load/save + helpers)
+- `src/models/repositories/loop_sections.model.ts`
+- `src/services/loop_thru_sections/loop_thru_sections.ts`
+- `src/models/services/loop_sections/loop_thru_sections.model.ts`
+- `test_phase4_loop_sections.js` (end-to-end test)
 
 ### 📋 Planned Features
-- **Phase 3: Flesh out Outline** ⬅️ **NEXT**: Merge body terms and create detailed content structure
-- **Phase 4: Loop through sections**: Generate content for each outline section
-- **Phase 5: Render output**: Compile final article with structured content
-- **Multiple Prompt Support**: Add more prompt configurations to `/data/` folder
-- **Validation Middleware**: Enhanced request validation and sanitization
-- **Rate Limiting**: API usage limits and monitoring
-- **Authentication**: API key management for production use
+- **Phase 5: Render Output**: Compile Phase 4 content blocks into final article (HTML/Markdown), include TOC, metadata, and export utilities
+- Validation middleware, rate limiting, and authentication for production
+- Split NeuronWriter repository into create/pull modules (maintenance)
 
 ### 🔧 **Future Refactoring Plans**
 - **NeuronWriter Repository Separation**: Split `neuron_writer.ts` into separate files:
