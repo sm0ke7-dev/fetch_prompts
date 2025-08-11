@@ -228,6 +228,72 @@ export class GetOptimizationTermsService {
   }
 
   /**
+   * Save optimization terms from a specific query to a JSON file under src/repositories/optimization_terms
+   */
+  async saveOptimizationTermsToFileByQueryId(queryId: string, keywordOverride?: string): Promise<{ success: boolean; filePath?: string; message: string; error?: string; }> {
+    try {
+      console.log(`🔎 Pulling query by ID: ${queryId}`);
+      const queryResult = await this.repository.getQuery({ query: queryId });
+
+      if (queryResult.status !== 'ready') {
+        return {
+          success: false,
+          message: `Query ${queryId} is not ready. Status: ${queryResult.status}`,
+          error: 'QUERY_NOT_READY'
+        };
+      }
+
+      const keyword = (keywordOverride || queryResult.keyword || `query_${queryId}`).toString();
+
+      // Parse to structured format we use for downstream phases
+      const optimizationTerms = this.extractStructuredOptimizationTerms(queryResult);
+
+      // Shape output similar to previously saved files
+      const outputPayload = {
+        keyword,
+        query_id: queryId,
+        query_url: queryResult.query_url || `https://app.neuronwriter.com/analysis/view/${queryId}`,
+        generated_at: new Date().toISOString(),
+        headings: optimizationTerms.headings,
+        body_terms: optimizationTerms.body_terms,
+        entities: optimizationTerms.entities,
+        questions: {
+          suggested: optimizationTerms.suggested_questions,
+          paa: optimizationTerms.paa_questions,
+          content: optimizationTerms.content_questions
+        }
+      };
+
+      // Resolve path to src/repositories/optimization_terms from dist/services
+      const projectRoot = path.resolve(__dirname, '../../');
+      const outputDir = path.join(projectRoot, 'src', 'repositories', 'optimization_terms');
+      if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true });
+      }
+
+      const filename = `${keyword.replace(/\s+/g, '_').toLowerCase()}.json`;
+      const filePath = path.join(outputDir, filename);
+
+      fs.writeFileSync(filePath, JSON.stringify(outputPayload, null, 2), 'utf-8');
+
+      console.log(`💾 Saved optimization terms to: ${filePath}`);
+
+      return {
+        success: true,
+        filePath,
+        message: `Saved optimization terms for "${keyword}" to ${filePath}`
+      };
+    } catch (error) {
+      console.error('❌ Error saving optimization terms to file:', error);
+      return {
+        success: false,
+        message: 'Failed to save optimization terms to file',
+        error: error instanceof Error ? error.message : 'Unknown error'
+      };
+    }
+  }
+
+  /**
    * Get list of available projects
    */
   async listProjects() {

@@ -1,0 +1,1712 @@
+{
+  "keyword": "what scares bats out of homes",
+  "query_id": "d7260aae7d6d4dfb",
+  "query_url": "https://app.neuronwriter.com/analysis/view/d7260aae7d6d4dfb",
+  "generated_at": "2025-08-11T09:28:17.537Z",
+  "headings": {
+    "h1": [
+      {
+        "term": "bat",
+        "usage_percentage": 80
+      },
+      {
+        "term": "get rid of bats",
+        "usage_percentage": 40
+      },
+      {
+        "term": "keep bats",
+        "usage_percentage": 30
+      },
+      {
+        "term": "home",
+        "usage_percentage": 20
+      },
+      {
+        "term": "keep bats away",
+        "usage_percentage": 20
+      },
+      {
+        "term": "bats away",
+        "usage_percentage": 20
+      },
+      {
+        "term": "roost",
+        "usage_percentage": 10
+      },
+      {
+        "term": "attic",
+        "usage_percentage": 10
+      },
+      {
+        "term": "bats in a house",
+        "usage_percentage": 10
+      },
+      {
+        "term": "bats away from your home",
+        "usage_percentage": 10
+      },
+      {
+        "term": "away from your home",
+        "usage_percentage": 10
+      },
+      {
+        "term": "keep them away",
+        "usage_percentage": 10
+      }
+    ],
+    "h2": [
+      {
+        "term": "bat",
+        "usage_percentage": 60
+      },
+      {
+        "term": "home",
+        "usage_percentage": 40
+      },
+      {
+        "term": "get rid of bats",
+        "usage_percentage": 30
+      },
+      {
+        "term": "keep bats",
+        "usage_percentage": 20
+      },
+      {
+        "term": "keep bats away",
+        "usage_percentage": 20
+      },
+      {
+        "term": "bats away",
+        "usage_percentage": 20
+      },
+      {
+        "term": "bat removal",
+        "usage_percentage": 20
+      },
+      {
+        "term": "attract bats",
+        "usage_percentage": 20
+      },
+      {
+        "term": "bat house",
+        "usage_percentage": 10
+      },
+      {
+        "term": "bat infestation",
+        "usage_percentage": 10
+      },
+      {
+        "term": "attic",
+        "usage_percentage": 10
+      },
+      {
+        "term": "bat exclusion",
+        "usage_percentage": 10
+      },
+      {
+        "term": "remove bats",
+        "usage_percentage": 10
+      },
+      {
+        "term": "deter bats",
+        "usage_percentage": 10
+      },
+      {
+        "term": "professional bat",
+        "usage_percentage": 10
+      },
+      {
+        "term": "get rid of bats safely",
+        "usage_percentage": 10
+      },
+      {
+        "term": "bats in my attic",
+        "usage_percentage": 10
+      }
+    ],
+    "h3": []
+  },
+  "body_terms": {
+    "basic": [
+      {
+        "term": "bat",
+        "usage_percentage": 100,
+        "suggested_usage": [
+          65,
+          74
+        ]
+      },
+      {
+        "term": "get rid of bats",
+        "usage_percentage": 70,
+        "suggested_usage": [
+          1,
+          4
+        ]
+      },
+      {
+        "term": "bat house",
+        "usage_percentage": 90,
+        "suggested_usage": [
+          1,
+          5
+        ]
+      },
+      {
+        "term": "keep bats",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          3
+        ]
+      },
+      {
+        "term": "roost",
+        "usage_percentage": 90,
+        "suggested_usage": [
+          1,
+          6
+        ]
+      },
+      {
+        "term": "home",
+        "usage_percentage": 100,
+        "suggested_usage": [
+          8,
+          18
+        ]
+      },
+      {
+        "term": "bats away",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          3
+        ]
+      },
+      {
+        "term": "bat removal",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          7
+        ]
+      },
+      {
+        "term": "bat infestation",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          3
+        ]
+      },
+      {
+        "term": "pest control",
+        "usage_percentage": 70,
+        "suggested_usage": [
+          1,
+          4
+        ]
+      },
+      {
+        "term": "attic",
+        "usage_percentage": 80,
+        "suggested_usage": [
+          1,
+          6
+        ]
+      },
+      {
+        "term": "entry point",
+        "usage_percentage": 70,
+        "suggested_usage": [
+          1,
+          5
+        ]
+      },
+      {
+        "term": "dropping",
+        "usage_percentage": 80,
+        "suggested_usage": [
+          1,
+          4
+        ]
+      },
+      {
+        "term": "bat droppings",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "bat exclusion",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "repellent",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "vent",
+        "usage_percentage": 70,
+        "suggested_usage": [
+          1,
+          4
+        ]
+      },
+      {
+        "term": "around your home",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "one-way",
+        "usage_percentage": 80,
+        "suggested_usage": [
+          1,
+          3
+        ]
+      },
+      {
+        "term": "prevent bats",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "deter bats",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "professional bat",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bat problem",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bright lights",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          3
+        ]
+      },
+      {
+        "term": "food source",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "insect population",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      }
+    ],
+    "extended": [
+      {
+        "term": "keep bats away",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          3
+        ]
+      },
+      {
+        "term": "bats in your home",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "remove bats",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          3
+        ]
+      },
+      {
+        "term": "species of bats",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bat in your house",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bat control",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "attract bats",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "enter your home",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "bat species",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "big brown bats",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "bat colonies",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats can squeeze",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats in a house",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats away from your home",
+        "usage_percentage": 10,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "away from your home",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats can carry",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats are nocturnal",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "many bats",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "professional bat removal",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats are a protected species",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "types of bats",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats prefer",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats are roosting",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "get bats",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "little brown bats",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats are attracted",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats may",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "ways to keep bats",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "professional bat control",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bat box",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats out of your house",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats out of your home",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "one-way bat",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats enter",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bat guano",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "remove bats from your home",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "pallid bats",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats flying around",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bat nest",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "installing bat houses away",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats are nocturnal animals",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "contact with a bat",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "disturbing bats",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "suspect bats are roosting",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats from entering your home",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "roosting in your home",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats use",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "way into your home",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "install one-way bat",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "colony of bats",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats around",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "get rid of bats safely",
+        "usage_percentage": 0,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "keep them away",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats can enter",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "home and property",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bat repellent",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats are likely",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "humans and bats",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bat urine",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats are protected",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "damage to your home",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "staying in your home",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats are entering",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "providing bats",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "install bat cones",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats to leave",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "attracted to your home",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats in my attic",
+        "usage_percentage": 10,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "flying around your home",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "idea of bats",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "know how to get rid",
+        "usage_percentage": 10,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "inside the house",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  "entities": [
+    {
+      "term": "Bat",
+      "importance": 51.00599999999999,
+      "relevance": 0.51006,
+      "confidence": 8.7538,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bat"
+        ]
+      ]
+    },
+    {
+      "term": "Pest control",
+      "importance": 30.159359999999996,
+      "relevance": 0.47124000000000005,
+      "confidence": 3.0518,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Pest_control"
+        ]
+      ]
+    },
+    {
+      "term": "Pest (organism)",
+      "importance": 25.09312,
+      "relevance": 0.39208,
+      "confidence": 1.8836,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Pest_(organism)"
+        ]
+      ]
+    },
+    {
+      "term": "Insect",
+      "importance": 20.874240000000004,
+      "relevance": 0.32616000000000006,
+      "confidence": 14.376,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Insect"
+        ]
+      ]
+    },
+    {
+      "term": "Health",
+      "importance": 18.47552,
+      "relevance": 0.28868,
+      "confidence": 1.5836000000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Health"
+        ]
+      ]
+    },
+    {
+      "term": "Bird",
+      "importance": 18.05568,
+      "relevance": 0.28212000000000004,
+      "confidence": 7.468000000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bird"
+        ]
+      ]
+    },
+    {
+      "term": "Guano",
+      "importance": 11.805840000000002,
+      "relevance": 0.32794,
+      "confidence": 4.7934,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Guano"
+        ]
+      ]
+    },
+    {
+      "term": "Odor",
+      "importance": 10.358640000000001,
+      "relevance": 0.28774,
+      "confidence": 5.4626,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Odor"
+        ]
+      ]
+    },
+    {
+      "term": "Rabies",
+      "importance": 10.20168,
+      "relevance": 0.28338,
+      "confidence": 5.8524,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Rabies"
+        ]
+      ]
+    },
+    {
+      "term": "Attic",
+      "importance": 8.561520000000002,
+      "relevance": 0.23782,
+      "confidence": 1.1756,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Attic"
+        ]
+      ]
+    },
+    {
+      "term": "Sense of smell",
+      "importance": 8.274239999999999,
+      "relevance": 0.22984,
+      "confidence": 8.83,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Sense_of_smell"
+        ]
+      ]
+    },
+    {
+      "term": "Roof",
+      "importance": 8.262720000000002,
+      "relevance": 0.22952,
+      "confidence": 1.6532,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Roof"
+        ]
+      ]
+    },
+    {
+      "term": "Caulk",
+      "importance": 8.24112,
+      "relevance": 0.22892,
+      "confidence": 4.42,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Caulk"
+        ]
+      ]
+    },
+    {
+      "term": "Habitat",
+      "importance": 7.619039999999999,
+      "relevance": 0.21164,
+      "confidence": 3.3950000000000005,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Habitat"
+        ]
+      ]
+    },
+    {
+      "term": "Urine",
+      "importance": 6.7716,
+      "relevance": 0.1881,
+      "confidence": 4.563000000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Urine"
+        ]
+      ]
+    },
+    {
+      "term": "Plant",
+      "importance": 6.188400000000001,
+      "relevance": 0.1719,
+      "confidence": 4.481999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Plant"
+        ]
+      ]
+    },
+    {
+      "term": "Disease",
+      "importance": 5.83416,
+      "relevance": 0.16206,
+      "confidence": 5.5146,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Disease"
+        ]
+      ]
+    },
+    {
+      "term": "Wildlife",
+      "importance": 5.779439999999999,
+      "relevance": 0.16054,
+      "confidence": 3.219,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Wildlife"
+        ]
+      ]
+    },
+    {
+      "term": "Ecosystem",
+      "importance": 5.76216,
+      "relevance": 0.16006,
+      "confidence": 9.742,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Ecosystem"
+        ]
+      ]
+    },
+    {
+      "term": "Hibernation",
+      "importance": 5.0270399999999995,
+      "relevance": 0.13964,
+      "confidence": 2.3701999999999996,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Hibernation"
+        ]
+      ]
+    },
+    {
+      "term": "Wood",
+      "importance": 4.3459200000000004,
+      "relevance": 0.12072000000000001,
+      "confidence": 0.7902,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Wood"
+        ]
+      ]
+    },
+    {
+      "term": "Animal",
+      "importance": 3.8779200000000005,
+      "relevance": 0.10772,
+      "confidence": 1.3668,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Animal"
+        ]
+      ]
+    },
+    {
+      "term": "Insect repellent",
+      "importance": 3.3692799999999994,
+      "relevance": 0.21058,
+      "confidence": 0.6766,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Insect_repellent"
+        ]
+      ]
+    },
+    {
+      "term": "Building insulation",
+      "importance": 3.16576,
+      "relevance": 0.19786,
+      "confidence": 0.991,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Building_insulation"
+        ]
+      ]
+    },
+    {
+      "term": "Pollination",
+      "importance": 2.9852800000000004,
+      "relevance": 0.18658000000000002,
+      "confidence": 1.6747999999999998,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Pollination"
+        ]
+      ]
+    },
+    {
+      "term": "Ultrasound",
+      "importance": 2.86048,
+      "relevance": 0.17878,
+      "confidence": 2.4466,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Ultrasound"
+        ]
+      ]
+    },
+    {
+      "term": "Nocturnality",
+      "importance": 2.76864,
+      "relevance": 0.17304,
+      "confidence": 2.4989999999999997,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Nocturnality"
+        ]
+      ]
+    },
+    {
+      "term": "Rodent",
+      "importance": 2.35744,
+      "relevance": 0.14734,
+      "confidence": 2.1042,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Rodent"
+        ]
+      ]
+    },
+    {
+      "term": "Risk",
+      "importance": 2.31584,
+      "relevance": 0.14474,
+      "confidence": 0.9636000000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Risk"
+        ]
+      ]
+    },
+    {
+      "term": "Predation",
+      "importance": 2.28768,
+      "relevance": 0.14298,
+      "confidence": 6.332,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Predation"
+        ]
+      ]
+    },
+    {
+      "term": "Door",
+      "importance": 2.2223999999999995,
+      "relevance": 0.1389,
+      "confidence": 0.5875999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Door"
+        ]
+      ]
+    },
+    {
+      "term": "Eucalyptus",
+      "importance": 2.1891199999999995,
+      "relevance": 0.13682,
+      "confidence": 2.0591999999999997,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Eucalyptus"
+        ]
+      ]
+    },
+    {
+      "term": "Hazard",
+      "importance": 2.00704,
+      "relevance": 0.12544,
+      "confidence": 0.5566,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Hazard"
+        ]
+      ]
+    },
+    {
+      "term": "Information",
+      "importance": 1.99584,
+      "relevance": 0.12474,
+      "confidence": 0.807,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Information"
+        ]
+      ]
+    },
+    {
+      "term": "Fungus",
+      "importance": 1.9836800000000003,
+      "relevance": 0.12398,
+      "confidence": 4.5576,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Fungus"
+        ]
+      ]
+    },
+    {
+      "term": "Food",
+      "importance": 1.9696,
+      "relevance": 0.12309999999999999,
+      "confidence": 2.9056,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Food"
+        ]
+      ]
+    },
+    {
+      "term": "Tree",
+      "importance": 1.8384,
+      "relevance": 0.1149,
+      "confidence": 0.5344,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Tree"
+        ]
+      ]
+    },
+    {
+      "term": "Peppermint",
+      "importance": 1.8281600000000002,
+      "relevance": 0.11426,
+      "confidence": 2.3292,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Peppermint"
+        ]
+      ]
+    },
+    {
+      "term": "Ammonia",
+      "importance": 1.7833600000000003,
+      "relevance": 0.11146,
+      "confidence": 4.742,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Ammonia"
+        ]
+      ]
+    },
+    {
+      "term": "Hunting",
+      "importance": 1.7395200000000002,
+      "relevance": 0.10872,
+      "confidence": 2.4736000000000002,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Hunting"
+        ]
+      ]
+    },
+    {
+      "term": "Seed",
+      "importance": 1.65952,
+      "relevance": 0.10372,
+      "confidence": 0.5714,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Seed"
+        ]
+      ]
+    },
+    {
+      "term": "United States Fish and Wildlife Service",
+      "importance": 1.5584,
+      "relevance": 0.0974,
+      "confidence": 4.3438,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/United_States_Fish_and_Wildlife_Service"
+        ]
+      ]
+    },
+    {
+      "term": "Natural environment",
+      "importance": 1.55552,
+      "relevance": 0.09722,
+      "confidence": 0.5871999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Natural_environment"
+        ]
+      ]
+    },
+    {
+      "term": "Eucalyptus oil",
+      "importance": 1.5296,
+      "relevance": 0.09559999999999999,
+      "confidence": 1.9365999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Eucalyptus_oil"
+        ]
+      ]
+    },
+    {
+      "term": "Barn",
+      "importance": 1.4982399999999998,
+      "relevance": 0.09363999999999999,
+      "confidence": 0.7364200000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Barn"
+        ]
+      ]
+    },
+    {
+      "term": "Weather",
+      "importance": 1.47328,
+      "relevance": 0.09208000000000001,
+      "confidence": 2.4596000000000005,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Weather"
+        ]
+      ]
+    },
+    {
+      "term": "Instinct",
+      "importance": 1.42496,
+      "relevance": 0.08906,
+      "confidence": 0.40144,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Instinct"
+        ]
+      ]
+    },
+    {
+      "term": "Species",
+      "importance": 1.39104,
+      "relevance": 0.08693999999999999,
+      "confidence": 4.514,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Species"
+        ]
+      ]
+    },
+    {
+      "term": "Cinnamon",
+      "importance": 1.3638400000000002,
+      "relevance": 0.08524000000000001,
+      "confidence": 1.9924,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Cinnamon"
+        ]
+      ]
+    },
+    {
+      "term": "Infestation",
+      "importance": 1.3494959999999998,
+      "relevance": 0.037486,
+      "confidence": 1.0530000000000002,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Infestation"
+        ]
+      ]
+    },
+    {
+      "term": "Pet",
+      "importance": 1.34208,
+      "relevance": 0.08388,
+      "confidence": 0.42501999999999995,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Pet"
+        ]
+      ]
+    },
+    {
+      "term": "United States",
+      "importance": 1.1523199999999998,
+      "relevance": 0.07202,
+      "confidence": 6.0680000000000005,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/United_States"
+        ]
+      ]
+    },
+    {
+      "term": "Child",
+      "importance": 1.06272,
+      "relevance": 0.06642,
+      "confidence": 0.6808,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Child"
+        ]
+      ]
+    },
+    {
+      "term": "Foam",
+      "importance": 1.0339200000000002,
+      "relevance": 0.06462,
+      "confidence": 0.9624,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Foam"
+        ]
+      ]
+    },
+    {
+      "term": "Attention",
+      "importance": 0.9484799999999999,
+      "relevance": 0.05928,
+      "confidence": 0.6626,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Attention"
+        ]
+      ]
+    },
+    {
+      "term": "Histoplasmosis",
+      "importance": 0.7472000000000002,
+      "relevance": 0.18680000000000002,
+      "confidence": 2.702,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Histoplasmosis"
+        ]
+      ]
+    },
+    {
+      "term": "Inch",
+      "importance": 0.740384,
+      "relevance": 0.046273999999999996,
+      "confidence": 0.8465999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Inch"
+        ]
+      ]
+    },
+    {
+      "term": "Allergy",
+      "importance": 0.55448,
+      "relevance": 0.13862000000000002,
+      "confidence": 5.508,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Allergy"
+        ]
+      ]
+    },
+    {
+      "term": "Little brown bat",
+      "importance": 0.5353600000000002,
+      "relevance": 0.13384000000000001,
+      "confidence": 1.2136,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Little_brown_bat"
+        ]
+      ]
+    }
+  ],
+  "questions": {
+    "suggested": [
+      "how to scare bats out of house"
+    ],
+    "paa": [
+      "How can I scare bats away from my house?",
+      "What do bats hate most?",
+      "What are bats most afraid of?",
+      "What does it mean if a bat keeps coming in your house?"
+    ],
+    "content": [
+      "Are Armadillos Dangerous Around Your Home?",
+      "Are Bats Dangerous?",
+      "Are bats hard to get rid of?",
+      "Can Bats Cause Structural Damage?",
+      "Can I use noise to repel bats?",
+      "Can anyone help me with information on bats?",
+      "Do bats always come back to the same place at night?",
+      "Do bats go away on their own?",
+      "Do mothballs get rid of bats?",
+      "Do you feel there is any truth to it being bats?",
+      "Does one bat in the house mean more?",
+      "Food sources: Are insects (bat food) being attracted to your home because of standing water or exterior lighting at night?",
+      "Got bats?",
+      "Harborage areas: Are there plenty of places on your property, such as rock caves and entry to indoor spaces, where bats can find shelter during the day?",
+      "Have a Bat Problem?",
+      "How Can You Get Rid of Bats Safely and Legally?",
+      "How Can You Tell If Bats Are in Your Home?",
+      "How Do Bats Get Into Your Home?",
+      "How Much Does Pest Control Cost?",
+      "How can I get rid of bats in my attic or house naturally?",
+      "How can I identify bat entry points?",
+      "How can I prevent future bat infestations?",
+      "How can you get rid of a bat that is flying in circles in one room of your house?",
+      "How dangerous are bats in your house?",
+      "How do I catch a bat in the house?",
+      "How do I get a bat out of my house?",
+      "How do I get a bat out of the house?",
+      "How do I keep bats from roosting in this back corner?",
+      "How do I prevent bats from re-entering my home after they have been removed?",
+      "How do bats enter homes?",
+      "How do you lure a bat out of hiding in your house?",
+      "How do you scare off fruit bats?",
+      "How much does bat removal cost?",
+      "Is Pest Control Worth It?",
+      "Is it a good omen if a bat comes to the house?",
+      "Water sources: Do you have a fountain, pond, or regularly timed irrigation system that is providing the bats with water?",
+      "What Are the Most Common Bat Entry Points?",
+      "What Are the Signs of a Bat Infestation?",
+      "What Attracts Bats To Your Home?",
+      "What Attracts Bats?",
+      "What Do Bat Nests Look Like?",
+      "What Health Risks Do Bats Pose?",
+      "What Natural Bat Deterrents Work?",
+      "What Problems Do Bats Cause?",
+      "What Should You Do After Bats Are Removed?",
+      "What Types of Bats Commonly Invade Homes?",
+      "What are bats attracted to?",
+      "What are effective exclusion techniques for bat removal?",
+      "What are some common bat species found in homes?",
+      "What are the common signs of a bat infestation?",
+      "What attracts bats to your house?",
+      "What can you do to keep bats away?",
+      "What do bats hate the most?",
+      "What does it mean if a bat is out flying around in the daytime?",
+      "What health risks are associated with bats?",
+      "What is the best way to get rid of bats?",
+      "What is the fastest method to get rid of bats?",
+      "What keeps them away?",
+      "What natural repellents can be used to deter bats?",
+      "What should I do if a bat got in my house?",
+      "What should you do if a bat gets in your house?",
+      "What smell will keep bats away?",
+      "What will repel bats?",
+      "When should I consider professional bat removal services?",
+      "Where can I find professional bat control services in Florida and Georgia?",
+      "Why Hire Professional Bat Removal Services?",
+      "Why Should You Remove Bats?",
+      "Why has a living bat landed on my house and hasn't moved its position in three days?",
+      "Will a bat come out daily if stuck in a home?",
+      "Will keeping a light on deter bats?"
+    ]
+  }
+}
