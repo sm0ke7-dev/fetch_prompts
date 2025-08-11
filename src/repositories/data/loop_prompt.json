@@ -1,0 +1,67 @@
+{
+    "model": "gpt-4o-mini",
+    "temperature": 0.7,
+    "max_tokens": 1500,
+    "top_p": 1,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "system": "You are a professional content writer that creates engaging, informative article sections. Use the provided terms naturally throughout the content while maintaining readability and SEO optimization. Write in a conversational yet authoritative tone.",
+    "user": "headline: {{headline}} description: {{description}} header_terms: {{header_terms}} content_terms: {{content_terms}}",
+    "variables": {
+        "headline": "{{headline}}",
+        "description": "{{description}}",
+        "header_terms": "{{header_terms}}",
+        "content_terms": "{{content_terms}}"
+    },
+    "output-schema": {
+        "name": "section_content",
+        "description": "Generates HTML-structured content for a single article section.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "section": {
+                    "type": "object",
+                    "properties": {
+                        "headline": {
+                            "type": "string",
+                            "description": "The section headline wrapped in h2 tags, incorporating relevant header terms naturally."
+                        },
+                        "content": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": ["paragraph", "ordered-list", "unordered-list", "headline-3"],
+                                        "description": "The type of content block"
+                                    },
+                                    "content": {
+                                        "oneOf": [
+                                            {
+                                                "type": "string",
+                                                "description": "For paragraph and headline-3 types: HTML content with proper tags"
+                                            },
+                                            {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                },
+                                                "description": "For list types: array of HTML list items with li tags"
+                                            }
+                                        ],
+                                        "description": "The content of the block, either a string (paragraph/headline) or array of list items"
+                                    }
+                                },
+                                "required": ["type", "content"]
+                            },
+                            "description": "Array of content blocks that make up the section, incorporating content terms naturally"
+                        }
+                    },
+                    "required": ["headline", "content"]
+                }
+            },
+            "required": ["section"]
+        }
+    }
+}
