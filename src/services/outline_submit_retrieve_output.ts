@@ -11,6 +11,8 @@ import {
 } from '../models/services/outline_submit_retrieve_output.models';
 import { processOutlineInputs } from './outline_process_input';
 import { fetchPromptByName } from '../repositories/fetch_prompt';
+import * as fs from 'fs';
+import * as path from 'path';
 
 /**
  * Submits a processed outline prompt to OpenAI API and returns the response
@@ -202,6 +204,35 @@ export async function generateArticleOutline(request: GenerateOutlineRequest): P
     console.log(`✅ Article outline generation completed in ${processingTime}ms`);
     console.log(`📋 Generated ${outline.sections.length} sections`);
 
+    // Step 5: Save Phase 2 outline to src/repositories/outlines
+    try {
+      const projectRoot = path.resolve(__dirname, '../../');
+      const outlinesDir = path.join(projectRoot, 'src', 'repositories', 'outlines');
+      if (!fs.existsSync(outlinesDir)) {
+        fs.mkdirSync(outlinesDir, { recursive: true });
+      }
+
+      const filename = `phase2_outline_${sanitizeKeyword(request.keyword)}.json`;
+      const filePath = path.join(outlinesDir, filename);
+
+      const payload = {
+        keyword: request.keyword,
+        generated_at: new Date().toISOString(),
+        phase: 2,
+        outline,
+        metadata: {
+          processing_time_ms: processingTime,
+          token_usage: submitResult.data.usage || undefined
+        }
+      };
+
+      fs.writeFileSync(filePath, JSON.stringify(payload, null, 2), 'utf-8');
+      console.log(`💾 Phase 2 outline saved to: ${filePath}`);
+    } catch (saveError) {
+      console.error('⚠️  Failed to save Phase 2 outline file:', saveError);
+      // Continue without failing the response
+    }
+
     return {
       success: true,
       data: {
@@ -222,4 +253,12 @@ export async function generateArticleOutline(request: GenerateOutlineRequest): P
       message: `Failed to generate article outline for "${request.keyword}"`
     };
   }
+}
+
+function sanitizeKeyword(keyword: string): string {
+  return keyword
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, '')
+    .replace(/\s+/g, '_')
+    .trim();
 }

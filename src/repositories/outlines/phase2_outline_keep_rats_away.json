@@ -1,0 +1,59 @@
+{
+  "keyword": "keep rats away",
+  "generated_at": "2025-08-11T12:42:07.530Z",
+  "phase": 2,
+  "outline": {
+    "sections": [
+      {
+        "header": "Understanding Rats and Their Behavior",
+        "description": "Explore the nature of rats, their habits, and why they invade homes. This section will provide insights into their behavior, helping readers understand how to keep rats away effectively."
+      },
+      {
+        "header": "Signs of a Rat Infestation",
+        "description": "Learn to identify the common signs of a rat infestation in your home. This section will cover droppings, gnaw marks, and nesting behaviors that indicate the presence of rats."
+      },
+      {
+        "header": "Effective Strategies to Keep Rats Away",
+        "description": "Discover various methods to keep rats away from your property. This section will discuss preventive measures, including sealing entry points and maintaining cleanliness."
+      },
+      {
+        "header": "Natural Remedies to Get Rid of Rats",
+        "description": "Explore natural remedies that can help in getting rid of rats without the use of harmful chemicals. This section will include ingredients and methods that are effective yet safe."
+      },
+      {
+        "header": "Using Traps to Manage Rodent Populations",
+        "description": "Learn about different types of traps available for catching rats. This section will provide guidance on how to set traps effectively to rid of rats."
+      },
+      {
+        "header": "Long-term Solutions to Keep Rats Away",
+        "description": "Discuss long-term strategies to keep rats away, including landscaping tips and regular maintenance practices that deter rodent populations."
+      },
+      {
+        "header": "Dealing with Mice: Similarities and Differences",
+        "description": "Understand the similarities and differences between rats and mice, and how the strategies to keep rats away can also apply to managing mouse populations."
+      },
+      {
+        "header": "When to Call a Professional Exterminator",
+        "description": "Identify situations where professional help is necessary. This section will guide readers on when to seek expert assistance in getting rid of rats."
+      }
+    ]
+  },
+  "metadata": {
+    "processing_time_ms": 6575,
+    "token_usage": {
+      "prompt_tokens": 214,
+      "completion_tokens": 338,
+      "total_tokens": 552,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    }
+  }
+}

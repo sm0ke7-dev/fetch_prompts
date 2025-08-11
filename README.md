@@ -245,7 +245,7 @@ Successfully generated 8-section article outline for "what scares bats out of ho
 - `src/repositories/optimization_terms/what_scares_bats_out_of_homes.json` - Structured NeuronWriter data
 - `src/services/outline_submit_retrieve_output.ts` - Complete outline generation service
 - `src/repositories/data/outline_creation_prompt.json` - Custom OpenAI prompt template
-- `test_generate_outline_from_terms.js` - Ready-to-present test script for Phase 2
+- `test_phase2_generate_outline_from_terms.js` - Ready-to-present test script for Phase 2
 
 ### 📋 Planned Features
 - **Phase 3: Flesh out Outline** ⬅️ **NEXT**: Merge body terms and create detailed content structure

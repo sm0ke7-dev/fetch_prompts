@@ -1,5 +1,5 @@
 // Test: Generate article outline from existing optimization terms
-// Usage: node test_generate_outline_from_terms.js [keyword]
+// Usage: node test_phase2_generate_outline_from_terms.js [keyword]
 // If keyword is omitted, it will use keyword from keyword.json.
 
 const path = require('path');

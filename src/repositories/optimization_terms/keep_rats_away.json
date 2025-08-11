@@ -1,0 +1,1796 @@
+{
+  "keyword": "keep rats away",
+  "query_id": "50698b0e4f87ce7a",
+  "query_url": "https://app.neuronwriter.com/analysis/view/50698b0e4f87ce7a",
+  "generated_at": "2025-08-11T12:18:15.574Z",
+  "headings": {
+    "h1": [
+      {
+        "term": "rat",
+        "usage_percentage": 70
+      },
+      {
+        "term": "keep rats",
+        "usage_percentage": 30
+      },
+      {
+        "term": "rodent",
+        "usage_percentage": 20
+      },
+      {
+        "term": "keep rats away",
+        "usage_percentage": 10
+      },
+      {
+        "term": "mouse",
+        "usage_percentage": 10
+      },
+      {
+        "term": "rats away",
+        "usage_percentage": 10
+      },
+      {
+        "term": "rats and mice",
+        "usage_percentage": 10
+      },
+      {
+        "term": "keep them away",
+        "usage_percentage": 10
+      },
+      {
+        "term": "away from your home",
+        "usage_percentage": 10
+      },
+      {
+        "term": "prevent rodents",
+        "usage_percentage": 10
+      },
+      {
+        "term": "rat repellent",
+        "usage_percentage": 10
+      }
+    ],
+    "h2": [
+      {
+        "term": "rat",
+        "usage_percentage": 60
+      },
+      {
+        "term": "rodent",
+        "usage_percentage": 40
+      },
+      {
+        "term": "keep rats",
+        "usage_percentage": 40
+      },
+      {
+        "term": "get rid of rats",
+        "usage_percentage": 40
+      },
+      {
+        "term": "rid of rats",
+        "usage_percentage": 40
+      },
+      {
+        "term": "keep rats away",
+        "usage_percentage": 30
+      },
+      {
+        "term": "trap",
+        "usage_percentage": 30
+      },
+      {
+        "term": "rats away",
+        "usage_percentage": 30
+      },
+      {
+        "term": "infestation",
+        "usage_percentage": 30
+      },
+      {
+        "term": "rat infestation",
+        "usage_percentage": 20
+      },
+      {
+        "term": "nest",
+        "usage_percentage": 20
+      },
+      {
+        "term": "snap traps",
+        "usage_percentage": 20
+      },
+      {
+        "term": "keep rodents",
+        "usage_percentage": 20
+      },
+      {
+        "term": "mouse",
+        "usage_percentage": 10
+      },
+      {
+        "term": "pest control",
+        "usage_percentage": 10
+      },
+      {
+        "term": "bait",
+        "usage_percentage": 10
+      },
+      {
+        "term": "poison",
+        "usage_percentage": 10
+      },
+      {
+        "term": "food source",
+        "usage_percentage": 10
+      },
+      {
+        "term": "compost",
+        "usage_percentage": 10
+      },
+      {
+        "term": "pet food",
+        "usage_percentage": 10
+      },
+      {
+        "term": "prevent rodents",
+        "usage_percentage": 10
+      },
+      {
+        "term": "rat repellent",
+        "usage_percentage": 10
+      },
+      {
+        "term": "attic",
+        "usage_percentage": 10
+      },
+      {
+        "term": "repel",
+        "usage_percentage": 10
+      },
+      {
+        "term": "steel wool",
+        "usage_percentage": 10
+      },
+      {
+        "term": "food and water",
+        "usage_percentage": 10
+      },
+      {
+        "term": "rat traps",
+        "usage_percentage": 10
+      },
+      {
+        "term": "food and water sources",
+        "usage_percentage": 10
+      },
+      {
+        "term": "rats get",
+        "usage_percentage": 10
+      },
+      {
+        "term": "indoors",
+        "usage_percentage": 10
+      },
+      {
+        "term": "signs of a rat infestation",
+        "usage_percentage": 10
+      },
+      {
+        "term": "rodents like",
+        "usage_percentage": 10
+      }
+    ],
+    "h3": []
+  },
+  "body_terms": {
+    "basic": [
+      {
+        "term": "rat",
+        "usage_percentage": 90,
+        "suggested_usage": [
+          16,
+          37
+        ]
+      },
+      {
+        "term": "rodent",
+        "usage_percentage": 90,
+        "suggested_usage": [
+          2,
+          9
+        ]
+      },
+      {
+        "term": "keep rats",
+        "usage_percentage": 80,
+        "suggested_usage": [
+          1,
+          3
+        ]
+      },
+      {
+        "term": "trap",
+        "usage_percentage": 90,
+        "suggested_usage": [
+          2,
+          8
+        ]
+      },
+      {
+        "term": "mouse",
+        "usage_percentage": 90,
+        "suggested_usage": [
+          1,
+          4
+        ]
+      },
+      {
+        "term": "rats away",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          3
+        ]
+      },
+      {
+        "term": "pest control",
+        "usage_percentage": 70,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "infestation",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          4
+        ]
+      },
+      {
+        "term": "bird feeder",
+        "usage_percentage": 70,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "dropping",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          4
+        ]
+      },
+      {
+        "term": "bait",
+        "usage_percentage": 80,
+        "suggested_usage": [
+          1,
+          4
+        ]
+      },
+      {
+        "term": "poison",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          4
+        ]
+      },
+      {
+        "term": "food source",
+        "usage_percentage": 70,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "hardware cloth",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "feeder",
+        "usage_percentage": 70,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "compost",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          4
+        ]
+      },
+      {
+        "term": "nest",
+        "usage_percentage": 70,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "pet food",
+        "usage_percentage": 70,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "attic",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "repel",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "gnaw",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      }
+    ],
+    "extended": [
+      {
+        "term": "keep rats away",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "get rid of rats",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "rid of rats",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "rats and mice",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "keep them away",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "rat infestation",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "repel rats",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "control rats",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "away from your home",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "prevent rodents",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "rat repellent",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "way to get rid",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "deter rats",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "snap traps",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "rat droppings",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "entry points",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "rodent infestation",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "steel wool",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "deter",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "around your home",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "prevent rats",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "pest management",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "food and water",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "keep rodents",
+        "usage_percentage": 10,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "roof rats",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "attract rats",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "rat traps",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "rats in your home",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "caulk",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "fruit and vegetables",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "ways to keep rats",
+        "usage_percentage": 10,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "pest control companies",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "professional pest control",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "traps for rats",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "remove rats",
+        "usage_percentage": 10,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "rats might",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "rats from entering",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "help control rats",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "rat problem",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "food and water sources",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bird feeders away",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "food and shelter",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "rats get",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "indoors",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "keep your home",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "rats might hide",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "offer pest control",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "children and pets",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "dispose of trash",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "around the home",
+        "usage_percentage": 10,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "pest control services",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "dried fruit",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "chicken feed",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bird seed",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "hardware cloth rather than chicken",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "rat deterrent",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "strong scent",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "check your home",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "doors and windows",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "limit their food",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "signs of a rat infestation",
+        "usage_percentage": 10,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "entered your home",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "plants near",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "cloth rather than chicken wire",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "rodents like",
+        "usage_percentage": 10,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  "entities": [
+    {
+      "term": "Mouse",
+      "importance": 55.234,
+      "relevance": 0.5523399999999999,
+      "confidence": 2.8568000000000002,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Mouse"
+        ]
+      ]
+    },
+    {
+      "term": "Rodent",
+      "importance": 53.45199999999999,
+      "relevance": 0.5345199999999999,
+      "confidence": 12.111,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Rodent"
+        ]
+      ]
+    },
+    {
+      "term": "Food",
+      "importance": 35.622,
+      "relevance": 0.35622,
+      "confidence": 7.380199999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Food"
+        ]
+      ]
+    },
+    {
+      "term": "Pet",
+      "importance": 31.038,
+      "relevance": 0.31038,
+      "confidence": 2.9955999999999996,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Pet"
+        ]
+      ]
+    },
+    {
+      "term": "Pest (organism)",
+      "importance": 22.826239999999995,
+      "relevance": 0.35666,
+      "confidence": 1.8844,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Pest_(organism)"
+        ]
+      ]
+    },
+    {
+      "term": "Rat",
+      "importance": 19.33184,
+      "relevance": 0.30206,
+      "confidence": 7.417,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Rat"
+        ]
+      ]
+    },
+    {
+      "term": "Tree",
+      "importance": 17.139199999999995,
+      "relevance": 0.2678,
+      "confidence": 4.0408,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Tree"
+        ]
+      ]
+    },
+    {
+      "term": "Compost",
+      "importance": 16.5376,
+      "relevance": 0.2584,
+      "confidence": 5.8582,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Compost"
+        ]
+      ]
+    },
+    {
+      "term": "Pest control",
+      "importance": 14.4108,
+      "relevance": 0.4003,
+      "confidence": 2.9006,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Pest_control"
+        ]
+      ]
+    },
+    {
+      "term": "Fruit",
+      "importance": 13.825280000000001,
+      "relevance": 0.21602000000000002,
+      "confidence": 11.088,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Fruit"
+        ]
+      ]
+    },
+    {
+      "term": "Feces",
+      "importance": 13.071360000000002,
+      "relevance": 0.20424000000000003,
+      "confidence": 3.9836000000000005,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Feces"
+        ]
+      ]
+    },
+    {
+      "term": "Bird feeder",
+      "importance": 12.513600000000002,
+      "relevance": 0.3476,
+      "confidence": 2.2510000000000003,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bird_feeder"
+        ]
+      ]
+    },
+    {
+      "term": "Poison",
+      "importance": 11.3088,
+      "relevance": 0.1767,
+      "confidence": 2.8518,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Poison"
+        ]
+      ]
+    },
+    {
+      "term": "Waste",
+      "importance": 8.156880000000001,
+      "relevance": 0.22658,
+      "confidence": 0.792,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Waste"
+        ]
+      ]
+    },
+    {
+      "term": "Pet food",
+      "importance": 7.4304,
+      "relevance": 0.2064,
+      "confidence": 2.0646,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Pet_food"
+        ]
+      ]
+    },
+    {
+      "term": "Nest",
+      "importance": 7.287839999999999,
+      "relevance": 0.20244,
+      "confidence": 1.04572,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Nest"
+        ]
+      ]
+    },
+    {
+      "term": "Bird",
+      "importance": 6.50592,
+      "relevance": 0.18072,
+      "confidence": 9.336,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bird"
+        ]
+      ]
+    },
+    {
+      "term": "Bait (luring substance)",
+      "importance": 6.4015200000000005,
+      "relevance": 0.17782,
+      "confidence": 1.027,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bait_(luring_substance)"
+        ]
+      ]
+    },
+    {
+      "term": "Water",
+      "importance": 5.32872,
+      "relevance": 0.14801999999999998,
+      "confidence": 1.4994,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Water"
+        ]
+      ]
+    },
+    {
+      "term": "Meat",
+      "importance": 5.122800000000001,
+      "relevance": 0.1423,
+      "confidence": 1.9012,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Meat"
+        ]
+      ]
+    },
+    {
+      "term": "Soap",
+      "importance": 5.0320800000000006,
+      "relevance": 0.13978000000000002,
+      "confidence": 3.2388,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Soap"
+        ]
+      ]
+    },
+    {
+      "term": "Wood",
+      "importance": 4.99104,
+      "relevance": 0.13864,
+      "confidence": 0.9304,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Wood"
+        ]
+      ]
+    },
+    {
+      "term": "Steel",
+      "importance": 4.07448,
+      "relevance": 0.11318000000000002,
+      "confidence": 5.8908000000000005,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Steel"
+        ]
+      ]
+    },
+    {
+      "term": "Textile",
+      "importance": 4.04928,
+      "relevance": 0.11248,
+      "confidence": 0.7129200000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Textile"
+        ]
+      ]
+    },
+    {
+      "term": "Mousetrap",
+      "importance": 3.5872,
+      "relevance": 0.2242,
+      "confidence": 0.6446,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Mousetrap"
+        ]
+      ]
+    },
+    {
+      "term": "Orthohantavirus",
+      "importance": 3.2892799999999998,
+      "relevance": 0.20558,
+      "confidence": 3.78,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Orthohantavirus"
+        ]
+      ]
+    },
+    {
+      "term": "Butter",
+      "importance": 2.9066400000000003,
+      "relevance": 0.08074,
+      "confidence": 1.9288,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Butter"
+        ]
+      ]
+    },
+    {
+      "term": "Bird food",
+      "importance": 2.8863999999999996,
+      "relevance": 0.18039999999999998,
+      "confidence": 1.5504000000000002,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bird_food"
+        ]
+      ]
+    },
+    {
+      "term": "Black rat",
+      "importance": 2.82176,
+      "relevance": 0.17636,
+      "confidence": 0.6237999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Black_rat"
+        ]
+      ]
+    },
+    {
+      "term": "Caulk",
+      "importance": 2.40608,
+      "relevance": 0.15038,
+      "confidence": 2.6222000000000003,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Caulk"
+        ]
+      ]
+    },
+    {
+      "term": "Vegetable",
+      "importance": 2.33952,
+      "relevance": 0.14622,
+      "confidence": 2.718,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Vegetable"
+        ]
+      ]
+    },
+    {
+      "term": "Inch",
+      "importance": 2.288952,
+      "relevance": 0.063582,
+      "confidence": 1.4314,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Inch"
+        ]
+      ]
+    },
+    {
+      "term": "Child",
+      "importance": 2.2457519999999995,
+      "relevance": 0.06238199999999999,
+      "confidence": 0.9516000000000002,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Child"
+        ]
+      ]
+    },
+    {
+      "term": "Basement",
+      "importance": 2.1968,
+      "relevance": 0.1373,
+      "confidence": 0.8624,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Basement"
+        ]
+      ]
+    },
+    {
+      "term": "Predation",
+      "importance": 1.9494399999999998,
+      "relevance": 0.12183999999999999,
+      "confidence": 5.12,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Predation"
+        ]
+      ]
+    },
+    {
+      "term": "Seed",
+      "importance": 1.9481600000000001,
+      "relevance": 0.12176000000000001,
+      "confidence": 5.824,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Seed"
+        ]
+      ]
+    },
+    {
+      "term": "Squirrel",
+      "importance": 1.84896,
+      "relevance": 0.11556,
+      "confidence": 3.035,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Squirrel"
+        ]
+      ]
+    },
+    {
+      "term": "Waste container",
+      "importance": 1.82496,
+      "relevance": 0.11406000000000001,
+      "confidence": 0.6268,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Waste_container"
+        ]
+      ]
+    },
+    {
+      "term": "Cage",
+      "importance": 1.7651199999999998,
+      "relevance": 0.11032,
+      "confidence": 0.7352000000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Cage"
+        ]
+      ]
+    },
+    {
+      "term": "Roof",
+      "importance": 1.7440000000000004,
+      "relevance": 0.10900000000000001,
+      "confidence": 0.7268,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Roof"
+        ]
+      ]
+    },
+    {
+      "term": "Ultrasound",
+      "importance": 1.6828800000000004,
+      "relevance": 0.10518000000000001,
+      "confidence": 2.182,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Ultrasound"
+        ]
+      ]
+    },
+    {
+      "term": "Food storage",
+      "importance": 1.6787199999999998,
+      "relevance": 0.10491999999999999,
+      "confidence": 0.40380000000000005,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Food_storage"
+        ]
+      ]
+    },
+    {
+      "term": "Urine",
+      "importance": 1.5824,
+      "relevance": 0.0989,
+      "confidence": 3.4606000000000003,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Urine"
+        ]
+      ]
+    },
+    {
+      "term": "Infestation",
+      "importance": 1.483776,
+      "relevance": 0.041216,
+      "confidence": 1.197,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Infestation"
+        ]
+      ]
+    },
+    {
+      "term": "Paper",
+      "importance": 1.3865599999999998,
+      "relevance": 0.08666,
+      "confidence": 2.1216,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Paper"
+        ]
+      ]
+    },
+    {
+      "term": "Peanut butter",
+      "importance": 1.37376,
+      "relevance": 0.08586,
+      "confidence": 2.247,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Peanut_butter"
+        ]
+      ]
+    },
+    {
+      "term": "Furniture",
+      "importance": 1.3606400000000003,
+      "relevance": 0.08504,
+      "confidence": 1.2912,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Furniture"
+        ]
+      ]
+    },
+    {
+      "term": "Peanut",
+      "importance": 1.3353600000000003,
+      "relevance": 0.08346,
+      "confidence": 2.863,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Peanut"
+        ]
+      ]
+    },
+    {
+      "term": "Disease",
+      "importance": 1.3312,
+      "relevance": 0.0832,
+      "confidence": 0.8234,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Disease"
+        ]
+      ]
+    },
+    {
+      "term": "Chicken",
+      "importance": 1.3024,
+      "relevance": 0.0814,
+      "confidence": 3.6894,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Chicken"
+        ]
+      ]
+    },
+    {
+      "term": "Plastic",
+      "importance": 1.2713600000000003,
+      "relevance": 0.07946,
+      "confidence": 3.035,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Plastic"
+        ]
+      ]
+    },
+    {
+      "term": "Metal",
+      "importance": 1.26784,
+      "relevance": 0.07924,
+      "confidence": 0.6956,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Metal"
+        ]
+      ]
+    },
+    {
+      "term": "Wool",
+      "importance": 1.2208,
+      "relevance": 0.0763,
+      "confidence": 1.8142,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Wool"
+        ]
+      ]
+    },
+    {
+      "term": "Steel wool",
+      "importance": 1.1523199999999998,
+      "relevance": 0.07202,
+      "confidence": 1.0516,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Steel_wool"
+        ]
+      ]
+    },
+    {
+      "term": "Fence",
+      "importance": 1.14016,
+      "relevance": 0.07126,
+      "confidence": 1.068,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Fence"
+        ]
+      ]
+    },
+    {
+      "term": "Cheese",
+      "importance": 1.11648,
+      "relevance": 0.06978,
+      "confidence": 2.6555999999999997,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Cheese"
+        ]
+      ]
+    },
+    {
+      "term": "Animal",
+      "importance": 1.09984,
+      "relevance": 0.06874,
+      "confidence": 0.7918000000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Animal"
+        ]
+      ]
+    },
+    {
+      "term": "United States",
+      "importance": 1.0825599999999997,
+      "relevance": 0.06766,
+      "confidence": 4.1638,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/United_States"
+        ]
+      ]
+    },
+    {
+      "term": "Debris",
+      "importance": 1.01664,
+      "relevance": 0.06354,
+      "confidence": 1.0213999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Debris"
+        ]
+      ]
+    },
+    {
+      "term": "Plant",
+      "importance": 0.9952,
+      "relevance": 0.0622,
+      "confidence": 1.0071999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Plant"
+        ]
+      ]
+    },
+    {
+      "term": "Poaceae",
+      "importance": 0.9724799999999999,
+      "relevance": 0.06078,
+      "confidence": 0.43620000000000003,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Poaceae"
+        ]
+      ]
+    },
+    {
+      "term": "Cement",
+      "importance": 0.9616,
+      "relevance": 0.0601,
+      "confidence": 1.8841999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Cement"
+        ]
+      ]
+    },
+    {
+      "term": "Dried fruit",
+      "importance": 0.8880000000000002,
+      "relevance": 0.05550000000000001,
+      "confidence": 1.0228,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Dried_fruit"
+        ]
+      ]
+    },
+    {
+      "term": "Bone",
+      "importance": 0.8307200000000001,
+      "relevance": 0.05192,
+      "confidence": 0.39537999999999995,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bone"
+        ]
+      ]
+    },
+    {
+      "term": "Shrub",
+      "importance": 0.7981439999999999,
+      "relevance": 0.049884,
+      "confidence": 0.968,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Shrub"
+        ]
+      ]
+    },
+    {
+      "term": "Garbage",
+      "importance": 0.7578879999999999,
+      "relevance": 0.047368,
+      "confidence": 0.43979999999999997,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Garbage"
+        ]
+      ]
+    },
+    {
+      "term": "Attic",
+      "importance": 0.7263999999999998,
+      "relevance": 0.045399999999999996,
+      "confidence": 0.6452,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Attic"
+        ]
+      ]
+    },
+    {
+      "term": "Integrated pest management",
+      "importance": 0.5574399999999999,
+      "relevance": 0.13935999999999998,
+      "confidence": 3.404,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Integrated_pest_management"
+        ]
+      ]
+    }
+  ],
+  "questions": {
+    "suggested": [
+      "do onions keep rats away",
+      "will garlic keep rats away",
+      "herbs that keep rats away",
+      "can cats keep mice away",
+      "will bleach keep rats away",
+      "why keeps mice away",
+      "who keeps mice away",
+      "does vinegar keep rats away",
+      "what keeps rats away from plants",
+      "what will keep rats away from your house",
+      "does cinnamon keep rats away",
+      "do foxes keep rats away",
+      "how keep mice away",
+      "does mothballs keep rats away",
+      "things that keep rats away",
+      "will cats keep rats away",
+      "does lime keep rats away",
+      "will keep mice away",
+      "can cats keep rats away",
+      "what keep mice away",
+      "plants that keep rats away",
+      "how to keep rats away from the house",
+      "which plants keep rats away",
+      "animals that keep rats away",
+      "what keep rats away from your house",
+      "will vinegar keep rats away",
+      "what keep rats away from your home",
+      "does garlic keep rats away",
+      "smells that keep rats away",
+      "spices that keep rats away",
+      "do possums keep rats away",
+      "how to keep rats away from garden $",
+      "will mothballs keep rats away",
+      "how to keep rats away from car",
+      "what can keep mice away",
+      "will vicks keep rats away",
+      "does noise keep rats away",
+      "do lights keep rats away",
+      "what keep rats away",
+      "do rats keep away mice",
+      "do squirrels keep rats away",
+      "what keep rodents away",
+      "do groundhogs keep rats away",
+      "will ammonia keep rats away",
+      "what will keep rats away",
+      "how keep rats away",
+      "does diesel keep rats away",
+      "to keep rodents away",
+      "how to keep rats away from chicken coop",
+      "sounds that keep rats away",
+      "does coffee keep rats away",
+      "how keep rats out of car",
+      "to keep rats away",
+      "what keeps rats away naturally",
+      "how keep mice away from house",
+      "how to keep rats away from bird feeders",
+      "will cat keep rats away",
+      "what can keep rats away",
+      "do mothballs keep rats away",
+      "what keeps rats away permanently",
+      "to keep rats away from house",
+      "scents that keep rats away",
+      "do cats keep rats away",
+      "can mothballs keep rats away",
+      "do dogs keep rats away",
+      "plants that keep rats away from your garden",
+      "how keep rats away from home",
+      "how keep rats out of garden",
+      "what keep mice away from house",
+      "to keep mice away"
+    ],
+    "paa": [
+      "What do rats hate the worst?",
+      "What is the best thing to keep rats away?",
+      "What scent can keep rats away?",
+      "What is the most effective rat repellent?"
+    ],
+    "content": [
+      "Can I use poison to get rid of rodents?",
+      "How can I clean up areas where rodents have been?",
+      "How can I get rid of rodents?",
+      "How can I prevent rodents from living on my property?",
+      "Is it easy to find rodents?",
+      "Mouse in Your House?",
+      "Should I be worried if I see a rat in my garden?",
+      "What Are Rats?",
+      "What Do Rats Need?",
+      "What are the top three rat repellents?",
+      "What do rats hate the most?",
+      "What does baking soda do to rats?",
+      "What harm can rodents cause?",
+      "What is the cheapest way to get rid of rats?",
+      "What is the fastest way to get rid of rats?",
+      "What keeps rats away permanently?",
+      "Why are Rodents like Rats Dangerous?"
+    ]
+  }
+}
