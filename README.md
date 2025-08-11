@@ -36,6 +36,7 @@ fetch_prompt/
 ├── package.json               # Project dependencies and scripts
 ├── tsconfig.json              # TypeScript configuration
 ├── test_services.js           # Service layer test script
+├── test_optimization_terms.js # Optimization terms test script
 ├── src/
 │   ├── app.ts                 # Express application setup with middleware
 │   ├── server.ts              # Server startup and configuration
@@ -47,18 +48,22 @@ fetch_prompt/
 │   │   ├── fetch_prompts_model.ts # Prompt configuration interfaces
 │   │   └── services/          # Service-specific models
 │   │       ├── process_input.model.ts # Input processing interfaces
-│   │       └── submit_prompt.model.ts # OpenAI API interfaces
+│   │       ├── submit_prompt.model.ts # OpenAI API interfaces
+│   │       └── get_optimization_terms.model.ts # NeuronWriter API interfaces
 │   ├── repositories/          # Data access layer
 │   │   ├── data/
 │   │   │   └── prompts.json   # AI prompt configuration data
-│   │   └── fetch_prompt.ts    # Prompt fetching functionality
+│   │   ├── fetch_prompt.ts    # Prompt fetching functionality
+│   │   └── optimization_terms/ # Optimization terms data access
+│   │       └── neuron_writer.ts # NeuronWriter API integration
 │   ├── routes/                # API route definitions
 │   │   ├── index.ts           # Route exports (exports promptRoutes)
 │   │   └── prompt_routes.ts   # API endpoint definitions
 │   └── services/              # Business logic layer
 │       ├── index.ts           # Service exports (exports all services)
 │       ├── process_input.ts   # Input processing and variable substitution
-│       └── submit_prompt.ts   # OpenAI API integration
+│       ├── submit_prompt.ts   # OpenAI API integration
+│       └── get_optimization_terms.ts # NeuronWriter optimization terms service
 └── README.md                  # This file
 ```
 
@@ -155,19 +160,36 @@ This project uses a three-branch workflow:
 
 ## 🚀 Current Implementation Status
 
+### ✅ **Phase 1: Get Optimization Terms (COMPLETED)**
+- **NeuronWriter API Integration**: Full connection and authentication working
+- **Query Management**: Create, fetch, and wait for queries with async processing
+- **Comprehensive Terms Extraction**: Using `terms_txt` for maximum data coverage
+- **Data Structure Understanding**: Correctly mapped all API response fields
+- **Test Results**: Successfully extracted from "trail running shoes" query:
+  - **Header Terms**: 17 terms (from `terms_txt.h2`)
+  - **Body Terms**: 83 terms (from `terms_txt.content_extended`)
+  - **Entities**: 6 entities
+  - **Suggested Questions**: 83 questions
+  - **Content Questions**: 5 questions
+  - **Competitors**: 30 competitors
+
 ### ✅ Completed Features
 
 #### **Service Layer (Fully Implemented)**
-- **Repository Layer**: `fetch_prompt.ts` - Fetches prompt configurations from JSON files
+- **Repository Layer**: 
+  - `fetch_prompt.ts` - Fetches prompt configurations from JSON files
+  - `optimization_terms/neuron_writer.ts` - NeuronWriter API integration for optimization terms
 - **Service Layer**: 
   - `process_input.ts` - Handles variable substitution in prompts
   - `submit_prompt.ts` - Integrates with OpenAI API using function calling
+  - `get_optimization_terms.ts` - NeuronWriter optimization terms extraction
 - **Model Layer**: Complete TypeScript interfaces for all data structures
 
 #### **Key Capabilities**
 - ✅ **Prompt Configuration Management**: Load AI model configurations from JSON files
 - ✅ **Variable Substitution**: Replace `{{variable}}` placeholders with user input
 - ✅ **OpenAI Integration**: Make API calls with structured function calling
+- ✅ **NeuronWriter Integration**: Extract comprehensive optimization terms from SERP analysis
 - ✅ **Structured Output**: Return JSON responses matching defined schemas
 - ✅ **Error Handling**: Comprehensive error handling and validation
 - ✅ **Type Safety**: Full TypeScript support with proper interfaces
@@ -178,6 +200,7 @@ This project uses a three-branch workflow:
 - ✅ **AI Integration**: Generates structured JSON responses (6 SEO sections in 439 tokens)
 - ✅ **HTTP API**: Complete endpoint working at `POST /api/v1/text?prompt_name=prompts`
 - ✅ **Real-world Test**: Successfully generated 6 SEO sections about "Raccoon Removal Houston" (612 tokens)
+- ✅ **NeuronWriter Integration**: Successfully extracts optimization terms from "trail running shoes" query
 
 ### ✅ **HTTP API Layer (Fully Implemented)**
 - **Controller Layer**: `prompt_controller.ts` - Handles HTTP requests and responses
@@ -190,6 +213,10 @@ This project uses a three-branch workflow:
 - **Validation Middleware**: Enhanced request validation and sanitization
 - **Rate Limiting**: API usage limits and monitoring
 - **Authentication**: API key management for production use
+- **Phase 2: Plan Outline**: Use optimization terms to generate article outlines
+- **Phase 3: Flesh out Outline**: Merge body terms and create detailed content structure
+- **Phase 4: Loop through sections**: Generate content for each outline section
+- **Phase 5: Render output**: Compile final article with structured content
 
 ## 📚 API Documentation
 
@@ -277,6 +304,9 @@ NODE_ENV=development
 
 # OpenAI Configuration
 OPENAI_API_KEY=your_openai_api_key_here
+
+# NeuronWriter Configuration
+NEURONWRITER_API_KEY=your_neuronwriter_api_key_here
 ```
 
 **Note:** The `.local.env` file is ignored by Git for security reasons.
@@ -300,6 +330,16 @@ When working on this project as an LLM:
 3. **Update this README** when adding new features or changing architecture
 4. **Use descriptive commit messages** following conventional commits
 5. **Test your changes** before committing
+
+### Working with AI Assistants
+
+When collaborating with AI assistants on this project:
+
+- **No files or revisions** are made unless explicitly requested
+- **Always ask for permission** before creating or modifying any files
+- **Provide detailed gameplans** before making changes
+- **Explain steps clearly** for learning purposes
+- **Wait for explicit approval** before proceeding with any modifications
 
 ### Code Style Guidelines
 
