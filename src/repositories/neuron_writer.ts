@@ -5,7 +5,7 @@ import {
   GetQueryRequest, 
   GetQueryResponse,
   NeuronWriterApiConfig 
-} from '../../models';
+} from '../models';
 
 export class NeuronWriterRepository {
   private config: NeuronWriterApiConfig;

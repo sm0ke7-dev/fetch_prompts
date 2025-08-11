@@ -54,8 +54,8 @@ fetch_prompt/
 │   │   ├── data/
 │   │   │   └── prompts.json   # AI prompt configuration data
 │   │   ├── fetch_prompt.ts    # Prompt fetching functionality
-│   │   └── optimization_terms/ # Optimization terms data access
-│   │       └── neuron_writer.ts # NeuronWriter API integration
+│   │   ├── neuron_writer.ts   # NeuronWriter API integration
+│   │   └── optimization_terms/ # Optimization terms JSON data storage
 │   ├── routes/                # API route definitions
 │   │   ├── index.ts           # Route exports (exports promptRoutes)
 │   │   └── prompt_routes.ts   # API endpoint definitions
@@ -187,7 +187,7 @@ Successfully extracted structured data from "what scares squirrels" query:
 #### **Service Layer (Fully Implemented)**
 - **Repository Layer**: 
   - `fetch_prompt.ts` - Fetches prompt configurations from JSON files
-  - `optimization_terms/neuron_writer.ts` - NeuronWriter API integration for optimization terms
+  - `neuron_writer.ts` - NeuronWriter API integration for optimization terms
 - **Service Layer**: 
   - `process_input.ts` - Handles variable substitution in prompts
   - `submit_prompt.ts` - Integrates with OpenAI API using function calling
@@ -404,7 +404,7 @@ git commit -m "feat: add user authentication endpoint"
 **Issue: Query Timeout (120s)**
 - **Problem**: NeuronWriter queries timing out after 2 minutes
 - **Solution**: Increased timeout to 5 minutes (300s) in `waitForQueryReady` method
-- **Location**: `src/repositories/optimization_terms/neuron_writer.ts` line 104
+- **Location**: `src/repositories/neuron_writer.ts` line 104
 
 **Issue: Creating Duplicate Requests**
 - **Problem**: Service creates new queries instead of reusing existing ones

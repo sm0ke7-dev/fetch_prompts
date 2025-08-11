@@ -1,4 +1,4 @@
-import { NeuronWriterRepository } from '../repositories/optimization_terms/neuron_writer';
+import { NeuronWriterRepository } from '../repositories/neuron_writer';
 import { 
   GetOptimizationTermsRequest, 
   GetOptimizationTermsResponse, 
