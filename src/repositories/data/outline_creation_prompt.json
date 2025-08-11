@@ -1,0 +1,42 @@
+{
+    "model": "gpt-4o-mini",
+    "temperature": 0.5,
+    "max_tokens": 1000,
+    "top_p": 1,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "system": "You are a helpful assistant that generates article outlines for a SEO articles based on the user's keyword and heading terms. Each section should contain a 'headline' and a 'description'.",
+    "user": "Keyword: {{keyword}} Heading Terms: {{heading_terms}}",
+    "variables": {
+        "keyword": "{{keyword}}",
+        "heading_terms": "{{heading_terms}}"  
+    },
+    "output-schema": {
+        "name": "sections",
+        "description": "Generates a list of brief sections with headers and descriptions.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sections": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "header": {
+                    "type": "string",
+                    "description": "A short, descriptive title for the section."
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "A brief explanation or summary of the section content."
+                  }
+                },
+                "required": ["header", "description"]
+              },
+              "description": "An array of sections each containing a header and description."
+            }
+          },
+          "required": ["sections"]
+        }
+      }
+}
