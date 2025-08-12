@@ -1,0 +1,59 @@
+{
+  "keyword": "exterminate rats",
+  "generated_at": "2025-08-12T12:43:24.027Z",
+  "phase": 2,
+  "outline": {
+    "sections": [
+      {
+        "header": "Understanding Rats: The Unwanted Rodents",
+        "description": "An overview of rats, their behavior, and why they become a nuisance in homes and businesses."
+      },
+      {
+        "header": "Signs of a Rat Infestation",
+        "description": "Learn how to identify signs of a rat infestation, including droppings, gnaw marks, and noises."
+      },
+      {
+        "header": "Effective Methods for Getting Rid of Rats",
+        "description": "Explore various methods for getting rid of rats, including traps, poisons, and natural deterrents."
+      },
+      {
+        "header": "Rat Removal: Professional vs. DIY Solutions",
+        "description": "Discuss the pros and cons of professional rat removal services versus DIY solutions for rat control."
+      },
+      {
+        "header": "Preventing Future Rat Infestations",
+        "description": "Tips and strategies to keep rats away and prevent future infestations, focusing on cleanliness and sealing entry points."
+      },
+      {
+        "header": "The Importance of Quick Rat Control",
+        "description": "Explain why prompt action is crucial when dealing with a rat infestation to avoid health risks and property damage."
+      },
+      {
+        "header": "Understanding Rodent Behavior for Effective Extermination",
+        "description": "Insights into rat behavior that can help in devising effective extermination strategies."
+      },
+      {
+        "header": "Common Myths About Rats and Pest Control",
+        "description": "Debunk common myths surrounding rats and pest control to provide accurate information to readers."
+      }
+    ]
+  },
+  "metadata": {
+    "processing_time_ms": 5702,
+    "token_usage": {
+      "prompt_tokens": 214,
+      "completion_tokens": 261,
+      "total_tokens": 475,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    }
+  }
+}
