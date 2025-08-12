@@ -60,7 +60,7 @@ async function main() {
 
   // 4) Check if output file was created
   const outputFile = `phase3_merged_outline_${keyword.toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, '_')}.json`;
-  const outputPath = path.join(__dirname, 'dist', 'repositories', 'outlines', outputFile);
+  const outputPath = path.join(__dirname, 'src', 'repositories', 'outlines', outputFile);
   
   if (fs.existsSync(outputPath)) {
     console.log(`\n💾 Output saved to: ${outputFile}`);

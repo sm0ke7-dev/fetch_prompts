@@ -271,7 +271,7 @@ export class GetOptimizationTermsService {
         fs.mkdirSync(outputDir, { recursive: true });
       }
 
-      const filename = `${keyword.replace(/\s+/g, '_').toLowerCase()}.json`;
+      const filename = `${keyword.toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, '_').trim()}.json`;
       const filePath = path.join(outputDir, filename);
 
       fs.writeFileSync(filePath, JSON.stringify(outputPayload, null, 2), 'utf-8');

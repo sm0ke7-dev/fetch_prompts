@@ -1,0 +1,1221 @@
+{
+  "keyword": "do raccoons eat squirrels",
+  "query_id": "58e053687b8c0c71",
+  "query_url": "https://app.neuronwriter.com/analysis/view/58e053687b8c0c71",
+  "generated_at": "2025-08-12T09:03:11.799Z",
+  "headings": {
+    "h1": [
+      {
+        "term": "raccoon",
+        "usage_percentage": 70
+      },
+      {
+        "term": "squirrel",
+        "usage_percentage": 60
+      },
+      {
+        "term": "raccoons eat",
+        "usage_percentage": 40
+      },
+      {
+        "term": "eat squirrels",
+        "usage_percentage": 20
+      },
+      {
+        "term": "raccoons eat squirrels",
+        "usage_percentage": 20
+      },
+      {
+        "term": "racoon",
+        "usage_percentage": 10
+      },
+      {
+        "term": "skunk",
+        "usage_percentage": 10
+      }
+    ],
+    "h2": [
+      {
+        "term": "squirrel",
+        "usage_percentage": 40
+      },
+      {
+        "term": "raccoon",
+        "usage_percentage": 30
+      },
+      {
+        "term": "raccoons eat",
+        "usage_percentage": 10
+      },
+      {
+        "term": "racoon",
+        "usage_percentage": 10
+      },
+      {
+        "term": "eat squirrels",
+        "usage_percentage": 10
+      },
+      {
+        "term": "raccoons eat squirrels",
+        "usage_percentage": 10
+      },
+      {
+        "term": "nest",
+        "usage_percentage": 10
+      },
+      {
+        "term": "skunk",
+        "usage_percentage": 10
+      },
+      {
+        "term": "pest",
+        "usage_percentage": 10
+      },
+      {
+        "term": "squirrel nest",
+        "usage_percentage": 10
+      },
+      {
+        "term": "raccoons feed",
+        "usage_percentage": 10
+      },
+      {
+        "term": "wildlife control",
+        "usage_percentage": 10
+      },
+      {
+        "term": "raccoon removal",
+        "usage_percentage": 10
+      },
+      {
+        "term": "professional wildlife",
+        "usage_percentage": 10
+      }
+    ],
+    "h3": []
+  },
+  "body_terms": {
+    "basic": [
+      {
+        "term": "raccoon",
+        "usage_percentage": 90,
+        "suggested_usage": [
+          6,
+          33
+        ]
+      },
+      {
+        "term": "squirrel",
+        "usage_percentage": 100,
+        "suggested_usage": [
+          2,
+          18
+        ]
+      },
+      {
+        "term": "raccoons eat",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "rat",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "nest",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          3
+        ]
+      }
+    ],
+    "extended": [
+      {
+        "term": "racoon",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "eat squirrels",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons eat squirrels",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "omnivore",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "attract raccoons",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "scavenge",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "eat other animals",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "eat almost anything",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "skunk",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "they’ll eat",
+        "usage_percentage": 0,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoon’s diet",
+        "usage_percentage": 0,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "crayfish",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "rodent",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "garbage cans",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "bird eggs",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "wild animals",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons may",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "opportunistic",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "pest",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          3
+        ]
+      },
+      {
+        "term": "eat whatever",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "prey on squirrels",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "coon",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "squirrel nest",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "pet food",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "eat pretty much",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "also eat",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "eat many",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "may attract raccoons",
+        "usage_percentage": 10,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons are omnivores",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons are nocturnal",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons will eat",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bird feeders",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "acorn",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "paw",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "trash cans",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "often eat",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "small mammals",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "may attract",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons are known",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "omnivorous",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons are more likely",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons hunt",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "dead animals",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "eat rodents",
+        "usage_percentage": 10,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons live",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "opportunistic omnivores",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons feed",
+        "usage_percentage": 10,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "consists of fruits",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "possum",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "even eat",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "find food",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "food source",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "occasionally eat",
+        "usage_percentage": 10,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "wildlife control",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoon removal",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "snail",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "carrion",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "clam",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "variety of foods",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "professional raccoon",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "nutritional value",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "try to eat",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "dens",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "scavenger",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "keen sense of smell",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "source of food",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoon roundworm",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "food and water",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "rabies",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "hickory",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "slug",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "also feed",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "omnivorous diet",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "professional wildlife",
+        "usage_percentage": 10,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  "entities": [
+    {
+      "term": "Raccoon",
+      "importance": 59.558,
+      "relevance": 0.59558,
+      "confidence": 8.951400000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Raccoon"
+        ]
+      ]
+    },
+    {
+      "term": "Food",
+      "importance": 37.4924,
+      "relevance": 0.374924,
+      "confidence": 5.1812,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Food"
+        ]
+      ]
+    },
+    {
+      "term": "Squirrel",
+      "importance": 22.77504,
+      "relevance": 0.35586,
+      "confidence": 7.2018,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Squirrel"
+        ]
+      ]
+    },
+    {
+      "term": "Nut (fruit)",
+      "importance": 17.032600000000002,
+      "relevance": 0.170326,
+      "confidence": 3.0023400000000002,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Nut_(fruit)"
+        ]
+      ]
+    },
+    {
+      "term": "Bird",
+      "importance": 16.264960000000002,
+      "relevance": 0.25414000000000003,
+      "confidence": 17.136000000000003,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bird"
+        ]
+      ]
+    },
+    {
+      "term": "Predation",
+      "importance": 12.250080000000002,
+      "relevance": 0.34028,
+      "confidence": 12.224,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Predation"
+        ]
+      ]
+    },
+    {
+      "term": "Nest",
+      "importance": 8.3772,
+      "relevance": 0.2327,
+      "confidence": 1.6532,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Nest"
+        ]
+      ]
+    },
+    {
+      "term": "Animal",
+      "importance": 7.98048,
+      "relevance": 0.22168000000000002,
+      "confidence": 10.94,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Animal"
+        ]
+      ]
+    },
+    {
+      "term": "The Raccoons",
+      "importance": 7.655295999999999,
+      "relevance": 0.11961399999999997,
+      "confidence": 2.7439999999999998,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/The_Raccoons"
+        ]
+      ]
+    },
+    {
+      "term": "Pet",
+      "importance": 6.658559999999999,
+      "relevance": 0.18495999999999996,
+      "confidence": 2.063,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Pet"
+        ]
+      ]
+    },
+    {
+      "term": "Omnivore",
+      "importance": 4.8944,
+      "relevance": 0.3059,
+      "confidence": 5.356,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Omnivore"
+        ]
+      ]
+    },
+    {
+      "term": "Bird feeder",
+      "importance": 3.32576,
+      "relevance": 0.20786,
+      "confidence": 1.675,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bird_feeder"
+        ]
+      ]
+    },
+    {
+      "term": "Cat",
+      "importance": 2.71776,
+      "relevance": 0.16986,
+      "confidence": 2.8258,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Cat"
+        ]
+      ]
+    },
+    {
+      "term": "Diet (nutrition)",
+      "importance": 2.4169600000000004,
+      "relevance": 0.15106000000000003,
+      "confidence": 0.7228,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Diet_(nutrition)"
+        ]
+      ]
+    },
+    {
+      "term": "Egg",
+      "importance": 2.33248,
+      "relevance": 0.14578,
+      "confidence": 4.336,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Egg"
+        ]
+      ]
+    },
+    {
+      "term": "Fruit",
+      "importance": 2.22208,
+      "relevance": 0.13888,
+      "confidence": 4.6396,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Fruit"
+        ]
+      ]
+    },
+    {
+      "term": "Eastern gray squirrel",
+      "importance": 2.1664000000000008,
+      "relevance": 0.13540000000000002,
+      "confidence": 2.0782,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Eastern_gray_squirrel"
+        ]
+      ]
+    },
+    {
+      "term": "Dog",
+      "importance": 2.1583999999999994,
+      "relevance": 0.1349,
+      "confidence": 3.9554,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Dog"
+        ]
+      ]
+    },
+    {
+      "term": "Plant",
+      "importance": 2.096,
+      "relevance": 0.131,
+      "confidence": 6.581999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Plant"
+        ]
+      ]
+    },
+    {
+      "term": "Meat",
+      "importance": 2.0547200000000005,
+      "relevance": 0.12842,
+      "confidence": 2.7616,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Meat"
+        ]
+      ]
+    },
+    {
+      "term": "Pet food",
+      "importance": 1.7619200000000002,
+      "relevance": 0.11012,
+      "confidence": 1.2202,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Pet_food"
+        ]
+      ]
+    },
+    {
+      "term": "Bird food",
+      "importance": 1.7388800000000002,
+      "relevance": 0.10868,
+      "confidence": 0.642,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bird_food"
+        ]
+      ]
+    },
+    {
+      "term": "Meal",
+      "importance": 1.6783999999999997,
+      "relevance": 0.1049,
+      "confidence": 0.7571999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Meal"
+        ]
+      ]
+    },
+    {
+      "term": "Bird egg",
+      "importance": 1.63104,
+      "relevance": 0.10194,
+      "confidence": 1.2756,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bird_egg"
+        ]
+      ]
+    },
+    {
+      "term": "Hickory",
+      "importance": 1.6300800000000002,
+      "relevance": 0.10188,
+      "confidence": 1.9663999999999997,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Hickory"
+        ]
+      ]
+    },
+    {
+      "term": "Snake",
+      "importance": 1.54528,
+      "relevance": 0.09658,
+      "confidence": 2.2852,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Snake"
+        ]
+      ]
+    },
+    {
+      "term": "Fat",
+      "importance": 1.5113599999999998,
+      "relevance": 0.09446,
+      "confidence": 4.558,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Fat"
+        ]
+      ]
+    },
+    {
+      "term": "Opossum",
+      "importance": 1.32704,
+      "relevance": 0.08294,
+      "confidence": 1.374,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Opossum"
+        ]
+      ]
+    },
+    {
+      "term": "Protein",
+      "importance": 1.2144,
+      "relevance": 0.0759,
+      "confidence": 11.09,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Protein"
+        ]
+      ]
+    },
+    {
+      "term": "Seed",
+      "importance": 1.040384,
+      "relevance": 0.065024,
+      "confidence": 4.549799999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Seed"
+        ]
+      ]
+    },
+    {
+      "term": "Trapping",
+      "importance": 0.6068800000000001,
+      "relevance": 0.15172000000000002,
+      "confidence": 0.5388,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Trapping"
+        ]
+      ]
+    },
+    {
+      "term": "Rodent",
+      "importance": 0.55224,
+      "relevance": 0.13806000000000002,
+      "confidence": 2.098,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Rodent"
+        ]
+      ]
+    },
+    {
+      "term": "Dog food",
+      "importance": 0.5347199999999999,
+      "relevance": 0.13368,
+      "confidence": 0.8272,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Dog_food"
+        ]
+      ]
+    },
+    {
+      "term": "Nuisance wildlife management",
+      "importance": 0.51736,
+      "relevance": 0.12934,
+      "confidence": 0.2892,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Nuisance_wildlife_management"
+        ]
+      ]
+    }
+  ],
+  "questions": {
+    "suggested": [
+      "does racoon eat squirrels",
+      "does raccoons eat squirrels",
+      "would raccoons eat squirrels",
+      "will raccoons eat squirrels",
+      "do raccoons hunt squirrels",
+      "what do raccoons eat animals",
+      "can raccoons eat squirrels",
+      "do raccoons eat squirrels in ontario",
+      "do raccoons eat squirrels at night",
+      "do raccoons eat squirrels during the day",
+      "do raccoons kill and eat squirrels",
+      "do raccoons eat squirrels in the winter",
+      "do racoon eat squirrels",
+      "do raccoons eat squirrels and rabbits",
+      "what do raccoons eat squirrels",
+      "do raccoons eat squirrels"
+    ],
+    "paa": [
+      "Do raccoons eat squirrels at night?",
+      "What animal eats squirrels the most?",
+      "Do raccoons and squirrels get along?",
+      "Is it bad to have raccoons in your yard?"
+    ],
+    "content": [
+      "&gt; Non Life Threatening Help Needed &gt;  Are Racoons a predator to a squirrel??",
+      "Are Racoons a predator to a squirrel???",
+      "Do Raccoons Eat Squirrels?",
+      "Do Racoons Eat Squirrels Often?",
+      "Do all racoon carry this roundworm?",
+      "Do raccoons attack and eat cats?",
+      "Do raccoons attack cats, dogs and other pets?",
+      "Do raccoons attack prey, or do they just eat garbage and scavenge?",
+      "Do raccoons eat bread?",
+      "Do raccoons eat cats?",
+      "Do raccoons eat ducks?",
+      "Do raccoons eat meat?",
+      "Do raccoons eat other animals?",
+      "Do squirrels dislike raccoons that much?",
+      "How can racoons eat rotten food from the garbage and not get sick?",
+      "How do I humanely get rid of a raccoon family in my backyard?",
+      "How do I keep raccoons from tearing through the screen of my patio?",
+      "How to remove a squirrel nest and prevent damage to your home or property?",
+      "How would I keep the squirrels safe from getting roundworm if the squirrels and racoons cross the same paths everyday??",
+      "I dont mind the racoon getting a drink, I just dont want him to bring any harmful diseases ( racoon roundworm) here to my wild greys since they do eat here.... Any advice?",
+      "I know from what I heard squirrels pick it up through eating the racoons poop or getting it on their paws and ingesting it right?",
+      "I mean do Racoons go after squirrels normally?",
+      "I mean do racoons go after squirrels???",
+      "If raccoons can’t find garbage or pets food, what do they eat?",
+      "Is it dangerous if a racoon drinks out of that same bowl, meaning can the squirrels pick something up from the racoons from drinking from the same bowl they do??",
+      "Is it wrong to leave cat food outdoors for a local raccoon?",
+      "Is there food that will harm a raccoon?",
+      "Raccoons Eat Squirrels: Fact or Myth?",
+      "Should I be sweeping the millet and seeds up at night, would the bird seed attract a racoon?",
+      "So Racoons actually raid squirrels nests in trees??",
+      "Squirrels and raccoons do they get along?",
+      "View Full Version : Are Racoons a predator to a squirrel??",
+      "What Do Raccoons Eat In The Wild?",
+      "What Do Raccoons, Squirrels, Woodchucks, and Skunks Eat?",
+      "What are good ways to stop a raccoon from returning nightly?",
+      "What do raccoons eat in the wild?",
+      "What do raccoons prefer to eat?",
+      "What food is poisonous to raccoons?",
+      "What is a raccoon's favorite food?",
+      "What is a surefire, nonlethal method for keeping raccoons out of bird feeders?",
+      "What smell do raccoons hate the most?",
+      "What things kill raccoons?",
+      "When do Squirrels have Babies in Ontario?",
+      "When raccoons live out in the wild, where there are no trash cans to scavenge from, what do they eat?",
+      "Why Do Raccoons Eat Squirrels?",
+      "Why are raccoons so hated and considered as pest in the USA?",
+      "Will raccoons eat my backyard chickens?",
+      "Would a racoon attack a grown squirrel to eat them??"
+    ]
+  }
+}

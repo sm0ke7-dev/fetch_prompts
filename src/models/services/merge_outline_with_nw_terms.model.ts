@@ -115,6 +115,7 @@ export interface OutputSchema {
 export interface SubmitMergeRequest {
   processedMessages: ProcessedMessage[];
   promptConfig: MergePromptConfig;
+  keyword?: string;
 }
 
 export interface SubmitMergeResponse {

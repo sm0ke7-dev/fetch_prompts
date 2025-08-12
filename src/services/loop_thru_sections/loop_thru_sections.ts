@@ -282,7 +282,7 @@ export class LoopThruSectionsService {
     const fs = require('fs');
     const path = require('path');
     
-    const promptPath = path.join(__dirname, '..', '..', 'repositories', 'data', 'loop_prompt.json');
+    const promptPath = path.join(__dirname, '..', '..', '..', 'src', 'repositories', 'data', 'loop_prompt.json');
     
     if (!fs.existsSync(promptPath)) {
       throw new Error('Loop prompt configuration file not found: loop_prompt.json');

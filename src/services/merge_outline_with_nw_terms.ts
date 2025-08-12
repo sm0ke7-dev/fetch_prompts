@@ -58,7 +58,8 @@ export class MergeOutlineWithNWTermsService {
       console.log('🤖 Submitting merge request to OpenAI...');
       const submitResult = await this.submitMergeRequest({
         processedMessages: processResult.data!.processedMessages,
-        promptConfig: processResult.data!.promptConfig
+        promptConfig: processResult.data!.promptConfig,
+        keyword: request.keyword
       });
 
       if (!submitResult.success) {
@@ -170,7 +171,8 @@ export class MergeOutlineWithNWTermsService {
       
       const submitResult = await submitMergeOutline({
         processedMessages: request.processedMessages,
-        promptConfig: request.promptConfig
+        promptConfig: request.promptConfig,
+        keyword: request.keyword
       });
 
       if (!submitResult.success) {
@@ -205,7 +207,7 @@ export class MergeOutlineWithNWTermsService {
     const fs = require('fs');
     const path = require('path');
     
-    const promptPath = path.join(__dirname, '..', 'repositories', 'data', 'outline_kw_merge_prompt.json');
+    const promptPath = path.join(__dirname, '..', '..', 'src', 'repositories', 'data', 'outline_kw_merge_prompt.json');
     
     if (!fs.existsSync(promptPath)) {
       throw new Error('Merge prompt configuration file not found: outline_kw_merge_prompt.json');
@@ -213,4 +215,16 @@ export class MergeOutlineWithNWTermsService {
 
     return JSON.parse(fs.readFileSync(promptPath, 'utf-8'));
   }
+}
+
+/**
+ * Convenience function to merge outline with NW terms
+ */
+export async function mergeOutlineWithTerms(request: { keyword: string }): Promise<any> {
+  const service = new MergeOutlineWithNWTermsService();
+  return service.mergeOutlineWithNWTerms({
+    keyword: request.keyword,
+    phase2OutlineFile: undefined,
+    optimizationTermsFile: undefined
+  });
 }

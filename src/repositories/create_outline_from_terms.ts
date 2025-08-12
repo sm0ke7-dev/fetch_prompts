@@ -21,10 +21,11 @@ export async function loadOptimizationTerms(
 ): Promise<LoadTermsResponse> {
   try {
     // Generate filename from keyword if not provided
-    const termsFilename = filename || `${keyword.replace(/\s+/g, '_').toLowerCase()}.json`;
+    const termsFilename = filename || `${keyword.toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, '_').trim()}.json`;
     
     // Define the path to the optimization_terms directory
-    const termsDirectory = path.join(__dirname, 'optimization_terms');
+    // When compiled, __dirname points to dist/repositories, so we need to go up to src/repositories/optimization_terms
+    const termsDirectory = path.join(__dirname, '..', '..', 'src', 'repositories', 'optimization_terms');
     const filePath = path.join(termsDirectory, termsFilename);
     
     // Check if the file exists

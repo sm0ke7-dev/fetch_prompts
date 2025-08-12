@@ -10,7 +10,8 @@ import * as path from 'path';
 export async function fetchPromptByName(promptName: string): Promise<PromptResponse | ErrorResponse> {
   try {
     // Define the path to the data directory
-    const dataDirectory = path.join(__dirname, 'data');
+    // When compiled, __dirname points to dist/repositories, so we need to go up to src/repositories/data
+    const dataDirectory = path.join(__dirname, '..', '..', 'src', 'repositories', 'data');
     
     // Check if the data directory exists
     if (!fs.existsSync(dataDirectory)) {

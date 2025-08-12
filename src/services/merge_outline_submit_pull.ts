@@ -8,7 +8,7 @@ import {
  * @param request - The submit request containing processed messages and prompt config
  * @returns Promise<MergeOutlineSubmitResponse>
  */
-export async function submitMergeOutline(request: MergeOutlineSubmitRequest): Promise<MergeOutlineSubmitResponse> {
+export async function submitMergeOutline(request: MergeOutlineSubmitRequest & { keyword?: string }): Promise<MergeOutlineSubmitResponse> {
   try {
     // Use the existing submitPrompt service
     const { submitPrompt } = require('./submit_prompt');
@@ -48,7 +48,7 @@ export async function submitMergeOutline(request: MergeOutlineSubmitRequest): Pr
     const parsedResponse = JSON.parse(openAIResponse.data!.content);
     
     const mergedOutline = {
-      keyword: extractKeywordFromPrompt(request.processedMessages),
+      keyword: request.keyword || extractKeywordFromPrompt(request.processedMessages),
       generated_at: new Date().toISOString(),
       phase: 3,
       sections: parsedResponse.sections,
@@ -83,8 +83,13 @@ function extractKeywordFromPrompt(messages: any[]): string {
   // This is a simplified extraction - in practice, you might want to store the keyword separately
   const userMessage = messages.find(m => m.role === 'user');
   if (userMessage && userMessage.content.includes('article_outline:')) {
-    // Extract from the first line or use a default
-    return 'what scares bats out of homes'; // Default for now
+    // Try to extract keyword from the content
+    const content = userMessage.content;
+    // Look for patterns that might contain the keyword
+    const keywordMatch = content.match(/keyword[:\s]+([^,\n]+)/i);
+    if (keywordMatch) {
+      return keywordMatch[1].trim();
+    }
   }
   return 'unknown';
 }

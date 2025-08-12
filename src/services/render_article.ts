@@ -39,20 +39,10 @@ export class RenderArticleService {
     lines.push(`# ${this.escapeMd(phase4.keyword)}`);
     lines.push('');
 
-    // TOC
-    lines.push('## Table of Contents');
-    phase4.sections.forEach((s: any, idx: number) => {
-      const anchor = this.slug(`${idx + 1}-${s.headline}`);
-      lines.push(`- [${idx + 1}. ${s.headline}](#${anchor})`);
-    });
-    lines.push('');
-
     // Sections
     phase4.sections.forEach((section: any, idx: number) => {
       const sectionHeadline = section.content?.headline || section.headline;
-      const anchor = this.slug(`${idx + 1}-${sectionHeadline}`);
       lines.push(`## ${idx + 1}. ${sectionHeadline}`);
-      lines.push(`<a id="${anchor}"></a>`);
       lines.push('');
 
       // Render blocks

@@ -1,0 +1,55 @@
+{
+  "keyword": "do raccoons eat squirrels",
+  "generated_at": "2025-08-12T10:24:20.125Z",
+  "phase": 2,
+  "outline": {
+    "sections": [
+      {
+        "header": "Understanding Raccoons and Their Diet",
+        "description": "Explore the general diet of raccoons, including their omnivorous nature and the variety of foods they consume, such as fruits, insects, and small animals."
+      },
+      {
+        "header": "Do Raccoons Eat Squirrels?",
+        "description": "Investigate whether raccoons include squirrels in their diet, discussing the circumstances under which they might prey on them."
+      },
+      {
+        "header": "The Relationship Between Raccoons and Squirrels",
+        "description": "Analyze the ecological relationship between raccoons and squirrels, including competition for resources and potential predation."
+      },
+      {
+        "header": "Raccoons' Hunting Behavior",
+        "description": "Examine how raccoons hunt and forage for food, including their techniques and strategies that might involve hunting squirrels."
+      },
+      {
+        "header": "Squirrel Defense Mechanisms",
+        "description": "Discuss the natural defenses that squirrels have against predators like raccoons, including their agility and nesting habits."
+      },
+      {
+        "header": "Comparing Raccoons and Other Predators",
+        "description": "Look at how raccoons compare to other predators, such as skunks, in terms of their hunting habits and prey preferences."
+      },
+      {
+        "header": "Conclusion: Raccoons and Their Role in the Ecosystem",
+        "description": "Summarize the role of raccoons in the ecosystem, their dietary habits, and the impact they have on squirrel populations."
+      }
+    ]
+  },
+  "metadata": {
+    "processing_time_ms": 7828,
+    "token_usage": {
+      "prompt_tokens": 223,
+      "completion_tokens": 277,
+      "total_tokens": 500,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    }
+  }
+}

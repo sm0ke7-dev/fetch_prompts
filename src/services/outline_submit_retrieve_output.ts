@@ -9,8 +9,8 @@ import {
   OutlinePromptConfig,
   OutlineProcessedInputData
 } from '../models/services/outline_submit_retrieve_output.models';
-import { processOutlineInputs } from './outline_process_input';
-import { fetchPromptByName } from '../repositories/fetch_prompt';
+import { loadOptimizationTerms, formatHeadingTermsForPrompt } from '../repositories/create_outline_from_terms';
+
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -130,41 +130,85 @@ export async function generateArticleOutline(request: GenerateOutlineRequest): P
   try {
     console.log(`🚀 Starting article outline generation for keyword: "${request.keyword}"`);
 
-    // Step 1: Process outline inputs (loads terms, formats prompt)
+    // Step 1: Load optimization terms and format for prompt
     console.log('📝 Processing outline inputs...');
-    const processResult = await processOutlineInputs({
-      userInput: {
-        keyword: request.keyword,
-        optimization_terms_file: request.optimization_terms_file
-      },
-      promptName: 'outline_creation_prompt'
-    });
-
-    if (!processResult.success || !processResult.data) {
+    
+    const termsResult = await loadOptimizationTerms(request.keyword);
+    
+    if (!termsResult.success || !termsResult.data) {
       return {
         success: false,
-        error: processResult.message,
-        message: `Failed to process outline inputs: ${processResult.message}`
+        error: termsResult.message,
+        message: `Failed to load optimization terms: ${termsResult.message}`
       };
     }
+
+    // Format heading terms for the prompt
+    const formattedHeadingTerms = formatHeadingTermsForPrompt(termsResult.data);
 
     // Step 2: Load prompt configuration
     console.log('⚙️ Loading prompt configuration...');
-    const promptResult = await fetchPromptByName('outline_creation_prompt');
     
-    if (!promptResult.success || !promptResult.data) {
+    // Load the outline creation prompt directly from the data file
+    const promptPath = path.join(__dirname, '..', '..', 'src', 'repositories', 'data', 'outline_creation_prompt.json');
+    
+    if (!fs.existsSync(promptPath)) {
       return {
         success: false,
-        error: promptResult.message,
-        message: `Failed to load prompt configuration: ${promptResult.message}`
+        error: 'PROMPT_FILE_NOT_FOUND',
+        message: 'Outline creation prompt file not found'
       };
     }
+    
+    let promptConfig;
+    try {
+      const promptContent = fs.readFileSync(promptPath, 'utf-8');
+      promptConfig = JSON.parse(promptContent);
+    } catch (error) {
+      return {
+        success: false,
+        error: 'PROMPT_PARSE_ERROR',
+        message: `Failed to parse prompt configuration: ${error}`
+      };
+    }
+
+    // Process the prompt with variables
+    const substitutionData = {
+      keyword: request.keyword,
+      heading_terms: formattedHeadingTerms
+    };
+
+    // Process the system message
+    let processedSystemMessage = promptConfig.system;
+    for (const [key, value] of Object.entries(substitutionData)) {
+      const placeholder = `{{${key}}}`;
+      processedSystemMessage = processedSystemMessage.replace(
+        new RegExp(placeholder, 'g'), 
+        String(value)
+      );
+    }
+
+    // Process the user message
+    let processedUserMessage = promptConfig.user;
+    for (const [key, value] of Object.entries(substitutionData)) {
+      const placeholder = `{{${key}}}`;
+      processedUserMessage = processedUserMessage.replace(
+        new RegExp(placeholder, 'g'), 
+        String(value)
+      );
+    }
+
+    const processedInput = {
+      processedUserMessage,
+      processedSystemMessage,
+      variables: substitutionData
+    };
 
     // Step 3: Submit to OpenAI
     console.log('🤖 Submitting to OpenAI API...');
     const submitResult = await submitOutlinePrompt({
-      processedInput: processResult.data as OutlineProcessedInputData,
-      promptConfig: promptResult.data as OutlinePromptConfig
+      processedInput: processedInput as OutlineProcessedInputData,
+      promptConfig: promptConfig as OutlinePromptConfig
     });
 
     if (!submitResult.success || !submitResult.data) {

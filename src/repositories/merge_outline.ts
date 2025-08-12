@@ -14,9 +14,11 @@ export class MergeOutlineRepository {
   private readonly optimizationTermsPath: string;
 
   constructor() {
-    this.dataPath = path.join(__dirname, 'data');
-    this.outlinesPath = path.join(__dirname, 'outlines');
-    this.optimizationTermsPath = path.join(__dirname, 'optimization_terms');
+    // When compiled, __dirname points to dist/repositories, so we need to go up to src/repositories
+    const srcPath = path.join(__dirname, '..', '..', 'src', 'repositories');
+    this.dataPath = path.join(srcPath, 'data');
+    this.outlinesPath = path.join(srcPath, 'outlines');
+    this.optimizationTermsPath = path.join(srcPath, 'optimization_terms');
   }
 
   /**

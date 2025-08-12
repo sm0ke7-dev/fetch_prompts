@@ -1,6 +1,6 @@
 {
-  "keyword": "what scares bats out of homes",
-  "generated_at": "2025-08-12T09:45:24.097Z",
+  "keyword": "unknown",
+  "generated_at": "2025-08-12T09:58:02.285Z",
   "phase": 3,
   "sections": [
     {
@@ -9,14 +9,13 @@
       "header-terms": [
         "raccoon",
         "squirrel",
-        "raccoons eat",
-        "omnivore"
+        "raccoons eat"
       ],
       "content-terms": [
         "eat squirrels",
-        "scavenge",
-        "eat almost anything",
-        "wild animals"
+        "omnivore",
+        "opportunistic",
+        "eat almost anything"
       ]
     },
     {
@@ -24,59 +23,55 @@
       "description": "An in-depth look at the general diet of raccoons, including fruits, insects, and small animals. This section will highlight how squirrels fit into their diet.",
       "header-terms": [
         "raccoon",
-        "diet",
-        "omnivore",
-        "squirrel"
+        "squirrel",
+        "diet"
       ],
       "content-terms": [
-        "eat squirrels",
-        "squirrel nest",
+        "scavenge",
         "garbage cans",
         "bird eggs",
-        "scavenge"
+        "squirrel nest"
       ]
     },
     {
       "headline": "Are Squirrels Common Prey for Raccoons?",
       "description": "This section examines the relationship between raccoons and squirrels, discussing how often raccoons target squirrels as a food source.",
       "header-terms": [
-        "squirrels",
-        "prey",
-        "raccoons eat"
+        "raccoon",
+        "squirrel",
+        "prey"
       ],
       "content-terms": [
         "eat squirrels",
-        "opportunistic",
-        "rodent",
-        "wild animals"
+        "wild animals",
+        "opportunistic"
       ]
     },
     {
       "headline": "The Role of Squirrels in the Raccoon’s Diet",
       "description": "An exploration of the nutritional value of squirrels for raccoons and how this affects their hunting behavior.",
       "header-terms": [
-        "squirrels",
-        "diet",
-        "raccoon"
+        "raccoon",
+        "squirrel",
+        "nutritional value"
       ],
       "content-terms": [
-        "nutritional value",
         "eat squirrels",
-        "scavenge"
+        "rodent",
+        "hunting behavior"
       ]
     },
     {
       "headline": "Raccoons vs. Other Predators: The Competition for Squirrels",
       "description": "This section compares raccoons with other predators, such as skunks, that also prey on squirrels, highlighting the ecological dynamics.",
       "header-terms": [
-        "raccoons",
-        "predators",
-        "squirrels",
-        "skunk"
+        "raccoon",
+        "skunk",
+        "predators"
       ],
       "content-terms": [
+        "squirrel",
         "competition",
-        "eat squirrels",
         "wild animals"
       ]
     },
@@ -85,50 +80,47 @@
       "description": "A detailed examination of the hunting techniques raccoons use to catch squirrels, including their physical abilities and strategies.",
       "header-terms": [
         "raccoon",
-        "hunt",
-        "squirrels"
+        "squirrel",
+        "hunting techniques"
       ],
       "content-terms": [
-        "hunting techniques",
-        "capture",
+        "capture squirrels",
         "opportunistic",
-        "eat squirrels"
+        "physical abilities"
       ]
     },
     {
       "headline": "Impact of Raccoons on Squirrel Populations",
       "description": "This section discusses how raccoon predation affects local squirrel populations and the broader ecosystem.",
       "header-terms": [
-        "impact",
-        "squirrel populations",
-        "raccoons"
+        "raccoon",
+        "squirrel",
+        "population impact"
       ],
       "content-terms": [
         "predation",
         "ecosystem",
-        "eat squirrels",
-        "wild animals"
+        "squirrel populations"
       ]
     },
     {
       "headline": "Conclusion: Raccoons and Their Role in the Ecosystem",
       "description": "A summary of the findings regarding raccoons eating squirrels and their significance in the food chain and ecosystem.",
       "header-terms": [
-        "conclusion",
-        "raccoons",
-        "ecosystem",
-        "squirrels"
+        "raccoon",
+        "squirrel",
+        "ecosystem"
       ],
       "content-terms": [
         "food chain",
-        "impact",
-        "eat squirrels"
+        "role in ecosystem",
+        "predation"
       ]
     }
   ],
   "metadata": {
-    "processing_time_ms": 1754991924098,
-    "body_terms_used": 58,
+    "processing_time_ms": 1754992682286,
+    "body_terms_used": 50,
     "original_sections": 8
   }
 }

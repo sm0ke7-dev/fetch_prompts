@@ -22,7 +22,8 @@ export class NeuronWriterRepository {
    */
   private async readKeywordFromFile(): Promise<string> {
     try {
-      const keywordPath = path.join(__dirname, 'data', 'keyword.json');
+      // When compiled, __dirname points to dist/repositories, so we need to go up to src/repositories/data
+    const keywordPath = path.join(__dirname, '..', '..', 'src', 'repositories', 'data', 'keyword.json');
       const fileContent = fs.readFileSync(keywordPath, 'utf-8');
       const data = JSON.parse(fileContent);
       
