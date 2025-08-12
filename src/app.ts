@@ -1,5 +1,5 @@
 import express from 'express';
-import { promptRoutes } from './routes';
+import { promptRoutes, textMediaCreatorRoutes } from './routes';
 
 /**
  * Express application setup
@@ -25,6 +25,7 @@ app.use((req, res, next) => {
 
 // Routes
 app.use('/api', promptRoutes);
+app.use('/api', textMediaCreatorRoutes);
 
 // Health check endpoint
 app.get('/health', (req, res) => {

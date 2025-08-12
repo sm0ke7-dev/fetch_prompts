@@ -1,0 +1,580 @@
+{
+  "keyword": "raccoon predators",
+  "generated_at": "2025-08-12T11:31:08.691Z",
+  "phase": 4,
+  "sections": [
+    {
+      "headline": "Understanding Raccoons: Nature's Clever Survivors",
+      "description": "Explore the characteristics and behavior of raccoons, highlighting their adaptability and intelligence in various environments.",
+      "header-terms": [
+        "raccoon",
+        "wildlife",
+        "mammal",
+        "pest"
+      ],
+      "content-terms": [
+        "raccoons often",
+        "adult raccoon",
+        "young raccoon",
+        "raccoons in the wild",
+        "raccoons in north america"
+      ],
+      "content": {
+        "headline": "Understanding Raccoons: Nature's Clever Survivors",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": "Raccoons are fascinating wildlife mammals known for their adaptability and intelligence. These nocturnal creatures are often spotted rummaging through trash cans or scavenging in urban areas, which has earned them a reputation as pests. However, understanding the behavior and characteristics of raccoons can shed light on why they thrive in diverse environments."
+          },
+          {
+            "type": "paragraph",
+            "content": "Adult raccoons, typically weighing between 8 to 20 pounds, are recognized by their distinctive black mask and ringed tail. They are highly adaptable, using their dexterous front paws to manipulate objects and access food sources. In contrast, young raccoons, known as kits, are born blind and rely on their mothers for warmth and nourishment until they are old enough to venture out on their own."
+          },
+          {
+            "type": "unordered-list",
+            "content": [
+              "Raccoons in North America are found in forests, urban areas, and wetlands, showcasing their versatility.",
+              "They are omnivorous, feeding on fruits, nuts, seeds, insects, and even human food.",
+              "Raccoons often exhibit problem-solving skills, making them adept at finding solutions to access food."
+            ]
+          }
+        ]
+      },
+      "metadata": {
+        "processing_time_ms": 1754998201704,
+        "token_usage": {
+          "prompt_tokens": 294,
+          "completion_tokens": 251,
+          "total_tokens": 545,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "headline": "The Role of Predators in Raccoon Populations",
+      "description": "Discuss the significance of predators in maintaining raccoon populations and the ecological balance.",
+      "header-terms": [
+        "predator",
+        "raccoon populations",
+        "natural predators"
+      ],
+      "content-terms": [
+        "predator of raccoons",
+        "raccoons may",
+        "raccoons and other animals"
+      ],
+      "content": {
+        "headline": "The Role of Predators in Raccoon Populations",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": "Predators play a crucial role in maintaining raccoon populations and ensuring ecological balance. In the wild, raccoons face threats from various natural predators, including coyotes, bobcats, and even larger birds of prey. These predators help control raccoon populations, preventing them from overrunning their habitats and competing with other animals for resources."
+          },
+          {
+            "type": "paragraph",
+            "content": "Without the presence of these natural predators, raccoons may experience unchecked population growth. This can lead to overgrazing and depletion of food resources, not only affecting raccoons but also impacting other species that share the same habitat. The intricate balance of the ecosystem relies on this predator-prey dynamic to sustain diverse wildlife."
+          },
+          {
+            "type": "unordered-list",
+            "content": [
+              "Coyotes: One of the primary predators of raccoons, coyotes can significantly reduce raccoon numbers in their territory.",
+              "Bobcats: These stealthy hunters prey on raccoons, particularly juvenile individuals, helping to keep populations in check.",
+              "Great Horned Owls: As nocturnal predators, these owls can target raccoons at night, contributing to their mortality rates."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": "In conclusion, the role of predators in raccoon populations is vital for maintaining ecological balance. By regulating raccoon numbers, predators ensure that these animals do not become overly dominant in their ecosystems, promoting a healthy and diverse community of wildlife."
+          }
+        ]
+      },
+      "metadata": {
+        "processing_time_ms": 1754998207499,
+        "token_usage": {
+          "prompt_tokens": 281,
+          "completion_tokens": 308,
+          "total_tokens": 589,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "headline": "Top 10 Natural Predators of Raccoons",
+      "description": "List and describe the ten most common natural predators of raccoons, including their hunting techniques and habitats.",
+      "header-terms": [
+        "natural predators",
+        "fox",
+        "coyote",
+        "bobcats",
+        "owl",
+        "eagle",
+        "great horned owl",
+        "cougar"
+      ],
+      "content-terms": [
+        "hunt raccoons",
+        "kill a raccoon",
+        "birds of prey",
+        "raccoons in the wild"
+      ],
+      "content": {
+        "headline": "Top 10 Natural Predators of Raccoons",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": "Raccoons are highly adaptable creatures, often seen foraging through urban areas and wooded habitats. However, they are not at the top of the food chain. Many natural predators hunt raccoons and play a crucial role in controlling their populations. Here’s a look at the ten most common natural predators of raccoons, including their hunting techniques and habitats."
+          },
+          {
+            "type": "ordered-list",
+            "content": [
+              "<li><strong>Fox</strong> - Foxes are cunning hunters and often use stealth to stalk their prey. They typically hunt raccoons at night, employing their keen sense of hearing to locate them in dense foliage.</li>",
+              "<li><strong>Coyote</strong> - Observant and adaptable, coyotes hunt raccoons using a pack strategy. They often chase raccoons in open fields or wooded areas, making it difficult for the raccoons to escape.</li>",
+              "<li><strong>Bobcats</strong> - These solitary hunters rely on ambush tactics. Bobcats will stealthily approach their target before launching a surprise attack, often in the underbrush where raccoons are foraging.</li>",
+              "<li><strong>Great Horned Owl</strong> - As one of the most formidable birds of prey, the great horned owl hunts raccoons by night. They can fly silently and pinpoint raccoons from high above, swooping down to catch them off guard.</li>",
+              "<li><strong>Red-tailed Hawk</strong> - Known for their excellent vision, red-tailed hawks can spot raccoons from great distances. They dive at high speeds to capture their prey, often targeting young or sick raccoons in the wild.</li>",
+              "<li><strong>Golden Eagle</strong> - With powerful talons and sharp eyesight, golden eagles can hunt raccoons by swooping down from cliffs or tall trees, making them one of the apex predators in their habitat.</li>",
+              "<li><strong>Mountain Lion (Cougar)</strong> - Cougars are stealthy and powerful predators that can kill a raccoon with a single swipe. They prefer mountainous regions but can also be found in forests where raccoons reside.</li>",
+              "<li><strong>Domestic Dogs</strong> - While not wild, domestic dogs can pose a threat to raccoons. Their instinct to chase and hunt can lead to encounters that often result in injury or death for raccoons.</li>",
+              "<li><strong>Raccoon Kits</strong> - Interestingly, young raccoons are sometimes preyed upon by adult raccoons. This behavior can occur in overpopulated areas where food is scarce, leading to cannibalistic tendencies.</li>",
+              "<li><strong>Humans</strong> - Although not a predator in the traditional sense, humans can greatly impact raccoon populations through trapping and hunting, which can lead to reduced numbers in certain areas.</li>"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": "Understanding these natural predators is essential for appreciating the ecological balance in the habitats where raccoons live. Each predator employs unique hunting techniques that reflect their adaptations, showcasing the intricate relationships within their ecosystems."
+          }
+        ]
+      },
+      "metadata": {
+        "processing_time_ms": 1754998219878,
+        "token_usage": {
+          "prompt_tokens": 302,
+          "completion_tokens": 677,
+          "total_tokens": 979,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "headline": "How Foxes Target Raccoons as Prey",
+      "description": "Examine the relationship between foxes and raccoons, detailing how foxes hunt and consume raccoons.",
+      "header-terms": [
+        "fox",
+        "predator",
+        "prey"
+      ],
+      "content-terms": [
+        "fox hunting techniques",
+        "raccoons may",
+        "raccoons as prey"
+      ],
+      "content": {
+        "headline": "How Foxes Target Raccoons as Prey",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": "The dynamic between foxes and raccoons is a fascinating example of predator-prey relationships in the wild. As cunning predators, foxes have developed various hunting techniques that allow them to target raccoons effectively. While raccoons may appear to be agile and resourceful, they can fall victim to the stealth and strategy employed by foxes."
+          },
+          {
+            "type": "headline-3",
+            "content": "Fox Hunting Techniques"
+          },
+          {
+            "type": "unordered-list",
+            "content": [
+              "Stalking: Foxes often stalk raccoons quietly, using their keen sense of hearing and sight to locate them before making a move.",
+              "Ambush: Utilizing their knowledge of the raccoon's habits, foxes may set up ambushes in areas where raccoons are known to forage.",
+              "Chasing: If the opportunity arises, foxes can also chase raccoons, relying on their speed and agility to close the distance quickly."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": "Raccoons may not be the primary focus of a fox's diet, but they do represent a significant source of nutrition when the opportunity arises. Foxes will often target weaker or younger raccoons, ensuring that they can secure a meal without risking injury. This relationship highlights the intricate balance of the ecosystem, where each species plays a role in maintaining the natural order."
+          }
+        ]
+      },
+      "metadata": {
+        "processing_time_ms": 1754998228382,
+        "token_usage": {
+          "prompt_tokens": 281,
+          "completion_tokens": 288,
+          "total_tokens": 569,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "headline": "Coyotes: A Growing Threat to Raccoons",
+      "description": "Analyze the impact of coyotes on raccoon populations, including their hunting strategies and territorial behaviors.",
+      "header-terms": [
+        "coyote",
+        "raccoon populations",
+        "predator"
+      ],
+      "content-terms": [
+        "coyotes hunting raccoons",
+        "killing raccoons",
+        "raccoons often"
+      ],
+      "content": {
+        "headline": "Coyotes: A Growing Threat to Raccoons",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": "Coyotes have increasingly become a significant threat to raccoon populations across various regions. As adaptable predators, coyotes employ unique hunting strategies that have made them efficient in targeting raccoons. Their ability to thrive in urban areas means they come into closer contact with raccoons, altering the dynamics between these two species."
+          },
+          {
+            "type": "ordered-list",
+            "content": [
+              "Coyotes often hunt raccoons alone or in small packs, using their speed and keen senses to track them down.",
+              "They are known to exploit the element of surprise, ambushing raccoons in their natural habitats, especially during the night when raccoons are most active.",
+              "Coyotes tend to target younger raccoons or those that are ill or injured, which can significantly impact local raccoon populations."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": "The territorial behaviors of coyotes also play a critical role in their interactions with raccoons. Coyotes establish and defend territories that overlap with raccoon habitats, leading to increased competition for food resources. This territoriality can result in aggressive encounters, further threatening raccoon populations."
+          },
+          {
+            "type": "unordered-list",
+            "content": [
+              "As coyotes expand their range, raccoons are forced into smaller territories, increasing their vulnerability.",
+              "The presence of coyotes can lead to changes in raccoon behavior, causing them to avoid certain areas, which impacts their feeding and breeding patterns.",
+              "In areas with high coyote populations, raccoons may experience higher mortality rates, particularly among juveniles."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": "In conclusion, the relationship between coyotes and raccoons is complex and evolving. As coyotes continue to adapt and expand their territories, the pressure on raccoon populations is likely to increase. Understanding these dynamics is crucial for wildlife management and conservation efforts."
+          }
+        ]
+      },
+      "metadata": {
+        "processing_time_ms": 1754998238932,
+        "token_usage": {
+          "prompt_tokens": 283,
+          "completion_tokens": 381,
+          "total_tokens": 664,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "headline": "Other Wildlife That Eat Raccoons",
+      "description": "Identify additional wildlife species that prey on raccoons, discussing their roles in the ecosystem.",
+      "header-terms": [
+        "wildlife",
+        "natural predators"
+      ],
+      "content-terms": [
+        "raccoons and other animals",
+        "raccoons in north america"
+      ],
+      "content": {
+        "headline": "Other Wildlife That Eat Raccoons",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": "Raccoons are fascinating creatures commonly found in North America, but they are not at the top of the food chain. Various wildlife species prey on raccoons, playing significant roles in maintaining the balance of their ecosystems. Understanding these natural predators helps us appreciate the complexity of wildlife interactions."
+          },
+          {
+            "type": "unordered-list",
+            "content": [
+              "Coyotes: These adaptable canines are known for their opportunistic hunting behavior, making them one of the primary predators of raccoons.",
+              "Bobcats: As stealthy hunters, bobcats often hunt raccoons, especially in wooded areas where they can ambush their prey.",
+              "Great Horned Owls: These powerful birds of prey can take down raccoons, particularly juvenile ones, during the night when they are most active.",
+              "Mountain Lions: In certain regions, mountain lions may also prey on raccoons, although they typically target larger mammals."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": "The presence of these predators regulates raccoon populations, preventing overpopulation and reducing competition for food resources. This dynamic ensures that raccoons and other animals coexist sustainably within their habitats, highlighting the interconnectedness of wildlife in North America."
+          }
+        ]
+      },
+      "metadata": {
+        "processing_time_ms": 1754998244186,
+        "token_usage": {
+          "prompt_tokens": 272,
+          "completion_tokens": 254,
+          "total_tokens": 526,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "headline": "The Impact of Human Activity on Raccoon Predators",
+      "description": "Investigate how urbanization and habitat destruction affect the natural predators of raccoons.",
+      "header-terms": [
+        "human activity",
+        "predator",
+        "wildlife"
+      ],
+      "content-terms": [
+        "urbanization effects",
+        "habitat destruction",
+        "raccoons may"
+      ],
+      "content": {
+        "headline": "The Impact of Human Activity on Raccoon Predators",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": "As urbanization continues to expand, the effects on wildlife ecosystems become increasingly evident. One such impact is the disruption of the natural predator-prey dynamics, particularly concerning raccoons and their predators. Human activity, through urban development and habitat destruction, alters the environments that are essential for maintaining healthy wildlife populations."
+          },
+          {
+            "type": "paragraph",
+            "content": "Raccoons, often seen as adaptable urban dwellers, may thrive in human-altered landscapes; however, their natural predators face significant challenges. Urban environments often lead to a reduction in the availability of critical habitats for these predators, such as forests and wetlands. This habitat destruction not only limits their ability to hunt for food but also reduces their breeding and nesting sites, ultimately affecting their populations."
+          },
+          {
+            "type": "ordered-list",
+            "content": [
+              "Loss of natural habitats limits the range of raccoon predators, such as coyotes and foxes.",
+              "Urbanization increases human-wildlife conflict, leading to the potential culling of predators.",
+              "Fragmented habitats isolate predator populations, making it difficult for them to find mates or food."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": "In sum, while raccoons may adapt to urban settings, the underlying effects of human activity on their predators cannot be overlooked. It is crucial to recognize that preserving wildlife corridors and green spaces can help mitigate the adverse effects of urbanization and habitat destruction on these essential predator species."
+          }
+        ]
+      },
+      "metadata": {
+        "processing_time_ms": 1754998251586,
+        "token_usage": {
+          "prompt_tokens": 275,
+          "completion_tokens": 302,
+          "total_tokens": 577,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "headline": "Raccoons as Pests: The Predator-Prey Dynamic",
+      "description": "Discuss the perception of raccoons as pests and how this influences their interactions with predators.",
+      "header-terms": [
+        "pest",
+        "predator",
+        "prey"
+      ],
+      "content-terms": [
+        "raccoons as pests",
+        "trash cans",
+        "wildlife interactions"
+      ],
+      "content": {
+        "headline": "Raccoons as Pests: The Predator-Prey Dynamic",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": "Raccoons are often perceived as pests, especially in urban settings where they rummage through trash cans in search of food. This behavior not only frustrates homeowners but also shapes how these creatures interact with other wildlife. The perception of raccoons as pests can influence their status as both predators and prey within their ecosystems."
+          },
+          {
+            "type": "paragraph",
+            "content": "As opportunistic feeders, raccoons have adapted to exploit human environments, leading to increased wildlife interactions. Their ability to thrive in urban areas makes them more visible and often more problematic, which can exacerbate the perception of them as nuisances. However, this adaptability also plays a role in their relationships with natural predators."
+          },
+          {
+            "type": "unordered-list",
+            "content": [
+              "Raccoons are known to scavenge for food, often competing with other wildlife for resources, which can elevate their role as a pest.",
+              "Their interactions with predators such as coyotes and owls can shift depending on their availability of food in human-populated areas.",
+              "The balance of predator-prey dynamics can be altered when raccoons are forced to adapt to urban settings, leading to increased encounters with both predators and humans."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": "Understanding raccoons through the lens of their pest status offers insight into the broader ecological implications of wildlife interactions. While they may be seen as pests by some, their role in the environment as both predator and prey is crucial for maintaining ecological balance."
+          }
+        ]
+      },
+      "metadata": {
+        "processing_time_ms": 1754998257566,
+        "token_usage": {
+          "prompt_tokens": 277,
+          "completion_tokens": 316,
+          "total_tokens": 593,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "headline": "How to Protect Raccoons from Predators",
+      "description": "Provide tips and strategies for wildlife enthusiasts on how to protect raccoons in their natural habitats.",
+      "header-terms": [
+        "protect raccoons",
+        "wildlife",
+        "predator"
+      ],
+      "content-terms": [
+        "strategies for protection",
+        "raccoons in the wild",
+        "habitat preservation"
+      ],
+      "content": {
+        "headline": "How to Protect Raccoons from Predators",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": "Raccoons are fascinating creatures that play a significant role in our ecosystem. However, their survival can be threatened by various predators. As wildlife enthusiasts, it's essential to understand effective strategies for protection to ensure that raccoons can thrive in their natural habitats."
+          },
+          {
+            "type": "unordered-list",
+            "content": [
+              "Understand the local wildlife: Familiarize yourself with the predators that inhabit the same areas as raccoons in the wild, such as coyotes, foxes, and owls.",
+              "Create safe spaces: Encourage habitat preservation by planting native vegetation and creating brush piles, which provide raccoons with shelter from potential threats.",
+              "Monitor raccoon populations: Keep track of raccoon sightings and behavior in your area, which can help you identify any increases in predator activity.",
+              "Reduce human-induced threats: Educate your community about securing trash and minimizing outdoor lighting to reduce human-wildlife conflict.",
+              "Support local wildlife organizations: Get involved with or donate to organizations focused on habitat preservation and the protection of raccoons and other wildlife."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": "By implementing these strategies for protection, you can help safeguard raccoons and contribute to the overall health of their ecosystems. Remember, protecting raccoons not only benefits them but also enhances the biodiversity of the wildlife community."
+          }
+        ]
+      },
+      "metadata": {
+        "processing_time_ms": 1754998265241,
+        "token_usage": {
+          "prompt_tokens": 279,
+          "completion_tokens": 279,
+          "total_tokens": 558,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "headline": "Conclusion: The Balance of Nature and Raccoon Survival",
+      "description": "Summarize the importance of understanding raccoon predators and their role in the ecosystem for conservation efforts.",
+      "header-terms": [
+        "raccoon",
+        "predator",
+        "wildlife"
+      ],
+      "content-terms": [
+        "conservation efforts",
+        "ecological balance",
+        "raccoons in north america"
+      ],
+      "content": {
+        "headline": "Conclusion: The Balance of Nature and Raccoon Survival",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": "Understanding the intricate relationship between raccoons and their predators is vital for effective conservation efforts. Raccoons in North America play a significant role in maintaining ecological balance, acting as both consumers and prey within their habitats. By recognizing the various predators that impact raccoon populations, we can better appreciate their role in the ecosystem and the importance of wildlife management."
+          },
+          {
+            "type": "paragraph",
+            "content": "Conservation efforts aimed at preserving raccoon habitats not only benefit these animals but also the myriad of species that coexist within the same environment. Promoting a healthy ecological balance ensures that raccoons and their predators can thrive, highlighting the interconnectedness of wildlife and the need for comprehensive conservation strategies."
+          }
+        ]
+      },
+      "metadata": {
+        "processing_time_ms": 1754998268691,
+        "token_usage": {
+          "prompt_tokens": 279,
+          "completion_tokens": 163,
+          "total_tokens": 442,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "audio_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "processing_time_ms": 1754998268691,
+    "total_sections": 10,
+    "total_word_count": 2072,
+    "total_content_blocks": 35
+  }
+}

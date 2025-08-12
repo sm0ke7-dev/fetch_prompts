@@ -1,0 +1,1840 @@
+{
+  "keyword": "what eats bats",
+  "query_id": "2845b1276e8c5d54",
+  "query_url": "https://app.neuronwriter.com/analysis/view/2845b1276e8c5d54",
+  "generated_at": "2025-08-12T11:26:45.527Z",
+  "headings": {
+    "h1": [
+      {
+        "term": "bat",
+        "usage_percentage": 80
+      },
+      {
+        "term": "predator",
+        "usage_percentage": 20
+      },
+      {
+        "term": "bats eat",
+        "usage_percentage": 20
+      },
+      {
+        "term": "facts about bats",
+        "usage_percentage": 20
+      },
+      {
+        "term": "eat bats",
+        "usage_percentage": 10
+      },
+      {
+        "term": "predator of bats",
+        "usage_percentage": 10
+      },
+      {
+        "term": "eat other bats",
+        "usage_percentage": 10
+      },
+      {
+        "term": "bat predators",
+        "usage_percentage": 10
+      },
+      {
+        "term": "echolocation",
+        "usage_percentage": 10
+      }
+    ],
+    "h2": [
+      {
+        "term": "bat",
+        "usage_percentage": 40
+      },
+      {
+        "term": "eat bats",
+        "usage_percentage": 20
+      },
+      {
+        "term": "predator",
+        "usage_percentage": 10
+      },
+      {
+        "term": "bats eat",
+        "usage_percentage": 10
+      },
+      {
+        "term": "facts about bats",
+        "usage_percentage": 10
+      },
+      {
+        "term": "animals eat bats",
+        "usage_percentage": 10
+      },
+      {
+        "term": "hibernate",
+        "usage_percentage": 10
+      }
+    ],
+    "h3": []
+  },
+  "body_terms": {
+    "basic": [
+      {
+        "term": "bat",
+        "usage_percentage": 100,
+        "suggested_usage": [
+          29,
+          63
+        ]
+      },
+      {
+        "term": "predator",
+        "usage_percentage": 70,
+        "suggested_usage": [
+          1,
+          12
+        ]
+      },
+      {
+        "term": "prey",
+        "usage_percentage": 70,
+        "suggested_usage": [
+          1,
+          13
+        ]
+      },
+      {
+        "term": "brown bat",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          3
+        ]
+      },
+      {
+        "term": "eat bats",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          4
+        ]
+      },
+      {
+        "term": "little brown bat",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "owl",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          11
+        ]
+      },
+      {
+        "term": "mammal",
+        "usage_percentage": 80,
+        "suggested_usage": [
+          1,
+          7
+        ]
+      },
+      {
+        "term": "roost",
+        "usage_percentage": 70,
+        "suggested_usage": [
+          1,
+          7
+        ]
+      },
+      {
+        "term": "bat species",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          3
+        ]
+      },
+      {
+        "term": "snake",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          4
+        ]
+      },
+      {
+        "term": "bats eat",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "hawk",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          6
+        ]
+      },
+      {
+        "term": "bats live",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "little brown",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "fruit bat",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      }
+    ],
+    "extended": [
+      {
+        "term": "natural predators",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "predator of bats",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          3
+        ]
+      },
+      {
+        "term": "species of bat",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "spectral bat",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "vampire bat",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          4
+        ]
+      },
+      {
+        "term": "eat other bats",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "facts about bats",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bat predators",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "birds of prey",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "white-nose syndrome",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bat conservation",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "natural predators of bats",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "catch bats",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats roost",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "animals eat bats",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "hibernating bats",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "hibernate",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "crocodile",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "main predators",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "top predators",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "significant predators",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "catch bats in flight",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats are the only mammal",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "nocturnal",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "common bat",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "rodent",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "snakes eat bats",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "many bats",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bat population",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "common vampire bats",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "peregrine falcons",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "beak",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "pollinate",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "owls are also nocturnal",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "swoop",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "different species",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "central and south america",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "small mammals",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "take bats",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bat conservation trust",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "habitat loss",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "echolocation",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "flying fox",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "many animals",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "domestic cats",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "rock crevices",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats make",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "eat bats even",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "tropical regions",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "lie in wait",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "source for bats",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats also",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "fall prey",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "pseudogymnoascus destructans",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bats are also",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "snake species",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "roosting sites",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "department of the interior",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "fish and wildlife service",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bat species living",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "nectar",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bat conservation international",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "large birds",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "sharp talons",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "river banks",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "pipistrelle",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  "entities": [
+    {
+      "term": "Bat",
+      "importance": 77.69,
+      "relevance": 0.7769,
+      "confidence": 20.326,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bat"
+        ]
+      ]
+    },
+    {
+      "term": "Predation",
+      "importance": 65.03,
+      "relevance": 0.6503,
+      "confidence": 21.978,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Predation"
+        ]
+      ]
+    },
+    {
+      "term": "Bird",
+      "importance": 47.465999999999994,
+      "relevance": 0.47465999999999997,
+      "confidence": 26.1846,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bird"
+        ]
+      ]
+    },
+    {
+      "term": "Owl",
+      "importance": 35.26912,
+      "relevance": 0.55108,
+      "confidence": 12.334999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Owl"
+        ]
+      ]
+    },
+    {
+      "term": "Hawk",
+      "importance": 29.780480000000004,
+      "relevance": 0.46532,
+      "confidence": 5.0329999999999995,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Hawk"
+        ]
+      ]
+    },
+    {
+      "term": "Species",
+      "importance": 25.058000000000003,
+      "relevance": 0.25058,
+      "confidence": 14.9,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Species"
+        ]
+      ]
+    },
+    {
+      "term": "Mammal",
+      "importance": 24.801280000000002,
+      "relevance": 0.38752000000000003,
+      "confidence": 29.514,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Mammal"
+        ]
+      ]
+    },
+    {
+      "term": "Cat",
+      "importance": 23.70304,
+      "relevance": 0.37036,
+      "confidence": 6.0534,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Cat"
+        ]
+      ]
+    },
+    {
+      "term": "Bird of prey",
+      "importance": 23.445760000000003,
+      "relevance": 0.36634,
+      "confidence": 21.598,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bird_of_prey"
+        ]
+      ]
+    },
+    {
+      "term": "Snake",
+      "importance": 22.108160000000005,
+      "relevance": 0.34544,
+      "confidence": 8.4214,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Snake"
+        ]
+      ]
+    },
+    {
+      "term": "Insect",
+      "importance": 21.488639999999997,
+      "relevance": 0.33575999999999995,
+      "confidence": 19.384,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Insect"
+        ]
+      ]
+    },
+    {
+      "term": "Falcon",
+      "importance": 15.083280000000002,
+      "relevance": 0.41898,
+      "confidence": 3.382,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Falcon"
+        ]
+      ]
+    },
+    {
+      "term": "Flight",
+      "importance": 14.6176,
+      "relevance": 0.2284,
+      "confidence": 0.9648,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Flight"
+        ]
+      ]
+    },
+    {
+      "term": "Little brown bat",
+      "importance": 13.028399999999998,
+      "relevance": 0.3619,
+      "confidence": 3.6496000000000004,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Little_brown_bat"
+        ]
+      ]
+    },
+    {
+      "term": "Nocturnality",
+      "importance": 12.223439999999998,
+      "relevance": 0.33953999999999995,
+      "confidence": 8.094,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Nocturnality"
+        ]
+      ]
+    },
+    {
+      "term": "Fruit",
+      "importance": 10.414080000000002,
+      "relevance": 0.16272,
+      "confidence": 6.7268,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Fruit"
+        ]
+      ]
+    },
+    {
+      "term": "Pollination",
+      "importance": 8.62704,
+      "relevance": 0.23964,
+      "confidence": 3.1217999999999995,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Pollination"
+        ]
+      ]
+    },
+    {
+      "term": "Fly",
+      "importance": 7.860240000000001,
+      "relevance": 0.21834000000000003,
+      "confidence": 3.4842,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Fly"
+        ]
+      ]
+    },
+    {
+      "term": "Animal",
+      "importance": 7.80624,
+      "relevance": 0.21684,
+      "confidence": 9.578,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Animal"
+        ]
+      ]
+    },
+    {
+      "term": "Hunting",
+      "importance": 7.4973600000000005,
+      "relevance": 0.20826000000000003,
+      "confidence": 3.2601999999999998,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Hunting"
+        ]
+      ]
+    },
+    {
+      "term": "Food",
+      "importance": 6.161760000000001,
+      "relevance": 0.17116000000000003,
+      "confidence": 2.7034000000000002,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Food"
+        ]
+      ]
+    },
+    {
+      "term": "Endangered species",
+      "importance": 5.56704,
+      "relevance": 0.15464,
+      "confidence": 3.7162000000000006,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Endangered_species"
+        ]
+      ]
+    },
+    {
+      "term": "Wing",
+      "importance": 5.517360000000001,
+      "relevance": 0.15326,
+      "confidence": 0.8976,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Wing"
+        ]
+      ]
+    },
+    {
+      "term": "White-nose syndrome",
+      "importance": 5.5075199999999995,
+      "relevance": 0.34421999999999997,
+      "confidence": 4.285,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/White-nose_syndrome"
+        ]
+      ]
+    },
+    {
+      "term": "Mouth",
+      "importance": 5.38632,
+      "relevance": 0.14962,
+      "confidence": 1.6431999999999998,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Mouth"
+        ]
+      ]
+    },
+    {
+      "term": "Great horned owl",
+      "importance": 5.274240000000001,
+      "relevance": 0.32964000000000004,
+      "confidence": 2.82,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Great_horned_owl"
+        ]
+      ]
+    },
+    {
+      "term": "Peregrine falcon",
+      "importance": 4.943040000000001,
+      "relevance": 0.30894000000000005,
+      "confidence": 7.958,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Peregrine_falcon"
+        ]
+      ]
+    },
+    {
+      "term": "Cave",
+      "importance": 4.90032,
+      "relevance": 0.13612,
+      "confidence": 1.9311999999999998,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Cave"
+        ]
+      ]
+    },
+    {
+      "term": "Tail",
+      "importance": 4.8837600000000005,
+      "relevance": 0.13566000000000003,
+      "confidence": 1.1667999999999998,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Tail"
+        ]
+      ]
+    },
+    {
+      "term": "Pseudogymnoascus destructans",
+      "importance": 4.76128,
+      "relevance": 0.29758,
+      "confidence": 3.9846000000000004,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Pseudogymnoascus_destructans"
+        ]
+      ]
+    },
+    {
+      "term": "Spider",
+      "importance": 4.45472,
+      "relevance": 0.27842,
+      "confidence": 5.6326,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Spider"
+        ]
+      ]
+    },
+    {
+      "term": "Wildlife",
+      "importance": 4.437360000000001,
+      "relevance": 0.12326000000000001,
+      "confidence": 2.8228,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Wildlife"
+        ]
+      ]
+    },
+    {
+      "term": "Spider web",
+      "importance": 4.316799999999999,
+      "relevance": 0.2698,
+      "confidence": 0.587,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Spider_web"
+        ]
+      ]
+    },
+    {
+      "term": "Megabat",
+      "importance": 4.23328,
+      "relevance": 0.26458,
+      "confidence": 4.211,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Megabat"
+        ]
+      ]
+    },
+    {
+      "term": "Tarantula",
+      "importance": 4.215999999999999,
+      "relevance": 0.26349999999999996,
+      "confidence": 3.397,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Tarantula"
+        ]
+      ]
+    },
+    {
+      "term": "Claw",
+      "importance": 3.78176,
+      "relevance": 0.23636,
+      "confidence": 2.193,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Claw"
+        ]
+      ]
+    },
+    {
+      "term": "Fish",
+      "importance": 3.761136000000001,
+      "relevance": 0.10447600000000001,
+      "confidence": 8.285799999999998,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Fish"
+        ]
+      ]
+    },
+    {
+      "term": "Lizard",
+      "importance": 3.5615999999999994,
+      "relevance": 0.2226,
+      "confidence": 3.0520000000000005,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Lizard"
+        ]
+      ]
+    },
+    {
+      "term": "Centipede",
+      "importance": 3.51104,
+      "relevance": 0.21944,
+      "confidence": 3.382,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Centipede"
+        ]
+      ]
+    },
+    {
+      "term": "United States",
+      "importance": 3.45744,
+      "relevance": 0.09603999999999999,
+      "confidence": 10.325999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/United_States"
+        ]
+      ]
+    },
+    {
+      "term": "Spectral bat",
+      "importance": 3.3750399999999994,
+      "relevance": 0.21094,
+      "confidence": 1.4804,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Spectral_bat"
+        ]
+      ]
+    },
+    {
+      "term": "Crocodile",
+      "importance": 3.364159999999999,
+      "relevance": 0.21025999999999997,
+      "confidence": 3.8292,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Crocodile"
+        ]
+      ]
+    },
+    {
+      "term": "Beak",
+      "importance": 3.1955199999999997,
+      "relevance": 0.19971999999999998,
+      "confidence": 3.0224,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Beak"
+        ]
+      ]
+    },
+    {
+      "term": "Pteropus",
+      "importance": 3.17696,
+      "relevance": 0.19856000000000001,
+      "confidence": 1.682,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Pteropus"
+        ]
+      ]
+    },
+    {
+      "term": "Bat hawk",
+      "importance": 3.17056,
+      "relevance": 0.19815999999999998,
+      "confidence": 1.3594000000000002,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bat_hawk"
+        ]
+      ]
+    },
+    {
+      "term": "South America",
+      "importance": 3.1543200000000002,
+      "relevance": 0.08762,
+      "confidence": 9.774,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/South_America"
+        ]
+      ]
+    },
+    {
+      "term": "Rodent",
+      "importance": 2.9350399999999994,
+      "relevance": 0.18344,
+      "confidence": 3.6818,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Rodent"
+        ]
+      ]
+    },
+    {
+      "term": "Nectar",
+      "importance": 2.816,
+      "relevance": 0.176,
+      "confidence": 2.1488,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Nectar"
+        ]
+      ]
+    },
+    {
+      "term": "Fox",
+      "importance": 2.3990400000000007,
+      "relevance": 0.14994000000000002,
+      "confidence": 2.2643999999999997,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Fox"
+        ]
+      ]
+    },
+    {
+      "term": "Tooth",
+      "importance": 2.248,
+      "relevance": 0.1405,
+      "confidence": 1.3679999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Tooth"
+        ]
+      ]
+    },
+    {
+      "term": "Pseudogymnoascus",
+      "importance": 2.1884799999999998,
+      "relevance": 0.13677999999999998,
+      "confidence": 0.7482,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Pseudogymnoascus"
+        ]
+      ]
+    },
+    {
+      "term": "Pet",
+      "importance": 1.88736,
+      "relevance": 0.11796,
+      "confidence": 0.9245999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Pet"
+        ]
+      ]
+    },
+    {
+      "term": "Meat",
+      "importance": 1.7382400000000002,
+      "relevance": 0.10864,
+      "confidence": 0.49139999999999995,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Meat"
+        ]
+      ]
+    },
+    {
+      "term": "Disease",
+      "importance": 1.6944000000000004,
+      "relevance": 0.10590000000000002,
+      "confidence": 2.7278,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Disease"
+        ]
+      ]
+    },
+    {
+      "term": "Plant",
+      "importance": 1.6806399999999997,
+      "relevance": 0.10504,
+      "confidence": 6.032,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Plant"
+        ]
+      ]
+    },
+    {
+      "term": "Fungus",
+      "importance": 1.5926399999999998,
+      "relevance": 0.09953999999999999,
+      "confidence": 7.703999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Fungus"
+        ]
+      ]
+    },
+    {
+      "term": "Hibernation",
+      "importance": 1.5152,
+      "relevance": 0.0947,
+      "confidence": 1.9823999999999997,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Hibernation"
+        ]
+      ]
+    },
+    {
+      "term": "Ecosystem",
+      "importance": 1.34304,
+      "relevance": 0.08394,
+      "confidence": 6.484,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Ecosystem"
+        ]
+      ]
+    },
+    {
+      "term": "Australia",
+      "importance": 1.33216,
+      "relevance": 0.08326,
+      "confidence": 12.022,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Australia"
+        ]
+      ]
+    },
+    {
+      "term": "River",
+      "importance": 1.27072,
+      "relevance": 0.07942,
+      "confidence": 0.587,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/River"
+        ]
+      ]
+    },
+    {
+      "term": "Syndrome",
+      "importance": 1.26432,
+      "relevance": 0.07902,
+      "confidence": 0.7486,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Syndrome"
+        ]
+      ]
+    },
+    {
+      "term": "Blood",
+      "importance": 1.1494400000000002,
+      "relevance": 0.07184,
+      "confidence": 3.0242,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Blood"
+        ]
+      ]
+    },
+    {
+      "term": "Sky",
+      "importance": 1.10464,
+      "relevance": 0.06904,
+      "confidence": 0.47485999999999995,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Sky"
+        ]
+      ]
+    },
+    {
+      "term": "Earth",
+      "importance": 1.0832000000000004,
+      "relevance": 0.06770000000000001,
+      "confidence": 0.5048,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Earth"
+        ]
+      ]
+    },
+    {
+      "term": "Data",
+      "importance": 0.9635200000000003,
+      "relevance": 0.06022000000000001,
+      "confidence": 0.5193,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Data"
+        ]
+      ]
+    },
+    {
+      "term": "Africa",
+      "importance": 0.9068799999999999,
+      "relevance": 0.056679999999999994,
+      "confidence": 6.462000000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Africa"
+        ]
+      ]
+    },
+    {
+      "term": "Ounce",
+      "importance": 0.729536,
+      "relevance": 0.045596,
+      "confidence": 0.8160000000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Ounce"
+        ]
+      ]
+    },
+    {
+      "term": "Orb-weaver spider",
+      "importance": 0.6700799999999999,
+      "relevance": 0.16752,
+      "confidence": 0.3612,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Orb-weaver_spider"
+        ]
+      ]
+    },
+    {
+      "term": "Pangolin",
+      "importance": 0.65608,
+      "relevance": 0.16402,
+      "confidence": 2.3120000000000003,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Pangolin"
+        ]
+      ]
+    },
+    {
+      "term": "Sharp-shinned hawk",
+      "importance": 0.6469600000000001,
+      "relevance": 0.16174,
+      "confidence": 2.072,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Sharp-shinned_hawk"
+        ]
+      ]
+    },
+    {
+      "term": "Arachnid",
+      "importance": 0.62472,
+      "relevance": 0.15618,
+      "confidence": 2.426,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Arachnid"
+        ]
+      ]
+    },
+    {
+      "term": "Cooper's hawk",
+      "importance": 0.61552,
+      "relevance": 0.15388,
+      "confidence": 2.318,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Cooper's_hawk"
+        ]
+      ]
+    },
+    {
+      "term": "Indian flying fox",
+      "importance": 0.58536,
+      "relevance": 0.14634,
+      "confidence": 1.6754000000000002,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Indian_flying_fox"
+        ]
+      ]
+    },
+    {
+      "term": "Opiliones",
+      "importance": 0.56992,
+      "relevance": 0.14248,
+      "confidence": 0.9238,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Opiliones"
+        ]
+      ]
+    },
+    {
+      "term": "Tawny owl",
+      "importance": 0.56096,
+      "relevance": 0.14024,
+      "confidence": 2.676,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Tawny_owl"
+        ]
+      ]
+    },
+    {
+      "term": "Reptile",
+      "importance": 0.54304,
+      "relevance": 0.13576,
+      "confidence": 4.522,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Reptile"
+        ]
+      ]
+    },
+    {
+      "term": "Western barn owl",
+      "importance": 0.54184,
+      "relevance": 0.13546,
+      "confidence": 0.773,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Western_barn_owl"
+        ]
+      ]
+    },
+    {
+      "term": "Strigidae",
+      "importance": 0.5388,
+      "relevance": 0.1347,
+      "confidence": 3.556,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Strigidae"
+        ]
+      ]
+    },
+    {
+      "term": "Nephila",
+      "importance": 0.53792,
+      "relevance": 0.13448,
+      "confidence": 1.24,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Nephila"
+        ]
+      ]
+    },
+    {
+      "term": "Scorpion",
+      "importance": 0.52984,
+      "relevance": 0.13246,
+      "confidence": 1.0539999999999998,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Scorpion"
+        ]
+      ]
+    },
+    {
+      "term": "Horned owl",
+      "importance": 0.5282560000000002,
+      "relevance": 0.033016000000000004,
+      "confidence": 1.518,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Horned_owl"
+        ]
+      ]
+    },
+    {
+      "term": "Microbat",
+      "importance": 0.528,
+      "relevance": 0.132,
+      "confidence": 1.3174,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Microbat"
+        ]
+      ]
+    },
+    {
+      "term": "Huntsman spider",
+      "importance": 0.51216,
+      "relevance": 0.12804,
+      "confidence": 1.0968,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Huntsman_spider"
+        ]
+      ]
+    }
+  ],
+  "questions": {
+    "suggested": [
+      "what what do bats eat",
+      "what do bats eat and drink",
+      "what country eats bats",
+      "who eats bats",
+      "do any animals eat bats",
+      "what do bats eat wow classic",
+      "what eats bats",
+      "what are bats eating habits",
+      "what can eat bats",
+      "what animals eat bats",
+      "what do bats eat in minecraft",
+      "what did bats eat",
+      "what do bats eat in canada",
+      "what do bats eat blood",
+      "are bats",
+      "what is bats eat",
+      "what do bats eat fruit",
+      "what will eat bats",
+      "what centipede eats bats",
+      "what do bats eat for food",
+      "what does bats eat in minecraft",
+      "what is eating bats",
+      "what are bats eat",
+      "which country eats bats",
+      "what do bats eat in ontario",
+      "bats eating",
+      "who eats bats in the food chain",
+      "what do bats eat at night",
+      "which animal eats bats",
+      "what does eat bats",
+      "what do eat bats",
+      "what animal eats bats",
+      "does anything eat bats"
+    ],
+    "paa": [
+      "What animal eats a bat?",
+      "What is the biggest killer of bats?",
+      "What is a natural predator for bats?",
+      "Do cats eat bats?"
+    ],
+    "content": [
+      "Are bats blind?",
+      "Are bats dangerous?",
+      "Bat Predators: What Eats Bats?",
+      "Bats are swift omnivores who fortunately eat varieties of diets, but what eats bats themselves?",
+      "Bats, they're just like us?",
+      "But, what makes bats a staple in their diets?",
+      "Can you imagine an organism as small as spiders eating creatures as big as bats?",
+      "Can you imagine that these water-loving animals eat bats?",
+      "Disclaimer, idk squat about bats, but iirc, the bugs they eat, they catch on the wing, so if a ladybug were flying around when the bat was, probably?",
+      "Do bats eat ladybugs/ladybeetles?",
+      "Do coyotes have natural predators?",
+      "Do raccoons have any natural predators?",
+      "Do vampire bats really exist?",
+      "How are bats affected by wind turbines?",
+      "How do bats catch their prey in the dark?",
+      "How do bats give birth?",
+      "How do bats mate?",
+      "How do bats protect themselves from predators?",
+      "How often do bats attack humans?",
+      "I'm from Canada and I was wondering if bats in Canada eat ladybugs?",
+      "If bats are the only mammals capable of flight, what does that mean for flying squirrels?",
+      "Is This Crocodile Eating Her Babies or Taking Them to Safety?",
+      "It's easy to think of them as \"predators\", but have you ever considered that they might be prey?",
+      "It’s easy to think of them as “predators”, but have you ever considered that they might be prey?",
+      "Knowing this, aren’t you wondering how these heavy mammals get to eat bats?",
+      "Or how these bats get into a crocodile’s mouth in the first place?",
+      "Originally Answered: What animals are natural predators of bats?",
+      "Originally Answered: What are the natural predators to bats?",
+      "Originally Answered: What kind of predators do bats have?",
+      "So what predators eat bats?",
+      "So who or what exactly is out there snacking on these nocturnal creatures?",
+      "So, to summarize, do bats eat ladybugs?",
+      "Think you know bats?",
+      "What Animals Eat Bats?",
+      "What Do Bats Eat?",
+      "What Eats Bats?",
+      "What animal eats bats?",
+      "What are some natural predators of cows?",
+      "What are some natural predators of mosquitoes besides DEET for humans and bats for other animals?",
+      "What are some natural predators of the raccoon?",
+      "What are some natural predators of wasp?",
+      "What are the natural predators of alligators?",
+      "What are the natural predators of bats?",
+      "What are the natural predators of fireflies?",
+      "What are the natural predators of fruits bats?",
+      "What are the natural predators of pigs?",
+      "What are the natural predators of platypuses?",
+      "What are the pangolin's natural predators?",
+      "What are the predators of little brown bats?",
+      "What do bats eat?",
+      "What is White-nose Syndrome?",
+      "What is a predator to a bat?",
+      "What should I do if I find dead or dying bats, or if I observe bats with signs of White-nose Syndrome?",
+      "What species of bats are affected by White-nose Syndrome?",
+      "Where do bats live?",
+      "Which animal prey on bats inside their cave?",
+      "Why are bats important?",
+      "﻿What do bats eat?"
+    ]
+  }
+}

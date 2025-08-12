@@ -1,0 +1,55 @@
+{
+  "keyword": "what eats bats",
+  "generated_at": "2025-08-12T11:26:54.707Z",
+  "phase": 2,
+  "outline": {
+    "sections": [
+      {
+        "header": "Introduction to Bats",
+        "description": "An overview of bats, their importance in ecosystems, and the role they play in nature."
+      },
+      {
+        "header": "What Eats Bats?",
+        "description": "A detailed look at the various predators that hunt bats, including birds of prey and larger mammals."
+      },
+      {
+        "header": "Predators of Bats",
+        "description": "An exploration of specific animals that are known to eat bats, including their hunting habits and how they impact bat populations."
+      },
+      {
+        "header": "Facts About Bats",
+        "description": "Interesting and lesser-known facts about bats, including their behavior, habitat, and diet."
+      },
+      {
+        "header": "Do Bats Hibernate?",
+        "description": "An explanation of bat hibernation patterns, including which species hibernate and the conditions that trigger this behavior."
+      },
+      {
+        "header": "What Do Bats Eat?",
+        "description": "A discussion on the diet of bats, focusing on the various insects and fruits they consume and their role in pest control and pollination."
+      },
+      {
+        "header": "Conclusion",
+        "description": "A summary of the key points discussed, emphasizing the ecological importance of bats and their predators."
+      }
+    ]
+  },
+  "metadata": {
+    "processing_time_ms": 9178,
+    "token_usage": {
+      "prompt_tokens": 207,
+      "completion_tokens": 221,
+      "total_tokens": 428,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "keyword": "what eats squirrels",
+  "generated_at": "2025-08-12T10:43:47.647Z",
+  "phase": 2,
+  "outline": {
+    "sections": [
+      {
+        "header": "Understanding Squirrels: An Overview",
+        "description": "This section provides an introduction to squirrels, focusing on their habitat, behavior, and diet, emphasizing the grey squirrel as a common species."
+      },
+      {
+        "header": "Natural Predators of Squirrels",
+        "description": "Here, we explore the various natural predators that hunt squirrels, detailing their hunting methods and the ecological role they play."
+      },
+      {
+        "header": "The Role of Foxes in Squirrel Populations",
+        "description": "This section discusses how foxes, as opportunistic predators, impact squirrel populations and their hunting strategies."
+      },
+      {
+        "header": "Owls: Silent Hunters of the Night",
+        "description": "An overview of how owls, particularly larger species, prey on squirrels during nighttime, highlighting their unique hunting adaptations."
+      },
+      {
+        "header": "Hawks: Aerial Predators of Squirrels",
+        "description": "This section examines the role of hawks in controlling squirrel populations, focusing on their keen eyesight and hunting techniques."
+      },
+      {
+        "header": "Coyotes: Versatile Predators",
+        "description": "A look at how coyotes adapt their hunting to include squirrels in their diet, especially in urban environments."
+      },
+      {
+        "header": "Raccoons: Opportunistic Feeders",
+        "description": "This section highlights how raccoons may consume squirrels, particularly in areas where food sources are scarce."
+      },
+      {
+        "header": "Ground Squirrels: A Different Perspective",
+        "description": "An exploration of how ground squirrels, as a different species, face predation and their unique adaptations to avoid being eaten."
+      },
+      {
+        "header": "Conclusion: The Balance of Nature",
+        "description": "A summary of the predator-prey relationship between squirrels and their predators, emphasizing the importance of this balance in ecosystems."
+      }
+    ]
+  },
+  "metadata": {
+    "processing_time_ms": 7910,
+    "token_usage": {
+      "prompt_tokens": 207,
+      "completion_tokens": 334,
+      "total_tokens": 541,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    }
+  }
+}

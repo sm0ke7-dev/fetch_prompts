@@ -1,0 +1,1385 @@
+{
+  "keyword": "what eats squirrels",
+  "query_id": "b3d98a211428fb25",
+  "query_url": "https://app.neuronwriter.com/analysis/view/b3d98a211428fb25",
+  "generated_at": "2025-08-12T10:43:39.723Z",
+  "headings": {
+    "h1": [
+      {
+        "term": "squirrel",
+        "usage_percentage": 70
+      },
+      {
+        "term": "predator",
+        "usage_percentage": 30
+      },
+      {
+        "term": "grey squirrel",
+        "usage_percentage": 10
+      },
+      {
+        "term": "gray squirrel",
+        "usage_percentage": 10
+      },
+      {
+        "term": "eat squirrels",
+        "usage_percentage": 10
+      },
+      {
+        "term": "predators eat",
+        "usage_percentage": 10
+      },
+      {
+        "term": "eastern gray",
+        "usage_percentage": 10
+      },
+      {
+        "term": "carnivorous",
+        "usage_percentage": 10
+      }
+    ],
+    "h2": [
+      {
+        "term": "squirrel",
+        "usage_percentage": 20
+      },
+      {
+        "term": "predator",
+        "usage_percentage": 10
+      },
+      {
+        "term": "fox",
+        "usage_percentage": 10
+      },
+      {
+        "term": "owl",
+        "usage_percentage": 10
+      },
+      {
+        "term": "ground squirrel",
+        "usage_percentage": 10
+      },
+      {
+        "term": "hawk",
+        "usage_percentage": 10
+      },
+      {
+        "term": "coyote",
+        "usage_percentage": 10
+      },
+      {
+        "term": "raccoon",
+        "usage_percentage": 10
+      },
+      {
+        "term": "snake",
+        "usage_percentage": 10
+      },
+      {
+        "term": "nest",
+        "usage_percentage": 10
+      },
+      {
+        "term": "weasel",
+        "usage_percentage": 10
+      },
+      {
+        "term": "vole",
+        "usage_percentage": 10
+      },
+      {
+        "term": "bobcats",
+        "usage_percentage": 10
+      },
+      {
+        "term": "sciurus carolinensis",
+        "usage_percentage": 10
+      },
+      {
+        "term": "hibernate",
+        "usage_percentage": 10
+      },
+      {
+        "term": "opportunist",
+        "usage_percentage": 10
+      }
+    ],
+    "h3": []
+  },
+  "body_terms": {
+    "basic": [
+      {
+        "term": "squirrel",
+        "usage_percentage": 100,
+        "suggested_usage": [
+          17,
+          55
+        ]
+      },
+      {
+        "term": "predator",
+        "usage_percentage": 90,
+        "suggested_usage": [
+          2,
+          9
+        ]
+      },
+      {
+        "term": "grey squirrel",
+        "usage_percentage": 70,
+        "suggested_usage": [
+          1,
+          11
+        ]
+      },
+      {
+        "term": "gray squirrel",
+        "usage_percentage": 70,
+        "suggested_usage": [
+          1,
+          11
+        ]
+      },
+      {
+        "term": "prey",
+        "usage_percentage": 90,
+        "suggested_usage": [
+          1,
+          6
+        ]
+      },
+      {
+        "term": "fox",
+        "usage_percentage": 80,
+        "suggested_usage": [
+          1,
+          3
+        ]
+      },
+      {
+        "term": "owl",
+        "usage_percentage": 70,
+        "suggested_usage": [
+          1,
+          4
+        ]
+      },
+      {
+        "term": "hawk",
+        "usage_percentage": 70,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "birds of prey",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "coyote",
+        "usage_percentage": 70,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoon",
+        "usage_percentage": 70,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "snake",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "weasel",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "red-tailed",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      }
+    ],
+    "extended": [
+      {
+        "term": "red squirrels",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "eat squirrels",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "ground squirrel",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "squirrel species",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "predators eat",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "pine martens",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "hunt squirrels",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "squirrel's tail",
+        "usage_percentage": 0,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "nest",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "red foxes",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "eastern gray",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "great horned owl",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "goshawk",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "vole",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "red-tailed hawks",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "bobcats",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "chipmunk",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "forage",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "prey on squirrels",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raptor",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "rodent",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "number of squirrels",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "red squirrel population",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "squirrels also",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "great horned",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "two squirrel species",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "carnivorous",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "breeding season",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "predation",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "food availability",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "rattlesnake",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "small animals",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "burrow",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "predatory birds",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "squirrels use",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "food caches",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "sciurus carolinensis",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "squirrels will also",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "foraging on the ground",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "squirrels also use",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "squirrel in its mouth",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "house cats",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "opportunistic",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "squirrels are also",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "small rodents",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "conifer",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "hibernate",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "nestling",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "university of california",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "coniferous",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "acorn",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "spermophilus",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "opportunist",
+        "usage_percentage": 10,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  "entities": [
+    {
+      "term": "Predation",
+      "importance": 60.374,
+      "relevance": 0.6037399999999999,
+      "confidence": 18.358,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Predation"
+        ]
+      ]
+    },
+    {
+      "term": "Squirrel",
+      "importance": 38.970000000000006,
+      "relevance": 0.38970000000000005,
+      "confidence": 9.533199999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Squirrel"
+        ]
+      ]
+    },
+    {
+      "term": "Eastern gray squirrel",
+      "importance": 35.168000000000006,
+      "relevance": 0.5495000000000001,
+      "confidence": 6.5664,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Eastern_gray_squirrel"
+        ]
+      ]
+    },
+    {
+      "term": "Coyote",
+      "importance": 27.528960000000005,
+      "relevance": 0.43014,
+      "confidence": 5.980199999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Coyote"
+        ]
+      ]
+    },
+    {
+      "term": "Hawk",
+      "importance": 21.724160000000005,
+      "relevance": 0.33944,
+      "confidence": 3.9758000000000004,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Hawk"
+        ]
+      ]
+    },
+    {
+      "term": "Owl",
+      "importance": 20.561919999999997,
+      "relevance": 0.32128,
+      "confidence": 4.33,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Owl"
+        ]
+      ]
+    },
+    {
+      "term": "Cat",
+      "importance": 20.161279999999998,
+      "relevance": 0.31501999999999997,
+      "confidence": 6.327,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Cat"
+        ]
+      ]
+    },
+    {
+      "term": "Fox",
+      "importance": 18.126079999999998,
+      "relevance": 0.28321999999999997,
+      "confidence": 4.4134,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Fox"
+        ]
+      ]
+    },
+    {
+      "term": "Bird of prey",
+      "importance": 17.79712,
+      "relevance": 0.27808,
+      "confidence": 11.7,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bird_of_prey"
+        ]
+      ]
+    },
+    {
+      "term": "Snake",
+      "importance": 16.147199999999998,
+      "relevance": 0.25229999999999997,
+      "confidence": 6.034000000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Snake"
+        ]
+      ]
+    },
+    {
+      "term": "Food",
+      "importance": 15.674879999999998,
+      "relevance": 0.24491999999999997,
+      "confidence": 3.3792,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Food"
+        ]
+      ]
+    },
+    {
+      "term": "Tail",
+      "importance": 13.76384,
+      "relevance": 0.21505999999999997,
+      "confidence": 1.9326,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Tail"
+        ]
+      ]
+    },
+    {
+      "term": "Bobcat",
+      "importance": 13.3812,
+      "relevance": 0.3717,
+      "confidence": 5.0161999999999995,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bobcat"
+        ]
+      ]
+    },
+    {
+      "term": "European pine marten",
+      "importance": 13.1652,
+      "relevance": 0.3657,
+      "confidence": 3.941,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/European_pine_marten"
+        ]
+      ]
+    },
+    {
+      "term": "Animal",
+      "importance": 12.469759999999997,
+      "relevance": 0.19483999999999999,
+      "confidence": 9.6664,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Animal"
+        ]
+      ]
+    },
+    {
+      "term": "Raccoon",
+      "importance": 10.144080000000002,
+      "relevance": 0.28178000000000003,
+      "confidence": 7.999600000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Raccoon"
+        ]
+      ]
+    },
+    {
+      "term": "Tree",
+      "importance": 7.414560000000001,
+      "relevance": 0.20596,
+      "confidence": 4.2036,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Tree"
+        ]
+      ]
+    },
+    {
+      "term": "Bird",
+      "importance": 7.221600000000001,
+      "relevance": 0.20060000000000003,
+      "confidence": 15.018,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bird"
+        ]
+      ]
+    },
+    {
+      "term": "Rat",
+      "importance": 6.53256,
+      "relevance": 0.18146,
+      "confidence": 2.404,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Rat"
+        ]
+      ]
+    },
+    {
+      "term": "Red-tailed hawk",
+      "importance": 5.3094399999999995,
+      "relevance": 0.33183999999999997,
+      "confidence": 2.918,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Red-tailed_hawk"
+        ]
+      ]
+    },
+    {
+      "term": "Great horned owl",
+      "importance": 4.738239999999999,
+      "relevance": 0.29614,
+      "confidence": 5.776000000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Great_horned_owl"
+        ]
+      ]
+    },
+    {
+      "term": "Species",
+      "importance": 4.3783199999999995,
+      "relevance": 0.12161999999999999,
+      "confidence": 6.2478,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Species"
+        ]
+      ]
+    },
+    {
+      "term": "Vole",
+      "importance": 3.82816,
+      "relevance": 0.23925999999999997,
+      "confidence": 3.8044,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Vole"
+        ]
+      ]
+    },
+    {
+      "term": "Rattlesnake",
+      "importance": 3.6192,
+      "relevance": 0.2262,
+      "confidence": 2.9828,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Rattlesnake"
+        ]
+      ]
+    },
+    {
+      "term": "Pine",
+      "importance": 3.482856,
+      "relevance": 0.096746,
+      "confidence": 3.8915999999999995,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Pine"
+        ]
+      ]
+    },
+    {
+      "term": "Hunting",
+      "importance": 2.8105599999999997,
+      "relevance": 0.17565999999999998,
+      "confidence": 1.1,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Hunting"
+        ]
+      ]
+    },
+    {
+      "term": "Mouse",
+      "importance": 2.74176,
+      "relevance": 0.17136,
+      "confidence": 1.4566,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Mouse"
+        ]
+      ]
+    },
+    {
+      "term": "Foraging",
+      "importance": 2.55968,
+      "relevance": 0.15998,
+      "confidence": 0.8086,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Foraging"
+        ]
+      ]
+    },
+    {
+      "term": "Mammal",
+      "importance": 2.13216,
+      "relevance": 0.13326,
+      "confidence": 7.069800000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Mammal"
+        ]
+      ]
+    },
+    {
+      "term": "Red fox",
+      "importance": 1.9728,
+      "relevance": 0.1233,
+      "confidence": 2.8256,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Red_fox"
+        ]
+      ]
+    },
+    {
+      "term": "Marten",
+      "importance": 1.8745600000000002,
+      "relevance": 0.11716000000000001,
+      "confidence": 1.5378,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Marten"
+        ]
+      ]
+    },
+    {
+      "term": "Wildlife",
+      "importance": 1.79712,
+      "relevance": 0.11232,
+      "confidence": 2.0712,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Wildlife"
+        ]
+      ]
+    },
+    {
+      "term": "Weasel",
+      "importance": 1.34592,
+      "relevance": 0.08412,
+      "confidence": 3.9452,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Weasel"
+        ]
+      ]
+    },
+    {
+      "term": "Plant",
+      "importance": 1.33888,
+      "relevance": 0.08368,
+      "confidence": 0.8284,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Plant"
+        ]
+      ]
+    },
+    {
+      "term": "Truck",
+      "importance": 1.20544,
+      "relevance": 0.07534,
+      "confidence": 0.97568,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Truck"
+        ]
+      ]
+    },
+    {
+      "term": "Seed",
+      "importance": 1.11488,
+      "relevance": 0.06968,
+      "confidence": 4.048399999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Seed"
+        ]
+      ]
+    },
+    {
+      "term": "Flower",
+      "importance": 1.00128,
+      "relevance": 0.06258,
+      "confidence": 2.9346,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Flower"
+        ]
+      ]
+    },
+    {
+      "term": "Weight",
+      "importance": 0.9248,
+      "relevance": 0.057800000000000004,
+      "confidence": 0.693,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Weight"
+        ]
+      ]
+    },
+    {
+      "term": "American badger",
+      "importance": 0.7816,
+      "relevance": 0.1954,
+      "confidence": 0.6285999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/American_badger"
+        ]
+      ]
+    },
+    {
+      "term": "Eurasian goshawk",
+      "importance": 0.75288,
+      "relevance": 0.18822,
+      "confidence": 2.752,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Eurasian_goshawk"
+        ]
+      ]
+    },
+    {
+      "term": "Long-eared owl",
+      "importance": 0.6742399999999998,
+      "relevance": 0.16856,
+      "confidence": 0.22759999999999997,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Long-eared_owl"
+        ]
+      ]
+    },
+    {
+      "term": "Adult",
+      "importance": 0.6721280000000001,
+      "relevance": 0.042008000000000004,
+      "confidence": 0.54844,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Adult"
+        ]
+      ]
+    },
+    {
+      "term": "Biologist",
+      "importance": 0.6713279999999999,
+      "relevance": 0.041958,
+      "confidence": 1.246,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Biologist"
+        ]
+      ]
+    },
+    {
+      "term": "United States",
+      "importance": 0.670624,
+      "relevance": 0.041914,
+      "confidence": 3.7716000000000003,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/United_States"
+        ]
+      ]
+    },
+    {
+      "term": "Unsecured debt",
+      "importance": 0.6686400000000001,
+      "relevance": 0.16716,
+      "confidence": 1.893,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Unsecured_debt"
+        ]
+      ]
+    },
+    {
+      "term": "Stomach",
+      "importance": 0.6315839999999999,
+      "relevance": 0.039473999999999995,
+      "confidence": 0.48339999999999994,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Stomach"
+        ]
+      ]
+    },
+    {
+      "term": "Common buzzard",
+      "importance": 0.61144,
+      "relevance": 0.15286,
+      "confidence": 1.1582000000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Common_buzzard"
+        ]
+      ]
+    },
+    {
+      "term": "Wolverine",
+      "importance": 0.60664,
+      "relevance": 0.15166,
+      "confidence": 0.9086000000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Wolverine"
+        ]
+      ]
+    },
+    {
+      "term": "Investment",
+      "importance": 0.5936,
+      "relevance": 0.1484,
+      "confidence": 1.4862,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Investment"
+        ]
+      ]
+    },
+    {
+      "term": "Credit",
+      "importance": 0.57952,
+      "relevance": 0.14488,
+      "confidence": 0.4084,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Credit"
+        ]
+      ]
+    },
+    {
+      "term": "Ural owl",
+      "importance": 0.5660000000000001,
+      "relevance": 0.14150000000000001,
+      "confidence": 2.81,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Ural_owl"
+        ]
+      ]
+    },
+    {
+      "term": "Red squirrel",
+      "importance": 0.562,
+      "relevance": 0.1405,
+      "confidence": 2.366,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Red_squirrel"
+        ]
+      ]
+    },
+    {
+      "term": "SoFi",
+      "importance": 0.5204799999999999,
+      "relevance": 0.13011999999999999,
+      "confidence": 0.6634,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/SoFi"
+        ]
+      ]
+    },
+    {
+      "term": "Dividend",
+      "importance": 0.5189600000000001,
+      "relevance": 0.12974000000000002,
+      "confidence": 2.076,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Dividend"
+        ]
+      ]
+    },
+    {
+      "term": "Long-tailed weasel",
+      "importance": 0.50632,
+      "relevance": 0.12658,
+      "confidence": 4.093999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Long-tailed_weasel"
+        ]
+      ]
+    }
+  ],
+  "questions": {
+    "suggested": [
+      "what eats squirrels uk",
+      "what are eating animals",
+      "what do squirrels eat in the wild",
+      "what animals eat squirrels",
+      "what do squirrels eat in the summer",
+      "what do squirrels eat and drink",
+      "what is squirrels eat",
+      "what eats squirrels",
+      "what is an animal that eats squirrels",
+      "what what animals eat",
+      "what do squirrels eat in the winter",
+      "what fruit can squirrels eat",
+      "what do squirrels eat in dreamlight valley",
+      "what is eating squirrel",
+      "what what do squirrels eat",
+      "what do squirrels eat uk",
+      "what can squirrels eat grapes",
+      "what can eat squirrels",
+      "what are squirrels eat",
+      "what will eat squirrels",
+      "what did eat squirrel",
+      "what do eat squirrels",
+      "do squirrels eat nuts",
+      "what is eating animals about",
+      "what will squirrels eat in my garden",
+      "what do squirrels eat meat",
+      "what do squirrels eat in the grass",
+      "what is eat animals",
+      "what animal eats squirrels",
+      "which animal eats squirrels",
+      "what can squirrels eat bread",
+      "who eats squirrels",
+      "what are squirrels eating",
+      "what can squirrels eat apples"
+    ],
+    "paa": [
+      "What is a squirrel's worst enemy?",
+      "What animal eats the most squirrels?",
+      "What is the biggest killer of squirrels?",
+      "What is the number one predator of squirrels?"
+    ],
+    "content": [
+      "Are foxes a squirrel's predator?",
+      "Are they generally successful or is it curtains when a larger predator decides to hunt them down?",
+      "But if they have so many predators, why are they so abundant?",
+      "Do squirrels ever hunt birds?",
+      "Do squirrels have any natural predators?",
+      "Do squirrels hibernate?",
+      "Do they have natural predators or play an important ecological role?",
+      "Have squirrels you want to get rid of?",
+      "What Eats A Squirrel In The Food Chain?",
+      "What animal eats a squirrel?",
+      "What attracts squirrels to your house?",
+      "What do squirrels eat?",
+      "What does it mean when a squirrel jumps on you?",
+      "What predators eat squirrels?",
+      "What predators hunt squirrels the most successfully?",
+      "What was the predators goal?",
+      "When do squirrels have babies?",
+      "When it comes to outwitting larger predators, how do squirrels and chipmunks do it?",
+      "Where do squirrels live?",
+      "Where do squirrels nest?",
+      "Which predators eat squirrels?",
+      "Why are squirrels everywhere in the United States?",
+      "Why do squirrels bury food?",
+      "Why do squirrels shake their tails?",
+      "Why do squirrels usually stop while moving before continuing moving?",
+      "Why don't we ever see dead squirrels?"
+    ]
+  }
+}

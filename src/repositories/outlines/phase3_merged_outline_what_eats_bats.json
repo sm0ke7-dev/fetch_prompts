@@ -1,0 +1,120 @@
+{
+  "keyword": "what eats bats",
+  "generated_at": "2025-08-12T11:27:03.994Z",
+  "phase": 3,
+  "sections": [
+    {
+      "headline": "Introduction to Bats",
+      "description": "An overview of bats, their significance in ecosystems, and their roles in nature.",
+      "header-terms": [
+        "bats",
+        "mammal",
+        "ecosystem",
+        "roost"
+      ],
+      "content-terms": [
+        "bat species",
+        "bats live",
+        "importance of bats",
+        "natural predators",
+        "bat conservation"
+      ]
+    },
+    {
+      "headline": "What Eats Bats?",
+      "description": "A detailed look at the various predators that hunt bats, including birds of prey and larger mammals.",
+      "header-terms": [
+        "predator",
+        "prey",
+        "eat bats",
+        "birds of prey"
+      ],
+      "content-terms": [
+        "natural predators",
+        "animals eat bats",
+        "predator of bats",
+        "top predators"
+      ]
+    },
+    {
+      "headline": "Predators of Bats",
+      "description": "An exploration of specific animals that are known to eat bats, including their hunting habits and how they impact bat populations.",
+      "header-terms": [
+        "predator",
+        "bat species",
+        "owl",
+        "hawk"
+      ],
+      "content-terms": [
+        "vampire bat",
+        "spectral bat",
+        "catch bats",
+        "hunting habits",
+        "impact on bat populations"
+      ]
+    },
+    {
+      "headline": "Facts About Bats",
+      "description": "Interesting and lesser-known facts about bats, including their behavior, habitat, and diet.",
+      "header-terms": [
+        "bats",
+        "mammal",
+        "roost"
+      ],
+      "content-terms": [
+        "facts about bats",
+        "bats eat",
+        "bat species",
+        "little brown bat",
+        "fruit bat"
+      ]
+    },
+    {
+      "headline": "Do Bats Hibernate?",
+      "description": "An explanation of bat hibernation patterns, including which species hibernate and the conditions that trigger this behavior.",
+      "header-terms": [
+        "hibernate",
+        "bat species",
+        "brown bat"
+      ],
+      "content-terms": [
+        "hibernation patterns",
+        "little brown",
+        "white-nose syndrome"
+      ]
+    },
+    {
+      "headline": "What Do Bats Eat?",
+      "description": "A discussion on the diet of bats, focusing on the various insects and fruits they consume and their role in pest control and pollination.",
+      "header-terms": [
+        "bats eat",
+        "diet",
+        "fruit bat"
+      ],
+      "content-terms": [
+        "insects",
+        "pest control",
+        "pollination",
+        "species of bat"
+      ]
+    },
+    {
+      "headline": "Conclusion",
+      "description": "A summary of the key points discussed, emphasizing the ecological importance of bats and their predators.",
+      "header-terms": [
+        "bats",
+        "predator"
+      ],
+      "content-terms": [
+        "ecological importance",
+        "bat conservation",
+        "natural predators"
+      ]
+    }
+  ],
+  "metadata": {
+    "processing_time_ms": 1754998023994,
+    "body_terms_used": 52,
+    "original_sections": 7
+  }
+}

@@ -1,0 +1,2024 @@
+{
+  "keyword": "raccoon predators",
+  "query_id": "bfc52cf769e93f6d",
+  "query_url": "https://app.neuronwriter.com/analysis/view/bfc52cf769e93f6d",
+  "generated_at": "2025-08-12T11:29:31.844Z",
+  "headings": {
+    "h1": [
+      {
+        "term": "raccoon",
+        "usage_percentage": 80
+      },
+      {
+        "term": "predator",
+        "usage_percentage": 30
+      },
+      {
+        "term": "natural predators",
+        "usage_percentage": 20
+      },
+      {
+        "term": "10 natural predators",
+        "usage_percentage": 20
+      },
+      {
+        "term": "eat raccoons",
+        "usage_percentage": 10
+      },
+      {
+        "term": "raccoons in ontario",
+        "usage_percentage": 10
+      },
+      {
+        "term": "predators that eat raccoons",
+        "usage_percentage": 10
+      }
+    ],
+    "h2": [
+      {
+        "term": "raccoon",
+        "usage_percentage": 40
+      },
+      {
+        "term": "predator",
+        "usage_percentage": 20
+      },
+      {
+        "term": "fox",
+        "usage_percentage": 20
+      },
+      {
+        "term": "eat raccoons",
+        "usage_percentage": 20
+      },
+      {
+        "term": "raccoon predators",
+        "usage_percentage": 20
+      },
+      {
+        "term": "pest",
+        "usage_percentage": 20
+      },
+      {
+        "term": "wildlife",
+        "usage_percentage": 10
+      },
+      {
+        "term": "coyote",
+        "usage_percentage": 10
+      },
+      {
+        "term": "owl",
+        "usage_percentage": 10
+      },
+      {
+        "term": "great horned owl",
+        "usage_percentage": 10
+      },
+      {
+        "term": "raccoons in ontario",
+        "usage_percentage": 10
+      },
+      {
+        "term": "predators that eat raccoons",
+        "usage_percentage": 10
+      },
+      {
+        "term": "foxes and raccoons",
+        "usage_percentage": 10
+      },
+      {
+        "term": "raccoons on your property",
+        "usage_percentage": 10
+      },
+      {
+        "term": "raccoons are also",
+        "usage_percentage": 10
+      }
+    ],
+    "h3": []
+  },
+  "body_terms": {
+    "basic": [
+      {
+        "term": "raccoon",
+        "usage_percentage": 100,
+        "suggested_usage": [
+          35,
+          115
+        ]
+      },
+      {
+        "term": "predator",
+        "usage_percentage": 100,
+        "suggested_usage": [
+          4,
+          11
+        ]
+      },
+      {
+        "term": "prey",
+        "usage_percentage": 90,
+        "suggested_usage": [
+          1,
+          11
+        ]
+      },
+      {
+        "term": "natural predators",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          3
+        ]
+      },
+      {
+        "term": "wildlife",
+        "usage_percentage": 90,
+        "suggested_usage": [
+          1,
+          5
+        ]
+      },
+      {
+        "term": "adult raccoon",
+        "usage_percentage": 80,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "fox",
+        "usage_percentage": 80,
+        "suggested_usage": [
+          1,
+          9
+        ]
+      },
+      {
+        "term": "eat raccoons",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          4
+        ]
+      },
+      {
+        "term": "coyote",
+        "usage_percentage": 90,
+        "suggested_usage": [
+          2,
+          5
+        ]
+      },
+      {
+        "term": "mammal",
+        "usage_percentage": 70,
+        "suggested_usage": [
+          1,
+          8
+        ]
+      },
+      {
+        "term": "young raccoon",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "owl",
+        "usage_percentage": 80,
+        "suggested_usage": [
+          1,
+          4
+        ]
+      },
+      {
+        "term": "hunt raccoons",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "skunk",
+        "usage_percentage": 80,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "eagle",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          6
+        ]
+      },
+      {
+        "term": "bobcats",
+        "usage_percentage": 70,
+        "suggested_usage": [
+          1,
+          3
+        ]
+      },
+      {
+        "term": "great horned owl",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "rabies",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          3
+        ]
+      },
+      {
+        "term": "cougar",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "alligator",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          4
+        ]
+      },
+      {
+        "term": "prey on raccoons",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "urban areas",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "wild animals",
+        "usage_percentage": 50,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "squirrel",
+        "usage_percentage": 80,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "food source",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "rodent",
+        "usage_percentage": 60,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "pest",
+        "usage_percentage": 70,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      }
+    ],
+    "extended": [
+      {
+        "term": "raccoon predators",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "10 natural predators",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "predator of raccoons",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "kill a raccoon",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "birds of prey",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "raccoon populations",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "killing raccoons",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons in ontario",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "predators that eat raccoons",
+        "usage_percentage": 10,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons and other animals",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons in north america",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons kill",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons in the wild",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "baby raccoons",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "mama raccoon",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "captive raccoons",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "hunt and eat raccoons",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "foxes and raccoons",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "dead animals",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons and alligators",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons on your property",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "trash cans",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons may",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          2
+        ]
+      },
+      {
+        "term": "feeding raccoons",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "natural habitat",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "like raccoons",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "remove raccoons",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons are vulnerable",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "predator species",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "population of raccoons",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "endangered species",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "many natural predators",
+        "usage_percentage": 10,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoon roundworm",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons often",
+        "usage_percentage": 40,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "prey species",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "juvenile raccoons",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "main predators",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "larger predators",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons can carry rabies",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoon droppings",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "male raccoons",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoon predation",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "powerful predators",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "larger prey",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoon cubs",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "many predators",
+        "usage_percentage": 10,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "mother raccoon",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "way to keep raccoons",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoon meat",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoon tracks",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "washington department of fish",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons are also",
+        "usage_percentage": 20,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      },
+      {
+        "term": "raccoons will often",
+        "usage_percentage": 30,
+        "suggested_usage": [
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  "entities": [
+    {
+      "term": "Raccoon",
+      "importance": 79.496,
+      "relevance": 0.79496,
+      "confidence": 18.458000000000002,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Raccoon"
+        ]
+      ]
+    },
+    {
+      "term": "Animal",
+      "importance": 36.554,
+      "relevance": 0.36554000000000003,
+      "confidence": 14.537,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Animal"
+        ]
+      ]
+    },
+    {
+      "term": "Coyote",
+      "importance": 36.052479999999996,
+      "relevance": 0.5633199999999999,
+      "confidence": 12.59,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Coyote"
+        ]
+      ]
+    },
+    {
+      "term": "Predation",
+      "importance": 30.784,
+      "relevance": 0.48100000000000004,
+      "confidence": 18.927999999999997,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Predation"
+        ]
+      ]
+    },
+    {
+      "term": "Species",
+      "importance": 25.590000000000007,
+      "relevance": 0.2559,
+      "confidence": 14.232,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Species"
+        ]
+      ]
+    },
+    {
+      "term": "Cat",
+      "importance": 23.10144,
+      "relevance": 0.36095999999999995,
+      "confidence": 9.0594,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Cat"
+        ]
+      ]
+    },
+    {
+      "term": "Dog",
+      "importance": 21.955840000000002,
+      "relevance": 0.34306000000000003,
+      "confidence": 10.7424,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Dog"
+        ]
+      ]
+    },
+    {
+      "term": "Squirrel",
+      "importance": 20.5376,
+      "relevance": 0.3209,
+      "confidence": 6.300199999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Squirrel"
+        ]
+      ]
+    },
+    {
+      "term": "Bird",
+      "importance": 19.08864,
+      "relevance": 0.29826,
+      "confidence": 21.503999999999998,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bird"
+        ]
+      ]
+    },
+    {
+      "term": "Wolf",
+      "importance": 17.07336,
+      "relevance": 0.47426,
+      "confidence": 8.931999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Wolf"
+        ]
+      ]
+    },
+    {
+      "term": "Forest",
+      "importance": 15.367680000000002,
+      "relevance": 0.24012000000000003,
+      "confidence": 1.8228000000000002,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Forest"
+        ]
+      ]
+    },
+    {
+      "term": "Wildlife",
+      "importance": 13.835263999999999,
+      "relevance": 0.216176,
+      "confidence": 3.9126000000000003,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Wildlife"
+        ]
+      ]
+    },
+    {
+      "term": "Mammal",
+      "importance": 11.669759999999998,
+      "relevance": 0.32416,
+      "confidence": 21.668,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Mammal"
+        ]
+      ]
+    },
+    {
+      "term": "Fox",
+      "importance": 11.496240000000002,
+      "relevance": 0.31934000000000007,
+      "confidence": 3.9859999999999998,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Fox"
+        ]
+      ]
+    },
+    {
+      "term": "Eagle",
+      "importance": 11.29968,
+      "relevance": 0.31388,
+      "confidence": 4.2783999999999995,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Eagle"
+        ]
+      ]
+    },
+    {
+      "term": "Nocturnality",
+      "importance": 11.10888,
+      "relevance": 0.30857999999999997,
+      "confidence": 6.0762,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Nocturnality"
+        ]
+      ]
+    },
+    {
+      "term": "Owl",
+      "importance": 10.92384,
+      "relevance": 0.30344,
+      "confidence": 5.451199999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Owl"
+        ]
+      ]
+    },
+    {
+      "term": "Habitat",
+      "importance": 10.72512,
+      "relevance": 0.29792,
+      "confidence": 7.128800000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Habitat"
+        ]
+      ]
+    },
+    {
+      "term": "Hunting",
+      "importance": 9.91512,
+      "relevance": 0.27542,
+      "confidence": 3.4288,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Hunting"
+        ]
+      ]
+    },
+    {
+      "term": "Rabbit",
+      "importance": 9.7848,
+      "relevance": 0.2718,
+      "confidence": 5.215999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Rabbit"
+        ]
+      ]
+    },
+    {
+      "term": "Deer",
+      "importance": 9.770400000000002,
+      "relevance": 0.27140000000000003,
+      "confidence": 3.2840000000000003,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Deer"
+        ]
+      ]
+    },
+    {
+      "term": "Bird of prey",
+      "importance": 9.596160000000001,
+      "relevance": 0.26656,
+      "confidence": 20.59,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bird_of_prey"
+        ]
+      ]
+    },
+    {
+      "term": "Mouse",
+      "importance": 9.484559999999998,
+      "relevance": 0.26345999999999997,
+      "confidence": 2.1908000000000003,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Mouse"
+        ]
+      ]
+    },
+    {
+      "term": "Skunk",
+      "importance": 9.056159999999998,
+      "relevance": 0.25156,
+      "confidence": 4.2272,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Skunk"
+        ]
+      ]
+    },
+    {
+      "term": "Nest",
+      "importance": 9.055439999999999,
+      "relevance": 0.25154,
+      "confidence": 1.6136,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Nest"
+        ]
+      ]
+    },
+    {
+      "term": "Invasive species",
+      "importance": 8.48376,
+      "relevance": 0.23566000000000004,
+      "confidence": 8.4158,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Invasive_species"
+        ]
+      ]
+    },
+    {
+      "term": "Food",
+      "importance": 8.31456,
+      "relevance": 0.23096,
+      "confidence": 4.2004,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Food"
+        ]
+      ]
+    },
+    {
+      "term": "Pest (organism)",
+      "importance": 7.6363199999999996,
+      "relevance": 0.21212,
+      "confidence": 0.75084,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Pest_(organism)"
+        ]
+      ]
+    },
+    {
+      "term": "Snake",
+      "importance": 7.631856000000001,
+      "relevance": 0.211996,
+      "confidence": 6.8488,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Snake"
+        ]
+      ]
+    },
+    {
+      "term": "Fish",
+      "importance": 6.59664,
+      "relevance": 0.18324,
+      "confidence": 12.36,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Fish"
+        ]
+      ]
+    },
+    {
+      "term": "Paw",
+      "importance": 6.1870080000000005,
+      "relevance": 0.096672,
+      "confidence": 0.8442000000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Paw"
+        ]
+      ]
+    },
+    {
+      "term": "Tree",
+      "importance": 6.05376,
+      "relevance": 0.16816,
+      "confidence": 1.3654,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Tree"
+        ]
+      ]
+    },
+    {
+      "term": "Great horned owl",
+      "importance": 5.914240000000001,
+      "relevance": 0.36964,
+      "confidence": 10.604,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Great_horned_owl"
+        ]
+      ]
+    },
+    {
+      "term": "North America",
+      "importance": 5.7873600000000005,
+      "relevance": 0.16076000000000001,
+      "confidence": 18.54,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/North_America"
+        ]
+      ]
+    },
+    {
+      "term": "Texas",
+      "importance": 5.44464,
+      "relevance": 0.15123999999999999,
+      "confidence": 1.9454,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Texas"
+        ]
+      ]
+    },
+    {
+      "term": "United States",
+      "importance": 5.410080000000001,
+      "relevance": 0.15028000000000002,
+      "confidence": 20.684,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/United_States"
+        ]
+      ]
+    },
+    {
+      "term": "Tooth",
+      "importance": 5.238,
+      "relevance": 0.14550000000000002,
+      "confidence": 1.42446,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Tooth"
+        ]
+      ]
+    },
+    {
+      "term": "Cougar",
+      "importance": 4.88,
+      "relevance": 0.305,
+      "confidence": 4.5112,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Cougar"
+        ]
+      ]
+    },
+    {
+      "term": "Americas",
+      "importance": 4.778640000000001,
+      "relevance": 0.13274000000000002,
+      "confidence": 3.379,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Americas"
+        ]
+      ]
+    },
+    {
+      "term": "American alligator",
+      "importance": 4.35648,
+      "relevance": 0.27228,
+      "confidence": 2.7922,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/American_alligator"
+        ]
+      ]
+    },
+    {
+      "term": "North Carolina",
+      "importance": 4.34448,
+      "relevance": 0.12067999999999998,
+      "confidence": 4.9232,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/North_Carolina"
+        ]
+      ]
+    },
+    {
+      "term": "Pythonidae",
+      "importance": 4.23872,
+      "relevance": 0.26492,
+      "confidence": 2.2058,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Pythonidae"
+        ]
+      ]
+    },
+    {
+      "term": "Bobcat",
+      "importance": 4.091199999999999,
+      "relevance": 0.2557,
+      "confidence": 4.2236,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bobcat"
+        ]
+      ]
+    },
+    {
+      "term": "River",
+      "importance": 3.980880000000001,
+      "relevance": 0.11058000000000001,
+      "confidence": 1.4962,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/River"
+        ]
+      ]
+    },
+    {
+      "term": "Rodent",
+      "importance": 3.8099199999999995,
+      "relevance": 0.23811999999999997,
+      "confidence": 4.428,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Rodent"
+        ]
+      ]
+    },
+    {
+      "term": "Canada",
+      "importance": 3.679919999999999,
+      "relevance": 0.10221999999999998,
+      "confidence": 10.622200000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Canada"
+        ]
+      ]
+    },
+    {
+      "term": "Golden eagle",
+      "importance": 3.67648,
+      "relevance": 0.22978,
+      "confidence": 3.9918,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Golden_eagle"
+        ]
+      ]
+    },
+    {
+      "term": "Fur",
+      "importance": 3.66304,
+      "relevance": 0.22893999999999998,
+      "confidence": 5.8842,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Fur"
+        ]
+      ]
+    },
+    {
+      "term": "Lizard",
+      "importance": 3.47936,
+      "relevance": 0.21746,
+      "confidence": 3.1916,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Lizard"
+        ]
+      ]
+    },
+    {
+      "term": "Fisher (animal)",
+      "importance": 3.36096,
+      "relevance": 0.21006,
+      "confidence": 1.0302,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Fisher_(animal)"
+        ]
+      ]
+    },
+    {
+      "term": "Lion",
+      "importance": 3.29696,
+      "relevance": 0.20606,
+      "confidence": 2.7466,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Lion"
+        ]
+      ]
+    },
+    {
+      "term": "Elk",
+      "importance": 3.20672,
+      "relevance": 0.20042,
+      "confidence": 4.392,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Elk"
+        ]
+      ]
+    },
+    {
+      "term": "Bear",
+      "importance": 3.0656,
+      "relevance": 0.1916,
+      "confidence": 2.9978000000000002,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bear"
+        ]
+      ]
+    },
+    {
+      "term": "Adult",
+      "importance": 3.0546,
+      "relevance": 0.08485000000000001,
+      "confidence": 1.0934000000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Adult"
+        ]
+      ]
+    },
+    {
+      "term": "Pet",
+      "importance": 2.8771199999999997,
+      "relevance": 0.17982,
+      "confidence": 2.1561999999999997,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Pet"
+        ]
+      ]
+    },
+    {
+      "term": "Rabies",
+      "importance": 2.7734400000000003,
+      "relevance": 0.17334,
+      "confidence": 4.761,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Rabies"
+        ]
+      ]
+    },
+    {
+      "term": "Endangered species",
+      "importance": 2.7305599999999997,
+      "relevance": 0.17065999999999998,
+      "confidence": 5.6819999999999995,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Endangered_species"
+        ]
+      ]
+    },
+    {
+      "term": "Canine distemper",
+      "importance": 2.7030400000000006,
+      "relevance": 0.16894,
+      "confidence": 3.8625999999999996,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Canine_distemper"
+        ]
+      ]
+    },
+    {
+      "term": "Omnivore",
+      "importance": 2.62784,
+      "relevance": 0.16424,
+      "confidence": 4.2016,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Omnivore"
+        ]
+      ]
+    },
+    {
+      "term": "Reptile",
+      "importance": 2.5667200000000006,
+      "relevance": 0.16042,
+      "confidence": 7.812,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Reptile"
+        ]
+      ]
+    },
+    {
+      "term": "Claw",
+      "importance": 2.49184,
+      "relevance": 0.15574,
+      "confidence": 1.8030000000000002,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Claw"
+        ]
+      ]
+    },
+    {
+      "term": "Giant panda",
+      "importance": 2.3872,
+      "relevance": 0.1492,
+      "confidence": 1.4486,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Giant_panda"
+        ]
+      ]
+    },
+    {
+      "term": "Garbage",
+      "importance": 2.3772960000000003,
+      "relevance": 0.06603600000000001,
+      "confidence": 0.65504,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Garbage"
+        ]
+      ]
+    },
+    {
+      "term": "Tail",
+      "importance": 2.18336,
+      "relevance": 0.13646,
+      "confidence": 1.1454,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Tail"
+        ]
+      ]
+    },
+    {
+      "term": "Meat",
+      "importance": 2.15904,
+      "relevance": 0.13494,
+      "confidence": 2.2914000000000003,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Meat"
+        ]
+      ]
+    },
+    {
+      "term": "Eastern United States",
+      "importance": 2.003456,
+      "relevance": 0.125216,
+      "confidence": 0.966,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Eastern_United_States"
+        ]
+      ]
+    },
+    {
+      "term": "Egg",
+      "importance": 1.9929599999999998,
+      "relevance": 0.12456,
+      "confidence": 0.768,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Egg"
+        ]
+      ]
+    },
+    {
+      "term": "Tennessee",
+      "importance": 1.9433599999999998,
+      "relevance": 0.12145999999999998,
+      "confidence": 3.0212,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Tennessee"
+        ]
+      ]
+    },
+    {
+      "term": "Insect",
+      "importance": 1.8489600000000006,
+      "relevance": 0.11556000000000002,
+      "confidence": 8.594,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Insect"
+        ]
+      ]
+    },
+    {
+      "term": "Europe",
+      "importance": 1.7472,
+      "relevance": 0.1092,
+      "confidence": 0.7086,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Europe"
+        ]
+      ]
+    },
+    {
+      "term": "Habit",
+      "importance": 1.730016,
+      "relevance": 0.048056,
+      "confidence": 0.8480000000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Habit"
+        ]
+      ]
+    },
+    {
+      "term": "Feral",
+      "importance": 1.7264,
+      "relevance": 0.1079,
+      "confidence": 1.1312,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Feral"
+        ]
+      ]
+    },
+    {
+      "term": "Florida",
+      "importance": 1.7152,
+      "relevance": 0.1072,
+      "confidence": 6.481999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Florida"
+        ]
+      ]
+    },
+    {
+      "term": "Plant",
+      "importance": 1.6972799999999995,
+      "relevance": 0.10608,
+      "confidence": 3.4664,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Plant"
+        ]
+      ]
+    },
+    {
+      "term": "California",
+      "importance": 1.51104,
+      "relevance": 0.09444,
+      "confidence": 7.3,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/California"
+        ]
+      ]
+    },
+    {
+      "term": "Indigenous peoples of the Americas",
+      "importance": 1.3945599999999998,
+      "relevance": 0.08716,
+      "confidence": 8.8884,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Indigenous_peoples_of_the_Americas"
+        ]
+      ]
+    },
+    {
+      "term": "Suburb",
+      "importance": 1.3088000000000002,
+      "relevance": 0.08180000000000001,
+      "confidence": 1.3052,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Suburb"
+        ]
+      ]
+    },
+    {
+      "term": "Panama",
+      "importance": 1.2934400000000001,
+      "relevance": 0.08084,
+      "confidence": 4.6579999999999995,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Panama"
+        ]
+      ]
+    },
+    {
+      "term": "Mother",
+      "importance": 1.2912,
+      "relevance": 0.0807,
+      "confidence": 0.8220000000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Mother"
+        ]
+      ]
+    },
+    {
+      "term": "Honey",
+      "importance": 1.2819200000000002,
+      "relevance": 0.08012,
+      "confidence": 2.685,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Honey"
+        ]
+      ]
+    },
+    {
+      "term": "South America",
+      "importance": 1.25856,
+      "relevance": 0.07866,
+      "confidence": 10.074,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/South_America"
+        ]
+      ]
+    },
+    {
+      "term": "Coast",
+      "importance": 1.2368,
+      "relevance": 0.0773,
+      "confidence": 1.8079999999999998,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Coast"
+        ]
+      ]
+    },
+    {
+      "term": "Wingspan",
+      "importance": 1.2176000000000002,
+      "relevance": 0.0761,
+      "confidence": 1.488,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Wingspan"
+        ]
+      ]
+    },
+    {
+      "term": "Weasel",
+      "importance": 1.1497600000000001,
+      "relevance": 0.07186000000000001,
+      "confidence": 2.8704,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Weasel"
+        ]
+      ]
+    },
+    {
+      "term": "Fruit",
+      "importance": 1.14016,
+      "relevance": 0.07126,
+      "confidence": 5.108,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Fruit"
+        ]
+      ]
+    },
+    {
+      "term": "Behavior",
+      "importance": 1.13504,
+      "relevance": 0.07094,
+      "confidence": 1.7632,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Behavior"
+        ]
+      ]
+    },
+    {
+      "term": "Valley",
+      "importance": 1.0464,
+      "relevance": 0.0654,
+      "confidence": 0.41402,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Valley"
+        ]
+      ]
+    },
+    {
+      "term": "Weight",
+      "importance": 1.01152,
+      "relevance": 0.06322,
+      "confidence": 0.5269999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Weight"
+        ]
+      ]
+    },
+    {
+      "term": "Lake",
+      "importance": 0.95552,
+      "relevance": 0.059719999999999995,
+      "confidence": 1.333,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Lake"
+        ]
+      ]
+    },
+    {
+      "term": "Disease",
+      "importance": 0.92896,
+      "relevance": 0.05806,
+      "confidence": 0.6384000000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Disease"
+        ]
+      ]
+    },
+    {
+      "term": "Nut (fruit)",
+      "importance": 0.9180800000000001,
+      "relevance": 0.05738000000000001,
+      "confidence": 1.2864,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Nut_(fruit)"
+        ]
+      ]
+    },
+    {
+      "term": "Island raccoon",
+      "importance": 0.8,
+      "relevance": 0.2,
+      "confidence": 0.9800000000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Island_raccoon"
+        ]
+      ]
+    },
+    {
+      "term": "Urban area",
+      "importance": 0.780096,
+      "relevance": 0.048756,
+      "confidence": 0.46381999999999995,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Urban_area"
+        ]
+      ]
+    },
+    {
+      "term": "Swimming (sport)",
+      "importance": 0.7757759999999998,
+      "relevance": 0.048485999999999994,
+      "confidence": 0.8396000000000001,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Swimming_(sport)"
+        ]
+      ]
+    },
+    {
+      "term": "Family (biology)",
+      "importance": 0.76352,
+      "relevance": 0.04772,
+      "confidence": 1.9152,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Family_(biology)"
+        ]
+      ]
+    },
+    {
+      "term": "Tres Marias raccoon",
+      "importance": 0.7506399999999999,
+      "relevance": 0.18766,
+      "confidence": 1.6425999999999998,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Tres_Marias_raccoon"
+        ]
+      ]
+    },
+    {
+      "term": "Burmese python",
+      "importance": 0.7296000000000001,
+      "relevance": 0.1824,
+      "confidence": 1.9175999999999997,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Burmese_python"
+        ]
+      ]
+    },
+    {
+      "term": "Bahamian raccoon",
+      "importance": 0.70256,
+      "relevance": 0.17564,
+      "confidence": 0.8048,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Bahamian_raccoon"
+        ]
+      ]
+    },
+    {
+      "term": "Procyon (genus)",
+      "importance": 0.6732,
+      "relevance": 0.1683,
+      "confidence": 0.9057999999999999,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Procyon_(genus)"
+        ]
+      ]
+    },
+    {
+      "term": "Guadeloupe raccoon",
+      "importance": 0.65456,
+      "relevance": 0.16364,
+      "confidence": 1.4982,
+      "links": [
+        [
+          "wikipedia",
+          "http://en.wikipedia.org/wiki/Guadeloupe_raccoon"
+        ]
+      ]
+    }
+  ],
+  "questions": {
+    "suggested": [
+      "are raccoons predators to chickens",
+      "what are raccoon dogs predators",
+      "are racoon predators",
+      "do raccoon have predators",
+      "are raccoon dogs predators",
+      "are raccoon predators",
+      "who are raccoon predators",
+      "are raccoons predators rdr2",
+      "are raccoon predators or prey",
+      "are raccoons predators to rabbits",
+      "is raccoon predator",
+      "what are raccoon predators",
+      "what do raccoons predators",
+      "are raccoons predators to cats",
+      "are raccoons predators to squirrels",
+      "is raccoon predator or prey",
+      "does raccoon have predators",
+      "are raccoons predators or scavengers"
+    ],
+    "paa": [
+      "What is a raccoons main predator?",
+      "What is a raccoon's biggest enemy?",
+      "What animals are raccoons most afraid of?",
+      "What smell do raccoons hate?"
+    ],
+    "content": [
+      "\"Raccoon dinner: Who's game?",
+      "Are Raccoons Dangerous?",
+      "Are Raccoons Rodents?",
+      "Are hungry raccoons dangerous to feral cats and humans?",
+      "Are raccoons dangerous to people?",
+      "Are raccoons prey, predator, or both?",
+      "Back to your question: is a raccoon a carnivore or a mammal?",
+      "Can a cat survive a raccoon attack?",
+      "Do possums damage corn like raccoons do?",
+      "Do raccoons attack prey, or do they just eat garbage and scavenge?",
+      "Do raccoons eat cats?",
+      "Do raccoons have any natural predators?",
+      "Do raccoons kill for fun?",
+      "Do raccoons like humans?",
+      "Do racoons often kill and carry away their prey?",
+      "Do you ever wonder how raccoons and alligators come into contact with one another?",
+      "Have A Raccoon Problem?",
+      "How do I keep raccoons away from flipping my SOD at night?",
+      "How do predators know what animals are prey?",
+      "How do raccoons kill house cats?",
+      "How often do racoons prey on cats and kittens?",
+      "If a non rabid raccoon approaches you, appears docile, is already familiar with you and comes close enough to touch, can you pet it?",
+      "Is a raccoon a carnivore or a mammal?",
+      "Is a raccoon a scavenger or omnivore?",
+      "Is there anyway to repel raccoons but not cats at the same time?",
+      "Natural Raccoon Predators: What Eats Raccoons?",
+      "Need Help With Raccoons In Your Property?",
+      "Raccoon Mating Season: When Do They Breed?",
+      "Raccoons or possums?",
+      "What Do Raccoons Eat?",
+      "What Enemies Do Raccoons Have?",
+      "What animal eats raccoons in Ontario?",
+      "What animals eat raccoons in Ontario?",
+      "What are good ways to stop a raccoon from returning nightly?",
+      "What are some natural predators of the raccoon?",
+      "What predators eat raccoons?",
+      "What smell do raccoons hate the most?",
+      "What things kill raccoons?",
+      "Where Do Raccoons Live?",
+      "Where do raccoons live?",
+      "Why do raccoon likes grabbing things that aren't even food?",
+      "Why does a predator ignore prey playing dead?",
+      "Will raccoons leave on their own?",
+      "Would you rather have raccoons in your neighborhood or a few of these beasts?",
+      "how to get rid of raccoon problems?"
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "keyword": "raccoon predators",
+  "generated_at": "2025-08-12T11:29:38.730Z",
+  "phase": 2,
+  "outline": {
+    "sections": [
+      {
+        "header": "Understanding Raccoons: Nature's Clever Survivors",
+        "description": "Explore the characteristics and behavior of raccoons, highlighting their adaptability and intelligence in various environments."
+      },
+      {
+        "header": "The Role of Predators in Raccoon Populations",
+        "description": "Discuss the significance of predators in maintaining raccoon populations and the ecological balance."
+      },
+      {
+        "header": "Top 10 Natural Predators of Raccoons",
+        "description": "List and describe the ten most common natural predators of raccoons, including their hunting techniques and habitats."
+      },
+      {
+        "header": "How Foxes Target Raccoons as Prey",
+        "description": "Examine the relationship between foxes and raccoons, detailing how foxes hunt and consume raccoons."
+      },
+      {
+        "header": "Coyotes: A Growing Threat to Raccoons",
+        "description": "Analyze the impact of coyotes on raccoon populations, including their hunting strategies and territorial behaviors."
+      },
+      {
+        "header": "Other Wildlife That Eat Raccoons",
+        "description": "Identify additional wildlife species that prey on raccoons, discussing their roles in the ecosystem."
+      },
+      {
+        "header": "The Impact of Human Activity on Raccoon Predators",
+        "description": "Investigate how urbanization and habitat destruction affect the natural predators of raccoons."
+      },
+      {
+        "header": "Raccoons as Pests: The Predator-Prey Dynamic",
+        "description": "Discuss the perception of raccoons as pests and how this influences their interactions with predators."
+      },
+      {
+        "header": "How to Protect Raccoons from Predators",
+        "description": "Provide tips and strategies for wildlife enthusiasts on how to protect raccoons in their natural habitats."
+      },
+      {
+        "header": "Conclusion: The Balance of Nature and Raccoon Survival",
+        "description": "Summarize the importance of understanding raccoon predators and their role in the ecosystem for conservation efforts."
+      }
+    ]
+  },
+  "metadata": {
+    "processing_time_ms": 6879,
+    "token_usage": {
+      "prompt_tokens": 215,
+      "completion_tokens": 356,
+      "total_tokens": 571,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    }
+  }
+}

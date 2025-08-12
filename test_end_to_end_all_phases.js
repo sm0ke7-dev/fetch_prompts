@@ -10,8 +10,8 @@ require('dotenv').config({ path: '.local.env' });
 const { GetOptimizationTermsService } = require('./dist/services/get_optimization_terms');
 const { generateArticleOutline } = require('./dist/services/outline_submit_retrieve_output');
 const { mergeOutlineWithTerms } = require('./dist/services/merge_outline_with_nw_terms');
-const { generateSectionContent } = require('./dist/services/loop_thru_sections/loop_thru_sections');
-const { renderArticleToMarkdown } = require('./dist/services/render_article');
+const { LoopThruSectionsService } = require('./dist/services/loop_thru_sections/loop_thru_sections');
+const { RenderArticleService } = require('./dist/services/render_article');
 
 // Utility function to sanitize keyword for filenames
 function sanitizeKeyword(keyword) {
@@ -114,7 +114,7 @@ async function runPhase3(keyword) {
     throw new Error(`Phase 3 failed: ${result.message}`);
   }
 
-  const mergedOutline = result.data.merged_outline;
+  const mergedOutline = result.data.mergedOutline;
   console.log('✅ Phase 3 completed successfully!');
   console.log(`   Sections: ${mergedOutline.sections.length}`);
   console.log(`   Processing time: ${result.data.processing_time}ms`);
@@ -137,29 +137,24 @@ async function runPhase4(keyword) {
   
   console.log(`📖 Keyword: "${keyword}"`);
   
-  const result = await generateSectionContent({ keyword });
+  const loopService = new LoopThruSectionsService();
+  const result = await loopService.loopThruSections({ keyword });
   if (!result.success) {
     throw new Error(`Phase 4 failed: ${result.message}`);
   }
 
-  const article = result.data.article;
+  const article = result.data.phase4Article;
   console.log('✅ Phase 4 completed successfully!');
   console.log(`   Sections: ${article.sections.length}`);
   console.log(`   Processing time: ${result.data.processing_time}ms`);
-  console.log(`   Token usage:`, result.data.usage);
-
-  // Count content blocks
-  let totalBlocks = 0;
-  article.sections.forEach(sec => {
-    totalBlocks += sec.content.length;
-  });
-  console.log(`   Total content blocks: ${totalBlocks}`);
+  console.log(`   Total word count: ${article.metadata.total_word_count}`);
+  console.log(`   Total content blocks: ${article.metadata.total_content_blocks}`);
 
   // Print section summaries
   console.log('\n📋 Generated Content Summary:');
   article.sections.forEach((sec, idx) => {
     console.log(`   ${idx + 1}. ${sec.headline}`);
-    console.log(`      Content blocks: ${sec.content.length}`);
+    console.log(`      Content blocks: ${sec.content.content.length}`);
   });
   
   return result.data;
@@ -171,18 +166,18 @@ async function runPhase5(keyword) {
   
   console.log(`📖 Keyword: "${keyword}"`);
   
-  const result = await renderArticleToMarkdown({ keyword });
+  const renderService = new RenderArticleService();
+  const result = await renderService.renderMarkdown({ keyword });
   if (!result.success) {
     throw new Error(`Phase 5 failed: ${result.message}`);
   }
 
   console.log('✅ Phase 5 completed successfully!');
   console.log(`   Processing time: ${result.data.processing_time}ms`);
-  console.log(`   Output file: ${result.data.output_file}`);
-  console.log(`   File size: ${result.data.file_size} bytes`);
+  console.log(`   Output file: ${result.data.output_path}`);
 
   // Show preview of the generated markdown
-  const markdownContent = result.data.markdown_content;
+  const markdownContent = result.data.markdown;
   const previewLines = markdownContent.split('\n').slice(0, 20).join('\n');
   console.log('\n📄 Article Preview (first 20 lines):');
   console.log('─' .repeat(60));
