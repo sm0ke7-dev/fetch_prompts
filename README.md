@@ -34,9 +34,13 @@ fetch_prompt/
 ├── .gitignore                 # Git ignore rules
 ├── .local.env                 # Local environment variables (not tracked)
 ├── package.json               # Project dependencies and scripts
+├── package-lock.json          # Locked dependency versions
 ├── tsconfig.json              # TypeScript configuration
-├── test_services.js           # Service layer test script
-├── test_optimization_terms.js # Optimization terms test script
+├── test_phase1_neuronwriter_with_keyword_file.js # Phase 1: NeuronWriter terms extraction test
+├── test_phase2_generate_outline_from_terms.js # Phase 2: Outline generation test
+├── test_phase3_merge_outline.js # Phase 3: Outline merging test
+├── test_phase4_loop_sections.js # Phase 4: Content generation test
+├── test_phase5_render_article.js # Phase 5: Markdown rendering test
 ├── src/
 │   ├── app.ts                 # Express application setup with middleware
 │   ├── server.ts              # Server startup and configuration
@@ -46,16 +50,45 @@ fetch_prompt/
 │   ├── models/                # Data models and interfaces
 │   │   ├── index.ts           # Model exports (exports all models)
 │   │   ├── fetch_prompts_model.ts # Prompt configuration interfaces
+│   │   ├── repositories/      # Repository-specific models
+│   │   │   ├── loop_sections.model.ts # Phase 4 repository models
+│   │   │   └── merge_outline.model.ts # Phase 3 repository models
 │   │   └── services/          # Service-specific models
 │   │       ├── process_input.model.ts # Input processing interfaces
 │   │       ├── submit_prompt.model.ts # OpenAI API interfaces
-│   │       └── get_optimization_terms.model.ts # NeuronWriter API interfaces
+│   │       ├── get_optimization_terms.model.ts # NeuronWriter API interfaces
+│   │       ├── outline_process_input.model.ts # Phase 2 input processing
+│   │       ├── outline_submit_retrieve_output.models.ts # Phase 2 output handling
+│   │       ├── merge_outline_with_nw_terms.model.ts # Phase 3 merge processing
+│   │       ├── merge_outline_submit_pull.model.ts # Phase 3 submit/pull
+│   │       ├── loop_sections/loop_thru_sections.model.ts # Phase 4 content generation
+│   │       └── render_article.model.ts # Phase 5 rendering
 │   ├── repositories/          # Data access layer
 │   │   ├── data/
-│   │   │   └── prompts.json   # AI prompt configuration data
+│   │   │   ├── prompts.json   # AI prompt configuration data
+│   │   │   ├── outline_creation_prompt.json # Phase 2 outline generation prompt
+│   │   │   ├── outline_kw_merge_prompt.json # Phase 3 outline merging prompt
+│   │   │   ├── loop_prompt.json # Phase 4 content generation prompt
+│   │   │   └── keyword.json   # Current keyword for NeuronWriter requests
 │   │   ├── fetch_prompt.ts    # Prompt fetching functionality
 │   │   ├── neuron_writer.ts   # NeuronWriter API integration
-│   │   └── optimization_terms/ # Optimization terms JSON data storage
+│   │   ├── create_outline_from_terms.ts # Phase 2 repository
+│   │   ├── merge_outline.ts   # Phase 3 repository
+│   │   ├── loop_section.ts    # Phase 4 repository
+│   │   ├── render_article.ts  # Phase 5 repository
+│   │   ├── optimization_terms/ # Optimization terms JSON data storage
+│   │   │   ├── what_scares_bats_out_of_homes.json # Phase 1 output
+│   │   │   └── keep_rats_away.json # Phase 1 output
+│   │   ├── outlines/          # Generated outlines (Phase 2 & 3)
+│   │   │   ├── phase2_outline_what_scares_bats_out_of_homes.json
+│   │   │   ├── phase2_outline_keep_rats_away.json
+│   │   │   ├── phase3_merged_outline_what_scares_bats_out_of_homes.json
+│   │   │   └── phase3_merged_outline_keep_rats_away.json
+│   │   ├── articles/          # Generated article content (Phase 4)
+│   │   │   ├── phase4_article_what_scares_bats_out_of_homes.json
+│   │   │   └── phase4_article_keep_rats_away.json
+│   │   └── final/             # Final rendered articles (Phase 5)
+│   │       └── phase5_article_what_scares_bats_out_of_homes.md
 │   ├── routes/                # API route definitions
 │   │   ├── index.ts           # Route exports (exports promptRoutes)
 │   │   └── prompt_routes.ts   # API endpoint definitions
@@ -63,7 +96,13 @@ fetch_prompt/
 │       ├── index.ts           # Service exports (exports all services)
 │       ├── process_input.ts   # Input processing and variable substitution
 │       ├── submit_prompt.ts   # OpenAI API integration
-│       └── get_optimization_terms.ts # NeuronWriter optimization terms service
+│       ├── get_optimization_terms.ts # NeuronWriter optimization terms service
+│       ├── outline_process_input.ts # Phase 2 input processing
+│       ├── outline_submit_retrieve_output.ts # Phase 2 output handling
+│       ├── merge_outline_with_nw_terms.ts # Phase 3 merge processing
+│       ├── merge_outline_submit_pull.ts # Phase 3 submit/pull
+│       ├── loop_thru_sections/loop_thru_sections.ts # Phase 4 content generation
+│       └── render_article.ts # Phase 5 rendering
 └── README.md                  # This file
 ```
 
@@ -231,19 +270,25 @@ Successfully extracted structured data from "what scares squirrels" query:
 - **Express Setup**: `app.ts` - Middleware, CORS, and route configuration
 - **Server Startup**: `server.ts` - Environment loading and server initialization
 
-### 🎯 **Current Status: Phase 4 Complete - Ready for Phase 5**
+### 🎯 **Current Status: Phase 5 Complete - All Phases Working**
 
 - ✅ Phase 1: NW structured terms extraction and file save working
-- ✅ Phase 2: Outline generation working; now auto-saves to outlines folder
+- ✅ Phase 2: Outline generation working; auto-saves to outlines folder
 - ✅ Phase 3: Merge with body terms working; saved to outlines folder
 - ✅ Phase 4: Section content generation working; saved to articles folder
-- 🎯 Next Step: Phase 5 – Render final article (compile content blocks to final HTML/Markdown)
+- ✅ Phase 5: Final article rendering to Markdown complete; saved to final folder
 
 **Latest Test Results:**
 - Phase 1: Generated `keep_rats_away.json` (terms) in ~94s (ready query flows faster)
 - Phase 2: 8-section outline generated in ~6–11s; auto-saved to `phase2_outline_keep_rats_away.json`
 - Phase 3: 8 merged sections; term lists populated per section; saved to `phase3_merged_outline_*.json`
 - Phase 4: 29–38 content blocks across 8 sections; saved to `phase4_article_*.json`
+- Phase 5: Final Markdown article generated with proper heading structure (H1, H2, H3); saved to `phase5_article_*.md`
+
+**Recent Fixes (Phase 5):**
+- ✅ Removed timestamp metadata from output (`_Generated: ...` line)
+- ✅ Fixed heading structure: H1 for title, H2 for sections, H3 for subsections
+- ✅ Clean Markdown output ready for NeuronWriter or any markdown editor
 
 **Key Files for Phase 3:**
 - `src/repositories/outlines/phase2_outline_<keyword>.json` (input)
@@ -263,8 +308,15 @@ Successfully extracted structured data from "what scares squirrels" query:
 - `src/models/services/loop_sections/loop_thru_sections.model.ts`
 - `test_phase4_loop_sections.js` (end-to-end test)
 
+**Key Files for Phase 5:**
+- `src/repositories/render_article.ts` (load Phase 4 data, save final markdown)
+- `src/services/render_article.ts` (transform JSON to Markdown with proper headings)
+- `src/models/services/render_article.model.ts`
+- `test_phase5_render_article.js` (end-to-end test)
+- Output: `src/repositories/final/phase5_article_*.md`
+
 ### 📋 Planned Features
-- **Phase 5: Render Output**: Compile Phase 4 content blocks into final article (HTML/Markdown), include TOC, metadata, and export utilities
+- ✅ **Phase 5: Render Output**: Compile Phase 4 content blocks into final article (Markdown), include TOC, proper heading structure (H1, H2, H3)
 - Validation middleware, rate limiting, and authentication for production
 - Split NeuronWriter repository into create/pull modules (maintenance)
 

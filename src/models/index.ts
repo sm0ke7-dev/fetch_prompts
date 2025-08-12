@@ -8,3 +8,4 @@ export * from './services/merge_outline_submit_pull.model';
 export * from './repositories/merge_outline.model';
 export * from './repositories/loop_sections.model';
 export * from './services/loop_sections/loop_thru_sections.model';
+export * from './services/render_article.model';
