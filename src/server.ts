@@ -15,5 +15,6 @@ app.listen(PORT, () => {
   console.log(`🔗 API endpoints:`);
   console.log(`   - Text generation: http://localhost:${PORT}/api/v1/text`);
   console.log(`   - Content pipeline: http://localhost:${PORT}/api/v1/text-media`);
+  console.log(`   - Image generation: http://localhost:${PORT}/api/v1/image-media`);
   console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
 });
