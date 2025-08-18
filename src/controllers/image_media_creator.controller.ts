@@ -121,7 +121,8 @@ class ImageMediaCreatorController {
       const ideogramResult = await ideogramImageGeneratorService.generateImage({
         prompt: imageDescriptions.image_description,
         rendering_speed: 'DEFAULT',
-        style_type: 'GENERAL'
+        style_type: 'GENERAL',
+        aspect_ratio: '16x9'
       });
 
       if (!ideogramResult.success || !ideogramResult.data) {
@@ -133,44 +134,39 @@ class ImageMediaCreatorController {
         return;
       }
 
-      // Step 7: Save Phase 3 output to debug folder if debug mode is enabled
+      // Step 7: Always download and save the image to featured folder
       let savedImagePath: string | undefined;
-      if (isDebugMode) {
-        const debugDir = path.join(__dirname, '..', '..', 'src', 'repositories', 'image_desc_temp_debug', 'phase3_images');
-        if (!fs.existsSync(debugDir)) {
-          fs.mkdirSync(debugDir, { recursive: true });
+      try {
+        const sanitizedKeyword = keyword
+          .toLowerCase()
+          .replace(/[^a-z0-9\s]/g, '')
+          .replace(/\s+/g, '_')
+          .trim();
+        const imageUrl = ideogramResult.data.imageUrl.replace(/\\u0026/g, '&');
+        const featuredDir = path.join(__dirname, '..', '..', 'src', 'repositories', 'images', 'featured');
+        if (!fs.existsSync(featuredDir)) {
+          fs.mkdirSync(featuredDir, { recursive: true });
         }
-        
-        // Save metadata
-        const metaPath = path.join(debugDir, `${keyword.replace(/\s+/g, '_')}_image_metadata.json`);
-        fs.writeFileSync(metaPath, JSON.stringify(ideogramResult.data, null, 2));
-        console.log('📁 Debug: Phase 3 metadata saved to:', metaPath);
-
-        // Attempt to download and save the image locally
-        try {
-          const sanitizedKeyword = keyword.replace(/\s+/g, '_').toLowerCase();
-          const imageUrl = ideogramResult.data.imageUrl.replace(/\\u0026/g, '&');
-          const imageResp = await fetch(imageUrl, {
-            headers: {
-              'Accept': 'image/*, */*;q=0.8',
-              'User-Agent': 'debug-downloader/1.0'
-            }
-          });
-          if (imageResp.ok) {
-            const arrBuf = await imageResp.arrayBuffer();
-            const buf = Buffer.from(arrBuf);
-            const imgPath = path.join(debugDir, `${sanitizedKeyword}_image.png`);
-            fs.writeFileSync(imgPath, buf);
-            savedImagePath = imgPath;
-            console.log('🖼️ Debug: Image downloaded to:', imgPath);
-          } else {
-            let bodyText = '';
-            try { bodyText = await imageResp.text(); } catch {}
-            console.warn('⚠️ Debug: Failed to download image. HTTP', imageResp.status, bodyText?.slice(0, 200));
+        const imageResp = await fetch(imageUrl, {
+          headers: {
+            'Accept': 'image/*, */*;q=0.8',
+            'User-Agent': 'image-downloader/1.0'
           }
-        } catch (downloadErr) {
-          console.warn('⚠️ Debug: Error downloading image:', downloadErr);
+        });
+        if (imageResp.ok) {
+          const arrBuf = await imageResp.arrayBuffer();
+          const buf = Buffer.from(arrBuf);
+          const imgPath = path.join(featuredDir, `${sanitizedKeyword}_feat_image.png`);
+          fs.writeFileSync(imgPath, buf);
+          savedImagePath = imgPath;
+          console.log('🖼️ Image saved to:', imgPath);
+        } else {
+          let bodyText = '';
+          try { bodyText = await imageResp.text(); } catch {}
+          console.warn('⚠️ Failed to download image. HTTP', imageResp.status, bodyText?.slice(0, 200));
         }
+      } catch (downloadErr) {
+        console.warn('⚠️ Error downloading image:', downloadErr);
       }
 
       // Step 8: Return the complete result (description + generated image)

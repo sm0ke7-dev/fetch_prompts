@@ -6,7 +6,7 @@
     "frequency_penalty": 0,
     "presence_penalty": 0,
     "system": "You are a helpful assistant that creates descriptive LLM Prompts for AI image generation.",
-    "user": "Create a descriptive image description for the following Keyword. The description will be loaded into an AI image generation tool to produce a featured image for the keyword's blog post. keyword: {{keyword}}",
+    "user": "Create an image description for the following keyword. The description will be loaded into an AI image generation tool to produce a featured image for the keyword's blog post. the image description must not have texts. the image description must be a single sentence, designed for a horizontal landscape photo, photorealistic style, anatomically correct and naturally proportioned (no distorted, malformed, unrealistic features, extra limbs, missing limbs, anatomical errors, cartoon, illustration, CGI, 3D render, painting, anime, plastic, toy, text, logos, or watermarks), professional photography quality: keyword: {{keyword}}",
     "variables": {
         "keyword": "{{keyword}}"
     },
