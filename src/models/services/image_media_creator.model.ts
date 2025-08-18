@@ -43,6 +43,18 @@ export interface ImageMediaResponse {
     content_summary: {
       /** Number of images generated */
       image_count: number;
+      /** Generated image description for AI image generation */
+      image_description?: string;
+      /** Title for the generated image */
+      image_title?: string;
+      /** Generated image URL from Ideogram API */
+      generated_image_url?: string;
+      /** Image resolution */
+      image_resolution?: string;
+      /** Random seed used for generation */
+      image_seed?: number;
+      /** Local file path where image is saved (debug mode) */
+      saved_image_path?: string;
     };
   };
   /** Response message */

@@ -22,18 +22,23 @@ const router = Router();
  *     "generation": {
  *       "status": "completed",
  *       "time": 5000,
- *       "images": ["/images/raccoon_in_garden_1.png", "/images/raccoon_in_garden_2.png"]
+ *       "images": ["/images/raccoon_in_garden_1.png"]
  *     },
  *     "output_files": {
- *       "images": ["/images/raccoon_in_garden_1.png", "/images/raccoon_in_garden_2.png"],
+ *       "images": ["/images/raccoon_in_garden_1.png"],
  *       "metadata": "/metadata/raccoon_in_garden_metadata.json"
  *     },
  *     "content_summary": {
- *       "image_count": 2
+ *       "image_count": 1,
+ *       "image_description": "A detailed description of the generated image...",
+ *       "image_title": "Understanding Raccoon Behavior in Gardens"
  *     }
  *   },
- *   "message": "Image generation completed successfully"
+ *   "message": "Image description generated successfully (ready for image generation)"
  * }
+ * 
+ * Debug Mode:
+ * Add ?debug=true query parameter to save intermediate files to image_desc_temp_debug/
  */
 router.post('/v1/image-media', imageMediaCreatorController.generateImages);
 

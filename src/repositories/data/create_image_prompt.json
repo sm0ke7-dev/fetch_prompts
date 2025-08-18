@@ -1,41 +1,31 @@
 {
     "model": "gpt-4o-mini",
-    "temperature": 0.5,
+    "temperature": 0.7,
     "max_tokens": 1000,
     "top_p": 1,
     "frequency_penalty": 0,
     "presence_penalty": 0,
-    "system": "You are a helpful assistant that generates sections for a SEO articles based on the user's keyword. Each section should contain a 'headline' and a 'description'.",
-    "user": "Keyword: {{keyword}}",
+    "system": "You are a helpful assistant that creates descriptive LLM Prompts for AI image generation.",
+    "user": "Create a descriptive image description for the following Keyword. The description will be loaded into an AI image generation tool to produce a featured image for the keyword's blog post. keyword: {{keyword}}",
     "variables": {
         "keyword": "{{keyword}}"
     },
     "output-schema": {
-        "name": "generate_sections",
-        "description": "Generates a list of brief sections with headers and descriptions.",
+        "name": "generate_image_description",
+        "description": "Generates a single descriptive image prompt for AI image generation.",
         "parameters": {
           "type": "object",
           "properties": {
-            "sections": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "header": {
-                    "type": "string",
-                    "description": "A short, descriptive title for the section."
-                  },
-                  "description": {
-                    "type": "string",
-                    "description": "A brief explanation or summary of the section content."
-                  }
-                },
-                "required": ["header", "description"]
-              },
-              "description": "An array of sections each containing a header and description."
+            "image_description": {
+              "type": "string",
+              "description": "A detailed, descriptive prompt for AI image generation that will create a compelling featured image for the blog post. Should include visual elements, style, mood, and composition details."
+            },
+            "image_title": {
+              "type": "string",
+              "description": "A short, descriptive title for the generated image."
             }
           },
-          "required": ["sections"]
+          "required": ["image_description", "image_title"]
         }
       }
 }

@@ -3,6 +3,9 @@ import { ImageMediaRequest, ImageMediaResponse, ImageGenerationResult } from '..
 import { fetchPromptByName } from '../repositories/fetch_prompt';
 import { processInputs } from '../services/process_input';
 import { submitPrompt } from '../services/submit_prompt';
+import { ideogramImageGeneratorService } from '../services/generate_image';
+import * as fs from 'fs';
+import * as path from 'path';
 
 /**
  * Image Media Creator Controller
@@ -98,13 +101,83 @@ class ImageMediaCreatorController {
         return;
       }
 
-      // Step 5: Return the image descriptions (placeholder for actual image generation)
+      // Step 5: Check if debug mode is enabled
+      const isDebugMode = req.query.debug === 'true';
+      
+      // Save Phase 2 output to debug folder if debug mode is enabled
+      if (isDebugMode) {
+        const debugDir = path.join(__dirname, '..', '..', 'src', 'repositories', 'image_desc_temp_debug', 'phase2_descriptions');
+        if (!fs.existsSync(debugDir)) {
+          fs.mkdirSync(debugDir, { recursive: true });
+        }
+        
+        const debugFile = path.join(debugDir, `${keyword.replace(/\s+/g, '_')}_image_desc.json`);
+        fs.writeFileSync(debugFile, JSON.stringify(imageDescriptions, null, 2));
+        console.log('📁 Debug: Phase 2 output saved to:', debugFile);
+      }
+
+      // Step 6: Generate actual image using Ideogram API (Phase 3)
+      console.log('🎨 Step 6: Generating image with Ideogram API...');
+      const ideogramResult = await ideogramImageGeneratorService.generateImage({
+        prompt: imageDescriptions.image_description,
+        rendering_speed: 'DEFAULT',
+        style_type: 'GENERAL'
+      });
+
+      if (!ideogramResult.success || !ideogramResult.data) {
+        res.status(500).json({
+          success: false,
+          message: 'Failed to generate image with Ideogram API',
+          error: ideogramResult.error
+        });
+        return;
+      }
+
+      // Step 7: Save Phase 3 output to debug folder if debug mode is enabled
+      let savedImagePath: string | undefined;
+      if (isDebugMode) {
+        const debugDir = path.join(__dirname, '..', '..', 'src', 'repositories', 'image_desc_temp_debug', 'phase3_images');
+        if (!fs.existsSync(debugDir)) {
+          fs.mkdirSync(debugDir, { recursive: true });
+        }
+        
+        // Save metadata
+        const metaPath = path.join(debugDir, `${keyword.replace(/\s+/g, '_')}_image_metadata.json`);
+        fs.writeFileSync(metaPath, JSON.stringify(ideogramResult.data, null, 2));
+        console.log('📁 Debug: Phase 3 metadata saved to:', metaPath);
+
+        // Attempt to download and save the image locally
+        try {
+          const sanitizedKeyword = keyword.replace(/\s+/g, '_').toLowerCase();
+          const imageUrl = ideogramResult.data.imageUrl.replace(/\\u0026/g, '&');
+          const imageResp = await fetch(imageUrl, {
+            headers: {
+              'Accept': 'image/*, */*;q=0.8',
+              'User-Agent': 'debug-downloader/1.0'
+            }
+          });
+          if (imageResp.ok) {
+            const arrBuf = await imageResp.arrayBuffer();
+            const buf = Buffer.from(arrBuf);
+            const imgPath = path.join(debugDir, `${sanitizedKeyword}_image.png`);
+            fs.writeFileSync(imgPath, buf);
+            savedImagePath = imgPath;
+            console.log('🖼️ Debug: Image downloaded to:', imgPath);
+          } else {
+            let bodyText = '';
+            try { bodyText = await imageResp.text(); } catch {}
+            console.warn('⚠️ Debug: Failed to download image. HTTP', imageResp.status, bodyText?.slice(0, 200));
+          }
+        } catch (downloadErr) {
+          console.warn('⚠️ Debug: Error downloading image:', downloadErr);
+        }
+      }
+
+      // Step 8: Return the complete result (description + generated image)
       const generationResult: ImageGenerationResult = {
         status: 'completed',
         time: Date.now() - startTime,
-        images: imageDescriptions.sections?.map((section: any, index: number) => 
-          `/images/${keyword.replace(/\s+/g, '_')}_${index + 1}.png`
-        ) || []
+        images: [ideogramResult.data.imageUrl]
       };
 
       const response: ImageMediaResponse = {
@@ -118,14 +191,22 @@ class ImageMediaCreatorController {
             metadata: `/metadata/${keyword.replace(/\s+/g, '_')}_metadata.json`
           },
           content_summary: {
-            image_count: count
+            image_count: count,
+            image_description: imageDescriptions.image_description,
+            image_title: imageDescriptions.image_title,
+            generated_image_url: ideogramResult.data.imageUrl,
+            image_resolution: ideogramResult.data.resolution,
+            image_seed: ideogramResult.data.seed,
+            saved_image_path: savedImagePath
           }
         },
-        message: 'Image descriptions generated successfully (ready for image generation)'
+        message: 'Image generation completed successfully (description + generated image)'
       };
 
-      console.log('🎉 HTTP API: Image descriptions generated in', response.data!.processing_time, 'ms');
-      console.log('📋 Generated sections:', imageDescriptions.sections?.length || 0);
+      console.log('🎉 HTTP API: Complete image generation in', response.data!.processing_time, 'ms');
+      console.log('📋 Image Title:', imageDescriptions.image_title);
+      console.log('🎨 Image Description:', imageDescriptions.image_description);
+      console.log('🖼️ Generated Image URL:', ideogramResult.data.imageUrl);
       res.status(200).json(response);
 
     } catch (error) {
