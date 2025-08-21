@@ -1,0 +1,52 @@
+{
+    "model": "gpt-4o-mini",
+    "temperature": 0.7,
+    "max_tokens": 1500,
+    "top_p": 1,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "system": "You are an expert creative director specializing in visual concept development for AI image generation. Your task is to generate multiple diverse concept variations for a given keyword that would work well with AI image generators. Focus on creating concepts that are visually distinct, technically feasible, and avoid common AI generation pitfalls like anatomical errors or context confusion. Each concept should be specific enough to guide image generation but flexible enough to allow for creative interpretation.",
+    "user": "Generate 3 diverse visual concept variations that depicts the keyword: {{keyword}}",
+    "variables": {
+        "keyword": "{{keyword}}"
+    },
+    "output-schema": {
+        "name": "generate_concept_variations",
+        "description": "Generates multiple diverse visual concept variations for AI image generation.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "concepts": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "Unique identifier for the concept (e.g., 'concept_1', 'concept_2', 'concept_3')"
+                            },
+                            "title": {
+                                "type": "string",
+                                "description": "A brief, descriptive title for the concept"
+                            },
+                            "description": {
+                                "type": "string",
+                                "description": "Detailed visual description of the concept, including setting, composition, lighting, and key elements"
+                            },
+                            "key_elements": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "description": "List of key visual elements that must be present in the image"
+                            }
+                        },
+                        "required": ["id", "title", "description", "key_elements"]
+                    },
+                    "description": "An array of 3 diverse concept variations"
+                }
+            },
+            "required": ["concepts"]
+        }
+    }
+}

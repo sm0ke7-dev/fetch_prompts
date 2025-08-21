@@ -40,6 +40,6 @@ const router = Router();
  * Debug Mode:
  * Add ?debug=true query parameter to save intermediate files to image_desc_temp_debug/
  */
-router.post('/v1/image-media', imageMediaCreatorController.generateImages);
+router.post('/v1/image-media', imageMediaCreatorController.generateImages.bind(imageMediaCreatorController));
 
 export default router;

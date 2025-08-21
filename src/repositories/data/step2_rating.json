@@ -1,0 +1,83 @@
+{
+    "model": "gpt-4o-mini",
+    "temperature": 0.3,
+    "max_tokens": 1000,
+    "top_p": 1,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "system": "You are an expert AI image generation analyst specializing in evaluating how well concepts will perform with AI image generators. Your task is to rate concept variations based on their commonality in training datasets and likelihood of successful generation. Consider factors like how frequently similar scenarios appear in training data, complexity of elements, and potential for AI generation errors.",
+    "user": "Rate the following 3 concept variations for the keyword '{{keyword}}' based on their commonality in AI training datasets and likelihood of successful generation:\n\n{{concepts}}",
+    "variables": {
+        "keyword": "{{keyword}}",
+        "concepts": "{{concepts}}"
+    },
+    "output-schema": {
+        "name": "rate_concept_variations",
+        "description": "Rates concept variations for commonality and generation success likelihood.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "ratings": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "concept_id": {
+                                "type": "string",
+                                "description": "The ID of the concept being rated (e.g., 'concept_1', 'concept_2', 'concept_3')"
+                            },
+                            "commonality_score": {
+                                "type": "integer",
+                                "description": "Score from 1-10 (1=very rare in training data, 10=very common in training data) based on how frequently similar scenarios appear in AI training datasets"
+                            },
+                            "generation_success_score": {
+                                "type": "integer",
+                                "description": "Score from 1-10 (1=likely to fail, 10=very likely to succeed) based on likelihood of successful AI image generation"
+                            },
+                            "overall_score": {
+                                "type": "integer",
+                                "description": "Combined score from 1-10 (average of commonality and generation success scores)"
+                            },
+                            "reasoning": {
+                                "type": "string",
+                                "description": "Brief explanation of the ratings, including factors considered and potential challenges"
+                            }
+                        },
+                        "required": ["concept_id", "commonality_score", "generation_success_score", "overall_score", "reasoning"]
+                    },
+                    "description": "An array of ratings for each concept variation"
+                },
+                "best_concept": {
+                    "type": "object",
+                    "properties": {
+                        "concept_id": {
+                            "type": "string",
+                            "description": "ID of the concept with the highest overall score"
+                        },
+                        "title": {
+                            "type": "string",
+                            "description": "Title of the best concept"
+                        },
+                        "description": {
+                            "type": "string",
+                            "description": "Description of the best concept"
+                        },
+                        "key_elements": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "description": "Key elements of the best concept"
+                        },
+                        "overall_score": {
+                            "type": "integer",
+                            "description": "Overall score of the best concept"
+                        }
+                    },
+                    "required": ["concept_id", "title", "description", "key_elements", "overall_score"]
+                }
+            },
+            "required": ["ratings", "best_concept"]
+        }
+    }
+}

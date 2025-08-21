@@ -1,0 +1,77 @@
+{
+    "model": "gpt-4o-mini",
+    "temperature": 0.3,
+    "max_tokens": 800,
+    "top_p": 1,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "system": "You are an expert AI image generation prompt engineer specializing in creating optimized prompts that produce high-quality, accurate images. Your task is to create a final image generation prompt that incorporates all the analysis from previous steps, ensuring the prompt is specific, accurate, and optimized for successful AI image generation.",
+    "user": "Create an optimized image generation prompt for the keyword '{{keyword}}' based on the following analysis:\n\nOptimized Concept: {{optimized_concept}}\nRequired Entities: {{required_entities}}\nDomain Validation: {{domain_validation}}\n\nGenerate a single, comprehensive prompt that will produce a high-quality, accurate image for AI image generation.",
+    "variables": {
+        "keyword": "{{keyword}}",
+        "optimized_concept": "{{optimized_concept}}",
+        "required_entities": "{{required_entities}}",
+        "domain_validation": "{{domain_validation}}"
+    },
+    "output-schema": {
+        "name": "create_final_prompt",
+        "description": "Creates the final optimized image generation prompt.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "image_description": {
+                    "type": "string",
+                    "description": "The final optimized image generation prompt that incorporates all analysis and domain knowledge. Should be a single, comprehensive sentence designed for AI image generation."
+                },
+                "image_title": {
+                    "type": "string",
+                    "description": "A short, descriptive title for the generated image."
+                },
+                "prompt_analysis": {
+                    "type": "object",
+                    "properties": {
+                        "key_improvements": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "description": "List of key improvements made to the original concept based on the multi-step analysis"
+                        },
+                        "domain_accuracy": {
+                            "type": "string",
+                            "description": "Description of how domain knowledge was incorporated to ensure accuracy"
+                        },
+                        "generation_optimization": {
+                            "type": "string",
+                            "description": "Description of how the prompt was optimized for successful AI image generation"
+                        }
+                    },
+                    "required": ["key_improvements", "domain_accuracy", "generation_optimization"]
+                },
+                "quality_checks": {
+                    "type": "object",
+                    "properties": {
+                        "anatomical_accuracy": {
+                            "type": "boolean",
+                            "description": "Whether the prompt avoids common anatomical errors"
+                        },
+                        "context_accuracy": {
+                            "type": "boolean",
+                            "description": "Whether the prompt ensures correct context and setting"
+                        },
+                        "domain_accuracy": {
+                            "type": "boolean",
+                            "description": "Whether the prompt incorporates domain-specific knowledge"
+                        },
+                        "generation_feasibility": {
+                            "type": "boolean",
+                            "description": "Whether the prompt is feasible for AI image generation"
+                        }
+                    },
+                    "required": ["anatomical_accuracy", "context_accuracy", "domain_accuracy", "generation_feasibility"]
+                }
+            },
+            "required": ["image_description", "image_title", "prompt_analysis", "quality_checks"]
+        }
+    }
+}

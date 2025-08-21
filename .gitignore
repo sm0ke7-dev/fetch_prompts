@@ -64,3 +64,6 @@ jspm_packages/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Generated images
+src/repositories/images/featured/

@@ -1,0 +1,102 @@
+{
+    "model": "gpt-4o-mini",
+    "temperature": 0.3,
+    "max_tokens": 1000,
+    "top_p": 1,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "system": "You are an expert visual composition analyst specializing in identifying the essential entities and elements needed for successful AI image generation. Your task is to analyze a concept and identify the minimum viable set of entities that must be present in the image for it to be accurate and successful. Focus on domain-specific knowledge and common AI generation pitfalls.",
+    "user": "Analyze the following concept for the keyword '{{keyword}}' and identify the minimum viable entities required for accurate AI image generation:\n\nBest Concept: {{best_concept}}\n\nConsider domain-specific knowledge and potential AI generation issues when identifying required entities.",
+    "variables": {
+        "keyword": "{{keyword}}",
+        "best_concept": "{{best_concept}}"
+    },
+    "output-schema": {
+        "name": "identify_minimum_entities",
+        "description": "Identifies minimum viable entities required for accurate AI image generation.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "required_entities": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "entity": {
+                                "type": "string",
+                                "description": "Name of the required entity (e.g., 'technician', 'HVAC unit', 'rooftop')"
+                            },
+                            "category": {
+                                "type": "string",
+                                "description": "Category of the entity (e.g., 'person', 'equipment', 'setting', 'tool', 'clothing')"
+                            },
+                            "importance": {
+                                "type": "string",
+                                "description": "Importance level (critical, important, optional) for the image to be accurate"
+                            },
+                            "description": {
+                                "type": "string",
+                                "description": "Brief description of how this entity should appear in the image"
+                            },
+                            "potential_issues": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "description": "List of potential AI generation issues to watch out for with this entity"
+                            }
+                        },
+                        "required": ["entity", "category", "importance", "description", "potential_issues"]
+                    },
+                    "description": "List of minimum viable entities required for the image"
+                },
+                "domain_validation": {
+                    "type": "object",
+                    "properties": {
+                        "domain_knowledge_applied": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "description": "List of domain-specific knowledge points applied (e.g., 'HVAC units are typically outdoor equipment', 'technicians wear protective gear')"
+                        },
+                        "common_misconceptions": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "description": "List of common misconceptions that AI might have about this domain"
+                        },
+                        "accuracy_notes": {
+                            "type": "string",
+                            "description": "Notes about ensuring accuracy in the final image generation"
+                        }
+                    },
+                    "required": ["domain_knowledge_applied", "common_misconceptions", "accuracy_notes"]
+                },
+                "optimized_concept": {
+                    "type": "object",
+                    "properties": {
+                        "title": {
+                            "type": "string",
+                            "description": "Updated title incorporating domain knowledge"
+                        },
+                        "description": {
+                            "type": "string",
+                            "description": "Updated description incorporating required entities and domain knowledge"
+                        },
+                        "key_elements": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "description": "Updated list of key elements incorporating required entities"
+                        }
+                    },
+                    "required": ["title", "description", "key_elements"]
+                }
+            },
+            "required": ["required_entities", "domain_validation", "optimized_concept"]
+        }
+    }
+}

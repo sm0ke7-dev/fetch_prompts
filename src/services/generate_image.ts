@@ -1,4 +1,6 @@
 import { IdeogramGenerateRequest, IdeogramGenerateResult, IdeogramGenerateResponse } from '../models/services/generate_image.model';
+import * as fs from 'fs';
+import * as path from 'path';
 
 /**
  * Ideogram Image Generation Service
@@ -42,9 +44,9 @@ export class IdeogramImageGeneratorService {
       if (request.rendering_speed) {
         formData.append('rendering_speed', request.rendering_speed);
       }
-      if (request.style_type) {
-        formData.append('style_type', request.style_type);
-      }
+      // Set style_type to REALISTIC for photorealistic images (unless explicitly overridden)
+      const styleType = request.style_type || 'REALISTIC';
+      formData.append('style_type', styleType);
       if (request.num_images) {
         formData.append('num_images', request.num_images.toString());
       }
@@ -112,6 +114,53 @@ export class IdeogramImageGeneratorService {
         error: `Ideogram service error: ${errorMessage}`,
         processing_time: Date.now() - startTime
       };
+    }
+  }
+
+  /**
+   * Download and save an image from URL to the featured images folder
+   * @param imageUrl - The URL of the image to download
+   * @param keyword - The keyword for filename generation
+   * @returns Promise with the saved image path
+   */
+  async downloadAndSaveImage(imageUrl: string, keyword: string): Promise<string> {
+    try {
+      const sanitizedKeyword = keyword
+        .toLowerCase()
+        .replace(/[^a-z0-9\s]/g, '')
+        .replace(/\s+/g, '_')
+        .trim();
+
+      const featuredDir = path.join(__dirname, '..', '..', 'src', 'repositories', 'images', 'featured');
+      if (!fs.existsSync(featuredDir)) {
+        fs.mkdirSync(featuredDir, { recursive: true });
+      }
+
+      const imageResp = await fetch(imageUrl, {
+        headers: {
+          'Accept': 'image/*, */*;q=0.8',
+          'User-Agent': 'image-downloader/1.0'
+        }
+      });
+
+      if (!imageResp.ok) {
+        let bodyText = '';
+        try { bodyText = await imageResp.text(); } catch {}
+        throw new Error(`Failed to download image. HTTP ${imageResp.status} ${bodyText?.slice(0, 200)}`);
+      }
+
+      const arrBuf = await imageResp.arrayBuffer();
+      const buf = Buffer.from(arrBuf);
+      const imgPath = path.join(featuredDir, `${sanitizedKeyword}_feat_image.png`);
+      fs.writeFileSync(imgPath, buf);
+      
+      console.log('🖼️ Image saved to:', imgPath);
+      return imgPath;
+
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+      console.warn('⚠️ Error downloading image:', errorMessage);
+      throw new Error(`Failed to download and save image: ${errorMessage}`);
     }
   }
 }

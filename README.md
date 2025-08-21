@@ -200,6 +200,8 @@ This project uses a three-branch workflow:
 
 ## 🚀 Current Implementation Status
 
+## 📝 **TEXT GENERATION SYSTEM**
+
 ### ✅ **ALL 5 PHASES COMPLETE AND WORKING**
 
 ### 🎉 **BREAKTHROUGH: HTTP API INTEGRATION COMPLETE!**
@@ -209,97 +211,6 @@ This project uses a three-branch workflow:
 - **Complete Pipeline**: All 5 phases automated via HTTP requests
 - **Production Ready**: Structured JSON responses with detailed metrics
 - **Real-time Processing**: ~3 minutes per complete article generation
-
-### 🖼️ **BREAKTHROUGH: IMAGE GENERATION API COMPLETE!**
-
-**🚀 IMAGE GENERATION PIPELINE STATUS:**
-- **Phase 1: HTTP Endpoint** ✅ **COMPLETE**
-  - **Endpoint**: `POST /api/v1/image-media`
-  - **Status**: Fully functional HTTP API with request/response handling
-  - **Files**: `image_media_creator.controller.ts`, `image_media_creator.routes.ts`, `image_media_creator.model.ts`
-
-- **Phase 2: Image Description Generation** ✅ **COMPLETE**
-  - **Functionality**: OpenAI API integration for generating detailed image descriptions
-  - **Output**: Single featured image description with title and detailed prompt
-  - **Files**: `create_image_prompt.json` (updated schema), controller response logic
-  - **Test Results**: Successfully generated "Understanding Squirrel Diseases" with detailed visual description
-
- - **Phase 3: Ideogram API Integration** ✅ **COMPLETE**
-   - **Functionality**: Converts Phase 2 descriptions into actual images using Ideogram v3 Generate API
-   - **Endpoint Used**: `POST https://api.ideogram.ai/v1/ideogram-v3/generate`
-   - **Response Additions**: `generated_image_url`, `image_resolution`, `image_seed`
-   - **Debug Mode**: Auto-downloads the image to `src/repositories/image_desc_temp_debug/phase3_images/{keyword}_image.png` and returns `saved_image_path`
-  
-  **📋 Ideogram API v3 Specifications:**
-  - **Endpoint**: `POST https://api.ideogram.ai/v1/ideogram-v3/generate`
-  - **Authentication**: `Api-Key` header with API key
-  - **Content-Type**: `multipart/form-data`
-  - **Required Parameters**: `prompt` (string) - image description
-  - **Optional Parameters**: 
-    - `resolution` - image resolution (69 supported values)
-    - `aspect_ratio` - aspect ratio (15 options, defaults to 1x1)
-    - `rendering_speed` - TURBO/DEFAULT/QUALITY (defaults to DEFAULT)
-    - `num_images` - number of images (1-8, defaults to 1)
-    - `style_type` - GENERAL/REALISTIC/DESIGN/FICTION (defaults to GENERAL)
-  - **Response**: JSON with `created` timestamp and `data` array containing image objects with `url`, `resolution`, `seed`, etc.
-  - **Important**: Image URLs expire - images are auto-downloaded in debug mode
-  - **Documentation**: [Ideogram API Generate v3](https://developer.ideogram.ai/api-reference/api-reference/generate-v3)
-
-**🎯 LATEST SUCCESS RESULTS (December 2024):**
-**Image Generation API - COMPLETE & PRODUCTION READY:**
-- **Processing Time**: ~12-14 seconds per image
-- **Image Quality**: High-quality, photorealistic landscape images (1312x736)
-- **Prompt Engineering**: Optimized for professional, anatomically correct, industry-agnostic content
-- **File Management**: Automatic saving to `src/repositories/images/featured/` with sanitized filenames
-- **API Endpoint**: `POST /api/v1/image-media` with JSON response including `saved_image_path`
-
-**✅ SUCCESSFUL TEST RESULTS:**
-- **"landscaping trends"**: Professional garden scene with native plants and modern design
-- **"roof maintenance"**: Skilled roofer inspecting weathered roof with tools
-- **"can snakes climb walls?"**: Snake climbing textured stone wall (excellent anatomy)
-- **"should i repair my garage door or hire a pro"**: Split-scene DIY vs professional comparison
-- **"best time to plant tomatoes"**: Vibrant garden scene with seedlings and tools
-- **"what eats rats"**: Barn owl and field mouse in natural setting
-- **"do raccoons eat squirrels"**: Curious raccoon observing squirrel (no anatomical errors)
-- **"what keeps bats out of homes"**: Bat-proofing measures with distant bats in sky
-- **"how to fix a broken toilet seat"**: Broken seat next to toilet in modern bathroom
-- **"how to clean hvac"**: Professional technician with tools in utility room
-- **"how to change hvac filter"**: Person in casual clothes changing filter in residential setting
-- **"how to get rid of beaver"**: Serene riverbank with beaver lodge (respectful wildlife management)
-
-**🔧 TECHNICAL IMPROVEMENTS:**
-- **Landscape Aspect Ratio**: 16x9 (1312x736) for better blog post integration
-- **Filename Sanitization**: Handles special characters and spaces correctly
-- **Prompt Optimization**: Universal instructions for photorealistic, anatomically correct content
-- **Error Prevention**: Comprehensive negative instructions embedded in prompt
-- **Professional Quality**: Consistent high-quality images across multiple industries
-
-**✅ LATEST SUCCESS RESULTS (December 2024):**
-**HTTP API Test with "raccoon predators":**
-- **Total Processing Time**: 187,611ms (3.1 minutes)
-- **Phase 1**: 90s (NeuronWriter terms - 7 H1, 15 H2, 27 body terms)
-- **Phase 2**: 7s (10-section outline generated)
-- **Phase 3**: 16s (Outline merged with body terms)
-- **Phase 4**: 74s (Content generation for 10 sections)
-- **Phase 5**: 7ms (Markdown rendering)
-- **Output**: Complete article saved to `phase5_article_raccoon_predators.md`
-
-**🎯 HTTP API Features:**
-- **Request Body**: `{"keyword": "your keyword here"}`
-- **Response**: Structured JSON with processing times, file paths, content summary
-- **Error Handling**: Comprehensive error responses with detailed messages
-- **Concurrent Processing**: Multiple requests can be processed simultaneously
-- **File Management**: All outputs automatically saved with sanitized filenames
-
-**📁 New Files Added:**
-- `src/controllers/text_media_creator.controller.ts` - HTTP request handling
-- `src/routes/text_media_creator.routes.ts` - API route definitions  
-- `src/models/services/text_media_creator.model.ts` - Request/response interfaces
-- `src/controllers/image_media_creator.controller.ts` - Image generation HTTP handling
-- `src/routes/image_media_creator.routes.ts` - Image generation API route definitions
-- `src/models/services/image_media_creator.model.ts` - Image generation interfaces
-- `src/repositories/data/create_image_prompt.json` - Image generation prompt configuration
-- Updated `src/app.ts`, `src/server.ts`, and index files for integration
 
 ### ✅ **ALL 5 PHASES COMPLETE AND WORKING**
 
@@ -360,45 +271,12 @@ This project uses a three-branch workflow:
 4. **Error Handling**: Comprehensive error handling and validation throughout pipeline
 5. **Production Ready**: Clean, professional output suitable for immediate publication
 
-### ✅ Completed Features
-
-#### **Service Layer (Fully Implemented)**
-- **Repository Layer**: 
-  - `fetch_prompt.ts` - Fetches prompt configurations from JSON files
-  - `neuron_writer.ts` - NeuronWriter API integration for optimization terms
-  - `create_outline_from_terms.ts` - Loads and formats optimization terms for outline generation
-- **Service Layer**: 
-  - `process_input.ts` - Handles variable substitution in prompts
-  - `submit_prompt.ts` - Integrates with OpenAI API using function calling
-  - `get_optimization_terms.ts` - NeuronWriter optimization terms extraction
-  - `outline_process_input.ts` - Processes outline inputs with NeuronWriter terms
-  - `outline_submit_retrieve_output.ts` - Complete outline generation service
-- **Model Layer**: Complete TypeScript interfaces for all data structures
-
-#### **Key Capabilities**
-- ✅ **Prompt Configuration Management**: Load AI model configurations from JSON files
-- ✅ **Variable Substitution**: Replace `{{variable}}` placeholders with user input
-- ✅ **OpenAI Integration**: Make API calls with structured function calling
-- ✅ **NeuronWriter Integration**: Extract comprehensive optimization terms from SERP analysis
-- ✅ **Article Outline Generation**: Create SEO-optimized outlines using SERP data
-- ✅ **Structured Output**: Return JSON responses matching defined schemas
-- ✅ **Error Handling**: Comprehensive error handling and validation
-- ✅ **Type Safety**: Full TypeScript support with proper interfaces
-
-#### **Test Results**
-- ✅ **Prompt Fetching**: Successfully loads `prompts.json` configurations
-- ✅ **Input Processing**: Variable substitution works correctly
-- ✅ **AI Integration**: Generates structured JSON responses (6 SEO sections in 439 tokens)
-- ✅ **HTTP API**: Complete endpoint working at `POST /api/v1/text?prompt_name=prompts`
-- ✅ **Real-world Test**: Successfully generated 6 SEO sections about "Raccoon Removal Houston" (612 tokens)
-- ✅ **NeuronWriter Integration**: Successfully extracts optimization terms from "trail running shoes" query
-- ✅ **Phase 2 Complete**: Generated 8-section outline for "what scares squirrels" (493 tokens, 7.8s)
-
-### ✅ **HTTP API Layer (Fully Implemented)**
-- **Controller Layer**: `prompt_controller.ts` - Handles HTTP requests and responses
-- **Route Layer**: `prompt_routes.ts` - Defines API endpoint patterns
-- **Express Setup**: `app.ts` - Middleware, CORS, and route configuration
-- **Server Startup**: `server.ts` - Environment loading and server initialization
+### ✅ **HTTP API Features:**
+- **Request Body**: `{"keyword": "your keyword here"}`
+- **Response**: Structured JSON with processing times, file paths, content summary
+- **Error Handling**: Comprehensive error responses with detailed messages
+- **Concurrent Processing**: Multiple requests can be processed simultaneously
+- **File Management**: All outputs automatically saved with sanitized filenames
 
 ### 🎯 **Current Status: Phase 5 Complete - All Phases Working**
 
@@ -444,6 +322,168 @@ This project uses a three-branch workflow:
 - `src/models/services/render_article.model.ts`
 - `test_phase5_render_article.js` (end-to-end test)
 - Output: `src/repositories/final/phase5_article_*.md`
+
+## 🖼️ **IMAGE GENERATION SYSTEM**
+
+### ✅ **ALL 3 PHASES COMPLETE AND WORKING**
+
+### 🎉 **BREAKTHROUGH: IMAGE GENERATION API COMPLETE!**
+
+**🚀 IMAGE GENERATION PIPELINE STATUS:**
+- **Phase 1: HTTP Endpoint** ✅ **COMPLETE**
+  - **Endpoint**: `POST /api/v1/image-media`
+  - **Status**: Fully functional HTTP API with request/response handling
+  - **Files**: `image_media_creator.controller.ts`, `image_media_creator.routes.ts`, `image_media_creator.model.ts`
+
+- **Phase 2: Image Description Generation** ✅ **COMPLETE**
+  - **Functionality**: OpenAI API integration for generating detailed image descriptions
+  - **Output**: Single featured image description with title and detailed prompt
+  - **Files**: `create_image_prompt.json` (updated schema), controller response logic
+  - **Test Results**: Successfully generated "Understanding Squirrel Diseases" with detailed visual description
+
+ - **Phase 3: Ideogram API Integration** ✅ **COMPLETE**
+   - **Functionality**: Converts Phase 2 descriptions into actual images using Ideogram v3 Generate API
+   - **Endpoint Used**: `POST https://api.ideogram.ai/v1/ideogram-v3/generate`
+   - **Response Additions**: `generated_image_url`, `image_resolution`, `image_seed`
+   - **Debug Mode**: Auto-downloads the image to `src/repositories/image_desc_temp_debug/phase3_images/{keyword}_image.png` and returns `saved_image_path`
+  
+  **📋 Ideogram API v3 Specifications:**
+  - **Endpoint**: `POST https://api.ideogram.ai/v1/ideogram-v3/generate`
+  - **Authentication**: `Api-Key` header with API key
+  - **Content-Type**: `multipart/form-data`
+  - **Required Parameters**: `prompt` (string) - image description
+  - **Optional Parameters**: 
+    - `resolution` - image resolution (69 supported values)
+    - `aspect_ratio` - aspect ratio (15 options, defaults to 1x1)
+    - `rendering_speed` - TURBO/DEFAULT/QUALITY (defaults to DEFAULT)
+    - `num_images` - number of images (1-8, defaults to 1)
+    - `style_type` - GENERAL/REALISTIC/DESIGN/FICTION (defaults to GENERAL)
+  - **Response**: JSON with `created` timestamp and `data` array containing image objects with `url`, `resolution`, `seed`, etc.
+  - **Important**: Image URLs expire - images are auto-downloaded in debug mode
+  - **Documentation**: [Ideogram API Generate v3](https://developer.ideogram.ai/api-reference/api-reference/generate-v3)
+
+**🎯 LATEST SUCCESS RESULTS (December 2024):**
+**Image Generation API - COMPLETE & PRODUCTION READY:**
+- **Processing Time**: ~12-14 seconds per image
+- **Image Quality**: High-quality, photorealistic images (1312x736) with `style_type: "REALISTIC"`
+- **Prompt Engineering**: Optimized for professional, anatomically correct, industry-agnostic content
+- **Photorealistic Enhancement**: Default `style_type: "REALISTIC"` for non-cartoonish, professional images
+- **File Management**: Automatic saving to `src/repositories/images/featured/` with sanitized filenames
+- **API Endpoint**: `POST /api/v1/image-media` with JSON response including `saved_image_path`
+
+**✅ SUCCESSFUL TEST RESULTS:**
+- **"landscaping trends"**: Professional garden scene with native plants and modern design
+- **"roof maintenance"**: Skilled roofer inspecting weathered roof with tools
+- **"can snakes climb walls?"**: Snake climbing textured stone wall (excellent anatomy)
+- **"should i repair my garage door or hire a pro"**: Split-scene DIY vs professional comparison
+- **"best time to plant tomatoes"**: Vibrant garden scene with seedlings and tools
+- **"what eats rats"**: Barn owl and field mouse in natural setting
+- **"do raccoons eat squirrels"**: Curious raccoon observing squirrel (no anatomical errors)
+- **"what keeps bats out of homes"**: Bat-proofing measures with distant bats in sky
+- **"how to fix a broken toilet seat"**: Broken seat next to toilet in modern bathroom
+- **"how to clean hvac"**: Professional technician with tools in utility room
+- **"how to change hvac filter"**: Person in casual clothes changing filter in residential setting
+- **"how to get rid of beaver"**: Serene riverbank with beaver lodge (respectful wildlife management)
+- **"professional photographer"**: Modern photography studio with photorealistic lighting and equipment (REALISTIC style)
+
+**🔧 TECHNICAL IMPROVEMENTS:**
+- **Landscape Aspect Ratio**: 16x9 (1312x736) for better blog post integration
+- **Filename Sanitization**: Handles special characters and spaces correctly
+- **Prompt Optimization**: Universal instructions for photorealistic, anatomically correct content
+- **Error Prevention**: Comprehensive negative instructions embedded in prompt
+- **Professional Quality**: Consistent high-quality images across multiple industries
+- **Photorealistic Style**: Default `style_type: "REALISTIC"` for non-cartoonish, professional images
+- **API Compliance**: Verified all parameters match Ideogram API v3 documentation
+
+**📝 Note on Image Quality Assurance:**
+- Current implementation focuses on prompt engineering and aspect ratio optimization
+- Future improvements planned for ensuring consistently publishable images through alternative validation approaches
+
+## 🔬 **FUTURE ENHANCEMENTS**
+
+### **Multi-Step Validation Approach (Planned)**
+
+**🎯 The Problem Being Solved:**
+AI image generators like Ideogram work within the framework of their training datasets. When scenarios are not super common, image generators may produce problematic images with:
+- Extra limbs or anatomical errors
+- Inaccurate representation of specific tools or equipment
+- Monstrous or distorted faces
+- Malformed hands and appendages
+- Context confusion (e.g., AC units inside houses instead of outside)
+- Unrealistic object placement or proportions
+
+**🧠 Multi-Step Validation Solution:**
+A progressive refinement system to maximize publishable image success rate:
+
+1. **Generate Ideas** - Brainstorm multiple visual concepts for the keyword
+2. **Rate Ideas for Common Representation** - Evaluate which concepts are most common in training datasets
+3. **Generate Minimum Viable Entities** - Break down chosen concept into essential, recognizable visual elements
+4. **Process and Create Prompt** - Combine validated concept with minimum viable entities
+5. **Generate Image** - Apply validated prompt to Ideogram with higher success probability
+6. **Quality Evaluation** - Verify generated image meets standards and check for common failure modes
+
+**🚀 Key Benefits:**
+- **Higher Success Rate**: Only use concepts well-represented in training data
+- **Reduced Regeneration**: Better first-attempt success through validation
+- **Quality Assurance**: Built-in validation before and after generation
+- **Cost Effective**: Fewer failed generations = lower API costs
+- **Scalable**: Can learn from failures and improve over time
+
+**💡 Implementation Strategy:**
+- Replace simple `create_image_prompt.json` approach with multi-step chain
+- Enhance existing `generate_image.ts` service with validation layers
+- Add quality evaluation feedback loop with fallback strategies
+- Maintain database of successful vs failed concepts for continuous improvement
+
+## 📁 **New Files Added:**
+- `src/controllers/text_media_creator.controller.ts` - HTTP request handling
+- `src/routes/text_media_creator.routes.ts` - API route definitions  
+- `src/models/services/text_media_creator.model.ts` - Request/response interfaces
+- `src/controllers/image_media_creator.controller.ts` - Image generation HTTP handling
+- `src/routes/image_media_creator.routes.ts` - Image generation API route definitions
+- `src/models/services/image_media_creator.model.ts` - Image generation interfaces
+- `src/repositories/data/create_image_prompt.json` - Image generation prompt configuration
+- Updated `src/app.ts`, `src/server.ts`, and index files for integration
+
+### ✅ Completed Features
+
+#### **Service Layer (Fully Implemented)**
+- **Repository Layer**: 
+  - `fetch_prompt.ts` - Fetches prompt configurations from JSON files
+  - `neuron_writer.ts` - NeuronWriter API integration for optimization terms
+  - `create_outline_from_terms.ts` - Loads and formats optimization terms for outline generation
+- **Service Layer**: 
+  - `process_input.ts` - Handles variable substitution in prompts
+  - `submit_prompt.ts` - Integrates with OpenAI API using function calling
+  - `get_optimization_terms.ts` - NeuronWriter optimization terms extraction
+  - `outline_process_input.ts` - Processes outline inputs with NeuronWriter terms
+  - `outline_submit_retrieve_output.ts` - Complete outline generation service
+- **Model Layer**: Complete TypeScript interfaces for all data structures
+
+#### **Key Capabilities**
+- ✅ **Prompt Configuration Management**: Load AI model configurations from JSON files
+- ✅ **Variable Substitution**: Replace `{{variable}}` placeholders with user input
+- ✅ **OpenAI Integration**: Make API calls with structured function calling
+- ✅ **NeuronWriter Integration**: Extract comprehensive optimization terms from SERP analysis
+- ✅ **Article Outline Generation**: Create SEO-optimized outlines using SERP data
+- ✅ **Structured Output**: Return JSON responses matching defined schemas
+- ✅ **Error Handling**: Comprehensive error handling and validation
+- ✅ **Type Safety**: Full TypeScript support with proper interfaces
+
+#### **Test Results**
+- ✅ **Prompt Fetching**: Successfully loads `prompts.json` configurations
+- ✅ **Input Processing**: Variable substitution works correctly
+- ✅ **AI Integration**: Generates structured JSON responses (6 SEO sections in 439 tokens)
+- ✅ **HTTP API**: Complete endpoint working at `POST /api/v1/text?prompt_name=prompts`
+- ✅ **Real-world Test**: Successfully generated 6 SEO sections about "Raccoon Removal Houston" (612 tokens)
+- ✅ **NeuronWriter Integration**: Successfully extracts optimization terms from "trail running shoes" query
+- ✅ **Phase 2 Complete**: Generated 8-section outline for "what scares squirrels" (493 tokens, 7.8s)
+
+### ✅ **HTTP API Layer (Fully Implemented)**
+- **Controller Layer**: `prompt_controller.ts` - Handles HTTP requests and responses
+- **Route Layer**: `prompt_routes.ts` - Defines API endpoint patterns
+- **Express Setup**: `app.ts` - Middleware, CORS, and route configuration
+- **Server Startup**: `server.ts` - Environment loading and server initialization
 
 ### 📋 Planned Features
 - ✅ **Phase 5: Render Output**: Compile Phase 4 content blocks into final article (Markdown), include TOC, proper heading structure (H1, H2, H3)
