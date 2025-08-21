@@ -424,7 +424,7 @@ A progressive refinement system to maximize publishable image success rate:
 - **✅ Integrated Pipeline**: Complete flow from keyword → 4-step analysis → structured prompt → image generation → file saving
 
 **📊 Technical Implementation:**
-- **Files Added**: 
+- **Files Added**:
   - `src/services/4step_image_desc_generation/img_desc_generation.ts` (main service)
   - `src/models/services/4step_image_desc_generation/img_desc_generation.models.ts` (TypeScript interfaces)
   - `src/repositories/data/step1_idea_generation.json` (concept generation prompt)
@@ -433,7 +433,9 @@ A progressive refinement system to maximize publishable image success rate:
   - `src/repositories/data/step4_final_prompt.json` (structured prompt creation)
 - **Architecture**: Clean separation between controller (HTTP handling) and service (business logic)
 - **Error Handling**: Comprehensive error handling with detailed logging at each step
-- **Performance**: ~41 seconds for complete 4-step process + image generation
+- **Performance**: ~41-49 seconds for complete 4-step process + image generation
+- **Audit Logging**: Complete visibility into prompts sent to OpenAI for each step with formatted output
+- **Real-time Monitoring**: All logs appear automatically in terminal during normal operation
 
 **🎯 Key Benefits Achieved:**
 - **Higher Success Rate**: Only use concepts well-represented in training data
@@ -442,6 +444,8 @@ A progressive refinement system to maximize publishable image success rate:
 - **Cost Effective**: Better first-attempt success through validation
 - **Maintainable**: Clean architecture with proper separation of concerns
 - **Debuggable**: Comprehensive logging for fine-tuning and optimization
+- **Complete Transparency**: Full visibility into AI prompts and responses for easy debugging
+- **Real-time Monitoring**: Automatic terminal output during normal operation (no special commands needed)
 
 **🔧 Test Results (December 2024):**
 - **✅ Successful Test**: "home office setup" completed successfully in 41 seconds
@@ -449,6 +453,9 @@ A progressive refinement system to maximize publishable image success rate:
 - **✅ Image Generation**: Successfully generated and saved image to `featured/` folder
 - **✅ Structured Format**: Proper JSON output with core, setting, objects, characters, camera, mood
 - **✅ Architecture**: Controller properly delegates to service, clean separation achieved
+- **✅ Enhanced Audit Logging**: Complete prompt visibility showing exact prompts sent to OpenAI for each step
+- **✅ Multiple Test Cases**: Successfully tested with "do raccoons eat squirrels" (49s) and "kitchen renovation tips" (47s)
+- **✅ Real-time Terminal Output**: All logs appear automatically in terminal during normal operation (no special commands needed)
 
 ## 📁 **New Files Added:**
 

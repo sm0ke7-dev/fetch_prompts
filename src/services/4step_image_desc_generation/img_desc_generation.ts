@@ -184,7 +184,10 @@ export class FourStepImageDescriptionService {
       
       // Convert structured prompt to text
       const imageDescription = this.convertStructuredPromptToText(step4Data.structured_prompt);
-      console.log('📝 Prompt:', imageDescription.substring(0, 100) + '...');
+      console.log('📝 FULL TEXT PROMPT SENT TO IDEOGRAM:');
+      console.log('━'.repeat(80));
+      console.log(imageDescription);
+      console.log('━'.repeat(80));
       
       // Generate image
       const generateResult = await ideogramImageGeneratorService.generateImage({
@@ -252,6 +255,12 @@ export class FourStepImageDescriptionService {
       }
       console.log('🔧 Inputs processed successfully');
 
+      // Log the prompt being sent to OpenAI
+      console.log('📋 STEP 1 PROMPT SENT TO OPENAI:');
+      console.log('='.repeat(80));
+      console.log(processResult.data);
+      console.log('='.repeat(80));
+
       // Submit to OpenAI
       const submitResult = await submitPrompt({
         processedInput: processResult.data,
@@ -278,6 +287,10 @@ export class FourStepImageDescriptionService {
       
       console.log('📤 Step 1 Output:');
       console.log('   Concepts Generated:', step1Data.concepts.length);
+      console.log('🔍 COMPLETE STEP 1 JSON OUTPUT:');
+      console.log(JSON.stringify(step1Data, null, 2));
+      
+
       step1Data.concepts.forEach((concept, index) => {
         console.log(`   Concept ${index + 1}: ${concept.title}`);
         console.log(`     Description: ${concept.description.substring(0, 80)}...`);
@@ -323,6 +336,12 @@ export class FourStepImageDescriptionService {
       }
       console.log('🔧 Inputs processed successfully');
 
+      // Log the prompt being sent to OpenAI
+      console.log('📋 STEP 2 PROMPT SENT TO OPENAI:');
+      console.log('='.repeat(80));
+      console.log(processResult.data);
+      console.log('='.repeat(80));
+
       // Submit to OpenAI
       const submitResult = await submitPrompt({
         processedInput: processResult.data,
@@ -349,6 +368,8 @@ export class FourStepImageDescriptionService {
       
       console.log('📤 Step 2 Output:');
       console.log('   Ratings Generated:', step2Data.ratings.length);
+      console.log('🔍 COMPLETE STEP 2 JSON OUTPUT:');
+      console.log(JSON.stringify(step2Data, null, 2));
       step2Data.ratings.forEach((rating, index) => {
         console.log(`   Rating ${index + 1}: ${rating.concept_id}`);
         console.log(`     Commonality Score: ${rating.commonality_score}/10`);
@@ -401,6 +422,12 @@ export class FourStepImageDescriptionService {
       }
       console.log('🔧 Inputs processed successfully');
 
+      // Log the prompt being sent to OpenAI
+      console.log('📋 STEP 3 PROMPT SENT TO OPENAI:');
+      console.log('='.repeat(80));
+      console.log(processResult.data);
+      console.log('='.repeat(80));
+
       // Submit to OpenAI
       const submitResult = await submitPrompt({
         processedInput: processResult.data,
@@ -427,6 +454,8 @@ export class FourStepImageDescriptionService {
       
       console.log('📤 Step 3 Output:');
       console.log('   Required Entities:', step3Data.required_entities.length);
+      console.log('🔍 COMPLETE STEP 3 JSON OUTPUT:');
+      console.log(JSON.stringify(step3Data, null, 2));
       step3Data.required_entities.forEach((entity, index) => {
         console.log(`   Entity ${index + 1}: ${entity.entity} (${entity.category})`);
         console.log(`     Importance: ${entity.importance}`);
@@ -483,6 +512,12 @@ export class FourStepImageDescriptionService {
       }
       console.log('🔧 Inputs processed successfully');
 
+      // Log the prompt being sent to OpenAI
+      console.log('📋 STEP 4 PROMPT SENT TO OPENAI:');
+      console.log('='.repeat(80));
+      console.log(processResult.data);
+      console.log('='.repeat(80));
+
       // Submit to OpenAI
       const submitResult = await submitPrompt({
         processedInput: processResult.data,
@@ -510,6 +545,8 @@ export class FourStepImageDescriptionService {
       console.log('📤 Step 4 Output:');
       console.log('🎨 Final Image Title:', step4Data.image_title);
       console.log('📝 Structured Prompt Core:', step4Data.structured_prompt.core);
+      console.log('🏗️  COMPLETE STRUCTURED PROMPT:');
+      console.log(JSON.stringify(step4Data.structured_prompt, null, 2));
       console.log('🔍 Prompt Analysis:');
       console.log(`   Key Improvements: ${step4Data.prompt_analysis.key_improvements.length} identified`);
       console.log(`   Domain Accuracy: ${step4Data.prompt_analysis.domain_accuracy.substring(0, 60)}...`);
