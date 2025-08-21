@@ -560,6 +560,48 @@ http://localhost:3000/api
 
 ### Available Endpoints
 
+#### **POST /api/v1/image-media**
+Generate AI-powered images using the 4-step validation approach.
+
+**Request Body:**
+```json
+{
+  "keyword": "your keyword here"
+}
+```
+
+**Example Request (PowerShell):**
+```powershell
+Invoke-RestMethod -Uri "http://localhost:3000/api/v1/image-media" -Method POST -ContentType "application/json" -Body '{"keyword":"my-keyword"}'
+```
+
+**Example Request (cURL):**
+```bash
+curl -X POST "http://localhost:3000/api/v1/image-media" \
+  -H "Content-Type: application/json" \
+  -d '{"keyword":"my-keyword"}'
+```
+
+**Success Response (200):**
+```json
+{
+  "success": true,
+  "data": {
+    "keyword": "my-keyword",
+    "processing_time": 47000,
+    "generation": "4-step validation completed",
+    "output_files": ["src/repositories/images/featured/my-keyword_feat_image.png"],
+    "content": {
+      "final_image_description": "Detailed image description...",
+      "final_image_title": "Generated Image Title",
+      "generated_image_url": "https://...",
+      "saved_image_path": "src/repositories/images/featured/my-keyword_feat_image.png"
+    }
+  },
+  "message": "Image generation completed successfully"
+}
+```
+
 #### **POST /api/v1/text**
 Generate AI-powered content based on prompt configurations.
 
