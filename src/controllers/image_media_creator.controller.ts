@@ -1,7 +1,6 @@
 import { Request, Response } from 'express';
 import { ImageMediaRequest, ImageMediaResponse, ImageGenerationResult } from '../models/services/image_media_creator.model';
 import { fourStepImageDescriptionService } from '../services/4step_image_desc_generation/img_desc_generation';
-import { ideogramImageGeneratorService } from '../services/generate_image';
 
 /**
  * Image Media Creator Controller
@@ -43,51 +42,24 @@ class ImageMediaCreatorController {
         return;
       }
 
-      const imageDescriptions = {
-        image_description: fourStepResult.data.final_image_description,
-        image_title: fourStepResult.data.final_image_title
-      };
-
       // Step 5: Handle debug mode
       const isDebugMode = req.query.debug === 'true';
       if (isDebugMode) {
-        await this.handleDebugMode(keyword, imageDescriptions);
-      }
-
-      // Step 6: Generate actual image using Ideogram API
-      console.log('🎨 Step 6: Generating image with Ideogram API...');
-      const ideogramResult = await ideogramImageGeneratorService.generateImage({
-        prompt: imageDescriptions.image_description,
-        rendering_speed: 'DEFAULT',
-        style_type: 'GENERAL',
-        aspect_ratio: '16x9'
-      });
-
-      if (!ideogramResult.success || !ideogramResult.data) {
-        res.status(500).json({
-          success: false,
-          message: 'Failed to generate image with Ideogram API',
-          error: ideogramResult.error
+        await this.handleDebugMode(keyword, {
+          image_description: fourStepResult.data.final_image_description,
+          image_title: fourStepResult.data.final_image_title
         });
-        return;
       }
 
-      // Step 7: Download and save the image
-      let savedImagePath: string | undefined;
-      try {
-        const imageUrl = ideogramResult.data.imageUrl.replace(/\\u0026/g, '&');
-        savedImagePath = await ideogramImageGeneratorService.downloadAndSaveImage(imageUrl, keyword);
-      } catch (downloadErr) {
-        console.warn('⚠️ Error downloading image:', downloadErr);
-      }
-
-      // Step 8: Build and return response
-      const response = this.buildResponse(keyword, count, imageDescriptions, ideogramResult.data, savedImagePath, Date.now() - startTime);
+      // Build and return response
+      const response = this.buildResponse(keyword, count, fourStepResult.data, Date.now() - startTime);
 
       console.log('🎉 HTTP API: Complete image generation in', response.data!.processing_time, 'ms');
-      console.log('📋 Image Title:', imageDescriptions.image_title);
-      console.log('🎨 Image Description:', imageDescriptions.image_description);
-      console.log('🖼️ Generated Image URL:', ideogramResult.data.imageUrl);
+      console.log('📋 Image Title:', fourStepResult.data.final_image_title);
+      console.log('🎨 Image Description:', fourStepResult.data.final_image_description);
+      if (fourStepResult.data.generated_image_url) {
+        console.log('🖼️ Generated Image URL:', fourStepResult.data.generated_image_url);
+      }
       res.status(200).json(response);
 
     } catch (error) {
@@ -125,15 +97,13 @@ class ImageMediaCreatorController {
   private buildResponse(
     keyword: string, 
     count: number, 
-    imageDescriptions: any, 
-    ideogramData: any, 
-    savedImagePath: string | undefined, 
+    fourStepData: any, 
     processingTime: number
   ): ImageMediaResponse {
     const generationResult: ImageGenerationResult = {
       status: 'completed',
       time: processingTime,
-      images: [ideogramData.imageUrl]
+      images: fourStepData.generated_image_url ? [fourStepData.generated_image_url] : []
     };
 
     return {
@@ -148,15 +118,15 @@ class ImageMediaCreatorController {
         },
         content_summary: {
           image_count: count,
-          image_description: imageDescriptions.image_description,
-          image_title: imageDescriptions.image_title,
-          generated_image_url: ideogramData.imageUrl,
-          image_resolution: ideogramData.resolution,
-          image_seed: ideogramData.seed,
-          saved_image_path: savedImagePath
+          image_description: fourStepData.final_image_description,
+          image_title: fourStepData.final_image_title,
+          generated_image_url: fourStepData.generated_image_url,
+          image_resolution: fourStepData.resolution || 'N/A',
+          image_seed: fourStepData.seed || 'N/A',
+          saved_image_path: fourStepData.saved_image_path
         }
       },
-      message: 'Image generation completed successfully (description + generated image)'
+      message: 'Image generation completed successfully (4-step process + generated image)'
     };
   }
 }

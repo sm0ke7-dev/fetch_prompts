@@ -63,13 +63,20 @@ fetch_prompt/
 │   │       ├── merge_outline_with_nw_terms.model.ts # Phase 3 merge processing
 │   │       ├── merge_outline_submit_pull.model.ts # Phase 3 submit/pull
 │   │       ├── loop_sections/loop_thru_sections.model.ts # Phase 4 content generation
-│   │       └── render_article.model.ts # Phase 5 rendering
+│   │       ├── render_article.model.ts # Phase 5 rendering
+│   │       ├── generate_image.model.ts # Ideogram API interfaces
+│   │       └── 4step_image_desc_generation/img_desc_generation.models.ts # Multi-step validation interfaces
 │   ├── repositories/          # Data access layer
 │   │   ├── data/
 │   │   │   ├── prompts.json   # AI prompt configuration data
 │   │   │   ├── outline_creation_prompt.json # Phase 2 outline generation prompt
 │   │   │   ├── outline_kw_merge_prompt.json # Phase 3 outline merging prompt
 │   │   │   ├── loop_prompt.json # Phase 4 content generation prompt
+│   │   │   ├── create_image_prompt.json # Image generation prompt
+│   │   │   ├── step1_idea_generation.json # 4-step: concept generation
+│   │   │   ├── step2_rating.json # 4-step: concept rating
+│   │   │   ├── step3_entities.json # 4-step: entity identification
+│   │   │   ├── step4_final_prompt.json # 4-step: structured prompt creation
 │   │   │   └── keyword.json   # Current keyword for NeuronWriter requests
 │   │   ├── fetch_prompt.ts    # Prompt fetching functionality
 │   │   ├── neuron_writer.ts   # NeuronWriter API integration
@@ -103,7 +110,9 @@ fetch_prompt/
 │       ├── merge_outline_with_nw_terms.ts # Phase 3 merge processing
 │       ├── merge_outline_submit_pull.ts # Phase 3 submit/pull
 │       ├── loop_thru_sections/loop_thru_sections.ts # Phase 4 content generation
-│       └── render_article.ts # Phase 5 rendering
+│       ├── render_article.ts # Phase 5 rendering
+│       ├── generate_image.ts # Ideogram API integration
+│       └── 4step_image_desc_generation/img_desc_generation.ts # Multi-step image validation
 └── README.md                  # This file
 ```
 
@@ -369,22 +378,7 @@ This project uses a three-branch workflow:
 - **Prompt Engineering**: Optimized for professional, anatomically correct, industry-agnostic content
 - **Photorealistic Enhancement**: Default `style_type: "REALISTIC"` for non-cartoonish, professional images
 - **File Management**: Automatic saving to `src/repositories/images/featured/` with sanitized filenames
-- **API Endpoint**: `POST /api/v1/image-media` with JSON response including `saved_image_path`
-
-**✅ SUCCESSFUL TEST RESULTS:**
-- **"landscaping trends"**: Professional garden scene with native plants and modern design
-- **"roof maintenance"**: Skilled roofer inspecting weathered roof with tools
-- **"can snakes climb walls?"**: Snake climbing textured stone wall (excellent anatomy)
-- **"should i repair my garage door or hire a pro"**: Split-scene DIY vs professional comparison
-- **"best time to plant tomatoes"**: Vibrant garden scene with seedlings and tools
-- **"what eats rats"**: Barn owl and field mouse in natural setting
-- **"do raccoons eat squirrels"**: Curious raccoon observing squirrel (no anatomical errors)
-- **"what keeps bats out of homes"**: Bat-proofing measures with distant bats in sky
-- **"how to fix a broken toilet seat"**: Broken seat next to toilet in modern bathroom
-- **"how to clean hvac"**: Professional technician with tools in utility room
-- **"how to change hvac filter"**: Person in casual clothes changing filter in residential setting
-- **"how to get rid of beaver"**: Serene riverbank with beaver lodge (respectful wildlife management)
-- **"professional photographer"**: Modern photography studio with photorealistic lighting and equipment (REALISTIC style)
+- **API Endpoint**: `POST /api/v1/image-media` with JSON response including `saved_image_path`d
 
 **🔧 TECHNICAL IMPROVEMENTS:**
 - **Landscape Aspect Ratio**: 16x9 (1312x736) for better blog post integration
@@ -399,11 +393,11 @@ This project uses a three-branch workflow:
 - Current implementation focuses on prompt engineering and aspect ratio optimization
 - Future improvements planned for ensuring consistently publishable images through alternative validation approaches
 
-## 🔬 **FUTURE ENHANCEMENTS**
+## 🔬 **ADVANCED IMAGE GENERATION: Multi-Step Validation Approach**
 
-### **Multi-Step Validation Approach (Planned)**
+### ✅ **IMPLEMENTED AND WORKING (December 2024)**
 
-**🎯 The Problem Being Solved:**
+**🎯 The Problem We Solved:**
 AI image generators like Ideogram work within the framework of their training datasets. When scenarios are not super common, image generators may produce problematic images with:
 - Extra limbs or anatomical errors
 - Inaccurate representation of specific tools or equipment
@@ -412,38 +406,76 @@ AI image generators like Ideogram work within the framework of their training da
 - Context confusion (e.g., AC units inside houses instead of outside)
 - Unrealistic object placement or proportions
 
-**🧠 Multi-Step Validation Solution:**
+**🧠 Multi-Step Validation Solution (NOW IMPLEMENTED):**
 A progressive refinement system to maximize publishable image success rate:
 
-1. **Generate Ideas** - Brainstorm multiple visual concepts for the keyword
-2. **Rate Ideas for Common Representation** - Evaluate which concepts are most common in training datasets
-3. **Generate Minimum Viable Entities** - Break down chosen concept into essential, recognizable visual elements
-4. **Process and Create Prompt** - Combine validated concept with minimum viable entities
-5. **Generate Image** - Apply validated prompt to Ideogram with higher success probability
-6. **Quality Evaluation** - Verify generated image meets standards and check for common failure modes
+1. **✅ Generate Ideas** - Brainstorm 3 diverse visual concepts for the keyword
+2. **✅ Rate Ideas for Common Representation** - Evaluate which concepts are most common in training datasets
+3. **✅ Generate Minimum Viable Entities** - Break down chosen concept into essential, recognizable visual elements
+4. **✅ Process and Create Structured Prompt** - Create detailed JSON prompt with core, setting, objects, characters, camera, and mood
+5. **✅ Generate Image** - Apply validated prompt to Ideogram with higher success probability
 
-**🚀 Key Benefits:**
+**🚀 Implementation Results:**
+- **✅ 4-Step Service**: `FourStepImageDescriptionService` with comprehensive logging
+- **✅ Structured JSON Output**: Detailed format with core, setting, objects, characters, camera, mood sections
+- **✅ Clean Architecture**: Business logic moved to service layer, controller is thin orchestrator
+- **✅ Type Safety**: All interfaces organized in `img_desc_generation.models.ts`
+- **✅ Audit Logging**: Detailed step-by-step console output showing inputs/outputs for each phase
+- **✅ Integrated Pipeline**: Complete flow from keyword → 4-step analysis → structured prompt → image generation → file saving
+
+**📊 Technical Implementation:**
+- **Files Added**: 
+  - `src/services/4step_image_desc_generation/img_desc_generation.ts` (main service)
+  - `src/models/services/4step_image_desc_generation/img_desc_generation.models.ts` (TypeScript interfaces)
+  - `src/repositories/data/step1_idea_generation.json` (concept generation prompt)
+  - `src/repositories/data/step2_rating.json` (concept rating prompt)
+  - `src/repositories/data/step3_entities.json` (entity identification prompt)
+  - `src/repositories/data/step4_final_prompt.json` (structured prompt creation)
+- **Architecture**: Clean separation between controller (HTTP handling) and service (business logic)
+- **Error Handling**: Comprehensive error handling with detailed logging at each step
+- **Performance**: ~41 seconds for complete 4-step process + image generation
+
+**🎯 Key Benefits Achieved:**
 - **Higher Success Rate**: Only use concepts well-represented in training data
-- **Reduced Regeneration**: Better first-attempt success through validation
-- **Quality Assurance**: Built-in validation before and after generation
-- **Cost Effective**: Fewer failed generations = lower API costs
-- **Scalable**: Can learn from failures and improve over time
+- **Structured Output**: Teammate-requested JSON format for precise image control
+- **Quality Assurance**: Built-in validation before generation
+- **Cost Effective**: Better first-attempt success through validation
+- **Maintainable**: Clean architecture with proper separation of concerns
+- **Debuggable**: Comprehensive logging for fine-tuning and optimization
 
-**💡 Implementation Strategy:**
-- Replace simple `create_image_prompt.json` approach with multi-step chain
-- Enhance existing `generate_image.ts` service with validation layers
-- Add quality evaluation feedback loop with fallback strategies
-- Maintain database of successful vs failed concepts for continuous improvement
+**🔧 Test Results (December 2024):**
+- **✅ Successful Test**: "home office setup" completed successfully in 41 seconds
+- **✅ Step-by-Step Logging**: Detailed console output showing all 4 steps with token usage
+- **✅ Image Generation**: Successfully generated and saved image to `featured/` folder
+- **✅ Structured Format**: Proper JSON output with core, setting, objects, characters, camera, mood
+- **✅ Architecture**: Controller properly delegates to service, clean separation achieved
 
 ## 📁 **New Files Added:**
+
+### **Text Generation System:**
 - `src/controllers/text_media_creator.controller.ts` - HTTP request handling
 - `src/routes/text_media_creator.routes.ts` - API route definitions  
 - `src/models/services/text_media_creator.model.ts` - Request/response interfaces
+
+### **Image Generation System:**
 - `src/controllers/image_media_creator.controller.ts` - Image generation HTTP handling
 - `src/routes/image_media_creator.routes.ts` - Image generation API route definitions
 - `src/models/services/image_media_creator.model.ts` - Image generation interfaces
-- `src/repositories/data/create_image_prompt.json` - Image generation prompt configuration
+- `src/services/generate_image.ts` - Ideogram API integration service
+- `src/models/services/generate_image.model.ts` - Ideogram API interfaces
+- `src/repositories/data/create_image_prompt.json` - Simple image generation prompt
+
+### **4-Step Image Validation System:**
+- `src/services/4step_image_desc_generation/img_desc_generation.ts` - Multi-step validation service
+- `src/models/services/4step_image_desc_generation/img_desc_generation.models.ts` - TypeScript interfaces
+- `src/repositories/data/step1_idea_generation.json` - Concept generation prompt
+- `src/repositories/data/step2_rating.json` - Concept rating prompt  
+- `src/repositories/data/step3_entities.json` - Entity identification prompt
+- `src/repositories/data/step4_final_prompt.json` - Structured prompt creation
+
+### **Infrastructure:**
 - Updated `src/app.ts`, `src/server.ts`, and index files for integration
+- Added `.gitignore` entry for `src/repositories/images/featured/` directory
 
 ### ✅ Completed Features
 

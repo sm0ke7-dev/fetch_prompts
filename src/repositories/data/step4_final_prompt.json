@@ -1,12 +1,12 @@
 {
     "model": "gpt-4o-mini",
     "temperature": 0.3,
-    "max_tokens": 800,
+    "max_tokens": 1500,
     "top_p": 1,
     "frequency_penalty": 0,
     "presence_penalty": 0,
-    "system": "You are an expert AI image generation prompt engineer specializing in creating optimized prompts that produce high-quality, accurate images. Your task is to create a final image generation prompt that incorporates all the analysis from previous steps, ensuring the prompt is specific, accurate, and optimized for successful AI image generation.",
-    "user": "Create an optimized image generation prompt for the keyword '{{keyword}}' based on the following analysis:\n\nOptimized Concept: {{optimized_concept}}\nRequired Entities: {{required_entities}}\nDomain Validation: {{domain_validation}}\n\nGenerate a single, comprehensive prompt that will produce a high-quality, accurate image for AI image generation.",
+    "system": "You are an expert AI image generation prompt engineer specializing in creating structured, detailed prompts that produce high-quality, accurate images. Your task is to create a structured image generation prompt in JSON format that incorporates all the analysis from previous steps, ensuring the prompt is specific, accurate, and optimized for successful AI image generation.",
+    "user": "Create a structured image generation prompt for the keyword '{{keyword}}' based on the following analysis:\n\nOptimized Concept: {{optimized_concept}}\nRequired Entities: {{required_entities}}\nDomain Validation: {{domain_validation}}\n\nGenerate a structured JSON prompt with detailed sections for core description, setting, objects, characters, camera, and mood that will produce a high-quality, accurate image for AI image generation. Focus on creating a clear, detailed scene that the AI can easily understand and generate.",
     "variables": {
         "keyword": "{{keyword}}",
         "optimized_concept": "{{optimized_concept}}",
@@ -14,14 +14,110 @@
         "domain_validation": "{{domain_validation}}"
     },
     "output-schema": {
-        "name": "create_final_prompt",
-        "description": "Creates the final optimized image generation prompt.",
+        "name": "create_structured_prompt",
+        "description": "Creates a structured image generation prompt in JSON format.",
         "parameters": {
             "type": "object",
             "properties": {
-                "image_description": {
-                    "type": "string",
-                    "description": "The final optimized image generation prompt that incorporates all analysis and domain knowledge. Should be a single, comprehensive sentence designed for AI image generation."
+                "structured_prompt": {
+                    "type": "object",
+                    "description": "The structured image generation prompt in JSON format with detailed sections.",
+                    "properties": {
+                        "core": {
+                            "type": "string",
+                            "description": "A concise, clear description of the main scene or action (1-2 sentences)"
+                        },
+                        "setting": {
+                            "type": "object",
+                            "description": "Detailed information about the location and environment",
+                            "properties": {
+                                "location": {
+                                    "type": "string",
+                                    "description": "The specific location where the scene takes place"
+                                },
+                                "time_of_day": {
+                                    "type": "string",
+                                    "description": "The time of day for the scene (morning, afternoon, evening, night)"
+                                },
+                                "lighting": {
+                                    "type": "string",
+                                    "description": "The lighting conditions and sources"
+                                }
+                            },
+                            "required": ["location", "time_of_day", "lighting"]
+                        },
+                        "objects": {
+                            "type": "array",
+                            "description": "List of 3-5 main objects and items in the scene",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "description": "The type or category of the object"
+                                    },
+                                    "position": {
+                                        "type": "string",
+                                        "description": "Position or placement of the object in the scene"
+                                    }
+                                },
+                                "required": ["type", "position"]
+                            }
+                        },
+                        "characters": {
+                            "type": "array",
+                            "description": "List of characters or people in the scene (if any)",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "description": "The type or role of the character"
+                                    },
+                                    "pose": {
+                                        "type": "string",
+                                        "description": "The pose or position of the character"
+                                    },
+                                    "interaction": {
+                                        "type": "string",
+                                        "description": "What the character is doing or interacting with"
+                                    }
+                                },
+                                "required": ["type", "pose", "interaction"]
+                            }
+                        },
+                        "camera": {
+                            "type": "object",
+                            "description": "Camera and composition details",
+                            "properties": {
+                                "angle": {
+                                    "type": "string",
+                                    "description": "Camera angle (eye level, low angle, high angle)"
+                                },
+                                "position": {
+                                    "type": "string",
+                                    "description": "Camera position relative to the scene"
+                                }
+                            },
+                            "required": ["angle", "position"]
+                        },
+                        "mood": {
+                            "type": "object",
+                            "description": "The mood and atmosphere of the scene",
+                            "properties": {
+                                "emotion": {
+                                    "type": "string",
+                                    "description": "The emotional tone of the scene"
+                                },
+                                "tone": {
+                                    "type": "string",
+                                    "description": "The overall tone or feeling"
+                                }
+                            },
+                            "required": ["emotion", "tone"]
+                        }
+                    },
+                    "required": ["core", "setting", "objects", "characters", "camera", "mood"]
                 },
                 "image_title": {
                     "type": "string",
@@ -71,7 +167,7 @@
                     "required": ["anatomical_accuracy", "context_accuracy", "domain_accuracy", "generation_feasibility"]
                 }
             },
-            "required": ["image_description", "image_title", "prompt_analysis", "quality_checks"]
+            "required": ["structured_prompt", "image_title", "prompt_analysis", "quality_checks"]
         }
     }
 }
