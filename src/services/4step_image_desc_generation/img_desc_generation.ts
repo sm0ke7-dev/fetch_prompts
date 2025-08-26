@@ -282,8 +282,21 @@ export class FourStepImageDescriptionService {
       console.log('🤖 OpenAI Response:');
       console.log('   Tokens Used:', submitResult.data.usage?.total_tokens || 'N/A');
 
-      // Parse response
-      const step1Data = JSON.parse(submitResult.data.content) as Step1Result;
+      // Parse response (function call already returns JSON string)
+      let step1Data: Step1Result;
+      try {
+        step1Data = JSON.parse(submitResult.data.content) as Step1Result;
+      } catch (parseError) {
+        console.log('❌ Failed to parse Step 1 response:', parseError);
+        console.log('Raw content:', submitResult.data.content);
+        return { success: false, message: 'Failed to parse Step 1 response from function call' };
+      }
+      
+      // Validate the parsed data structure
+      if (!step1Data || !step1Data.concepts || !Array.isArray(step1Data.concepts)) {
+        console.log('❌ Invalid Step 1 response structure:', JSON.stringify(step1Data, null, 2));
+        return { success: false, message: 'Invalid Step 1 response structure - concepts missing or not an array' };
+      }
       
       console.log('📤 Step 1 Output:');
       console.log('   Concepts Generated:', step1Data.concepts.length);
@@ -363,8 +376,26 @@ export class FourStepImageDescriptionService {
       console.log('🤖 OpenAI Response:');
       console.log('   Tokens Used:', submitResult.data.usage?.total_tokens || 'N/A');
 
-      // Parse response
-      const step2Data = JSON.parse(submitResult.data.content) as Step2Result;
+      // Parse response (function call already returns JSON string)
+      let step2Data: Step2Result;
+      try {
+        step2Data = JSON.parse(submitResult.data.content) as Step2Result;
+      } catch (parseError) {
+        console.log('❌ Failed to parse Step 2 response:', parseError);
+        console.log('Raw content:', submitResult.data.content);
+        return { success: false, message: 'Failed to parse Step 2 response from function call' };
+      }
+      
+      // Validate the parsed data structure
+      if (!step2Data || !step2Data.ratings || !Array.isArray(step2Data.ratings)) {
+        console.log('❌ Invalid Step 2 response structure:', JSON.stringify(step2Data, null, 2));
+        return { success: false, message: 'Invalid Step 2 response structure - ratings missing or not an array' };
+      }
+      
+      if (!step2Data.best_concept || !step2Data.best_concept.concept_id) {
+        console.log('❌ Invalid Step 2 response structure - best_concept missing or invalid');
+        return { success: false, message: 'Invalid Step 2 response structure - best_concept missing or invalid' };
+      }
       
       console.log('📤 Step 2 Output:');
       console.log('   Ratings Generated:', step2Data.ratings.length);
@@ -449,8 +480,31 @@ export class FourStepImageDescriptionService {
       console.log('🤖 OpenAI Response:');
       console.log('   Tokens Used:', submitResult.data.usage?.total_tokens || 'N/A');
 
-      // Parse response
-      const step3Data = JSON.parse(submitResult.data.content) as Step3Result;
+      // Parse response (function call already returns JSON string)
+      let step3Data: Step3Result;
+      try {
+        step3Data = JSON.parse(submitResult.data.content) as Step3Result;
+      } catch (parseError) {
+        console.log('❌ Failed to parse Step 3 response:', parseError);
+        console.log('Raw content:', submitResult.data.content);
+        return { success: false, message: 'Failed to parse Step 3 response from function call' };
+      }
+      
+      // Validate the parsed data structure
+      if (!step3Data || !step3Data.required_entities || !Array.isArray(step3Data.required_entities)) {
+        console.log('❌ Invalid Step 3 response structure:', JSON.stringify(step3Data, null, 2));
+        return { success: false, message: 'Invalid Step 3 response structure - required_entities missing or not an array' };
+      }
+      
+      if (!step3Data.domain_validation || !Array.isArray(step3Data.domain_validation.domain_knowledge_applied)) {
+        console.log('❌ Invalid Step 3 response structure - domain_validation missing or invalid');
+        return { success: false, message: 'Invalid Step 3 response structure - domain_validation missing or invalid' };
+      }
+      
+      if (!step3Data.optimized_concept || !step3Data.optimized_concept.title) {
+        console.log('❌ Invalid Step 3 response structure - optimized_concept missing or invalid');
+        return { success: false, message: 'Invalid Step 3 response structure - optimized_concept missing or invalid' };
+      }
       
       console.log('📤 Step 3 Output:');
       console.log('   Required Entities:', step3Data.required_entities.length);
@@ -539,8 +593,40 @@ export class FourStepImageDescriptionService {
       console.log('🤖 OpenAI Response:');
       console.log('   Tokens Used:', submitResult.data.usage?.total_tokens || 'N/A');
 
-      // Parse response
-      const step4Data = JSON.parse(submitResult.data.content) as Step4Result;
+      // Parse response (function call already returns JSON string)
+      let step4Data: Step4Result;
+      try {
+        step4Data = JSON.parse(submitResult.data.content) as Step4Result;
+      } catch (parseError) {
+        console.log('❌ Failed to parse Step 4 response:', parseError);
+        console.log('Raw content:', submitResult.data.content);
+        return { success: false, message: 'Failed to parse Step 4 response from function call' };
+      }
+      
+      // Validate the parsed data structure
+      if (!step4Data || !step4Data.structured_prompt) {
+        console.log('❌ Invalid Step 4 response structure:', JSON.stringify(step4Data, null, 2));
+        return { success: false, message: 'Invalid Step 4 response structure - structured_prompt missing' };
+      }
+      
+      // Check if image_title exists (either at root level or in structured_prompt)
+      let imageTitle = step4Data.image_title;
+      if (!imageTitle && step4Data.structured_prompt) {
+        const structuredPromptWithTitle = step4Data.structured_prompt as any;
+        imageTitle = structuredPromptWithTitle.image_title;
+        if (imageTitle) {
+          // Move image_title to root level for consistency with our interface
+          step4Data.image_title = imageTitle;
+          // Remove image_title from structured_prompt to match our interface
+          delete structuredPromptWithTitle.image_title;
+        }
+      }
+      
+      if (!imageTitle) {
+        console.log('❌ Invalid Step 4 response structure - image_title missing from both root and structured_prompt');
+        console.log('Raw response structure:', JSON.stringify(step4Data, null, 2));
+        return { success: false, message: 'Invalid Step 4 response structure - image_title missing from both root and structured_prompt' };
+      }
       
       // Add fallback values for missing fields
       if (!step4Data.prompt_analysis) {

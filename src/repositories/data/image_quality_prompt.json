@@ -1,0 +1,41 @@
+{
+    "model": "gpt-4o-mini",
+    "temperature": 0.3,
+    "max_tokens": 1000,
+    "top_p": 1,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "system": "You are an expert image quality assessor for AI-generated images. Analyze images for anatomical correctness and content appropriateness. Be thorough but fair in your evaluation.",
+    "user": "Analyze the following image for quality assessment. The image is titled '{{image_title}}' and was generated for the keyword '{{keyword}}'. Check for: {{quality_criteria}}. Provide a quality score from 0.0 to 1.0, overall PASS/FAIL assessment, and list any issues found. Respond in JSON format with: {\"quality_score\": number, \"overall_assessment\": \"PASS\"|\"FAIL\", \"issues\": [string]}.",
+    "variables": {
+        "image_title": "{{image_title}}",
+        "keyword": "{{keyword}}",
+        "quality_criteria": "{{quality_criteria}}"
+    },
+    "output-schema": {
+        "name": "assess_image_quality",
+        "description": "Simple quality assessment with score, pass/fail, and issues list.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "quality_score": {
+                    "type": "number",
+                    "description": "Overall quality score from 0.0 to 1.0, where 1.0 is perfect quality"
+                },
+                "overall_assessment": {
+                    "type": "string",
+                    "enum": ["PASS", "FAIL"],
+                    "description": "Overall pass/fail assessment based on quality score"
+                },
+                "issues": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "List of specific quality issues found in the image"
+                }
+            },
+            "required": ["quality_score", "overall_assessment", "issues"]
+        }
+    }
+}

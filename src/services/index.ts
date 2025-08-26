@@ -7,3 +7,4 @@ export * from './merge_outline_submit_pull';
 export * from './loop_thru_sections/loop_thru_sections';
 export * from './render_article';
 export * from './generate_image';
+export * from './image_quality_assessment/image_quality_assessment';

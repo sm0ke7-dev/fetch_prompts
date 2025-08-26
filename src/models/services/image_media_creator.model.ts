@@ -55,6 +55,19 @@ export interface ImageMediaResponse {
       image_seed?: number;
       /** Local file path where image is saved (debug mode) */
       saved_image_path?: string;
+      /** Quality assessment results */
+      quality_assessment?: {
+        /** Body proportions assessment (PASS/FAIL) */
+        body_proportions?: string;
+        /** Limb count assessment (PASS/FAIL) */
+        limb_count?: string;
+        /** Facial features assessment (PASS/FAIL) */
+        facial_features?: string;
+        /** Overall assessment (PASS/FAIL) */
+        overall_assessment?: string;
+        /** Quality assessment processing time */
+        processing_time?: number;
+      };
     };
   };
   /** Response message */

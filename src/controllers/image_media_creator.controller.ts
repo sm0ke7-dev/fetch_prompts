@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import { ImageMediaRequest, ImageMediaResponse, ImageGenerationResult } from '../models/services/image_media_creator.model';
 import { fourStepImageDescriptionService } from '../services/4step_image_desc_generation/img_desc_generation';
+import { imageQualityAssessmentService } from '../services/image_quality_assessment/image_quality_assessment';
 
 /**
  * Image Media Creator Controller
@@ -51,8 +52,22 @@ class ImageMediaCreatorController {
         });
       }
 
+      // Step 6: Quality Assessment (Phase 4)
+      let qualityAssessmentResult = null;
+      if (fourStepResult.data.generated_image_url) {
+        console.log('🔍 Step 6: Executing image quality assessment...');
+        qualityAssessmentResult = await imageQualityAssessmentService.assessImageQuality({
+          imagePath: fourStepResult.data.generated_image_url, // Use URL instead of file path
+          keyword: keyword
+        });
+        
+        if (!qualityAssessmentResult.success) {
+          console.log('⚠️ Quality assessment failed, but continuing with response:', qualityAssessmentResult.message);
+        }
+      }
+
       // Build and return response
-      const response = this.buildResponse(keyword, count, fourStepResult.data, Date.now() - startTime);
+      const response = this.buildResponse(keyword, count, fourStepResult.data, qualityAssessmentResult, Date.now() - startTime);
 
       console.log('🎉 HTTP API: Complete image generation in', response.data!.processing_time, 'ms');
       console.log('📋 Image Title:', fourStepResult.data.final_image_title);
@@ -98,6 +113,7 @@ class ImageMediaCreatorController {
     keyword: string, 
     count: number, 
     fourStepData: any, 
+    qualityAssessmentResult: any,
     processingTime: number
   ): ImageMediaResponse {
     const generationResult: ImageGenerationResult = {
@@ -123,10 +139,19 @@ class ImageMediaCreatorController {
           generated_image_url: fourStepData.generated_image_url,
           image_resolution: fourStepData.resolution || 'N/A',
           image_seed: fourStepData.seed || 'N/A',
-          saved_image_path: fourStepData.saved_image_path
+          saved_image_path: fourStepData.saved_image_path,
+          quality_assessment: qualityAssessmentResult?.success ? {
+            body_proportions: qualityAssessmentResult.data.body_proportions,
+            limb_count: qualityAssessmentResult.data.limb_count,
+            facial_features: qualityAssessmentResult.data.facial_features,
+            overall_assessment: qualityAssessmentResult.data.overall_assessment,
+            processing_time: qualityAssessmentResult.data.processing_time
+          } : undefined
         }
       },
-      message: 'Image generation completed successfully (4-step process + generated image)'
+      message: qualityAssessmentResult?.success 
+        ? 'Image generation completed successfully (4-step process + generated image + quality assessment)'
+        : 'Image generation completed successfully (4-step process + generated image)'
     };
   }
 }
