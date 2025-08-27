@@ -15,7 +15,7 @@ export class FourStepImageDescriptionService {
   /**
    * Execute the complete 4-step image description generation process
    */
-  async generateImageDescription(keyword: string): Promise<FourStepImageDescriptionResult> {
+  async generateImageDescription(keyword: string, feedback: string = ""): Promise<FourStepImageDescriptionResult> {
     const startTime = Date.now();
     
     try {
@@ -29,7 +29,7 @@ export class FourStepImageDescriptionService {
       console.log('\n' + '-'.repeat(60));
       console.log('📋 STEP 1: GENERATING CONCEPT VARIATIONS');
       console.log('-'.repeat(60));
-      const step1Result = await this.executeStep1(keyword);
+      const step1Result = await this.executeStep1(keyword, feedback);
       if (!step1Result.success || !step1Result.data) {
         console.log('❌ Step 1 FAILED:', step1Result.message);
         return {
@@ -59,14 +59,20 @@ export class FourStepImageDescriptionService {
       console.log('\n' + '-'.repeat(60));
       console.log('🔍 STEP 3: IDENTIFYING MINIMUM VIABLE ENTITIES');
       console.log('-'.repeat(60));
-      const step3Result = await this.executeStep3(keyword, step2Result.data.best_concept);
+      let step3Result = await this.executeStep3(keyword, step2Result.data.best_concept, false);
       if (!step3Result.success || !step3Result.data) {
-        console.log('❌ Step 3 FAILED:', step3Result.message);
-        return {
-          success: false,
-          message: 'Step 3 failed',
-          error: step3Result.message
-        };
+        console.log('❌ Step 3 FAILED (attempt 1):', step3Result.message);
+        // Single retry with stricter guidance
+        console.log('🔁 Retrying Step 3 with stricter instructions...');
+        step3Result = await this.executeStep3(keyword, step2Result.data.best_concept, true);
+        if (!step3Result.success || !step3Result.data) {
+          console.log('❌ Step 3 FAILED (attempt 2):', step3Result.message);
+          return {
+            success: false,
+            message: step3Result.message || 'Step 3 failed',
+            error: step3Result.error
+          };
+        }
       }
       console.log('✅ Step 3 COMPLETED successfully');
 
@@ -231,10 +237,13 @@ export class FourStepImageDescriptionService {
   /**
    * Step 1: Generate 3 concept variations
    */
-  private async executeStep1(keyword: string): Promise<{ success: boolean; data?: Step1Result; message?: string }> {
+  private async executeStep1(keyword: string, feedback: string = ""): Promise<{ success: boolean; data?: Step1Result; message?: string }> {
     try {
       console.log('📥 Step 1 Input:');
       console.log('   Keyword:', keyword);
+      if (feedback) {
+        console.log('   Feedback:', feedback);
+      }
       
       // Fetch the prompt
       const promptResult = await fetchPromptByName('step1_idea_generation');
@@ -246,7 +255,7 @@ export class FourStepImageDescriptionService {
 
       // Process inputs
       const processResult = await processInputs({
-        userInput: { keyword },
+        userInput: { keyword, feedback },
         promptName: 'step1_idea_generation'
       });
       if (!processResult.success || !processResult.data) {
@@ -424,7 +433,7 @@ export class FourStepImageDescriptionService {
   /**
    * Step 3: Identify minimum viable entities
    */
-  private async executeStep3(keyword: string, bestConcept: Step2Result['best_concept']): Promise<{ success: boolean; data?: Step3Result; message?: string }> {
+  private async executeStep3(keyword: string, bestConcept: Step2Result['best_concept'], isRetry: boolean): Promise<{ success: boolean; data?: Step3Result; message?: string; error?: string }> {
     try {
       console.log('📥 Step 3 Input:');
       console.log('   Keyword:', keyword);
@@ -453,6 +462,12 @@ export class FourStepImageDescriptionService {
       }
       console.log('🔧 Inputs processed successfully');
 
+      // Strengthen instruction on retry without changing prompt files
+      if (isRetry) {
+        const strictAppend = " You must return 'optimized_concept' with 'title', 'description', and 'key_elements'. Do not omit fields. Output MUST match the function schema exactly.";
+        (processResult.data as any).processedUserMessage = `${processResult.data.processedUserMessage}${strictAppend}`;
+      }
+
       // Log the prompt being sent to OpenAI
       console.log('📋 STEP 3 PROMPT SENT TO OPENAI:');
       console.log('='.repeat(80));
@@ -464,8 +479,8 @@ export class FourStepImageDescriptionService {
         processedInput: processResult.data,
         promptConfig: {
           model: promptResult.data.model,
-          temperature: promptResult.data.temperature,
-          max_tokens: promptResult.data.max_tokens,
+          temperature: isRetry ? Math.max(0.1, (promptResult.data.temperature || 0.3) - 0.2) : promptResult.data.temperature,
+          max_tokens: (promptResult.data.max_tokens || 1000) + (isRetry ? 300 : 0),
           top_p: promptResult.data.top_p,
           frequency_penalty: promptResult.data.frequency_penalty,
           presence_penalty: promptResult.data.presence_penalty,
@@ -487,23 +502,23 @@ export class FourStepImageDescriptionService {
       } catch (parseError) {
         console.log('❌ Failed to parse Step 3 response:', parseError);
         console.log('Raw content:', submitResult.data.content);
-        return { success: false, message: 'Failed to parse Step 3 response from function call' };
+        return { success: false, message: 'STEP3_PARSE_ERROR', error: 'Failed to parse Step 3 response from function call' };
       }
       
       // Validate the parsed data structure
       if (!step3Data || !step3Data.required_entities || !Array.isArray(step3Data.required_entities)) {
         console.log('❌ Invalid Step 3 response structure:', JSON.stringify(step3Data, null, 2));
-        return { success: false, message: 'Invalid Step 3 response structure - required_entities missing or not an array' };
+        return { success: false, message: 'STEP3_SCHEMA_MISSING_REQUIRED_ENTITIES', error: 'Invalid Step 3 response structure - required_entities missing or not an array' };
       }
       
       if (!step3Data.domain_validation || !Array.isArray(step3Data.domain_validation.domain_knowledge_applied)) {
         console.log('❌ Invalid Step 3 response structure - domain_validation missing or invalid');
-        return { success: false, message: 'Invalid Step 3 response structure - domain_validation missing or invalid' };
+        return { success: false, message: 'STEP3_SCHEMA_MISSING_DOMAIN_VALIDATION', error: 'Invalid Step 3 response structure - domain_validation missing or invalid' };
       }
       
       if (!step3Data.optimized_concept || !step3Data.optimized_concept.title) {
         console.log('❌ Invalid Step 3 response structure - optimized_concept missing or invalid');
-        return { success: false, message: 'Invalid Step 3 response structure - optimized_concept missing or invalid' };
+        return { success: false, message: 'STEP3_SCHEMA_MISSING_OPTIMIZED_CONCEPT', error: 'Invalid Step 3 response structure - optimized_concept missing or invalid' };
       }
       
       console.log('📤 Step 3 Output:');

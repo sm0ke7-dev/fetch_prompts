@@ -1,13 +1,12 @@
 import { fetchPromptByName } from '../../repositories/fetch_prompt';
 import { processInputs } from '../process_input';
-import { submitPrompt } from '../submit_prompt';
 import {
   ImageQualityAssessmentRequest,
   ImageQualityAssessmentResponse,
   ImageQualityAssessmentResult
 } from '../../models/services/image_quality_assessment/image_quality_assessment.models';
-import * as fs from 'fs';
 import * as path from 'path';
+import { ImageMediaResponse, ImageGenerationResult } from '../../models/services/image_media_creator.model';
 
 export class ImageQualityAssessmentService {
   /**
@@ -29,6 +28,7 @@ export class ImageQualityAssessmentService {
     const startTime = Date.now();
     
     try {
+      const isDebug = process.env.LOG_LEVEL === 'debug';
       console.log('\n' + '='.repeat(80));
       console.log('🔍 PHASE 4: IMAGE QUALITY ASSESSMENT (GPT Vision)');
       console.log('='.repeat(80));
@@ -49,6 +49,38 @@ export class ImageQualityAssessmentService {
       // Extract image title from URL or keyword
       const imageTitle = this.extractImageTitle(request.imagePath, request.keyword);
 
+      // Prepare prompt using configuration and variable substitution
+      const promptConfigResult = await fetchPromptByName('image_quality_prompt');
+      if (!promptConfigResult.success || !promptConfigResult.data) {
+        return {
+          success: false,
+          message: 'Failed to fetch image quality prompt configuration',
+          error: promptConfigResult.message
+        };
+      }
+
+      const qualityCriteriaFromPrompt = (promptConfigResult.data as any).quality_criteria as string | undefined;
+      const qualityCriteria = qualityCriteriaFromPrompt && qualityCriteriaFromPrompt.trim() !== ''
+        ? qualityCriteriaFromPrompt
+        : this.getQualityCriteria();
+
+      const processResult = await processInputs({
+        userInput: {
+          image_title: imageTitle,
+          keyword: request.keyword,
+          quality_criteria: qualityCriteria
+        },
+        promptName: 'image_quality_prompt'
+      });
+
+      if (!processResult.success || !processResult.data) {
+        return {
+          success: false,
+          message: 'Failed to process prompt inputs for image quality assessment',
+          error: processResult.message
+        };
+      }
+
       // Step 1: Create vision API request with direct URL
       console.log('\n' + '-'.repeat(60));
       console.log('🤖 STEP 1: CREATING GPT VISION API REQUEST');
@@ -64,30 +96,43 @@ export class ImageQualityAssessmentService {
       }
 
       const visionRequest = {
-        model: "gpt-4o-mini",
-        messages: [{
-          role: "user",
-          content: [
-            {
-              type: "text",
-              text: `Analyze this image for quality assessment. The image is titled '${imageTitle}' and was generated for the keyword '${request.keyword}'. Check for: ${this.getQualityCriteria()}. Respond in JSON format with: {"body_proportions": "PASS"|"FAIL", "limb_count": "PASS"|"FAIL", "facial_features": "PASS"|"FAIL", "overall_assessment": "PASS"|"FAIL"}.`
-            },
-            {
-              type: "image_url",
-              image_url: {
-                url: request.imagePath,
-                detail: "auto"
+        model: promptConfigResult.data.model,
+        temperature: promptConfigResult.data.temperature,
+        max_tokens: promptConfigResult.data.max_tokens,
+        top_p: promptConfigResult.data.top_p,
+        frequency_penalty: promptConfigResult.data.frequency_penalty,
+        presence_penalty: promptConfigResult.data.presence_penalty,
+        messages: [
+          {
+            role: "system",
+            content: processResult.data.processedSystemMessage
+          },
+          {
+            role: "user",
+            content: [
+              {
+                type: "text",
+                text: processResult.data.processedUserMessage
+              },
+              {
+                type: "image_url",
+                image_url: {
+                  url: request.imagePath,
+                  detail: "auto"
+                }
               }
-            }
-          ]
-        }]
+            ]
+          }
+        ]
       };
 
-      console.log('✅ Vision API request created successfully');
-      console.log('📋 GPT VISION API REQUEST BODY:');
-      console.log('='.repeat(80));
-      console.log(JSON.stringify(visionRequest, null, 2));
-      console.log('='.repeat(80));
+      if (isDebug) {
+        console.log('✅ Vision API request created successfully');
+        console.log('📋 GPT VISION API REQUEST BODY:');
+        console.log('='.repeat(80));
+        console.log(JSON.stringify(visionRequest, null, 2));
+        console.log('='.repeat(80));
+      }
 
       // Step 2: Submit to GPT Vision API
       console.log('\n' + '-'.repeat(60));
@@ -114,7 +159,9 @@ export class ImageQualityAssessmentService {
       }
 
       const visionResponse = await response.json() as any;
-      console.log('✅ GPT Vision API response received successfully');
+      if (isDebug) {
+        console.log('✅ GPT Vision API response received successfully');
+      }
 
       // Step 3: Parse the quality assessment response
       console.log('\n' + '-'.repeat(60));
@@ -130,10 +177,12 @@ export class ImageQualityAssessmentService {
         };
       }
       
-      console.log('📝 QUALITY ASSESSMENT RESULT:');
-      console.log('='.repeat(80));
-      console.log(content);
-      console.log('='.repeat(80));
+      if (isDebug) {
+        console.log('📝 QUALITY ASSESSMENT RESULT:');
+        console.log('='.repeat(80));
+        console.log(content);
+        console.log('='.repeat(80));
+      }
 
       const qualityResult = this.parseQualityAssessmentResponse(content);
       
@@ -150,13 +199,8 @@ export class ImageQualityAssessmentService {
       const processingTime = Date.now() - startTime;
       if (qualityResult.data) {
         qualityResult.data.processing_time = processingTime;
-
-                 console.log('✅ Quality assessment completed successfully');
-         console.log('📊 Body Proportions:', qualityResult.data.body_proportions);
-         console.log('📊 Limb Count:', qualityResult.data.limb_count);
-         console.log('📊 Facial Features:', qualityResult.data.facial_features);
-         console.log('🎯 Overall Assessment:', qualityResult.data.overall_assessment);
-         console.log('⏱️ Processing Time:', processingTime, 'ms');
+        const summary = `🧪 Image QA: BP=${qualityResult.data.body_proportions}, LC=${qualityResult.data.limb_count}, FF=${qualityResult.data.facial_features}, OVERALL=${qualityResult.data.overall_assessment}, t=${processingTime}ms`;
+        console.log(summary);
       }
 
       return {
@@ -232,6 +276,17 @@ export class ImageQualityAssessmentService {
          processing_time: 0 // Will be set by caller
        };
 
+       // Optional fields
+       if (parsed.context_alignment) {
+         (result as any).context_alignment = parsed.context_alignment;
+       }
+       if (parsed.failure_reasons && Array.isArray(parsed.failure_reasons)) {
+         (result as any).failure_reasons = parsed.failure_reasons as string[];
+       }
+       if (parsed.redo_hint && typeof parsed.redo_hint === 'string') {
+         (result as any).redo_hint = parsed.redo_hint as string;
+       }
+
       return {
         success: true,
         data: result
@@ -246,6 +301,55 @@ export class ImageQualityAssessmentService {
         error: 'Failed to parse quality assessment response'
       };
     }
+  }
+
+  /**
+   * Build the HTTP response for the image media pipeline
+   */
+  public buildImageMediaResponse(
+    keyword: string,
+    count: number,
+    fourStepData: any,
+    qualityAssessmentResult: any,
+    processingTime: number
+  ): ImageMediaResponse {
+    const generationResult: ImageGenerationResult = {
+      status: 'completed',
+      time: processingTime,
+      images: fourStepData.generated_image_url ? [fourStepData.generated_image_url] : []
+    };
+
+    return {
+      success: true,
+      data: {
+        keyword,
+        processing_time: processingTime,
+        generation: generationResult,
+        output_files: {
+          images: generationResult.images || [],
+          metadata: `/metadata/${keyword.replace(/\s+/g, '_')}_metadata.json`
+        },
+        content_summary: {
+          image_count: count,
+          image_description: fourStepData.final_image_description,
+          image_title: fourStepData.final_image_title,
+          generated_image_url: fourStepData.generated_image_url,
+          image_resolution: fourStepData.resolution || 'N/A',
+          image_seed: fourStepData.seed || 'N/A',
+          saved_image_path: fourStepData.saved_image_path,
+          quality_assessment: qualityAssessmentResult?.success ? {
+            body_proportions: qualityAssessmentResult.data.body_proportions,
+            limb_count: qualityAssessmentResult.data.limb_count,
+            facial_features: qualityAssessmentResult.data.facial_features,
+            overall_assessment: qualityAssessmentResult.data.overall_assessment,
+            processing_time: qualityAssessmentResult.data.processing_time
+          } : undefined
+        }
+      },
+      message: qualityAssessmentResult?.success 
+        ? 'Image generation completed successfully (4-step process + generated image + quality assessment)'
+        : 'Image generation completed successfully (4-step process + generated image)'
+    };
   }
 }
 

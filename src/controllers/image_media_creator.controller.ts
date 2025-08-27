@@ -30,9 +30,13 @@ class ImageMediaCreatorController {
         return;
       }
 
-      // Step 1-4: Execute 4-step image description generation
+      // Step 1-4: Execute 4-step image description generation (with optional feedback on retry)
       console.log('🚀 Step 1-4: Executing 4-step image description generation...');
-      const fourStepResult = await fourStepImageDescriptionService.generateImageDescription(keyword);
+      let feedback: string = '';
+      let attemptsUsed = 0;
+      const maxAttempts = 2; // 1 initial + 1 retry
+      let fourStepResult = await fourStepImageDescriptionService.generateImageDescription(keyword, feedback);
+      attemptsUsed++;
       
       if (!fourStepResult.success || !fourStepResult.data) {
         res.status(500).json({
@@ -66,15 +70,43 @@ class ImageMediaCreatorController {
         }
       }
 
-      // Build and return response
-      const response = this.buildResponse(keyword, count, fourStepResult.data, qualityAssessmentResult, Date.now() - startTime);
+      // Optional retry if QA failed
+      if (qualityAssessmentResult?.success && qualityAssessmentResult.data && (qualityAssessmentResult.data.overall_assessment === 'FAIL' || (qualityAssessmentResult.data as any).context_alignment === 'FAIL') && attemptsUsed < maxAttempts) {
+        const reasons = (qualityAssessmentResult.data as any).failure_reasons as string[] | undefined;
+        const redoHint = (qualityAssessmentResult.data as any).redo_hint as string | undefined;
+        const reasonStr = reasons && reasons.length > 0 ? reasons.join('; ') : 'context or anatomical mismatch';
+        feedback = `Reasons: ${reasonStr}. Hint: ${redoHint || 'Add explicit visual anchors for subject, action, and setting.'}`;
+        console.log('🔁 QA FAIL detected. Retrying from Step 1 with feedback:', feedback);
 
-      console.log('🎉 HTTP API: Complete image generation in', response.data!.processing_time, 'ms');
-      console.log('📋 Image Title:', fourStepResult.data.final_image_title);
-      console.log('🎨 Image Description:', fourStepResult.data.final_image_description);
-      if (fourStepResult.data.generated_image_url) {
-        console.log('🖼️ Generated Image URL:', fourStepResult.data.generated_image_url);
+        // Re-run 4-step with feedback
+        fourStepResult = await fourStepImageDescriptionService.generateImageDescription(keyword, feedback);
+        attemptsUsed++;
+
+        // Re-run QA if we have a new image
+        if (fourStepResult.success && fourStepResult.data && fourStepResult.data.generated_image_url) {
+          console.log('🔍 Re-running image quality assessment on retry image...');
+          qualityAssessmentResult = await imageQualityAssessmentService.assessImageQuality({
+            imagePath: fourStepResult.data.generated_image_url,
+            keyword
+          });
+        }
       }
+
+      // Build and return response (delegated to service)
+      const response = imageQualityAssessmentService.buildImageMediaResponse(
+        keyword,
+        count,
+        fourStepResult.data,
+        qualityAssessmentResult,
+        Date.now() - startTime
+      );
+
+      // Attach rerun metadata if applicable
+      (response.data as any).rerun = {
+        attempted: attemptsUsed > 1,
+        attempts_used: attemptsUsed,
+        feedback_applied: attemptsUsed > 1 ? feedback : null
+      };
       res.status(200).json(response);
 
     } catch (error) {
@@ -106,54 +138,7 @@ class ImageMediaCreatorController {
     console.log('📁 Debug: Phase 2 output saved to:', debugFile);
   }
 
-  /**
-   * Build the response object
-   */
-  private buildResponse(
-    keyword: string, 
-    count: number, 
-    fourStepData: any, 
-    qualityAssessmentResult: any,
-    processingTime: number
-  ): ImageMediaResponse {
-    const generationResult: ImageGenerationResult = {
-      status: 'completed',
-      time: processingTime,
-      images: fourStepData.generated_image_url ? [fourStepData.generated_image_url] : []
-    };
-
-    return {
-      success: true,
-      data: {
-        keyword,
-        processing_time: processingTime,
-        generation: generationResult,
-        output_files: {
-          images: generationResult.images || [],
-          metadata: `/metadata/${keyword.replace(/\s+/g, '_')}_metadata.json`
-        },
-        content_summary: {
-          image_count: count,
-          image_description: fourStepData.final_image_description,
-          image_title: fourStepData.final_image_title,
-          generated_image_url: fourStepData.generated_image_url,
-          image_resolution: fourStepData.resolution || 'N/A',
-          image_seed: fourStepData.seed || 'N/A',
-          saved_image_path: fourStepData.saved_image_path,
-          quality_assessment: qualityAssessmentResult?.success ? {
-            body_proportions: qualityAssessmentResult.data.body_proportions,
-            limb_count: qualityAssessmentResult.data.limb_count,
-            facial_features: qualityAssessmentResult.data.facial_features,
-            overall_assessment: qualityAssessmentResult.data.overall_assessment,
-            processing_time: qualityAssessmentResult.data.processing_time
-          } : undefined
-        }
-      },
-      message: qualityAssessmentResult?.success 
-        ? 'Image generation completed successfully (4-step process + generated image + quality assessment)'
-        : 'Image generation completed successfully (4-step process + generated image)'
-    };
-  }
+  // Response construction has been moved to the service layer
 }
 
 // Export singleton instance

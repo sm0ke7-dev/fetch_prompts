@@ -231,6 +231,88 @@ NEURONWRITER_API_KEY=your_neuronwriter_api_key_here
 
 **Note:** The `.local.env` file is ignored by Git for security reasons.
 
+## 🔍 Troubleshooting
+
+### Common Issues
+
+#### **Development Setup Issues**
+
+**Issue: Missing Dependencies**
+- **Solution**: Run `npm install` to install all project dependencies
+
+**Issue: TypeScript Compilation Errors**
+- **Solution**: Run `npm run build` to compile TypeScript files
+
+**Issue: Environment Variables Not Loading**
+- **Solution**: Check `.local.env` file exists and contains valid API keys
+
+### Getting Help
+
+- Check the existing code structure
+- Review this README
+- Check GitHub issues
+- Create a new issue if needed
+
+## 🚧 Known Issues & Improvements Needed
+
+### **Image Quality Assessment Feature - Basic Implementation**
+
+**Current Status:** ✅ Functional but basic implementation
+**Location:** `src/services/image_quality_assessment/image_quality_assessment.ts`
+
+#### **🔍 Issues Identified:**
+
+**1. Hardcoded Prompt System (CRITICAL)**
+- **Problem**: Uses hardcoded prompts instead of the project's prompt configuration system
+- **Location**: Lines 65-75 in the service file
+- **Impact**: Inconsistent with project architecture, difficult to maintain
+- **Solution Needed**: Replace with `fetchPromptByName('image_quality_prompt')` + `processInputs()` + `submitPrompt()`
+
+**2. Limited Assessment Criteria**
+- **Problem**: Only 3 basic categories (body_proportions, limb_count, facial_features)
+- **Missing**: Quality score (0.0-1.0), detailed issues list, comprehensive assessment
+- **Solution Needed**: Use structured output schema from `image_quality_prompt.json`
+
+**3. No Structured Function Calls**
+- **Problem**: Uses basic JSON parsing instead of OpenAI's function calling system
+- **Impact**: Potential parsing errors, inconsistent responses
+- **Solution Needed**: Implement output schema function calls for reliable responses
+
+**4. Business Logic in Controller**
+- **Problem**: Response formatting logic in controller instead of service layer
+- **Location**: `src/controllers/image_media_creator.controller.ts` lines 143-147
+- **Impact**: Violates separation of concerns
+- **Solution Needed**: Move response formatting to service layer
+
+#### **📋 Files Involved:**
+- `src/services/image_quality_assessment/image_quality_assessment.ts` (main service)
+- `src/models/services/image_quality_assessment/image_quality_assessment.models.ts` (data models)
+- `src/repositories/data/image_quality_prompt.json` (unused prompt config)
+- `src/controllers/image_media_creator.controller.ts` (integration point)
+- `src/models/services/image_media_creator.model.ts` (response models)
+
+#### **🎯 Improvement Goals:**
+1. **Use proper prompt configuration system** (consistency with rest of project)
+2. **Implement structured function calls** (reliable JSON responses)
+3. **Enhanced assessment criteria** (quality score + detailed issues)
+4. **Move business logic to service layer** (proper architecture)
+5. **Better error handling** (robust fallback mechanisms)
+
+#### **⚠️ Previous Attempt Notes:**
+- **Attempted**: Full refactor to use prompt configuration system
+- **Result**: File corruption due to complex changes
+- **Lesson**: Use targeted, incremental improvements instead of full rewrites
+- **Recommendation**: Make small, focused changes and test thoroughly
+
+#### **🔧 Recommended Approach:**
+1. **Start with targeted fixes** (fix specific lines, not entire files)
+2. **Test each change** before proceeding
+3. **Use incremental approach** (one improvement at a time)
+4. **Backup before major changes** (git commit frequently)
+5. **Follow existing patterns** (use same approach as other services)
+
+---
+
 ## 🤝 Contributing
 
 ### Working with AI Assistants
@@ -263,28 +345,6 @@ When collaborating with AI assistants on this project:
 - Add comments for complex logic
 - Use meaningful variable and function names
 - Keep functions small and focused
-
-## 🔍 Troubleshooting
-
-### Common Issues
-
-#### **Development Setup Issues**
-
-**Issue: Missing Dependencies**
-- **Solution**: Run `npm install` to install all project dependencies
-
-**Issue: TypeScript Compilation Errors**
-- **Solution**: Run `npm run build` to compile TypeScript files
-
-**Issue: Environment Variables Not Loading**
-- **Solution**: Check `.local.env` file exists and contains valid API keys
-
-### Getting Help
-
-- Check the existing code structure
-- Review this README
-- Check GitHub issues
-- Create a new issue if needed
 
 ---
 

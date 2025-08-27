@@ -6,7 +6,7 @@
     "frequency_penalty": 0,
     "presence_penalty": 0,
     "system": "You are an expert AI image generation analyst specializing in evaluating how well concepts will perform with AI image generators. Your task is to rate concept variations based on their commonality in training datasets and likelihood of successful generation. Consider factors like how frequently similar scenarios appear in training data, complexity of elements, and potential for AI generation errors.",
-    "user": "Rate the following 3 concept variations for the keyword '{{keyword}}' based on their commonality in AI training datasets and likelihood of successful generation:\n\n{{concepts}}",
+    "user": "Rate the following 3 concept variations for the keyword '{{keyword}}' based on their commonality in AI image generator training datasets and likelihood of successful generation:\n\n{{concepts}}",
     "variables": {
         "keyword": "{{keyword}}",
         "concepts": "{{concepts}}"

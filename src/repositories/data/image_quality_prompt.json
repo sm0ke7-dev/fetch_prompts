@@ -5,37 +5,12 @@
     "top_p": 1,
     "frequency_penalty": 0,
     "presence_penalty": 0,
-    "system": "You are an expert image quality assessor for AI-generated images. Analyze images for anatomical correctness and content appropriateness. Be thorough but fair in your evaluation.",
-    "user": "Analyze the following image for quality assessment. The image is titled '{{image_title}}' and was generated for the keyword '{{keyword}}'. Check for: {{quality_criteria}}. Provide a quality score from 0.0 to 1.0, overall PASS/FAIL assessment, and list any issues found. Respond in JSON format with: {\"quality_score\": number, \"overall_assessment\": \"PASS\"|\"FAIL\", \"issues\": [string]}.",
+    "system": "You are an expert image quality assessor for AI-generated images. Analyze images for anatomical correctness and content appropriateness. Be thorough, conservative, and evidence-based. Judge only what is visually present; do not infer missing elements. If unsure, default overall_assessment to FAIL.",
+    "user": "Analyze this image for quality assessment. The image is titled '{{image_title}}' and was generated for the keyword '{{keyword}}'. Check for: {{quality_criteria}}. Extract the key subject(s), action(s), and setting implied by the keyword, and identify concrete visual anchors these imply. If those anchors are not clearly visible in the image (or the scene is inconsistent with the implied setting), set \"context_alignment\" to \"FAIL\" and set \"overall_assessment\" to \"FAIL\" even if anatomical checks pass. Also include short feedback for a redo: list 1-3 concise failure reasons and a one-sentence redo_hint that tells how to adjust the concept for a better retry. Respond in JSON format with: {\"body_proportions\": \"PASS\"|\"FAIL\", \"limb_count\": \"PASS\"|\"FAIL\", \"facial_features\": \"PASS\"|\"FAIL\", \"context_alignment\": \"PASS\"|\"FAIL\", \"overall_assessment\": \"PASS\"|\"FAIL\", \"failure_reasons\": [string], \"redo_hint\": string}.",
+    "quality_criteria": "Anatomical correctness (body proportions, limb count, facial features), Content appropriateness for professional publishing, No inappropriate or offensive content, No anatomical errors (extra limbs, distorted features, etc.), Context alignment with keyword intent: the image must include the key subject(s), show the implied action/pose, and be set in a compatible environment; spatial relationships and perspective should be plausible; if any of these are missing or inconsistent with the keyword, mark as FAIL.",
     "variables": {
         "image_title": "{{image_title}}",
         "keyword": "{{keyword}}",
         "quality_criteria": "{{quality_criteria}}"
-    },
-    "output-schema": {
-        "name": "assess_image_quality",
-        "description": "Simple quality assessment with score, pass/fail, and issues list.",
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "quality_score": {
-                    "type": "number",
-                    "description": "Overall quality score from 0.0 to 1.0, where 1.0 is perfect quality"
-                },
-                "overall_assessment": {
-                    "type": "string",
-                    "enum": ["PASS", "FAIL"],
-                    "description": "Overall pass/fail assessment based on quality score"
-                },
-                "issues": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    },
-                    "description": "List of specific quality issues found in the image"
-                }
-            },
-            "required": ["quality_score", "overall_assessment", "issues"]
-        }
     }
 }
