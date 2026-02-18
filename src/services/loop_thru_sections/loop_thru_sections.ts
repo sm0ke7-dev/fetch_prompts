@@ -39,7 +39,7 @@ export class LoopThruSectionsService {
         const section = phase3Outline.sections[i];
         console.log(`📝 Generating content for section ${i + 1}/${phase3Outline.sections.length}: "${section.headline}"`);
         
-        const sectionContent = await this.generateSectionContent(section, request.pageType);
+        const sectionContent = await this.generateSectionContent(section, request.pageType, request.keyword);
         if (!sectionContent.success) {
           return {
             success: false,
@@ -104,7 +104,7 @@ export class LoopThruSectionsService {
   /**
    * Generate content for a single section
    */
-  private async generateSectionContent(section: any, pageType?: 'blog' | 'service_page'): Promise<SubmitSectionResponse> {
+  private async generateSectionContent(section: any, pageType?: 'blog' | 'service_page', keyword?: string): Promise<SubmitSectionResponse> {
     try {
       // 1. Process section input
       const processResult = await this.processSectionInput({
@@ -112,7 +112,8 @@ export class LoopThruSectionsService {
         description: section.description,
         headerTerms: section["header-terms"],
         contentTerms: section["content-terms"],
-        pageType
+        pageType,
+        keyword
       });
 
       if (!processResult.success) {
@@ -168,6 +169,7 @@ export class LoopThruSectionsService {
 
       const processResult = await processInputs({
         userInput: {
+          keyword: request.keyword || '',
           headline: request.headline,
           description: request.description,
           header_terms: request.headerTerms.join(', '),

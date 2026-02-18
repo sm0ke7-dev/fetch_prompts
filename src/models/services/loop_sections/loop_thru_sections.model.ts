@@ -54,6 +54,7 @@ export interface SectionContentData {
 }
 
 export interface ProcessSectionInputRequest {
+  keyword?: string;
   headline: string;
   description: string;
   headerTerms: string[];
