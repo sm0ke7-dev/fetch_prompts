@@ -313,6 +313,57 @@ NEURONWRITER_API_KEY=your_neuronwriter_api_key_here
 
 ---
 
+## 🗺️ Next Steps / Roadmap
+
+### Milestone 1: Claude Skill for Location Page Creation (`/create-location-page`)
+
+**Goal:** Make spinning up new location pages a one-command operation inside Claude Code.
+
+**How it works:**
+- Create a skill file at `.claude/commands/create-location-page.md`
+- The skill prompt will ask for a keyword + page type, then call the existing `POST /api/v1/text-media` endpoint
+- Claude handles the API call, monitors output, and confirms the generated file location
+- No new backend code needed — the full 5-phase pipeline already exists
+
+**Rough implementation plan:**
+1. Create `.claude/commands/create-location-page.md` with the skill prompt
+2. Prompt accepts: `keyword` (e.g. "raccoon removal Beaumont tx") and `pageType` (`service_page` | `blog`)
+3. Skill calls the local API, waits for response, and surfaces the output file path
+4. Optionally chain directly into Milestone 2 (WordPress upload) after generation
+
+**Estimated effort:** ~1–2 hours
+
+---
+
+### Milestone 2: Phase 6 — Programmatic WordPress Upload
+
+**Goal:** After article generation, automatically publish (or draft) the content to WordPress via the REST API.
+
+**How it works:**
+1. **Markdown → HTML conversion** — use `marked` or `markdown-it` npm package to convert the Phase 5 `.md` output to HTML
+2. **WordPress REST API** — `POST /wp-json/wp/v2/pages` (or `/posts` for blog content) with the HTML as the `content` field
+3. **Authentication** — WordPress Application Passwords (Settings → Users → Application Passwords). Store credentials in `.local.env`
+4. **New service file** — `src/services/wordpress_upload.ts` handles auth, request construction, and response handling
+5. **New endpoint or pipeline step** — either a standalone `POST /api/v1/wp-upload` endpoint or a Phase 6 added to the existing text pipeline
+
+**New environment variables needed:**
+```env
+# WordPress Configuration
+WP_BASE_URL=https://your-site.com
+WP_USERNAME=your_wp_username
+WP_APP_PASSWORD=your_wp_application_password
+```
+
+**Estimated effort:** ~1 day
+
+**Open questions to resolve before building:**
+- [ ] Should pages be uploaded as **draft** (safe, review before publish) or **published** directly?
+- [ ] What should the **slug / URL structure** be? (e.g. `/raccoon-removal-beaumont-tx/` or under a parent page?)
+- [ ] How should **duplicate pages** be handled — skip, overwrite, or create a new revision?
+- [ ] Should blog posts go to `/wp-json/wp/v2/posts` and service pages to `/wp-json/wp/v2/pages`?
+
+---
+
 ## 🤝 Contributing
 
 ### Working with AI Assistants
@@ -348,5 +399,5 @@ When collaborating with AI assistants on this project:
 
 ---
 
-**Last Updated:** December 2024 - HTTP API Integration Complete! (Text + Image Generation + Quality Assessment)
+**Last Updated:** February 2026 - service_page pageType support added; Next Steps roadmap documented
 **Version:** 1.0.0
