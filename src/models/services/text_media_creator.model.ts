@@ -6,6 +6,8 @@
 export interface TextMediaRequest {
   /** The keyword to generate content for */
   keyword: string;
+  /** The type of page to generate — defaults to "blog" */
+  pageType?: 'blog' | 'service_page';
 }
 
 export interface PhaseResult {

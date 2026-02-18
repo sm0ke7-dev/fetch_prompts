@@ -1,6 +1,7 @@
 export interface LoopThruSectionsRequest {
   keyword: string;
   phase3OutlineFile?: string;
+  pageType?: 'blog' | 'service_page';
 }
 
 export interface LoopThruSectionsResponse {
@@ -57,6 +58,7 @@ export interface ProcessSectionInputRequest {
   description: string;
   headerTerms: string[];
   contentTerms: string[];
+  pageType?: 'blog' | 'service_page';
 }
 
 export interface ProcessSectionInputResponse {

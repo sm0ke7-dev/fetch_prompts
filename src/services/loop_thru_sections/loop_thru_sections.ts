@@ -39,7 +39,7 @@ export class LoopThruSectionsService {
         const section = phase3Outline.sections[i];
         console.log(`📝 Generating content for section ${i + 1}/${phase3Outline.sections.length}: "${section.headline}"`);
         
-        const sectionContent = await this.generateSectionContent(section);
+        const sectionContent = await this.generateSectionContent(section, request.pageType);
         if (!sectionContent.success) {
           return {
             success: false,
@@ -104,14 +104,15 @@ export class LoopThruSectionsService {
   /**
    * Generate content for a single section
    */
-  private async generateSectionContent(section: any): Promise<SubmitSectionResponse> {
+  private async generateSectionContent(section: any, pageType?: 'blog' | 'service_page'): Promise<SubmitSectionResponse> {
     try {
       // 1. Process section input
       const processResult = await this.processSectionInput({
         headline: section.headline,
         description: section.description,
         headerTerms: section["header-terms"],
-        contentTerms: section["content-terms"]
+        contentTerms: section["content-terms"],
+        pageType
       });
 
       if (!processResult.success) {
@@ -161,6 +162,10 @@ export class LoopThruSectionsService {
       // Use the existing processInputs service for variable substitution
       const { processInputs } = require('../process_input');
       
+      const promptName = request.pageType === 'service_page'
+        ? 'location_service_loop_prompt'
+        : 'loop_prompt';
+
       const processResult = await processInputs({
         userInput: {
           headline: request.headline,
@@ -168,7 +173,7 @@ export class LoopThruSectionsService {
           header_terms: request.headerTerms.join(', '),
           content_terms: request.contentTerms.join(', ')
         },
-        promptName: 'loop_prompt'
+        promptName
       });
 
       if (!processResult.success) {
@@ -180,7 +185,7 @@ export class LoopThruSectionsService {
       }
 
       // Load the loop prompt configuration for additional settings
-      const promptConfig = await this.loadLoopPromptConfig();
+      const promptConfig = await this.loadLoopPromptConfig(request.pageType);
 
       return {
         success: true,
@@ -278,14 +283,17 @@ export class LoopThruSectionsService {
   /**
    * Load loop prompt configuration from JSON
    */
-  private async loadLoopPromptConfig(): Promise<any> {
+  private async loadLoopPromptConfig(pageType?: 'blog' | 'service_page'): Promise<any> {
     const fs = require('fs');
     const path = require('path');
-    
-    const promptPath = path.join(__dirname, '..', '..', '..', 'src', 'repositories', 'data', 'loop_prompt.json');
-    
+
+    const promptFileName = pageType === 'service_page'
+      ? 'location_service_loop_prompt.json'
+      : 'loop_prompt.json';
+    const promptPath = path.join(__dirname, '..', '..', '..', 'src', 'repositories', 'data', promptFileName);
+
     if (!fs.existsSync(promptPath)) {
-      throw new Error('Loop prompt configuration file not found: loop_prompt.json');
+      throw new Error(`Loop prompt configuration file not found: ${promptFileName}`);
     }
 
     return JSON.parse(fs.readFileSync(promptPath, 'utf-8'));

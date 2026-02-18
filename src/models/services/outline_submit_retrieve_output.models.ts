@@ -125,6 +125,7 @@ export interface ArticleOutline {
 export interface GenerateOutlineRequest {
   keyword: string;
   optimization_terms_file?: string;
+  pageType?: 'blog' | 'service_page';
 }
 
 export interface GenerateOutlineResponse {

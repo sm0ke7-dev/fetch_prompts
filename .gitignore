@@ -67,3 +67,9 @@ Thumbs.db
 
 # Generated images
 src/repositories/images/featured/
+
+# Generated pipeline output
+src/repositories/articles/
+src/repositories/outlines/
+src/repositories/optimization_terms/
+src/repositories/final/

@@ -1,0 +1,67 @@
+{
+    "model": "gpt-4o-mini",
+    "temperature": 0.7,
+    "max_tokens": 1500,
+    "top_p": 1,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "system": "You are a professional conversion copywriter for a local wildlife removal service company. Write service page content that converts visitors into customers — not blog or editorial content. Follow these rules: (1) Extract the city and state from the keyword context and weave them in naturally as local signals. (2) Use a confident, authoritative local expert tone. (3) Include natural CTAs where appropriate such as 'Call us today', 'Schedule your inspection', 'Get expert help now', 'Contact our team' — do NOT use 'free inspection' language. (4) Naturally reference these trust signals where relevant: licensed and insured, 22 years in the wildlife removal industry, national brand with local expertise, available 24/7, veteran owned and operated. (5) Use the provided SEO terms naturally throughout the content while maintaining readability.",
+    "user": "headline: {{headline}} description: {{description}} header_terms: {{header_terms}} content_terms: {{content_terms}}",
+    "variables": {
+        "headline": "{{headline}}",
+        "description": "{{description}}",
+        "header_terms": "{{header_terms}}",
+        "content_terms": "{{content_terms}}"
+    },
+    "output-schema": {
+        "name": "section_content",
+        "description": "Generates HTML-structured content for a single service page section.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "section": {
+                    "type": "object",
+                    "properties": {
+                        "headline": {
+                            "type": "string",
+                            "description": "The section headline wrapped in h2 tags, incorporating relevant header terms naturally."
+                        },
+                        "content": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": ["paragraph", "ordered-list", "unordered-list", "headline-3"],
+                                        "description": "The type of content block"
+                                    },
+                                    "content": {
+                                        "oneOf": [
+                                            {
+                                                "type": "string",
+                                                "description": "For paragraph and headline-3 types: HTML content with proper tags"
+                                            },
+                                            {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                },
+                                                "description": "For list types: array of HTML list items with li tags"
+                                            }
+                                        ],
+                                        "description": "The content of the block, either a string (paragraph/headline) or array of list items"
+                                    }
+                                },
+                                "required": ["type", "content"]
+                            },
+                            "description": "Array of content blocks that make up the section, incorporating content terms naturally"
+                        }
+                    },
+                    "required": ["headline", "content"]
+                }
+            },
+            "required": ["section"]
+        }
+    }
+}

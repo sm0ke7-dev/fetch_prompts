@@ -150,7 +150,10 @@ export async function generateArticleOutline(request: GenerateOutlineRequest): P
     console.log('⚙️ Loading prompt configuration...');
     
     // Load the outline creation prompt directly from the data file
-    const promptPath = path.join(__dirname, '..', '..', 'src', 'repositories', 'data', 'outline_creation_prompt.json');
+    const promptFileName = request.pageType === 'service_page'
+      ? 'location_service_outline_prompt.json'
+      : 'outline_creation_prompt.json';
+    const promptPath = path.join(__dirname, '..', '..', 'src', 'repositories', 'data', promptFileName);
     
     if (!fs.existsSync(promptPath)) {
       return {

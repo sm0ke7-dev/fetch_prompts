@@ -1,4 +1,6 @@
 import { Request, Response } from 'express';
+import fs from 'fs';
+import path from 'path';
 import { GetOptimizationTermsService } from '../services/get_optimization_terms';
 import { generateArticleOutline } from '../services/outline_submit_retrieve_output';
 import { mergeOutlineWithTerms } from '../services/merge_outline_with_nw_terms';
@@ -15,7 +17,7 @@ export const textMediaCreatorController = {
     
     try {
       // Validate request body
-      const { keyword }: TextMediaRequest = req.body;
+      const { keyword, pageType }: TextMediaRequest = req.body;
       
       if (!keyword || typeof keyword !== 'string') {
         res.status(400).json({
@@ -30,47 +32,54 @@ export const textMediaCreatorController = {
       // Phase 1: NeuronWriter Terms
       const phase1Start = Date.now();
       console.log('📋 Phase 1: Generating optimization terms...');
-      
-      const config = {
-        apiKey: process.env.NEURONWRITER_API_KEY!,
-        baseUrl: 'https://app.neuronwriter.com/neuron-api/0.5/writer',
-        timeout: 30000
-      };
-      
-      const optimizationService = new GetOptimizationTermsService(config);
-      
-      // Get NeuronWriter project
-      const projects = await optimizationService.listProjects();
-      if (projects.length === 0) {
-        throw new Error('No NeuronWriter projects found');
+
+      const sanitizedKeyword = keyword.toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, '_').trim();
+      const termsFilePath = path.resolve(__dirname, '../../src/repositories/optimization_terms', `${sanitizedKeyword}.json`);
+
+      if (fs.existsSync(termsFilePath)) {
+        console.log(`✅ Phase 1 skipped — using existing file: ${termsFilePath}`);
+      } else {
+        const config = {
+          apiKey: process.env.NEURONWRITER_API_KEY!,
+          baseUrl: 'https://app.neuronwriter.com/neuron-api/0.5/writer',
+          timeout: 30000
+        };
+
+        const optimizationService = new GetOptimizationTermsService(config);
+
+        // Get NeuronWriter project
+        const projects = await optimizationService.listProjects();
+        if (projects.length === 0) {
+          throw new Error('No NeuronWriter projects found');
+        }
+        const projectId = projects[0].project;
+
+        const phase1Result = await optimizationService.getOptimizationTerms({
+          keyword: keyword,
+          projectId: projectId,
+          engine: 'google.com',
+          language: 'English'
+        });
+
+        if (!phase1Result.success) {
+          throw new Error(`Phase 1 failed: ${phase1Result.message}`);
+        }
+
+        // Save Phase 1 results
+        if (!phase1Result.data) {
+          throw new Error('Phase 1 result data is missing');
+        }
+
+        const saveResult = await optimizationService.saveOptimizationTermsToFileByQueryId(
+          phase1Result.data.query_id,
+          keyword
+        );
+
+        if (!saveResult.success) {
+          throw new Error(`Failed to save Phase 1 results: ${saveResult.message}`);
+        }
       }
-      const projectId = projects[0].project;
-      
-      const phase1Result = await optimizationService.getOptimizationTerms({
-        keyword: keyword,
-        projectId: projectId,
-        engine: 'google.com',
-        language: 'English'
-      });
-      
-      if (!phase1Result.success) {
-        throw new Error(`Phase 1 failed: ${phase1Result.message}`);
-      }
-      
-      // Save Phase 1 results
-      if (!phase1Result.data) {
-        throw new Error('Phase 1 result data is missing');
-      }
-      
-      const saveResult = await optimizationService.saveOptimizationTermsToFileByQueryId(
-        phase1Result.data.query_id, 
-        keyword
-      );
-      
-      if (!saveResult.success) {
-        throw new Error(`Failed to save Phase 1 results: ${saveResult.message}`);
-      }
-      
+
       const phase1Time = Date.now() - phase1Start;
       console.log(`✅ Phase 1 completed in ${phase1Time}ms`);
 
@@ -78,7 +87,7 @@ export const textMediaCreatorController = {
       const phase2Start = Date.now();
       console.log('📋 Phase 2: Generating article outline...');
       
-      const phase2Result = await generateArticleOutline({ keyword });
+      const phase2Result = await generateArticleOutline({ keyword, pageType });
       if (!phase2Result.success) {
         throw new Error(`Phase 2 failed: ${phase2Result.message}`);
       }
@@ -103,7 +112,7 @@ export const textMediaCreatorController = {
       console.log('📋 Phase 4: Generating section content...');
       
       const loopService = new LoopThruSectionsService();
-      const phase4Result = await loopService.loopThruSections({ keyword });
+      const phase4Result = await loopService.loopThruSections({ keyword, pageType });
       if (!phase4Result.success) {
         throw new Error(`Phase 4 failed: ${phase4Result.message}`);
       }
@@ -126,7 +135,6 @@ export const textMediaCreatorController = {
 
       // Prepare response
       const totalTime = Date.now() - startTime;
-      const sanitizedKeyword = keyword.toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, '_').trim();
       
       const response: TextMediaResponse = {
         success: true,
