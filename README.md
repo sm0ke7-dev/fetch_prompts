@@ -23,7 +23,7 @@ This project provides a RESTful API for managing and retrieving prompts with AI 
 - **Language:** TypeScript
 - **Architecture:** MVC Pattern with Repository Layer
 - **Data Storage:** JSON files (can be extended to database)
-- **AI Integration:** OpenAI API with structured function calling
+- **AI Integration:** OpenAI API with structured tool calling (tools/tool_choice)
 - **Environment Management:** dotenv for configuration
 - **Version Control:** Git with GitHub
 
@@ -94,11 +94,11 @@ fetch_prompts/
 - **Phase 4**: Generate section content with multiple content block types
 - **Phase 5**: Render final article in clean Markdown format
 
-**Latest Test Results (December 2024):**
-- **Total Processing Time**: 62 seconds
-- **SEO Performance**: 82/83 (98.8% - nearly perfect!)
-- **Content Quality**: 1,215 words, 23 content blocks generated
+**Latest Test Results (February 2026):**
+- **Total Processing Time**: ~320 seconds using gpt-5-mini (62 seconds with gpt-4o-mini)
+- **Content Quality**: 8 sections, 133 lines, full local geographic depth
 - **File Output**: Complete Markdown article with proper heading structure
+- **Model Support**: Compatible with both `gpt-4o-mini` and `gpt-5-mini`
 
 ### ✅ **IMAGE GENERATION SYSTEM - ALL 4 PHASES COMPLETE**
 
@@ -315,23 +315,19 @@ NEURONWRITER_API_KEY=your_neuronwriter_api_key_here
 
 ## 🗺️ Next Steps / Roadmap
 
-### Milestone 1: Claude Skill for Location Page Creation (`/create-location-page`)
+### ✅ Milestone 1: Claude Skill for Location Page Creation (`/create-location-page`) — COMPLETE
 
 **Goal:** Make spinning up new location pages a one-command operation inside Claude Code.
 
 **How it works:**
-- Create a skill file at `.claude/commands/create-location-page.md`
-- The skill prompt will ask for a keyword + page type, then call the existing `POST /api/v1/text-media` endpoint
-- Claude handles the API call, monitors output, and confirms the generated file location
-- No new backend code needed — the full 5-phase pipeline already exists
+- Skill file lives at `.claude/commands/create-location-page.md`
+- Accepts a keyword + page type, then calls `POST /api/v1/text-media`
+- Claude handles the API call, waits for the pipeline to complete, and surfaces the output file path
 
-**Rough implementation plan:**
-1. Create `.claude/commands/create-location-page.md` with the skill prompt
-2. Prompt accepts: `keyword` (e.g. "raccoon removal Beaumont tx") and `pageType` (`service_page` | `blog`)
-3. Skill calls the local API, waits for response, and surfaces the output file path
-4. Optionally chain directly into Milestone 2 (WordPress upload) after generation
-
-**Estimated effort:** ~1–2 hours
+**Usage:**
+```
+/create-location-page raccoon removal Beaumont tx
+```
 
 ---
 
