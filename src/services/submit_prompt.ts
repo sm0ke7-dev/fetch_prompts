@@ -25,14 +25,19 @@ export async function submitPrompt(request: SubmitPromptRequest): Promise<Submit
       };
     }
 
+    // gpt-5 models only support default sampling params
+    const isGpt5 = promptConfig.model.startsWith('gpt-5');
+
     // Prepare the OpenAI API request
     const openaiRequest: OpenAIRequest = {
       model: promptConfig.model,
-      temperature: promptConfig.temperature,
-      max_tokens: promptConfig.max_tokens,
-      top_p: promptConfig.top_p,
-      frequency_penalty: promptConfig.frequency_penalty,
-      presence_penalty: promptConfig.presence_penalty,
+      ...(isGpt5 ? {} : {
+        temperature: promptConfig.temperature,
+        top_p: promptConfig.top_p,
+        frequency_penalty: promptConfig.frequency_penalty,
+        presence_penalty: promptConfig.presence_penalty,
+      }),
+      max_completion_tokens: promptConfig.max_tokens,
       messages: [
         {
           role: 'system',
@@ -47,8 +52,8 @@ export async function submitPrompt(request: SubmitPromptRequest): Promise<Submit
 
     // Add output schema if provided
     if (promptConfig.outputSchema) {
-      openaiRequest.functions = [promptConfig.outputSchema];
-      openaiRequest.function_call = { name: promptConfig.outputSchema.name };
+      openaiRequest.tools = [{ type: 'function', function: promptConfig.outputSchema }];
+      openaiRequest.tool_choice = { type: 'function', function: { name: promptConfig.outputSchema.name } };
     }
 
     // Make the API call to OpenAI
@@ -77,9 +82,9 @@ export async function submitPrompt(request: SubmitPromptRequest): Promise<Submit
     const choice = openaiResponse.choices[0];
     let content = choice?.message?.content;
     
-    // If using functions, the content might be in function_call
-    if (!content && choice?.message?.function_call) {
-      content = choice.message.function_call.arguments;
+    // If using tools, the content might be in tool_calls
+    if (!content && choice?.message?.tool_calls?.[0]) {
+      content = choice.message.tool_calls[0].function.arguments;
     }
     
     if (!content) {

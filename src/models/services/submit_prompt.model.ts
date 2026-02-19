@@ -1,25 +1,28 @@
 // Interface for OpenAI API request
 export interface OpenAIRequest {
   model: string;
-  temperature: number;
-  max_tokens: number;
-  top_p: number;
-  frequency_penalty: number;
-  presence_penalty: number;
+  temperature?: number;
+  max_completion_tokens: number;
+  top_p?: number;
+  frequency_penalty?: number;
+  presence_penalty?: number;
   messages: Array<{
     role: 'system' | 'user' | 'assistant';
     content: string;
   }>;
-  functions?: Array<{
-    name: string;
-    description: string;
-    parameters: {
-      type: string;
-      properties: Record<string, any>;
-      required: string[];
+  tools?: Array<{
+    type: 'function';
+    function: {
+      name: string;
+      description: string;
+      parameters: {
+        type: string;
+        properties: Record<string, any>;
+        required: string[];
+      };
     };
   }>;
-  function_call?: 'auto' | 'none' | { name: string };
+  tool_choice?: 'auto' | 'none' | 'required' | { type: 'function'; function: { name: string } };
 }
 
 // Interface for OpenAI API response
@@ -33,10 +36,14 @@ export interface OpenAIResponse {
     message: {
       role: string;
       content: string;
-      function_call?: {
-        name: string;
-        arguments: string;
-      };
+      tool_calls?: Array<{
+        id: string;
+        type: 'function';
+        function: {
+          name: string;
+          arguments: string;
+        };
+      }>;
     };
     finish_reason: string;
   }>;
