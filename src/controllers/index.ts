@@ -2,3 +2,4 @@
 export { promptController } from './prompt_controller';
 export { textMediaCreatorController } from './text_media_creator.controller';
 export { imageMediaCreatorController } from './image_media_creator.controller';
+export { wordpressUploadController } from './wordpress_upload.controller';

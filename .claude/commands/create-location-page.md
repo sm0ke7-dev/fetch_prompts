@@ -42,10 +42,45 @@ On success, extract and display:
 - Word count and section count if available in the response
 - Any errors or warnings from the response
 
-Then offer to:
+Then offer follow-up actions:
 1. **Read the file** — show the generated article in the terminal
-2. **Upload to WordPress** — (coming soon — Milestone 2)
+2. **Upload to WordPress** — upload as a draft via the WordPress REST API (see Step 5)
 3. **Do nothing** — the file is saved and ready
+
+### Step 5: WordPress upload (if requested)
+
+If the user chooses "Upload to WordPress":
+
+1. Ask: **"Would you like to upload this to WordPress as a draft?"** — wait for confirmation.
+
+2. On confirmation, call the upload endpoint:
+
+```bash
+curl -s -X POST http://localhost:3000/api/v1/wp-upload \
+  -H "Content-Type: application/json" \
+  -d '{"keyword": "<keyword>", "pageType": "<pageType>"}' \
+  --max-time 30
+```
+
+3. On success, report:
+   - **WordPress URL** — the `wordpress_url` from the response
+   - **Edit URL** — the `wordpress_edit_url` from the response
+   - **Status** — draft (always draft mode)
+   - **Content type** — page (for `service_page`) or post (for `blog`)
+   - Remind the user: *"Review the draft in WordPress before publishing."*
+
+4. On error, check the HTTP status:
+   - **500 or 502**: WordPress credentials may not be configured. Show this message:
+     ```
+     WordPress upload failed. Make sure these variables are set in .local.env:
+       WP_BASE_URL=https://your-site.com
+       WP_USERNAME=your_wp_username
+       WP_APP_PASSWORD=your_wp_application_password
+
+     Generate an Application Password in WordPress: Users → your profile → Application Passwords.
+     ```
+   - **404**: The generated article file was not found. Suggest re-running generation first.
+   - **Other errors**: Show the error message from the response and suggest checking server logs.
 
 ### Notes
 - Make sure the dev server is running (`npm run dev` on port 3000) before calling the API

@@ -8,3 +8,4 @@ export * from './loop_thru_sections/loop_thru_sections';
 export * from './render_article';
 export * from './generate_image';
 export * from './image_quality_assessment/image_quality_assessment';
+export * from './wordpress_upload';

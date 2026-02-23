@@ -119,6 +119,15 @@ fetch_prompts/
 - **File Management**: Automatic saving to `src/repositories/images/featured/`
 - **Integration**: Seamless pipeline from keyword → validation → generation → assessment
 
+### ✅ **WORDPRESS UPLOAD - PHASE 6 COMPLETE**
+
+**🚀 PROGRAMMATIC WORDPRESS PUBLISHING VIA REST API**
+- **Endpoint**: `POST /api/v1/wp-upload`
+- **Features**: Markdown → HTML conversion (markdown-it), WordPress REST API integration, draft mode
+- **Content Routing**: `service_page` → WP Pages, `blog` → WP Posts
+- **Authentication**: WordPress Application Passwords
+- **Claude Command**: `/create-location-page` updated with upload confirmation flow
+
 ## 📚 API Documentation
 
 ### Base URL
@@ -201,6 +210,38 @@ Generate AI-powered content based on prompt configurations.
 }
 ```
 
+#### **POST /api/v1/wp-upload**
+Upload a previously generated article to WordPress as a draft.
+
+**Request Body:**
+```json
+{
+  "keyword": "raccoon removal houston",
+  "pageType": "service_page"
+}
+```
+
+**Example Request (PowerShell):**
+```powershell
+Invoke-RestMethod -Uri "http://localhost:3000/api/v1/wp-upload" -Method POST -ContentType "application/json" -Body '{"keyword":"raccoon removal houston","pageType":"service_page"}'
+```
+
+**Success Response (200):**
+```json
+{
+  "success": true,
+  "data": {
+    "wordpress_id": 1234,
+    "wordpress_url": "https://your-site.com/?page_id=1234",
+    "wordpress_edit_url": "https://your-site.com/wp-admin/post.php?post=1234&action=edit",
+    "content_type": "page",
+    "status": "draft",
+    "title": "Raccoon Removal Houston"
+  },
+  "message": "Content uploaded to WordPress successfully"
+}
+```
+
 #### **GET /health**
 Health check endpoint to verify API status.
 
@@ -227,6 +268,11 @@ OPENAI_API_KEY=your_openai_api_key_here
 
 # NeuronWriter Configuration
 NEURONWRITER_API_KEY=your_neuronwriter_api_key_here
+
+# WordPress Configuration
+WP_BASE_URL=https://your-site.com
+WP_USERNAME=your_wp_username
+WP_APP_PASSWORD=your_wp_application_password
 ```
 
 **Note:** The `.local.env` file is ignored by Git for security reasons.
@@ -331,32 +377,23 @@ NEURONWRITER_API_KEY=your_neuronwriter_api_key_here
 
 ---
 
-### Milestone 2: Phase 6 — Programmatic WordPress Upload
+### ✅ Milestone 2: Phase 6 — Programmatic WordPress Upload — COMPLETE
 
-**Goal:** After article generation, automatically publish (or draft) the content to WordPress via the REST API.
+**Goal:** After article generation, automatically draft the content to WordPress via the REST API.
 
-**How it works:**
-1. **Markdown → HTML conversion** — use `marked` or `markdown-it` npm package to convert the Phase 5 `.md` output to HTML
-2. **WordPress REST API** — `POST /wp-json/wp/v2/pages` (or `/posts` for blog content) with the HTML as the `content` field
-3. **Authentication** — WordPress Application Passwords (Settings → Users → Application Passwords). Store credentials in `.local.env`
-4. **New service file** — `src/services/wordpress_upload.ts` handles auth, request construction, and response handling
-5. **New endpoint or pipeline step** — either a standalone `POST /api/v1/wp-upload` endpoint or a Phase 6 added to the existing text pipeline
+**What shipped:**
+- **Endpoint**: `POST /api/v1/wp-upload` — standalone upload from any generated article
+- **Markdown → HTML**: `markdown-it` converts Phase 5 output to clean HTML
+- **Content routing**: `service_page` → WP Pages, `blog` → WP Posts
+- **Authentication**: WordPress Application Passwords via `.local.env`
+- **Draft mode**: All uploads go to draft status for review before publishing
+- **Claude command**: `/create-location-page` updated with upload confirmation flow
 
-**New environment variables needed:**
-```env
-# WordPress Configuration
-WP_BASE_URL=https://your-site.com
-WP_USERNAME=your_wp_username
-WP_APP_PASSWORD=your_wp_application_password
-```
-
-**Estimated effort:** ~1 day
-
-**Open questions to resolve before building:**
-- [ ] Should pages be uploaded as **draft** (safe, review before publish) or **published** directly?
-- [ ] What should the **slug / URL structure** be? (e.g. `/raccoon-removal-beaumont-tx/` or under a parent page?)
-- [ ] How should **duplicate pages** be handled — skip, overwrite, or create a new revision?
-- [ ] Should blog posts go to `/wp-json/wp/v2/posts` and service pages to `/wp-json/wp/v2/pages`?
+**Files added:**
+- `src/services/wordpress_upload.ts` — service with load, convert, and upload methods
+- `src/models/services/wordpress_upload.model.ts` — 4 TypeScript interfaces
+- `src/controllers/wordpress_upload.controller.ts` — input validation + error handling
+- `src/routes/wordpress_upload.routes.ts` — POST /v1/wp-upload route
 
 ---
 
@@ -395,5 +432,5 @@ When collaborating with AI assistants on this project:
 
 ---
 
-**Last Updated:** February 2026 - service_page pageType support added; Next Steps roadmap documented
+**Last Updated:** February 2026 - WordPress upload integration (Phase 6) complete
 **Version:** 1.0.0

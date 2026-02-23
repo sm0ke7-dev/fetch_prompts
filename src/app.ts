@@ -1,5 +1,5 @@
 import express from 'express';
-import { promptRoutes, textMediaCreatorRoutes, imageMediaCreatorRoutes } from './routes';
+import { promptRoutes, textMediaCreatorRoutes, imageMediaCreatorRoutes, wordpressUploadRoutes } from './routes';
 
 /**
  * Express application setup
@@ -27,6 +27,7 @@ app.use((req, res, next) => {
 app.use('/api', promptRoutes);
 app.use('/api', textMediaCreatorRoutes);
 app.use('/api', imageMediaCreatorRoutes);
+app.use('/api', wordpressUploadRoutes);
 
 // Health check endpoint
 app.get('/health', (req, res) => {
