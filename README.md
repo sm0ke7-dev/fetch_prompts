@@ -99,6 +99,7 @@ fetch_prompts/
 - **Content Quality**: 8 sections, 133 lines, full local geographic depth
 - **File Output**: Complete Markdown article with proper heading structure
 - **Model Support**: Compatible with both `gpt-4o-mini` and `gpt-5-mini`
+- **End-to-End Test**: Full pipeline (generate → convert → upload) confirmed working; "wildlife removal spring lake nc" uploaded to WordPress as draft (page ID 3309)
 
 ### ✅ **IMAGE GENERATION SYSTEM - ALL 4 PHASES COMPLETE**
 
@@ -397,6 +398,24 @@ WP_APP_PASSWORD=your_wp_application_password
 
 ---
 
+### 🔜 Milestone 3: Content Quality & URL Structure Fixes — NEXT
+
+**Goal:** Polish the output quality and WordPress integration so published pages are production-ready.
+
+#### **1. URL Structure**
+- **Problem**: Uploaded pages land with WordPress default URL (`?page_id=3309`) instead of a clean permalink (e.g. `/wildlife-removal-spring-lake-nc/`)
+- **Fix needed**: Pass a `slug` in the API payload (already built in `wordpress_upload.ts`) and confirm WordPress permalink settings allow REST API to set slugs properly. May also require setting the page parent or verifying permalink structure is set to "Post name" in WP Settings → Permalinks.
+
+#### **2. Text & Formatting Issues in Generated Content**
+- **Problem**: Phase 5 output has several recurring formatting bugs:
+  - **JSON artifact leak** — garbled `}]}}` text appears at the end of some sections (likely a JSON parsing edge case in the pipeline response handling)
+  - **Double H2 tags** — headings are formatted as both markdown `## ` and inline `<h2>` tags simultaneously, producing invalid nested HTML after markdown-it conversion
+  - **Inconsistent heading capitalization** — some section headings are lowercase
+  - **Repetitive CTAs** — every section ends with the same generic phrase ("Call us today or contact our team to get expert help now") with no variation
+- **Fix needed**: Audit Phase 5 render prompt and response parsing; add a post-processing/cleanup step before saving the final `.md` file
+
+---
+
 ## 🤝 Contributing
 
 ### Working with AI Assistants
@@ -432,5 +451,5 @@ When collaborating with AI assistants on this project:
 
 ---
 
-**Last Updated:** February 2026 - WordPress upload integration (Phase 6) complete
+**Last Updated:** February 2026 - End-to-end pipeline tested; generate + WP upload confirmed working. Next: URL structure and content formatting fixes.
 **Version:** 1.0.0
