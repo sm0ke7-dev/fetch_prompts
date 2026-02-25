@@ -436,6 +436,10 @@ WP_DALLAS_APP_PASSWORD=your_wp_app_password
   - **Repetitive CTAs** — every section ends with the same generic phrase ("Call us today or contact our team to get expert help now") with no variation
 - **Fix needed**: Audit Phase 5 render prompt and response parsing; add a post-processing/cleanup step before saving the final `.md` file
 
+#### **3. Outline Structure — Service Page vs Blog Post**
+- **Problem**: Phase 2 outline generates sections that read like an informational blog post (e.g. "Understanding Raccoons", "DIY Removal Tips", "Legal Aspects") instead of a conversion-focused service page (e.g. "Our Raccoon Removal Process", "Service Areas", "Why Choose Us", "Get a Free Quote")
+- **Fix needed**: Rework the Phase 2 outline prompt to produce service-page-oriented sections with commercial intent, CTAs, trust signals, and local service framing rather than educational/informational content
+
 ---
 
 ## 🤝 Contributing
