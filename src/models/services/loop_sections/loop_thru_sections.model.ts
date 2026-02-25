@@ -60,6 +60,7 @@ export interface ProcessSectionInputRequest {
   headerTerms: string[];
   contentTerms: string[];
   pageType?: 'blog' | 'service_page';
+  sectionContext?: string;
 }
 
 export interface ProcessSectionInputResponse {

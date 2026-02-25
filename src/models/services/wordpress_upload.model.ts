@@ -6,6 +6,8 @@ export interface WordPressUploadRequest {
   // Office site key (e.g. 'charlotte', 'dallas'). Falls back to WP_BASE_URL if omitted.
   site?: string;
   status?: string; // defaults to "draft"
+  slug?: string;   // if provided, overrides the auto-generated keyword slug
+  parent?: number; // WordPress post ID of the parent page (for hierarchical post types)
 }
 
 export interface WordPressUploadResponse {
@@ -25,6 +27,7 @@ export interface WordPressApiPayload {
   content: string;
   status: string;
   slug: string;
+  parent?: number;
 }
 
 export interface WordPressApiResponse {

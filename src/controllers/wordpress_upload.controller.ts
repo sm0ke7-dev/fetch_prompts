@@ -7,7 +7,7 @@ export const wordpressUploadController = {
    */
   async uploadContent(req: Request, res: Response): Promise<void> {
     try {
-      const { keyword, pageType = 'service_page', site } = req.body;
+      const { keyword, pageType = 'service_page', site, slug, parent } = req.body;
 
       if (!keyword || typeof keyword !== 'string') {
         res.status(400).json({
@@ -24,6 +24,8 @@ export const wordpressUploadController = {
         keyword,
         pageType,
         site,
+        slug,
+        parent,
         status: 'draft'
       });
 

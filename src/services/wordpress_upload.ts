@@ -101,7 +101,7 @@ export class WordPressUploadService {
       const endpoint = `${baseUrl}/wp-json/wp/v2/${restBase}`;
 
       // Build slug and title from keyword
-      const slug = this.buildSlug(request.keyword);
+      const slug = request.slug ?? this.buildSlug(request.keyword);
       const title = this.buildTitle(request.keyword);
       const status = request.status || 'draft';
 
@@ -110,7 +110,8 @@ export class WordPressUploadService {
         title,
         content: html,
         status,
-        slug
+        slug,
+        ...(request.parent != null && { parent: request.parent })
       };
 
       // Build Basic auth header

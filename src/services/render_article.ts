@@ -42,7 +42,8 @@ export class RenderArticleService {
     // Sections
     phase4.sections.forEach((section: any, idx: number) => {
       const sectionHeadline = section.content?.headline || section.headline;
-      lines.push(`## ${idx + 1}. ${sectionHeadline}`);
+      const cleanHeadline = this.toTitleCase(this.stripHtml(sectionHeadline));
+      lines.push(`## ${idx + 1}. ${cleanHeadline}`);
       lines.push('');
 
       // Render blocks
@@ -86,9 +87,22 @@ export class RenderArticleService {
     return html.replace(/<[^>]*>/g, '').trim();
   }
 
+  private toTitleCase(text: string): string {
+    const minor = new Set(['a', 'an', 'the', 'and', 'but', 'or', 'for', 'nor', 'on', 'at', 'to', 'by', 'in', 'of', 'with', 'from']);
+    return text.split(/\s+/).map((word, idx) => {
+      const lower = word.toLowerCase();
+      return (idx === 0 || !minor.has(lower))
+        ? lower.charAt(0).toUpperCase() + lower.slice(1)
+        : lower;
+    }).join(' ');
+  }
+
   private ensureHtmlParagraph(content: string): string {
-    // If already contains <p> keep as-is; otherwise wrap in plain text line
-    if (/<\s*p[\s>]/i.test(content)) return content.trim();
+    // If already contains <p>, strip any trailing garbage after the last closing tag
+    if (/<\s*p[\s>]/i.test(content)) {
+      const lastClose = content.lastIndexOf('>');
+      return lastClose !== -1 ? content.substring(0, lastClose + 1).trim() : content.trim();
+    }
     // Escape and return as Markdown paragraph
     return this.escapeMd(content);
   }
@@ -102,6 +116,6 @@ export class RenderArticleService {
   }
 
   private escapeMd(text: string): string {
-    return String(text).replace(/[\\`*_{}\[\]()#+\-.!]/g, '\\$&');
+    return String(text).replace(/[\`*_{}\[\]()#+\-.!]/g, '\$&');
   }
 }

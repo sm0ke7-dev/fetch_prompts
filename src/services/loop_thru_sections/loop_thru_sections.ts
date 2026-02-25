@@ -34,12 +34,14 @@ export class LoopThruSectionsService {
       // 2. Loop through each section and generate content
       console.log(`🔄 Processing ${phase3Outline.sections.length} sections...`);
       const phase4Sections = [];
-      
+      const trustSignalsUsed: string[] = [];
+      let sectionContext = '';
+
       for (let i = 0; i < phase3Outline.sections.length; i++) {
         const section = phase3Outline.sections[i];
         console.log(`📝 Generating content for section ${i + 1}/${phase3Outline.sections.length}: "${section.headline}"`);
-        
-        const sectionContent = await this.generateSectionContent(section, request.pageType, request.keyword);
+
+        const sectionContent = await this.generateSectionContent(section, request.pageType, request.keyword, sectionContext);
         if (!sectionContent.success) {
           return {
             success: false,
@@ -56,6 +58,9 @@ export class LoopThruSectionsService {
             token_usage: sectionContent.data!.usage
           }
         });
+
+        // Build context for the next section based on trust signals used so far
+        sectionContext = this.buildSectionContext(sectionContent.data!.sectionContent, trustSignalsUsed);
       }
 
       // 3. Create Phase 4 article
@@ -104,7 +109,7 @@ export class LoopThruSectionsService {
   /**
    * Generate content for a single section
    */
-  private async generateSectionContent(section: any, pageType?: 'blog' | 'service_page', keyword?: string): Promise<SubmitSectionResponse> {
+  private async generateSectionContent(section: any, pageType?: 'blog' | 'service_page', keyword?: string, sectionContext?: string): Promise<SubmitSectionResponse> {
     try {
       // 1. Process section input
       const processResult = await this.processSectionInput({
@@ -113,7 +118,8 @@ export class LoopThruSectionsService {
         headerTerms: section["header-terms"],
         contentTerms: section["content-terms"],
         pageType,
-        keyword
+        keyword,
+        sectionContext
       });
 
       if (!processResult.success) {
@@ -173,7 +179,8 @@ export class LoopThruSectionsService {
           headline: request.headline,
           description: request.description,
           header_terms: request.headerTerms.join(', '),
-          content_terms: request.contentTerms.join(', ')
+          content_terms: request.contentTerms.join(', '),
+          section_context: request.sectionContext || ''
         },
         promptName
       });
@@ -280,6 +287,37 @@ export class LoopThruSectionsService {
         error: error
       };
     }
+  }
+
+  /**
+   * Scan generated section content for trust signals and return a context string
+   * to pass to the next section, preventing repetition.
+   */
+  private buildSectionContext(sectionContent: any, trustSignalsUsed: string[]): string {
+    const allText = [
+      sectionContent.headline || '',
+      ...((sectionContent.content || []) as any[]).flatMap((block: any) =>
+        Array.isArray(block.content) ? block.content : [block.content || '']
+      )
+    ].join(' ').toLowerCase();
+
+    const signals: Record<string, string> = {
+      'licensed and insured': 'licensed and insured',
+      '22 years': '22 years experience',
+      '24/7': 'available 24/7',
+      'veteran owned': 'veteran owned and operated',
+      'national brand': 'national brand with local expertise'
+    };
+
+    for (const [keyword, label] of Object.entries(signals)) {
+      if (allText.includes(keyword) && !trustSignalsUsed.includes(label)) {
+        trustSignalsUsed.push(label);
+      }
+    }
+
+    if (trustSignalsUsed.length === 0) return '';
+
+    return `Trust signals already used in earlier sections: ${trustSignalsUsed.join(', ')}. Do NOT repeat these in this section — focus on the section content only.`;
   }
 
   /**
