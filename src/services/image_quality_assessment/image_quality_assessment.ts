@@ -6,6 +6,7 @@ import {
   ImageQualityAssessmentResult
 } from '../../models/services/image_quality_assessment/image_quality_assessment.models';
 import * as path from 'path';
+import * as fs from 'fs';
 import { ImageMediaResponse, ImageGenerationResult } from '../../models/services/image_media_creator.model';
 
 export class ImageQualityAssessmentService {
@@ -36,13 +37,13 @@ export class ImageQualityAssessmentService {
       console.log('🔑 Keyword:', request.keyword);
       console.log('⏰ Start Time:', new Date().toISOString());
 
-      // Validate image URL exists
-      if (!request.imagePath || !request.imagePath.startsWith('http')) {
-        console.log('❌ Invalid image URL:', request.imagePath);
+      // Validate local image file exists
+      if (!request.localImagePath || !fs.existsSync(request.localImagePath)) {
+        console.log('❌ Local image file not found:', request.localImagePath);
         return {
           success: false,
-          message: 'Invalid image URL provided',
-          error: 'Image URL must be a valid HTTP URL'
+          message: 'Local image file not found',
+          error: `File does not exist: ${request.localImagePath}`
         };
       }
 
@@ -117,7 +118,7 @@ export class ImageQualityAssessmentService {
               {
                 type: "image_url",
                 image_url: {
-                  url: request.imagePath,
+                  url: `data:image/png;base64,${fs.readFileSync(request.localImagePath).toString('base64')}`,
                   detail: "auto"
                 }
               }

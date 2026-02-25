@@ -2,6 +2,7 @@
 
 export interface ImageQualityAssessmentRequest {
   imagePath: string;
+  localImagePath: string;
   keyword: string;
 }
 

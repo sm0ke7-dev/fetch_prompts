@@ -1,4 +1,6 @@
 import { Request, Response } from 'express';
+import * as fs from 'fs';
+import * as path from 'path';
 import { ImageMediaRequest, ImageMediaResponse, ImageGenerationResult } from '../models/services/image_media_creator.model';
 import { fourStepImageDescriptionService } from '../services/4step_image_desc_generation/img_desc_generation';
 import { imageQualityAssessmentService } from '../services/image_quality_assessment/image_quality_assessment';
@@ -61,7 +63,8 @@ class ImageMediaCreatorController {
       if (fourStepResult.data.generated_image_url) {
         console.log('🔍 Step 6: Executing image quality assessment...');
         qualityAssessmentResult = await imageQualityAssessmentService.assessImageQuality({
-          imagePath: fourStepResult.data.generated_image_url, // Use URL instead of file path
+          imagePath: fourStepResult.data.generated_image_url,
+          localImagePath: fourStepResult.data.saved_image_path || '',
           keyword: keyword
         });
         
@@ -87,6 +90,7 @@ class ImageMediaCreatorController {
           console.log('🔍 Re-running image quality assessment on retry image...');
           qualityAssessmentResult = await imageQualityAssessmentService.assessImageQuality({
             imagePath: fourStepResult.data.generated_image_url,
+            localImagePath: fourStepResult.data.saved_image_path || '',
             keyword
           });
         }
@@ -125,9 +129,7 @@ class ImageMediaCreatorController {
    * Handle debug mode by saving intermediate files
    */
   private async handleDebugMode(keyword: string, imageDescriptions: any): Promise<void> {
-    const fs = require('fs');
-    const path = require('path');
-    
+
     const debugDir = path.join(__dirname, '..', '..', 'src', 'repositories', 'image_desc_temp_debug', 'phase2_descriptions');
     if (!fs.existsSync(debugDir)) {
       fs.mkdirSync(debugDir, { recursive: true });

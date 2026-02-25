@@ -197,7 +197,7 @@ export class FourStepImageDescriptionService {
       
       // Generate image
       const generateResult = await ideogramImageGeneratorService.generateImage({
-        prompt: imageDescription,
+        prompt: imageDescription + ' No text, no words, no letters, no watermarks, no overlays.',
         style_type: 'REALISTIC'
       });
       

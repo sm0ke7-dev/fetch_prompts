@@ -105,8 +105,9 @@ fetch_prompts/
 
 **🚀 IMAGE GENERATION + QUALITY ASSESSMENT API COMPLETE**
 - **Endpoint**: `POST /api/v1/image-media`
-- **Processing Time**: ~45-50 seconds per complete pipeline
-- **Quality Assessment**: Automated GPT Vision analysis for anatomical correctness
+- **Processing Time**: ~45-55 seconds per complete pipeline
+- **Quality Assessment**: Automated GPT Vision analysis using saved local file (base64) — not the remote URL
+- **Composition**: Hard wildlife-photography rules enforce animal-focused concepts with no human crowds
 
 **Phases:**
 - **Phase 1**: HTTP Endpoint with request/response handling
@@ -114,11 +115,19 @@ fetch_prompts/
 - **Phase 3**: Ideogram API Integration for actual image generation
 - **Phase 4**: GPT Vision Quality Assessment (anatomical correctness)
 
-**Latest Test Results (December 2024):**
-- **Image Quality**: High-quality photorealistic images (1312x736)
-- **Quality Assessment**: PASS on body proportions, limb count, facial features
+**Image Composition Rules (enforced in Step 1 prompt):**
+- Animal/pest is the sole primary subject — frame built around it
+- Zero human characters unless keyword makes one essential; max one, partial framing only (hands/silhouette)
+- No multi-character interaction scenes, no bystanders or observers
+- Wildlife photography style: animal in natural intrusion context (tree, rooftop, attic vent, yard at night)
+- Simple, clean environments — one subject, one setting
+
+**Latest Test Results (February 2026):**
+- **Image Quality**: High-quality photorealistic/silhouette images — passes human inspection
+- **Quality Assessment**: PASS on body proportions, limb count, facial features (QA uses local saved PNG via base64, not expiring Ideogram URL)
 - **File Management**: Automatic saving to `src/repositories/images/featured/`
 - **Integration**: Seamless pipeline from keyword → validation → generation → assessment
+- **Test**: "raccoon removal" → "Raccoon Silhouette on Urban Rooftop at Sunset" — lone raccoon, no AI tells
 
 ### ✅ **WORDPRESS UPLOAD - PHASE 6 COMPLETE**
 
@@ -322,61 +331,27 @@ WP_DALLAS_APP_PASSWORD=your_wp_app_password
 
 ## 🚧 Known Issues & Improvements Needed
 
-### **Image Quality Assessment Feature - Basic Implementation**
+### **Image Quality Assessment — Remaining Improvements**
 
-**Current Status:** ✅ Functional but basic implementation
+**Current Status:** ✅ Functional — QA uses local saved file via base64 (URL expiry bug fixed)
 **Location:** `src/services/image_quality_assessment/image_quality_assessment.ts`
 
-#### **🔍 Issues Identified:**
+#### **🔍 Remaining Issues:**
 
-**1. Hardcoded Prompt System (CRITICAL)**
-- **Problem**: Uses hardcoded prompts instead of the project's prompt configuration system
-- **Location**: Lines 65-75 in the service file
-- **Impact**: Inconsistent with project architecture, difficult to maintain
-- **Solution Needed**: Replace with `fetchPromptByName('image_quality_prompt')` + `processInputs()` + `submitPrompt()`
-
-**2. Limited Assessment Criteria**
+**1. Limited Assessment Criteria**
 - **Problem**: Only 3 basic categories (body_proportions, limb_count, facial_features)
 - **Missing**: Quality score (0.0-1.0), detailed issues list, comprehensive assessment
-- **Solution Needed**: Use structured output schema from `image_quality_prompt.json`
+- **Solution Needed**: Extend output schema in `image_quality_prompt.json`
 
-**3. No Structured Function Calls**
+**2. No Structured Function Calls**
 - **Problem**: Uses basic JSON parsing instead of OpenAI's function calling system
 - **Impact**: Potential parsing errors, inconsistent responses
 - **Solution Needed**: Implement output schema function calls for reliable responses
 
-**4. Business Logic in Controller**
-- **Problem**: Response formatting logic in controller instead of service layer
-- **Location**: `src/controllers/image_media_creator.controller.ts` lines 143-147
-- **Impact**: Violates separation of concerns
-- **Solution Needed**: Move response formatting to service layer
-
 #### **📋 Files Involved:**
-- `src/services/image_quality_assessment/image_quality_assessment.ts` (main service)
-- `src/models/services/image_quality_assessment/image_quality_assessment.models.ts` (data models)
-- `src/repositories/data/image_quality_prompt.json` (unused prompt config)
-- `src/controllers/image_media_creator.controller.ts` (integration point)
-- `src/models/services/image_media_creator.model.ts` (response models)
-
-#### **🎯 Improvement Goals:**
-1. **Use proper prompt configuration system** (consistency with rest of project)
-2. **Implement structured function calls** (reliable JSON responses)
-3. **Enhanced assessment criteria** (quality score + detailed issues)
-4. **Move business logic to service layer** (proper architecture)
-5. **Better error handling** (robust fallback mechanisms)
-
-#### **⚠️ Previous Attempt Notes:**
-- **Attempted**: Full refactor to use prompt configuration system
-- **Result**: File corruption due to complex changes
-- **Lesson**: Use targeted, incremental improvements instead of full rewrites
-- **Recommendation**: Make small, focused changes and test thoroughly
-
-#### **🔧 Recommended Approach:**
-1. **Start with targeted fixes** (fix specific lines, not entire files)
-2. **Test each change** before proceeding
-3. **Use incremental approach** (one improvement at a time)
-4. **Backup before major changes** (git commit frequently)
-5. **Follow existing patterns** (use same approach as other services)
+- `src/services/image_quality_assessment/image_quality_assessment.ts`
+- `src/models/services/image_quality_assessment/image_quality_assessment.models.ts`
+- `src/repositories/data/image_quality_prompt.json`
 
 ---
 
@@ -473,5 +448,5 @@ When collaborating with AI assistants on this project:
 
 ---
 
-**Last Updated:** February 2026 - Multi-site + custom post type support added; `aaaclocations` upload confirmed working. Next: URL structure (WP permalink settings) and content formatting fixes.
+**Last Updated:** February 2026 - Image pipeline hardened: QA now uses local file (base64) instead of expiring Ideogram URL; animal-focused composition rules added to Step 1 prompt; dead prompt configs removed; inline `require` calls moved to top-level imports. Next: URL structure (WP permalink settings) and content formatting fixes.
 **Version:** 1.0.0
