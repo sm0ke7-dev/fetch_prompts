@@ -1,6 +1,7 @@
 import { IdeogramGenerateRequest, IdeogramGenerateResult, IdeogramGenerateResponse } from '../models/services/generate_image.model';
 import * as fs from 'fs';
 import * as path from 'path';
+import sharp from 'sharp';
 
 /**
  * Ideogram Image Generation Service
@@ -152,7 +153,13 @@ export class IdeogramImageGeneratorService {
       const arrBuf = await imageResp.arrayBuffer();
       const buf = Buffer.from(arrBuf);
       const imgPath = path.join(featuredDir, `${sanitizedKeyword}_feat_image.png`);
-      fs.writeFileSync(imgPath, buf);
+
+      const processedBuf = await sharp(buf)
+        .resize(600, 400)
+        .png()
+        .toBuffer();
+
+      fs.writeFileSync(imgPath, processedBuf);
       
       console.log('🖼️ Image saved to:', imgPath);
       return imgPath;

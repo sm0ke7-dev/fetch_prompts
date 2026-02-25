@@ -123,7 +123,7 @@ export class FourStepImageDescriptionService {
           step2: step2Result.data,
           step3: step3Result.data,
           step4: step4Result.data,
-          final_image_description: this.convertStructuredPromptToText(step4Result.data.structured_prompt),
+          final_image_description: step4Result.data.ideogram_prompt,
           final_image_title: step4Result.data.image_title,
           generated_image_url: imageResult.data?.generated_image_url,
           saved_image_path: imageResult.data?.saved_image_path,
@@ -188,13 +188,13 @@ export class FourStepImageDescriptionService {
     try {
       console.log('🎨 Ideogram Service: Starting image generation...');
       
-      // Convert structured prompt to text
-      const imageDescription = this.convertStructuredPromptToText(step4Data.structured_prompt);
-      console.log('📝 FULL TEXT PROMPT SENT TO IDEOGRAM:');
+      // Use the concise Ideogram-optimized prompt from Step 4
+      const imageDescription = step4Data.ideogram_prompt;
+      console.log('📝 IDEOGRAM PROMPT:');
       console.log('━'.repeat(80));
       console.log(imageDescription);
       console.log('━'.repeat(80));
-      
+
       // Generate image
       const generateResult = await ideogramImageGeneratorService.generateImage({
         prompt: imageDescription + ' No text, no words, no letters, no watermarks, no overlays.',

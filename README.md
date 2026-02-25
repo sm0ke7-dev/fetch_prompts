@@ -24,6 +24,7 @@ This project provides a RESTful API for managing and retrieving prompts with AI 
 - **Architecture:** MVC Pattern with Repository Layer
 - **Data Storage:** JSON files (can be extended to database)
 - **AI Integration:** OpenAI API with structured tool calling (tools/tool_choice)
+- **Image Processing:** sharp (EXIF strip + resize to 600×400 on all saved images)
 - **Environment Management:** dotenv for configuration
 - **Version Control:** Git with GitHub
 
@@ -114,20 +115,31 @@ fetch_prompts/
 - **Phase 2**: 4-Step Image Description Generation (concept validation)
 - **Phase 3**: Ideogram API Integration for actual image generation
 - **Phase 4**: GPT Vision Quality Assessment (anatomical correctness)
+- **Post-processing**: sharp pipeline — resize to 600×400, EXIF stripped, re-encoded as PNG
 
 **Image Composition Rules (enforced in Step 1 prompt):**
 - Animal/pest is the sole primary subject — frame built around it
 - Zero human characters unless keyword makes one essential; max one, partial framing only (hands/silhouette)
 - No multi-character interaction scenes, no bystanders or observers
-- Wildlife photography style: animal in natural intrusion context (tree, rooftop, attic vent, yard at night)
+- Wildlife photography style: animal in natural intrusion context (fence, rooftop, attic vent, yard at dusk/night, near house exterior)
 - Simple, clean environments — one subject, one setting
+- Subject must be grounded on a surface at all times — no mid-air, jumping, hanging, or precarious balancing
+- Static or slow-moving poses only (standing alert, sniffing ground, walking, sitting) — dynamic poses cause anatomical distortion
+- Realistic pest/wildlife scenarios only — no decorative contexts (flower beds, bird feeders, garden ornaments)
+- Gut-check rule: every concept must be something a wildlife photographer could realistically photograph
+
+**Ideogram Prompt Format (Step 4 output):**
+- Concise comma-separated descriptors (50-80 words max) — no narrative sentences
+- Format: subject + pose/position, environment, lighting, style tags
+- Style tags enforced: `photorealistic, wildlife photography, DSLR, natural lighting, shallow depth of field`
+- Steps 1-3 analysis informs the prompt content; Step 4 writes it in Ideogram-native format
 
 **Latest Test Results (February 2026):**
-- **Image Quality**: High-quality photorealistic/silhouette images — passes human inspection
+- **Image Quality**: Photorealistic results that pass human inspection — no obvious AI tells
 - **Quality Assessment**: PASS on body proportions, limb count, facial features (QA uses local saved PNG via base64, not expiring Ideogram URL)
-- **File Management**: Automatic saving to `src/repositories/images/featured/`
-- **Integration**: Seamless pipeline from keyword → validation → generation → assessment
-- **Test**: "raccoon removal" → "Raccoon Silhouette on Urban Rooftop at Sunset" — lone raccoon, no AI tells
+- **File Output**: All images saved at 600×400px with EXIF stripped to `src/repositories/images/featured/`
+- **Integration**: Seamless pipeline from keyword → concept validation → generation → QA → post-processing
+- **Test**: "squirrel" → gray squirrel perched on tree branch, DSLR-style — passes as real wildlife photo
 
 ### ✅ **WORDPRESS UPLOAD - PHASE 6 COMPLETE**
 
@@ -448,5 +460,5 @@ When collaborating with AI assistants on this project:
 
 ---
 
-**Last Updated:** February 2026 - Image pipeline hardened: QA now uses local file (base64) instead of expiring Ideogram URL; animal-focused composition rules added to Step 1 prompt; dead prompt configs removed; inline `require` calls moved to top-level imports. Next: URL structure (WP permalink settings) and content formatting fixes.
+**Last Updated:** February 2026 - Image post-processing added: sharp pipeline resizes all output to 600×400 and strips EXIF. Step 1 prompt hardened with grounded-pose and realistic-scenario rules. Step 4 now outputs a concise Ideogram-native prompt (comma-separated, style-tagged) instead of narrative text — significant image quality improvement. Next: URL structure (WP permalink settings) and content formatting fixes.
 **Version:** 1.0.0

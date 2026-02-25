@@ -72,6 +72,7 @@ export interface StructuredImagePrompt {
 
 export interface Step4Result {
   structured_prompt: StructuredImagePrompt;
+  ideogram_prompt: string;
   image_title: string;
   prompt_analysis: {
     key_improvements: string[];
