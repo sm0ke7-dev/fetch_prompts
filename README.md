@@ -125,7 +125,8 @@ fetch_prompts/
 **🚀 PROGRAMMATIC WORDPRESS PUBLISHING VIA REST API**
 - **Endpoint**: `POST /api/v1/wp-upload`
 - **Features**: Markdown → HTML conversion (markdown-it), WordPress REST API integration, draft mode
-- **Content Routing**: `service_page` → WP Pages, `blog` → WP Posts
+- **Content Routing**: `service_page` → WP Pages, `blog` → WP Posts, custom post types (e.g. `aaaclocations`) passed through directly as REST base
+- **Multi-Site Support**: Target any office via `site` field (e.g. `charlotte`, `dallas`); falls back to `WP_BASE_URL` if omitted
 - **Authentication**: WordPress Application Passwords
 - **Claude Command**: `/create-location-page` updated with upload confirmation flow
 
@@ -215,16 +216,24 @@ Generate AI-powered content based on prompt configurations.
 Upload a previously generated article to WordPress as a draft.
 
 **Request Body:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `keyword` | string | ✅ | The article keyword (must match a generated Phase 5 file) |
+| `pageType` | string | ✅ | `service_page` → WP Pages, `blog` → WP Posts, or any custom post type slug (e.g. `aaaclocations`) |
+| `site` | string | ❌ | Office key (e.g. `charlotte`, `dallas`). Falls back to `WP_BASE_URL` if omitted. |
+
 ```json
 {
   "keyword": "raccoon removal houston",
-  "pageType": "service_page"
+  "pageType": "aaaclocations",
+  "site": "charlotte"
 }
 ```
 
 **Example Request (PowerShell):**
 ```powershell
-Invoke-RestMethod -Uri "http://localhost:3000/api/v1/wp-upload" -Method POST -ContentType "application/json" -Body '{"keyword":"raccoon removal houston","pageType":"service_page"}'
+Invoke-RestMethod -Uri "http://localhost:3000/api/v1/wp-upload" -Method POST -ContentType "application/json" -Body '{"keyword":"raccoon removal houston","pageType":"aaaclocations","site":"charlotte"}'
 ```
 
 **Success Response (200):**
@@ -270,11 +279,22 @@ OPENAI_API_KEY=your_openai_api_key_here
 # NeuronWriter Configuration
 NEURONWRITER_API_KEY=your_neuronwriter_api_key_here
 
-# WordPress Configuration
+# WordPress — Legacy fallback (used when no "site" is passed)
 WP_BASE_URL=https://your-site.com
 WP_USERNAME=your_wp_username
 WP_APP_PASSWORD=your_wp_application_password
+
+# WordPress — Per-site credentials (add new offices here, no code changes needed)
+WP_CHARLOTTE_BASE_URL=https://charlotte.yoursite.com
+WP_CHARLOTTE_USERNAME=your_wp_username
+WP_CHARLOTTE_APP_PASSWORD=your_wp_app_password
+
+WP_DALLAS_BASE_URL=https://dallas.yoursite.com
+WP_DALLAS_USERNAME=your_wp_username
+WP_DALLAS_APP_PASSWORD=your_wp_app_password
 ```
+
+**Per-site pattern:** `WP_{SITE}_BASE_URL`, `WP_{SITE}_USERNAME`, `WP_{SITE}_APP_PASSWORD` — where `{SITE}` matches the `site` field in the API request (case-insensitive). Add any number of offices with no code changes.
 
 **Note:** The `.local.env` file is ignored by Git for security reasons.
 
@@ -388,6 +408,8 @@ WP_APP_PASSWORD=your_wp_application_password
 - **Content routing**: `service_page` → WP Pages, `blog` → WP Posts
 - **Authentication**: WordPress Application Passwords via `.local.env`
 - **Draft mode**: All uploads go to draft status for review before publishing
+- **Custom post type support**: `pageType` accepts any WP REST base (e.g. `aaaclocations`, `aaacanimals`) — no code changes needed for new post types
+- **Multi-site support**: Pass `site: "charlotte"` (or any office key) to target that office's credentials; new offices only require 3 env var additions
 - **Claude command**: `/create-location-page` updated with upload confirmation flow
 
 **Files added:**
@@ -451,5 +473,5 @@ When collaborating with AI assistants on this project:
 
 ---
 
-**Last Updated:** February 2026 - End-to-end pipeline tested; generate + WP upload confirmed working. Next: URL structure and content formatting fixes.
+**Last Updated:** February 2026 - Multi-site + custom post type support added; `aaaclocations` upload confirmed working. Next: URL structure (WP permalink settings) and content formatting fixes.
 **Version:** 1.0.0

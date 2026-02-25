@@ -1,6 +1,10 @@
 export interface WordPressUploadRequest {
   keyword: string;
-  pageType: 'blog' | 'service_page';
+  // Known types: 'service_page' (→ /pages), 'blog' (→ /posts)
+  // Custom post types (e.g. 'aaaclocations', 'aaacanimals') are passed through directly as the REST base
+  pageType: string;
+  // Office site key (e.g. 'charlotte', 'dallas'). Falls back to WP_BASE_URL if omitted.
+  site?: string;
   status?: string; // defaults to "draft"
 }
 
@@ -9,7 +13,7 @@ export interface WordPressUploadResponse {
   wordpress_id?: number;
   wordpress_url?: string;
   wordpress_edit_url?: string;
-  content_type?: 'page' | 'post';
+  content_type?: string; // 'page', 'post', or custom post type slug
   status?: string;
   title?: string;
   message?: string;

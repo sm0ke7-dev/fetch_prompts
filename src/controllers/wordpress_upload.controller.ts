@@ -7,7 +7,7 @@ export const wordpressUploadController = {
    */
   async uploadContent(req: Request, res: Response): Promise<void> {
     try {
-      const { keyword, pageType = 'service_page' } = req.body;
+      const { keyword, pageType = 'service_page', site } = req.body;
 
       if (!keyword || typeof keyword !== 'string') {
         res.status(400).json({
@@ -17,12 +17,13 @@ export const wordpressUploadController = {
         return;
       }
 
-      console.log(`WordPress Upload: Starting upload for keyword: "${keyword}" (pageType: ${pageType})`);
+      console.log(`WordPress Upload: Starting upload for keyword: "${keyword}" (pageType: ${pageType}, site: ${site || 'default'})`);
 
       const service = new WordPressUploadService();
       const response = await service.uploadToWordPress({
         keyword,
         pageType,
+        site,
         status: 'draft'
       });
 

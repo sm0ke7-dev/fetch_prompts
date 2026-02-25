@@ -43,6 +43,30 @@ export class WordPressUploadService {
   }
 
   /**
+   * Resolves WordPress credentials for a given site key.
+   * Looks for WP_{SITE}_BASE_URL etc. first, falls back to WP_BASE_URL.
+   */
+  private resolveSiteCredentials(site?: string): { baseUrl: string; username: string; appPassword: string } | null {
+    if (site) {
+      const prefix = `WP_${site.toUpperCase()}`;
+      const baseUrl = process.env[`${prefix}_BASE_URL`];
+      const username = process.env[`${prefix}_USERNAME`];
+      const appPassword = process.env[`${prefix}_APP_PASSWORD`];
+      if (baseUrl && username && appPassword) {
+        return { baseUrl, username, appPassword };
+      }
+    }
+    // Fallback to legacy vars
+    const baseUrl = process.env.WP_BASE_URL;
+    const username = process.env.WP_USERNAME;
+    const appPassword = process.env.WP_APP_PASSWORD;
+    if (baseUrl && username && appPassword) {
+      return { baseUrl, username, appPassword };
+    }
+    return null;
+  }
+
+  /**
    * Orchestrates the full WordPress upload flow:
    * 1. Load markdown article
    * 2. Convert to HTML
@@ -50,30 +74,31 @@ export class WordPressUploadService {
    */
   async uploadToWordPress(request: WordPressUploadRequest): Promise<WordPressUploadResponse> {
     try {
-      // Read env vars at call time (not constructor)
-      const baseUrl = process.env.WP_BASE_URL;
-      const username = process.env.WP_USERNAME;
-      const appPassword = process.env.WP_APP_PASSWORD;
+      const credentials = this.resolveSiteCredentials(request.site);
 
-      if (!baseUrl || !username || !appPassword) {
-        const missing: string[] = [];
-        if (!baseUrl) missing.push('WP_BASE_URL');
-        if (!username) missing.push('WP_USERNAME');
-        if (!appPassword) missing.push('WP_APP_PASSWORD');
+      if (!credentials) {
+        const siteLabel = request.site
+          ? `WP_${request.site.toUpperCase()}_BASE_URL / _USERNAME / _APP_PASSWORD`
+          : 'WP_BASE_URL / WP_USERNAME / WP_APP_PASSWORD';
         return {
           success: false,
-          message: `Missing required WordPress environment variables: ${missing.join(', ')}`
+          message: `Missing WordPress credentials. Expected env vars: ${siteLabel}`
         };
       }
+
+      const { baseUrl, username, appPassword } = credentials;
 
       // Load and convert markdown
       const markdown = this.loadMarkdownArticle(request.keyword);
       const html = this.convertToHtml(markdown);
 
-      // Determine endpoint based on pageType
-      const endpoint = request.pageType === 'service_page'
-        ? `${baseUrl}/wp-json/wp/v2/pages`
-        : `${baseUrl}/wp-json/wp/v2/posts`;
+      // Determine endpoint: map known aliases, otherwise use pageType directly as REST base
+      const knownRestBases: Record<string, string> = {
+        'service_page': 'pages',
+        'blog': 'posts'
+      };
+      const restBase = knownRestBases[request.pageType] ?? request.pageType;
+      const endpoint = `${baseUrl}/wp-json/wp/v2/${restBase}`;
 
       // Build slug and title from keyword
       const slug = this.buildSlug(request.keyword);
@@ -89,14 +114,14 @@ export class WordPressUploadService {
       };
 
       // Build Basic auth header
-      const credentials = Buffer.from(`${username}:${appPassword}`).toString('base64');
+      const authToken = Buffer.from(`${username}:${appPassword}`).toString('base64');
 
       // POST to WordPress
       const response = await fetch(endpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Basic ${credentials}`
+          'Authorization': `Basic ${authToken}`
         },
         body: JSON.stringify(payload)
       });
@@ -125,7 +150,7 @@ export class WordPressUploadService {
       }
 
       const wpResponse = await response.json() as WordPressApiResponse;
-      const contentType: 'page' | 'post' = request.pageType === 'service_page' ? 'page' : 'post';
+      const contentType = wpResponse.type; // use the actual post type returned by WP
 
       return {
         success: true,
