@@ -31,10 +31,14 @@ export class MergeOutlineWithNWTermsService {
         request.phase2OutlineFile
       );
 
-      // 2. Load body terms from optimization terms
-      console.log('🔍 Loading body terms from optimization data...');
+      // 2. Load body terms and heading terms from optimization terms
+      console.log('🔍 Loading body terms and heading terms from optimization data...');
       const bodyTerms = await this.mergeOutlineRepository.loadBodyTerms(
-        request.keyword, 
+        request.keyword,
+        request.optimizationTermsFile
+      );
+      const headingTerms = await this.mergeOutlineRepository.loadHeadingTerms(
+        request.keyword,
         request.optimizationTermsFile
       );
 
@@ -43,6 +47,7 @@ export class MergeOutlineWithNWTermsService {
       const processResult = await this.processMergeInputs({
         keyword: request.keyword,
         articleOutline: this.mergeOutlineRepository.formatOutlineForPrompt(phase2Outline),
+        headingTerms: this.mergeOutlineRepository.formatHeadingTermsForPrompt(headingTerms),
         bodyTerms: this.mergeOutlineRepository.formatBodyTermsForPrompt(bodyTerms)
       });
 
@@ -111,6 +116,7 @@ export class MergeOutlineWithNWTermsService {
       const processResult = await processInputs({
         userInput: {
           article_outline: request.articleOutline,
+          heading_terms: request.headingTerms || '',
           body_terms: request.bodyTerms
         },
         promptName: 'outline_kw_merge_prompt'

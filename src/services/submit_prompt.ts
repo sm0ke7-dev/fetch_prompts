@@ -88,10 +88,12 @@ export async function submitPrompt(request: SubmitPromptRequest): Promise<Submit
     }
     
     if (!content) {
+      const finishReason = choice?.finish_reason;
+      console.error('OpenAI empty response - finish_reason:', finishReason, 'tool_calls:', JSON.stringify(choice?.message?.tool_calls));
       return {
         success: false,
         data: null,
-        message: 'No content received from OpenAI API'
+        message: `No content received from OpenAI API (finish_reason: ${finishReason})`
       };
     }
 

@@ -91,13 +91,21 @@ fetch_prompts/
 **Phases:**
 - **Phase 1**: NeuronWriter Terms extraction with structured output schema
 - **Phase 2**: Article Outline generation from NeuronWriter heading terms
-- **Phase 3**: Merge outline with body terms for comprehensive content structure
+- **Phase 3**: Merge outline with NeuronWriter heading + body terms using gpt-5-mini (7-rule SEO merge prompt)
 - **Phase 4**: Generate section content with multiple content block types
 - **Phase 5**: Render final article in clean Markdown format
 
+**Phase 3 — NeuronWriter Term Distribution (Latest Improvements):**
+- **Model**: Upgraded to `gpt-5-mini` with `max_tokens: 16000` for reliable structured JSON output across 8 sections
+- **Heading Terms**: NeuronWriter H2/H3 heading terms are now loaded and passed alongside body terms for richer SEO coverage
+- **Merge Prompt**: Rewritten with 7 explicit rules — exact phrase matching, multi-word phrase priority, full term distribution, 8-12 content-terms per section, location term spread, and service-term topic matching
+- **Term Limits**: Increased from 20→30 basic and 15→25 extended terms to capture more NeuronWriter optimization data
+- **Result**: Sections now contain rich multi-word NeuronWriter phrases (e.g. `attic restoration`, `dead animal removal`, `exclusion work`, `wildlife removal in richardson`) instead of generic single words
+- **Diagnostics**: `submit_prompt.ts` now logs `finish_reason` on empty responses for faster debugging
+
 **Latest Test Results (February 2026):**
-- **Total Processing Time**: ~320 seconds using gpt-5-mini (62 seconds with gpt-4o-mini)
-- **Content Quality**: 8 sections, 133 lines, full local geographic depth
+- **Total Processing Time**: ~164 seconds using gpt-5-mini (Phase 3 merge: ~95s, Phase 4 loop: ~55s)
+- **Content Quality**: 8 sections, 1941 words, 39 content blocks, 126 NeuronWriter body terms distributed
 - **File Output**: Complete Markdown article with proper heading structure
 - **Model Support**: Compatible with both `gpt-4o-mini` and `gpt-5-mini`
 - **End-to-End Test**: Full pipeline (generate → convert → upload) confirmed working; "wildlife removal spring lake nc" uploaded to WordPress as draft (page ID 3309)
@@ -407,11 +415,16 @@ WP_DALLAS_APP_PASSWORD=your_wp_app_password
 
 ---
 
-### 🔜 Milestone 3: Content Quality & URL Structure Fixes — NEXT
+### 🔜 Milestone 3: Content Quality & URL Structure Fixes — IN PROGRESS
 
 **Goal:** Polish the output quality and WordPress integration so published pages are production-ready.
 
-#### **1. URL Structure**
+#### **✅ 1. Phase 3 NeuronWriter Term Distribution — COMPLETE**
+- **Problem**: Phase 3 merge was producing generic single-word terms instead of using multi-word NeuronWriter phrases; heading terms were ignored entirely
+- **Fix**: Rewrote merge prompt with 7 explicit rules, added heading term passthrough, upgraded to gpt-5-mini, increased term limits (20→30 basic, 15→25 extended), fixed max_tokens (4000→16000)
+- **Files changed**: `outline_kw_merge_prompt.json`, `merge_outline.ts`, `merge_outline.model.ts`, `merge_outline_with_nw_terms.ts`, `merge_outline_with_nw_terms.model.ts`, `submit_prompt.ts`
+
+#### **2. URL Structure**
 - **Problem**: Uploaded pages land with WordPress default URL (`?page_id=3309`) instead of a clean permalink (e.g. `/wildlife-removal-spring-lake-nc/`)
 - **Fix needed**: Pass a `slug` in the API payload (already built in `wordpress_upload.ts`) and confirm WordPress permalink settings allow REST API to set slugs properly. May also require setting the page parent or verifying permalink structure is set to "Post name" in WP Settings → Permalinks.
 
@@ -460,5 +473,5 @@ When collaborating with AI assistants on this project:
 
 ---
 
-**Last Updated:** February 2026 - Image post-processing added: sharp pipeline resizes all output to 600×400 and strips EXIF. Step 1 prompt hardened with grounded-pose and realistic-scenario rules. Step 4 now outputs a concise Ideogram-native prompt (comma-separated, style-tagged) instead of narrative text — significant image quality improvement. Next: URL structure (WP permalink settings) and content formatting fixes.
+**Last Updated:** February 2026 - Phase 3 NeuronWriter term distribution overhauled: gpt-5-mini with 7-rule merge prompt, heading term passthrough, increased term limits, max_tokens fix. Output now contains rich multi-word SEO phrases across all sections. Next: URL structure (WP permalink settings) and content formatting fixes.
 **Version:** 1.0.0

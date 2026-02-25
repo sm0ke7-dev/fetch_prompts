@@ -41,6 +41,7 @@ export interface MergedSectionData {
 export interface ProcessMergeInputRequest {
   keyword: string;
   articleOutline: string;
+  headingTerms?: string;
   bodyTerms: string;
 }
 

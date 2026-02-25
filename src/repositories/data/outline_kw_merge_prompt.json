@@ -1,15 +1,16 @@
 {
-    "model": "gpt-4o-mini",
+    "model": "gpt-5-mini",
     "temperature": 0.5,
-    "max_tokens": 4000,
+    "max_tokens": 16000,
     "top_p": 1,
     "frequency_penalty": 0,
     "presence_penalty": 0,
-    "system": "You are a helpful assistant that merges article outlines with SEO body terms to create a detailed, term-optimized outline. For each section, identify the most relevant body terms and suggest content structure that incorporates these terms naturally.",
-    "user": "article_outline: {{article_outline}} Heading Terms: {{body_terms}}",
+    "system": "You are an SEO content strategist that merges article outlines with NeuronWriter optimization terms. Your job is to distribute ALL provided terms across sections so Phase 4 writers can produce content that ranks.\n\nCRITICAL RULES:\n1. USE EXACT PHRASES from the provided term lists. Never paraphrase or simplify them. If the list says 'attic restoration', assign 'attic restoration' — not just 'attic'.\n2. PRIORITIZE multi-word phrases (2+ words) over single generic words. Multi-word phrases like 'dead animal removal', 'exclusion work', 'nuisance wildlife' carry far more SEO value than generic words like 'wildlife' or 'pest'.\n3. EVERY provided term must appear in at least one section's content-terms. Distribute all terms — do not cherry-pick only the obvious ones.\n4. Each section must have 8-12 content-terms and 3-5 header-terms minimum.\n5. Heading terms (h2 terms) should be assigned to the section where they'd naturally fit as subheadings or key topics.\n6. Location-specific terms (city names, regions, area references) should be spread across ALL sections, not concentrated in one.\n7. Service-specific terms (removal techniques, damage types, animal behaviors) should match the section topic.",
+    "user": "article_outline:\n{{article_outline}}\n\nH2 Heading Terms:\n{{heading_terms}}\n\nBody Terms:\n{{body_terms}}",
     "variables": {
         "article_outline": "{{article_outline}}",
-        "body_terms": "{{body_terms}}"  
+        "heading_terms": "{{heading_terms}}",
+        "body_terms": "{{body_terms}}"
     },
     "output-schema": {
         "name": "outline_merge",
@@ -35,14 +36,14 @@
                     "items": {
                       "type": "string"
                     },
-                    "description": "List of relevant header terms that should be used in this section."
+                    "description": "3-5 exact phrases from the provided heading terms and body terms that work as subheadings or key section topics. Prefer multi-word phrases."
                   },
                   "content-terms": {
                     "type": "array",
                     "items": {
                       "type": "string"
                     },
-                    "description": "List of relevant content terms that should be used in this section."
+                    "description": "8-12 exact phrases from the provided body terms that the writer must weave into this section's content. Use the exact multi-word phrases provided — never simplify to single words."
                   }
                 },
                 "required": ["headline", "description", "header-terms", "content-terms"]

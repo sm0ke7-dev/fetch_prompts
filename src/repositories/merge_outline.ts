@@ -1,11 +1,12 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { 
-  Phase2Outline, 
-  BodyTermsData, 
-  MergeOutlineRequest, 
+import {
+  Phase2Outline,
+  BodyTermsData,
+  HeadingTerm,
+  MergeOutlineRequest,
   MergeOutlineResponse,
-  MergedOutline 
+  MergedOutline
 } from '../models/repositories/merge_outline.model';
 
 export class MergeOutlineRepository {
@@ -64,7 +65,31 @@ export class MergeOutlineRepository {
     }
   }
 
-           /**
+  /**
+   * Load heading terms from optimization terms JSON file
+   */
+  async loadHeadingTerms(keyword: string, filename?: string): Promise<{ h1: HeadingTerm[]; h2: HeadingTerm[]; h3: HeadingTerm[] }> {
+    try {
+      const termsFile = filename || `${this.sanitizeKeyword(keyword)}.json`;
+      const termsPath = path.join(this.optimizationTermsPath, termsFile);
+
+      if (!fs.existsSync(termsPath)) {
+        throw new Error(`Optimization terms file not found: ${termsFile}`);
+      }
+
+      const termsData = JSON.parse(fs.readFileSync(termsPath, 'utf-8'));
+
+      if (!termsData.headings) {
+        return { h1: [], h2: [], h3: [] };
+      }
+
+      return termsData.headings;
+    } catch (error) {
+      throw new Error(`Failed to load heading terms: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    }
+  }
+
+  /**
           * Save merged outline to JSON file
           */
          async saveMergedOutline(mergedOutline: MergedOutline): Promise<void> {
@@ -84,17 +109,29 @@ export class MergeOutlineRepository {
   formatBodyTermsForPrompt(bodyTerms: BodyTermsData): string {
     const basicTerms = bodyTerms.basic
       .sort((a, b) => b.usage_percentage - a.usage_percentage)
-      .slice(0, 20) // Top 20 basic terms
+      .slice(0, 30) // Top 30 basic terms
       .map(term => `${term.term} (${term.usage_percentage}% usage, suggested: ${term.suggested_usage[0]}-${term.suggested_usage[1]} times)`)
       .join(', ');
 
     const extendedTerms = bodyTerms.extended
       .sort((a, b) => b.usage_percentage - a.usage_percentage)
-      .slice(0, 15) // Top 15 extended terms
+      .slice(0, 25) // Top 25 extended terms
       .map(term => `${term.term} (${term.usage_percentage}% usage, suggested: ${term.suggested_usage[0]}-${term.suggested_usage[1]} times)`)
       .join(', ');
 
     return `Basic Terms: ${basicTerms}\nExtended Terms: ${extendedTerms}`;
+  }
+
+  /**
+   * Format heading terms (h2) for prompt input
+   */
+  formatHeadingTermsForPrompt(headings: { h1: HeadingTerm[]; h2: HeadingTerm[]; h3: HeadingTerm[] }): string {
+    const h2Terms = headings.h2
+      .sort((a, b) => b.usage_percentage - a.usage_percentage)
+      .map(term => `${term.term} (${term.usage_percentage}% usage)`)
+      .join(', ');
+
+    return h2Terms;
   }
 
   /**

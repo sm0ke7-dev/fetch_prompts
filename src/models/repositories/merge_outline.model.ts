@@ -32,6 +32,11 @@ export interface BodyTerm {
   suggested_usage: [number, number];
 }
 
+export interface HeadingTerm {
+  term: string;
+  usage_percentage: number;
+}
+
 export interface MergeOutlineRequest {
   keyword: string;
   phase2OutlineFile?: string;
