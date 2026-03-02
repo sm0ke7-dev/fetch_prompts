@@ -105,13 +105,20 @@ export class WordPressUploadService {
       const title = this.buildTitle(request.keyword);
       const status = request.status || 'draft';
 
+      // Extract ACF hero fields from markdown
+      const { heroTitle, heroText } = this.extractHeroFields(markdown);
+
       // Build API payload
       const payload: WordPressApiPayload = {
         title,
         content: html,
         status,
         slug,
-        ...(request.parent != null && { parent: request.parent })
+        ...(request.parent != null && { parent: request.parent }),
+        acf: {
+          hero_title: heroTitle,
+          hero_text: heroText
+        }
       };
 
       // Build Basic auth header
@@ -169,6 +176,39 @@ export class WordPressUploadService {
         error
       };
     }
+  }
+
+  /**
+   * Extracts hero_title and hero_text from a Phase 5 Markdown article.
+   * hero_title: H1 line, title-cased.
+   * hero_text: first paragraph after the first H2, with markdown escapes stripped.
+   */
+  private extractHeroFields(markdown: string): { heroTitle: string; heroText: string } {
+    const lines = markdown.split('\n');
+
+    // Extract H1 for hero title
+    const h1Line = lines.find(line => line.startsWith('# '));
+    const heroTitle = h1Line
+      ? this.buildTitle(h1Line.replace(/^#\s+/, '').trim())
+      : '';
+
+    // Find first plain paragraph after the first H2
+    let pastFirstH2 = false;
+    let heroText = '';
+
+    for (const line of lines) {
+      if (!pastFirstH2 && line.startsWith('## ')) {
+        pastFirstH2 = true;
+        continue;
+      }
+      if (pastFirstH2 && line.trim() && !line.startsWith('#') && !line.startsWith('-') && !line.startsWith('*')) {
+        // Strip HTML tags and markdown escape sequences (e.g. \. \- \!)
+        heroText = line.trim().replace(/<[^>]*>/g, '').replace(/\\(.)/g, '$1').trim();
+        break;
+      }
+    }
+
+    return { heroTitle, heroText };
   }
 
   /**

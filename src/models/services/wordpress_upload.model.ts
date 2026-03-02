@@ -28,6 +28,10 @@ export interface WordPressApiPayload {
   status: string;
   slug: string;
   parent?: number;
+  acf?: {
+    hero_title: string;
+    hero_text: string;
+  };
 }
 
 export interface WordPressApiResponse {

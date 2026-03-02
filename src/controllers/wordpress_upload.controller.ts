@@ -7,7 +7,13 @@ export const wordpressUploadController = {
    */
   async uploadContent(req: Request, res: Response): Promise<void> {
     try {
-      const { keyword, pageType = 'service_page', site, slug, parent } = req.body;
+      const { keyword, pageType: rawPageType, site, slug, parent } = req.body;
+
+      // Resolve default page type: site-specific env var → 'service_page' fallback
+      const defaultPageType = site
+        ? process.env[`WP_${(site as string).toUpperCase()}_DEFAULT_PAGE_TYPE`] || 'service_page'
+        : 'service_page';
+      const pageType = rawPageType || defaultPageType;
 
       if (!keyword || typeof keyword !== 'string') {
         res.status(400).json({
