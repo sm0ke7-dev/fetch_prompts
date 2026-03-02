@@ -108,6 +108,18 @@ export class WordPressUploadService {
       // Extract ACF hero fields from markdown
       const { heroTitle, heroText } = this.extractHeroFields(markdown);
 
+      // Find and upload featured image (non-fatal if missing)
+      let featuredMediaId: number | undefined;
+      const imagePath = this.findLatestImageForKeyword(request.keyword);
+      if (imagePath) {
+        console.log('🖼️ Found featured image for upload:', imagePath);
+        const uploadedId = await this.uploadImageToWordPress(imagePath, credentials, title);
+        if (uploadedId != null) {
+          console.log('✅ Image uploaded to WP media library, ID:', uploadedId);
+          featuredMediaId = uploadedId;
+        }
+      }
+
       // Build API payload
       const payload: WordPressApiPayload = {
         title,
@@ -115,9 +127,11 @@ export class WordPressUploadService {
         status,
         slug,
         ...(request.parent != null && { parent: request.parent }),
+        featured_media: featuredMediaId,
         acf: {
           hero_title: heroTitle,
-          hero_text: heroText
+          hero_text: heroText,
+          ...(featuredMediaId != null && { featured_image: featuredMediaId })
         }
       };
 
@@ -209,6 +223,70 @@ export class WordPressUploadService {
     }
 
     return { heroTitle, heroText };
+  }
+
+  /**
+   * Scans the featured images directory for files matching {slug}_feat_image_{timestamp}.png
+   * and returns the absolute path of the most recent one, or null if none found.
+   */
+  private findLatestImageForKeyword(keyword: string): string | null {
+    const slug = this.sanitizeKeyword(keyword);
+    const imagesDir = path.join(__dirname, '..', '..', 'src', 'repositories', 'images', 'featured');
+
+    if (!fs.existsSync(imagesDir)) {
+      return null;
+    }
+
+    const pattern = new RegExp(`^${slug}_feat_image_(\\d+)\\.png$`);
+    const files = fs.readdirSync(imagesDir);
+
+    let bestFile: string | null = null;
+    let bestTimestamp = -1;
+
+    for (const file of files) {
+      const match = file.match(pattern);
+      if (match) {
+        const timestamp = parseInt(match[1], 10);
+        if (timestamp > bestTimestamp) {
+          bestTimestamp = timestamp;
+          bestFile = file;
+        }
+      }
+    }
+
+    return bestFile ? path.join(imagesDir, bestFile) : null;
+  }
+
+  /**
+   * Uploads a PNG image to the WordPress media library.
+   * Returns the media ID on success, or null if the upload fails (non-fatal).
+   */
+  private async uploadImageToWordPress(
+    imagePath: string,
+    credentials: { baseUrl: string; username: string; appPassword: string },
+    altText: string
+  ): Promise<number | null> {
+    const { baseUrl, username, appPassword } = credentials;
+    const imageBuffer = fs.readFileSync(imagePath);
+    const filename = path.basename(imagePath);
+
+    const response = await fetch(`${baseUrl}/wp-json/wp/v2/media`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Basic ${Buffer.from(`${username}:${appPassword}`).toString('base64')}`,
+        'Content-Disposition': `attachment; filename="${filename}"`,
+        'Content-Type': 'image/png'
+      },
+      body: imageBuffer
+    });
+
+    if (!response.ok) {
+      console.warn(`Warning: image upload to WordPress failed (${response.status}). Proceeding without featured image.`);
+      return null;
+    }
+
+    const data = await response.json() as { id?: number };
+    return data.id ?? null;
   }
 
   /**

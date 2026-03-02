@@ -28,9 +28,11 @@ export interface WordPressApiPayload {
   status: string;
   slug: string;
   parent?: number;
+  featured_media?: number;
   acf?: {
     hero_title: string;
     hero_text: string;
+    featured_image?: number;
   };
 }
 
