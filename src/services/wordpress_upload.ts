@@ -10,7 +10,7 @@ import {
 } from '../models/services/wordpress_upload.model';
 import { fourStepImageDescriptionService } from './4step_image_desc_generation/img_desc_generation';
 
-const INLINE_IMAGE_SECTION_COUNT = 3;
+const INLINE_IMAGE_SECTION_COUNT = 0;
 
 export class WordPressUploadService {
   private md: MarkdownIt;
