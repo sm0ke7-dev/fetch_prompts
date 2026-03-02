@@ -156,6 +156,7 @@ export class IdeogramImageGeneratorService {
 
       const processedBuf = await sharp(buf)
         .resize(600, 400)
+        .withMetadata({ exif: {} })
         .png()
         .toBuffer();
 
