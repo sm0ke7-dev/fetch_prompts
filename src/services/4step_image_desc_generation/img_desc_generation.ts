@@ -221,9 +221,19 @@ export class FourStepImageDescriptionService {
       
       // For bat keywords, use a simple prompt to avoid AI over-engineering anatomy
       const isBatKeyword = /\bbat\b/i.test(keyword);
-      const imageDescription = isBatKeyword
-        ? 'big brown bat, photorealistic, wildlife photography, DSLR, natural lighting, shallow depth of field'
-        : step4Data.ideogram_prompt;
+      let imageDescription: string;
+      if (isBatKeyword) {
+        const basePrompt = 'big brown bat, photorealistic, wildlife photography, DSLR, natural lighting, shallow depth of field';
+        // Extract setting context from keyword — strip "bat" and generic filler terms
+        const settingContext = keyword
+          .replace(/\bbat\b/gi, '')
+          .replace(/\b(removal|control|extermination|service|services|pest|wildlife|tx|ca|fl|ny|nj|ga|in|the|a|an|and|or|of|for)\b/gi, '')
+          .replace(/\s+/g, ' ')
+          .trim();
+        imageDescription = settingContext ? `${basePrompt}, ${settingContext}` : basePrompt;
+      } else {
+        imageDescription = step4Data.ideogram_prompt;
+      }
       console.log('📝 IDEOGRAM PROMPT:');
       console.log('━'.repeat(80));
       console.log(imageDescription);
@@ -236,8 +246,11 @@ export class FourStepImageDescriptionService {
         if (fs.existsSync(refDir)) {
           const refFiles = fs.readdirSync(refDir).filter(f => /\.(png|jpg|jpeg|webp)$/i.test(f));
           if (refFiles.length > 0) {
-            styleReferenceImages = refFiles.map(f => fs.readFileSync(path.join(refDir, f)));
-            console.log(`🦇 Loaded ${styleReferenceImages.length} bat style reference image(s)`);
+            // Pick 1-2 reference images at random to drive variation across calls
+            const shuffled = [...refFiles].sort(() => Math.random() - 0.5);
+            const selected = shuffled.slice(0, Math.min(2, shuffled.length));
+            styleReferenceImages = selected.map(f => fs.readFileSync(path.join(refDir, f)));
+            console.log(`🦇 Loaded ${styleReferenceImages.length}/${refFiles.length} bat style reference image(s) (random subset)`);
           }
         }
       }

@@ -8,6 +8,7 @@ export interface WordPressUploadRequest {
   status?: string; // defaults to "draft"
   slug?: string;   // if provided, overrides the auto-generated keyword slug
   parent?: number; // WordPress post ID of the parent page (for hierarchical post types)
+  inlineImagePath?: string; // Local path to an image to inject after the first H2 section
 }
 
 export interface WordPressMediaUploadResponse {

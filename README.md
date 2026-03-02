@@ -147,6 +147,7 @@ fetch_prompts/
 - **Quality Assessment**: PASS on body proportions, limb count, facial features (QA uses local saved PNG via base64, not expiring Ideogram URL)
 - **File Output**: All images saved at 600×400px with EXIF stripped to `src/repositories/images/featured/`
 - **Integration**: Seamless pipeline from keyword → concept validation → generation → QA → post-processing
+- **Style References (Bat Variation)**: When keyword contains "bat", the image pipeline injects context from the keyword into the Ideogram prompt and attaches 1-2 randomly selected style reference images from `src/repositories/images/references/bat/` for consistent photorealistic bat imagery
 - **Test**: "squirrel" → gray squirrel perched on tree branch, DSLR-style — passes as real wildlife photo
 
 ### ✅ **WORDPRESS UPLOAD - PHASE 6 COMPLETE**
@@ -253,8 +254,9 @@ Upload a previously generated article to WordPress as a draft.
 | `keyword` | string | ✅ | The article keyword (must match a generated Phase 5 file) |
 | `pageType` | string | ✅ | `service_page` → WP Pages, `blog` → WP Posts, or any custom post type slug (e.g. `aaaclocations`) |
 | `site` | string | ❌ | Office key (e.g. `charlotte`, `dallas`). Falls back to `WP_BASE_URL` if omitted. |
-| `slug` | string | ❌ | Override the auto-generated URL slug. Defaults to hyphenated keyword. |
+| `slug` | string | ❌ | Custom URL slug. Auto-generated from keyword if omitted. |
 | `parent` | number | ❌ | WordPress post ID of the parent page (for hierarchical post types). |
+| `inlineImagePath` | string | ❌ | Local file path to an image to inject after the first H2 heading in the article body. |
 
 ```json
 {
@@ -412,11 +414,12 @@ WP_DALLAS_APP_PASSWORD=your_wp_app_password
 - **Custom post type support**: `pageType` accepts any WP REST base (e.g. `aaaclocations`, `aaacanimals`) — no code changes needed for new post types
 - **Multi-site support**: Pass `site: "charlotte"` (or any office key) to target that office's credentials; new offices only require 3 env var additions
 - **Claude command**: `/create-location-page` updated with upload confirmation flow
-- **Featured image upload**: Scans `images/featured/` for the latest matching PNG and sets it as the post's featured media in WP
-- **Inline image injection**: Generates AI images for the first 3 H2 sections (via 4-step pipeline), uploads to WP media library, and injects `<img>` tags after each `</h2>` in the article body; controlled by `INLINE_IMAGE_SECTION_COUNT` constant
+- **Featured Image Upload**: Automatically finds the latest generated featured image for the keyword and uploads it to the WP media library, setting it as the post's `featured_media`
+- **Inline Image Injection**: Two modes — (1) pass `inlineImagePath` to manually inject a specific image after the first H2, or (2) auto-generates AI images for the first N H2 sections via the 4-step pipeline, controlled by `INLINE_IMAGE_SECTION_COUNT` constant (set to `0` to disable)
+- **ACF Hero Fields**: Extracts `hero_title` (from H1) and `hero_text` (first paragraph after first H2) and sends them as ACF custom fields
 
 **Files added:**
-- `src/services/wordpress_upload.ts` — service with load, convert, and upload methods
+- `src/services/wordpress_upload.ts` — service with load, convert, upload, and inline image injection methods
 - `src/models/services/wordpress_upload.model.ts` — 4 TypeScript interfaces
 - `src/controllers/wordpress_upload.controller.ts` — input validation + error handling
 - `src/routes/wordpress_upload.routes.ts` — POST /v1/wp-upload route
@@ -485,5 +488,5 @@ When collaborating with AI assistants on this project:
 
 ---
 
-**Last Updated:** March 2026 - Inline image injection for WordPress uploads: AI-generated images embedded after each of the first 3 H2 sections in the article body. Also added featured image auto-upload, `slug`/`parent` request fields, and `featured_media_id`/`inline_image_count` response fields.
+**Last Updated:** March 2026 - Featured image upload, inline image injection (manual path + auto-generation), ACF hero fields, bat image style reference variation. Next: URL structure and content formatting fixes.
 **Version:** 1.0.0

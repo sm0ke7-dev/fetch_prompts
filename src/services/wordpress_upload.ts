@@ -125,6 +125,23 @@ export class WordPressUploadService {
         }
       }
 
+      // Upload and inject manual inline image after first H2 (non-fatal if missing/fails)
+      let finalHtml = html;
+      console.log('🔍 Inline image path received:', request.inlineImagePath || '(none)');
+      if (request.inlineImagePath) {
+        if (!fs.existsSync(request.inlineImagePath)) {
+          console.warn('⚠️ Inline image path not found:', request.inlineImagePath);
+        } else {
+          console.log('🖼️ Uploading inline image:', request.inlineImagePath);
+          const inlineUploaded = await this.uploadImageToWordPress(request.inlineImagePath, credentials, title);
+          if (inlineUploaded?.source_url) {
+            console.log('✅ Inline image uploaded, URL:', inlineUploaded.source_url);
+            finalHtml = this.injectInlineImage(html, inlineUploaded.source_url, title);
+            console.log('✅ Inline image injected after first H2');
+          }
+        }
+      }
+
       // Generate and upload inline images (non-fatal if any fail)
       let inlineImages: Array<{ sectionIndex: number; url: string; altText: string }> = [];
       if (INLINE_IMAGE_SECTION_COUNT > 0) {
@@ -133,8 +150,8 @@ export class WordPressUploadService {
         console.log(`✅ ${inlineImages.length}/${INLINE_IMAGE_SECTION_COUNT} inline image(s) ready`);
       }
 
-      // Inject inline images into HTML (no-op if none were generated)
-      const contentHtml = inlineImages.length > 0 ? this.injectInlineImages(html, inlineImages) : html;
+      // Inject auto-generated inline images into HTML (no-op if none were generated)
+      const contentHtml = inlineImages.length > 0 ? this.injectInlineImages(finalHtml, inlineImages) : finalHtml;
 
       // Build API payload
       const payload: WordPressApiPayload = {
@@ -371,7 +388,7 @@ export class WordPressUploadService {
   }
 
   /**
-   * Injects <img> tags into HTML after each targeted </h2> closing tag.
+   * Injects <img> tags into HTML after each targeted </h2> closing tag (auto-generated images).
    */
   private injectInlineImages(
     html: string,
@@ -385,6 +402,22 @@ export class WordPressUploadService {
         return `</h2>\n<img src="${img.url}" alt="${img.altText}" class="wp-inline-image" style="width:100%;height:auto;margin:1rem 0;" />`;
       }
       return match;
+    });
+  }
+
+  /**
+   * Injects an <img> tag after the first H2 in the HTML, if no image already exists there (manual path).
+   */
+  private injectInlineImage(html: string, imageUrl: string, altText: string): string {
+    let injected = false;
+    return html.replace(/<\/h2>/i, (match) => {
+      if (injected) return match;
+      injected = true;
+      const afterH2 = html.slice(html.indexOf(match) + match.length, html.indexOf(match) + match.length + 100);
+      if (/<img\s/i.test(afterH2.trim())) {
+        return match;
+      }
+      return `${match}\n<img src="${imageUrl}" alt="${altText}" style="width:100%;height:auto;margin:1rem 0;" />`;
     });
   }
 
