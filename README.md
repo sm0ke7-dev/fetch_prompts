@@ -157,6 +157,8 @@ fetch_prompts/
 - **Content Routing**: `service_page` → WP Pages, `blog` → WP Posts, custom post types (e.g. `aaaclocations`) passed through directly as REST base
 - **Multi-Site Support**: Target any office via `site` field (e.g. `charlotte`, `dallas`); falls back to `WP_BASE_URL` if omitted
 - **Authentication**: WordPress Application Passwords
+- **Featured Image**: Automatically uploads the latest matching image from `images/featured/` and sets it as the post's featured media
+- **Inline Images**: Generates and injects AI images after each of the first 3 H2 sections; uploaded to WP media library and embedded as `<img>` tags in the article body (controlled by `INLINE_IMAGE_SECTION_COUNT` constant — set to `0` to disable)
 - **Claude Command**: `/create-location-page` updated with upload confirmation flow
 
 ## 📚 API Documentation
@@ -251,6 +253,8 @@ Upload a previously generated article to WordPress as a draft.
 | `keyword` | string | ✅ | The article keyword (must match a generated Phase 5 file) |
 | `pageType` | string | ✅ | `service_page` → WP Pages, `blog` → WP Posts, or any custom post type slug (e.g. `aaaclocations`) |
 | `site` | string | ❌ | Office key (e.g. `charlotte`, `dallas`). Falls back to `WP_BASE_URL` if omitted. |
+| `slug` | string | ❌ | Override the auto-generated URL slug. Defaults to hyphenated keyword. |
+| `parent` | number | ❌ | WordPress post ID of the parent page (for hierarchical post types). |
 
 ```json
 {
@@ -275,7 +279,9 @@ Invoke-RestMethod -Uri "http://localhost:3000/api/v1/wp-upload" -Method POST -Co
     "wordpress_edit_url": "https://your-site.com/wp-admin/post.php?post=1234&action=edit",
     "content_type": "page",
     "status": "draft",
-    "title": "Raccoon Removal Houston"
+    "title": "Raccoon Removal Houston",
+    "featured_media_id": 5678,
+    "inline_image_count": 3
   },
   "message": "Content uploaded to WordPress successfully"
 }
@@ -406,6 +412,8 @@ WP_DALLAS_APP_PASSWORD=your_wp_app_password
 - **Custom post type support**: `pageType` accepts any WP REST base (e.g. `aaaclocations`, `aaacanimals`) — no code changes needed for new post types
 - **Multi-site support**: Pass `site: "charlotte"` (or any office key) to target that office's credentials; new offices only require 3 env var additions
 - **Claude command**: `/create-location-page` updated with upload confirmation flow
+- **Featured image upload**: Scans `images/featured/` for the latest matching PNG and sets it as the post's featured media in WP
+- **Inline image injection**: Generates AI images for the first 3 H2 sections (via 4-step pipeline), uploads to WP media library, and injects `<img>` tags after each `</h2>` in the article body; controlled by `INLINE_IMAGE_SECTION_COUNT` constant
 
 **Files added:**
 - `src/services/wordpress_upload.ts` — service with load, convert, and upload methods
@@ -477,5 +485,5 @@ When collaborating with AI assistants on this project:
 
 ---
 
-**Last Updated:** February 2026 - Phase 3 NeuronWriter term distribution overhauled: gpt-5-mini with 7-rule merge prompt, heading term passthrough, increased term limits, max_tokens fix. Output now contains rich multi-word SEO phrases across all sections. Next: URL structure (WP permalink settings) and content formatting fixes.
+**Last Updated:** March 2026 - Inline image injection for WordPress uploads: AI-generated images embedded after each of the first 3 H2 sections in the article body. Also added featured image auto-upload, `slug`/`parent` request fields, and `featured_media_id`/`inline_image_count` response fields.
 **Version:** 1.0.0

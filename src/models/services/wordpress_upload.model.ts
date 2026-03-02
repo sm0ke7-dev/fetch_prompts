@@ -10,6 +10,11 @@ export interface WordPressUploadRequest {
   parent?: number; // WordPress post ID of the parent page (for hierarchical post types)
 }
 
+export interface WordPressMediaUploadResponse {
+  id: number;
+  source_url: string;
+}
+
 export interface WordPressUploadResponse {
   success: boolean;
   wordpress_id?: number;
@@ -18,6 +23,8 @@ export interface WordPressUploadResponse {
   content_type?: string; // 'page', 'post', or custom post type slug
   status?: string;
   title?: string;
+  featured_media_id?: number; // media library ID of the uploaded featured image, if any
+  inline_image_count?: number;
   message?: string;
   error?: any;
 }
@@ -32,7 +39,7 @@ export interface WordPressApiPayload {
   acf?: {
     hero_title: string;
     hero_text: string;
-    featured_image?: number;
+    image_caption?: string;
   };
 }
 

@@ -5,8 +5,12 @@ import {
   WordPressUploadRequest,
   WordPressUploadResponse,
   WordPressApiPayload,
-  WordPressApiResponse
+  WordPressApiResponse,
+  WordPressMediaUploadResponse
 } from '../models/services/wordpress_upload.model';
+import { fourStepImageDescriptionService } from './4step_image_desc_generation/img_desc_generation';
+
+const INLINE_IMAGE_SECTION_COUNT = 3;
 
 export class WordPressUploadService {
   private md: MarkdownIt;
@@ -95,7 +99,8 @@ export class WordPressUploadService {
       // Determine endpoint: map known aliases, otherwise use pageType directly as REST base
       const knownRestBases: Record<string, string> = {
         'service_page': 'pages',
-        'blog': 'posts'
+        'blog': 'posts',
+        'location': 'aaaclocations'
       };
       const restBase = knownRestBases[request.pageType] ?? request.pageType;
       const endpoint = `${baseUrl}/wp-json/wp/v2/${restBase}`;
@@ -113,17 +118,28 @@ export class WordPressUploadService {
       const imagePath = this.findLatestImageForKeyword(request.keyword);
       if (imagePath) {
         console.log('🖼️ Found featured image for upload:', imagePath);
-        const uploadedId = await this.uploadImageToWordPress(imagePath, credentials, title);
-        if (uploadedId != null) {
-          console.log('✅ Image uploaded to WP media library, ID:', uploadedId);
-          featuredMediaId = uploadedId;
+        const uploadedResult = await this.uploadImageToWordPress(imagePath, credentials, title);
+        if (uploadedResult != null) {
+          console.log('✅ Image uploaded to WP media library, ID:', uploadedResult.id);
+          featuredMediaId = uploadedResult.id;
         }
       }
+
+      // Generate and upload inline images (non-fatal if any fail)
+      let inlineImages: Array<{ sectionIndex: number; url: string; altText: string }> = [];
+      if (INLINE_IMAGE_SECTION_COUNT > 0) {
+        console.log(`🖼️ Generating ${INLINE_IMAGE_SECTION_COUNT} inline image(s)...`);
+        inlineImages = await this.generateAndUploadInlineImages(request.keyword, html, credentials, title);
+        console.log(`✅ ${inlineImages.length}/${INLINE_IMAGE_SECTION_COUNT} inline image(s) ready`);
+      }
+
+      // Inject inline images into HTML (no-op if none were generated)
+      const contentHtml = inlineImages.length > 0 ? this.injectInlineImages(html, inlineImages) : html;
 
       // Build API payload
       const payload: WordPressApiPayload = {
         title,
-        content: html,
+        content: contentHtml,
         status,
         slug,
         ...(request.parent != null && { parent: request.parent }),
@@ -131,7 +147,7 @@ export class WordPressUploadService {
         acf: {
           hero_title: heroTitle,
           hero_text: heroText,
-          ...(featuredMediaId != null && { featured_image: featuredMediaId })
+          ...(featuredMediaId != null && { image_caption: title })
         }
       };
 
@@ -181,7 +197,9 @@ export class WordPressUploadService {
         wordpress_edit_url: `${baseUrl}/wp-admin/post.php?post=${wpResponse.id}&action=edit`,
         content_type: contentType,
         status: wpResponse.status,
-        title: wpResponse.title.rendered
+        title: wpResponse.title.rendered,
+        ...(featuredMediaId != null && { featured_media_id: featuredMediaId }),
+        ...(inlineImages.length > 0 && { inline_image_count: inlineImages.length })
       };
     } catch (error) {
       return {
@@ -259,13 +277,13 @@ export class WordPressUploadService {
 
   /**
    * Uploads a PNG image to the WordPress media library.
-   * Returns the media ID on success, or null if the upload fails (non-fatal).
+   * Returns { id, source_url } on success, or null if the upload fails (non-fatal).
    */
   private async uploadImageToWordPress(
     imagePath: string,
     credentials: { baseUrl: string; username: string; appPassword: string },
     altText: string
-  ): Promise<number | null> {
+  ): Promise<WordPressMediaUploadResponse | null> {
     const { baseUrl, username, appPassword } = credentials;
     const imageBuffer = fs.readFileSync(imagePath);
     const filename = path.basename(imagePath);
@@ -281,12 +299,93 @@ export class WordPressUploadService {
     });
 
     if (!response.ok) {
-      console.warn(`Warning: image upload to WordPress failed (${response.status}). Proceeding without featured image.`);
+      console.warn(`Warning: image upload to WordPress failed (${response.status}). Proceeding without image.`);
       return null;
     }
 
-    const data = await response.json() as { id?: number };
-    return data.id ?? null;
+    const data = await response.json() as { id?: number; source_url?: string };
+    if (!data.id) return null;
+    return { id: data.id, source_url: data.source_url ?? '' };
+  }
+
+  /**
+   * Generates and uploads inline images for the first N H2 sections.
+   * Non-fatal: failed sections are skipped with a warning.
+   */
+  private async generateAndUploadInlineImages(
+    keyword: string,
+    html: string,
+    credentials: { baseUrl: string; username: string; appPassword: string },
+    title: string
+  ): Promise<Array<{ sectionIndex: number; url: string; altText: string }>> {
+    const h2Matches = [...html.matchAll(/<h2>(.*?)<\/h2>/g)];
+    const sectionsToProcess = h2Matches.slice(0, INLINE_IMAGE_SECTION_COUNT);
+    const results: Array<{ sectionIndex: number; url: string; altText: string }> = [];
+
+    if (sectionsToProcess.length === 0) return results;
+
+    const inlineDir = path.join(__dirname, '..', '..', 'src', 'repositories', 'images', 'inline');
+    if (!fs.existsSync(inlineDir)) {
+      fs.mkdirSync(inlineDir, { recursive: true });
+    }
+
+    const slug = this.sanitizeKeyword(keyword);
+
+    for (let i = 0; i < sectionsToProcess.length; i++) {
+      const sectionIndex = i + 1;
+      const h2Text = sectionsToProcess[i][1].replace(/<[^>]*>/g, '').trim();
+      const sectionKeyword = `${keyword} — ${h2Text}`;
+
+      try {
+        console.log(`🖼️ [Inline ${sectionIndex}/${sectionsToProcess.length}] Generating for: "${sectionKeyword}"`);
+
+        const imageResult = await fourStepImageDescriptionService.generateImageDescription(sectionKeyword);
+
+        if (!imageResult.success || !imageResult.data?.saved_image_path) {
+          console.warn(`⚠️ [Inline ${sectionIndex}] Image generation failed, skipping`);
+          continue;
+        }
+
+        // Copy to inline dir with proper naming
+        const timestamp = Date.now();
+        const inlinePath = path.join(inlineDir, `${slug}_${sectionIndex}_inline_${timestamp}.png`);
+        fs.copyFileSync(imageResult.data.saved_image_path, inlinePath);
+
+        // Upload to WordPress media library
+        const altText = `${title} — ${h2Text}`;
+        const uploadResult = await this.uploadImageToWordPress(inlinePath, credentials, altText);
+
+        if (!uploadResult) {
+          console.warn(`⚠️ [Inline ${sectionIndex}] WordPress upload failed, skipping`);
+          continue;
+        }
+
+        results.push({ sectionIndex, url: uploadResult.source_url, altText });
+        console.log(`✅ [Inline ${sectionIndex}] Uploaded: ${uploadResult.source_url}`);
+      } catch (err) {
+        console.warn(`⚠️ [Inline ${sectionIndex}] Error: ${(err as Error).message}, skipping`);
+      }
+    }
+
+    return results;
+  }
+
+  /**
+   * Injects <img> tags into HTML after each targeted </h2> closing tag.
+   */
+  private injectInlineImages(
+    html: string,
+    images: Array<{ sectionIndex: number; url: string; altText: string }>
+  ): string {
+    let h2Count = 0;
+    return html.replace(/<\/h2>/g, (match) => {
+      h2Count++;
+      const img = images.find(i => i.sectionIndex === h2Count);
+      if (img) {
+        return `</h2>\n<img src="${img.url}" alt="${img.altText}" class="wp-inline-image" style="width:100%;height:auto;margin:1rem 0;" />`;
+      }
+      return match;
+    });
   }
 
   /**

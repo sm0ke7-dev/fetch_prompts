@@ -128,12 +128,17 @@ export class IdeogramImageGeneratorService {
   }
 
   /**
-   * Download and save an image from URL to the featured images folder
+   * Download and save an image from URL to a local directory.
    * @param imageUrl - The URL of the image to download
    * @param keyword - The keyword for filename generation
+   * @param options - Optional overrides: saveDir (default: featured/), filenamePrefix (default: {slug}_feat_image)
    * @returns Promise with the saved image path
    */
-  async downloadAndSaveImage(imageUrl: string, keyword: string): Promise<string> {
+  async downloadAndSaveImage(
+    imageUrl: string,
+    keyword: string,
+    options?: { saveDir?: string; filenamePrefix?: string }
+  ): Promise<string> {
     try {
       const sanitizedKeyword = keyword
         .toLowerCase()
@@ -141,9 +146,9 @@ export class IdeogramImageGeneratorService {
         .replace(/\s+/g, '_')
         .trim();
 
-      const featuredDir = path.join(__dirname, '..', '..', 'src', 'repositories', 'images', 'featured');
-      if (!fs.existsSync(featuredDir)) {
-        fs.mkdirSync(featuredDir, { recursive: true });
+      const saveDir = options?.saveDir ?? path.join(__dirname, '..', '..', 'src', 'repositories', 'images', 'featured');
+      if (!fs.existsSync(saveDir)) {
+        fs.mkdirSync(saveDir, { recursive: true });
       }
 
       const imageResp = await fetch(imageUrl, {
@@ -162,7 +167,10 @@ export class IdeogramImageGeneratorService {
       const arrBuf = await imageResp.arrayBuffer();
       const buf = Buffer.from(arrBuf);
       const timestamp = Date.now();
-      const imgPath = path.join(featuredDir, `${sanitizedKeyword}_feat_image_${timestamp}.png`);
+      const filename = options?.filenamePrefix
+        ? `${options.filenamePrefix}_${timestamp}.png`
+        : `${sanitizedKeyword}_feat_image_${timestamp}.png`;
+      const imgPath = path.join(saveDir, filename);
 
       const processedBuf = await sharp(buf)
         .resize(600, 400)
