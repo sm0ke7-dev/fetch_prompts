@@ -45,9 +45,18 @@ export class IdeogramImageGeneratorService {
       if (request.rendering_speed) {
         formData.append('rendering_speed', request.rendering_speed);
       }
-      // Set style_type to REALISTIC for photorealistic images (unless explicitly overridden)
-      const styleType = request.style_type || 'REALISTIC';
-      formData.append('style_type', styleType);
+      // If style_reference_images are provided, append them and skip style_type (API conflict)
+      if (request.style_reference_images && request.style_reference_images.length > 0) {
+        console.log(`📎 Attaching ${request.style_reference_images.length} style reference image(s)...`);
+        for (const imgBuffer of request.style_reference_images) {
+          const blob = new Blob([imgBuffer], { type: 'image/png' });
+          formData.append('style_reference_images', blob, 'reference.png');
+        }
+      } else {
+        // Set style_type to REALISTIC for photorealistic images (unless explicitly overridden)
+        const styleType = request.style_type || 'REALISTIC';
+        formData.append('style_type', styleType);
+      }
       if (request.num_images) {
         formData.append('num_images', request.num_images.toString());
       }
@@ -152,7 +161,8 @@ export class IdeogramImageGeneratorService {
 
       const arrBuf = await imageResp.arrayBuffer();
       const buf = Buffer.from(arrBuf);
-      const imgPath = path.join(featuredDir, `${sanitizedKeyword}_feat_image.png`);
+      const timestamp = Date.now();
+      const imgPath = path.join(featuredDir, `${sanitizedKeyword}_feat_image_${timestamp}.png`);
 
       const processedBuf = await sharp(buf)
         .resize(600, 400)

@@ -10,6 +10,8 @@ import {
   FourStepImageDescriptionResult,
   StructuredImagePrompt
 } from '../../models/services/4step_image_desc_generation/img_desc_generation.models';
+import * as fs from 'fs';
+import * as path from 'path';
 
 export class FourStepImageDescriptionService {
   /**
@@ -24,6 +26,35 @@ export class FourStepImageDescriptionService {
       console.log('='.repeat(80));
       console.log('📝 Keyword:', keyword);
       console.log('⏰ Start Time:', new Date().toISOString());
+
+      // Bypass steps 1-4 for bat keywords — prompt is hardcoded, no AI needed
+      if (/\bbat\b/i.test(keyword)) {
+        console.log('🦇 Bat keyword detected — skipping steps 1-4, going straight to Ideogram');
+        const stubStep4: Step4Result = {
+          ideogram_prompt: '',
+          image_title: keyword,
+          structured_prompt: {} as any,
+          prompt_analysis: { key_improvements: [], domain_accuracy: '', generation_optimization: '' },
+          quality_checks: { anatomical_accuracy: true, context_accuracy: true, domain_accuracy: true, generation_feasibility: true }
+        };
+        const imageResult = await this.generateImageWithIdeogram(stubStep4, keyword);
+        const processingTime = Date.now() - startTime;
+        if (!imageResult.success) {
+          return { success: false, message: 'Image generation failed', error: imageResult.message };
+        }
+        return {
+          success: true,
+          data: {
+            step1: {} as any, step2: {} as any, step3: {} as any, step4: stubStep4,
+            final_image_description: '',
+            final_image_title: keyword,
+            generated_image_url: imageResult.data?.generated_image_url,
+            saved_image_path: imageResult.data?.saved_image_path,
+            processing_time: processingTime
+          },
+          message: 'Image generation completed successfully (bat bypass)'
+        };
+      }
 
       // Step 1: Generate 3 concept variations
       console.log('\n' + '-'.repeat(60));
@@ -188,17 +219,34 @@ export class FourStepImageDescriptionService {
     try {
       console.log('🎨 Ideogram Service: Starting image generation...');
       
-      // Use the concise Ideogram-optimized prompt from Step 4
-      const imageDescription = step4Data.ideogram_prompt;
+      // For bat keywords, use a simple prompt to avoid AI over-engineering anatomy
+      const isBatKeyword = /\bbat\b/i.test(keyword);
+      const imageDescription = isBatKeyword
+        ? 'big brown bat, photorealistic, wildlife photography, DSLR, natural lighting, shallow depth of field'
+        : step4Data.ideogram_prompt;
       console.log('📝 IDEOGRAM PROMPT:');
       console.log('━'.repeat(80));
       console.log(imageDescription);
       console.log('━'.repeat(80));
 
-      // Generate image
+      // Load style reference images for bat keywords
+      let styleReferenceImages: Buffer[] | undefined;
+      if (isBatKeyword) {
+        const refDir = path.join(__dirname, '..', '..', 'repositories', 'images', 'references', 'bat');
+        if (fs.existsSync(refDir)) {
+          const refFiles = fs.readdirSync(refDir).filter(f => /\.(png|jpg|jpeg|webp)$/i.test(f));
+          if (refFiles.length > 0) {
+            styleReferenceImages = refFiles.map(f => fs.readFileSync(path.join(refDir, f)));
+            console.log(`🦇 Loaded ${styleReferenceImages.length} bat style reference image(s)`);
+          }
+        }
+      }
+
+      // Generate image (skip style_type when using reference images; use TURBO for bat keywords)
       const generateResult = await ideogramImageGeneratorService.generateImage({
         prompt: imageDescription + ' No text, no words, no letters, no watermarks, no overlays.',
-        style_type: 'REALISTIC'
+        rendering_speed: isBatKeyword ? 'TURBO' : undefined,
+        ...(styleReferenceImages ? { style_reference_images: styleReferenceImages } : { style_type: 'REALISTIC' as const })
       });
       
       if (!generateResult.success || !generateResult.data) {

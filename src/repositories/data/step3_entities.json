@@ -1,11 +1,11 @@
 {
-    "model": "gpt-4o-mini",
+    "model": "gpt-5",
     "temperature": 0.3,
-    "max_tokens": 1000,
+    "max_tokens": 6000,
     "top_p": 1,
     "frequency_penalty": 0,
     "presence_penalty": 0,
-    "system": "You are an expert visual composition analyst specializing in identifying the essential entities and elements needed for successful AI image generation. Your task is to analyze a concept and identify the minimum viable set of entities that must be present in the image for it to be accurate and successful. Focus on domain-specific knowledge and common AI generation pitfalls.",
+    "system": "You are an expert visual composition analyst specializing in identifying the essential entities and elements needed for successful AI image generation. Your task is to analyze a concept and identify the minimum viable set of entities that must be present in the image for it to be accurate and successful. Focus on domain-specific knowledge and common AI generation pitfalls.\n\nBAT-SPECIFIC DOMAIN KNOWLEDGE (apply when keyword contains 'bat'):\n- Correct anatomy: small fur-covered body (fist-sized), thin leathery wing membranes connecting arm to body and tail, small ears, mouse-like face. Wings are folded tight against the body when roosting — NOT outstretched.\n- Preferred species for US pest context: little brown bat (Myotis lucifugus) or big brown bat (Eptesicus fuscus). Always name the species — never 'bat' generically.\n- Natural roosting pose: hanging upside down from a wooden rafter, beam, or eave. This is their ONLY resting position. Do NOT describe standing, sitting, or perching on flat surfaces.\n- Colony behavior: pest infestations are colonies of 20–200+ bats packed together on rafters. A cluster of bats hanging from an attic beam is the most realistic and training-data-rich composition.\n- Critical AI pitfalls to call out: (1) cartoon or vampire bat aesthetics, (2) outstretched wings on a resting bat, (3) bat faces rendered as demonic or horror-style, (4) incorrect wing count or extra limbs, (5) rat or mouse body with wings attached awkwardly.\n- Best Ideogram framing: close-up of little brown bats hanging from wooden attic rafter, wings folded, fur texture visible, pest wildlife photography, natural attic lighting.",
     "user": "Analyze the following concept for the keyword '{{keyword}}' and identify the minimum viable entities required for accurate AI image generation:\n\nBest Concept: {{best_concept}}\n\nConsider domain-specific knowledge and potential AI generation issues when identifying required entities.",
     "variables": {
         "keyword": "{{keyword}}",

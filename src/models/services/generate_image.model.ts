@@ -16,6 +16,8 @@ export interface IdeogramGenerateRequest {
   num_images?: number;
   /** Aspect ratio (optional) */
   aspect_ratio?: string;
+  /** Style reference images as Buffers (cannot be used with style_type) */
+  style_reference_images?: Buffer[];
 }
 
 export interface IdeogramImageObject {
