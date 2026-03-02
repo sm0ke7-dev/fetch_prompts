@@ -113,32 +113,45 @@ export class WordPressUploadService {
       // Extract ACF hero fields from markdown
       const { heroTitle, heroText } = this.extractHeroFields(markdown);
 
-      // Find and upload featured image (non-fatal if missing)
+      // Upload featured image: use explicit path if provided, otherwise auto-detect
       let featuredMediaId: number | undefined;
-      const imagePath = this.findLatestImageForKeyword(request.keyword);
+      const imagePath = request.featuredImagePath || this.findLatestImageForKeyword(request.keyword);
       if (imagePath) {
-        console.log('🖼️ Found featured image for upload:', imagePath);
-        const uploadedResult = await this.uploadImageToWordPress(imagePath, credentials, title);
-        if (uploadedResult != null) {
-          console.log('✅ Image uploaded to WP media library, ID:', uploadedResult.id);
-          featuredMediaId = uploadedResult.id;
+        if (request.featuredImagePath && !fs.existsSync(request.featuredImagePath)) {
+          console.warn('⚠️ Featured image path not found:', request.featuredImagePath);
+        } else {
+          console.log('🖼️ Featured image for upload:', imagePath);
+          const uploadedResult = await this.uploadImageToWordPress(imagePath, credentials, title);
+          if (uploadedResult != null) {
+            console.log('✅ Image uploaded to WP media library, ID:', uploadedResult.id);
+            featuredMediaId = uploadedResult.id;
+          }
         }
       }
 
-      // Upload and inject manual inline image after first H2 (non-fatal if missing/fails)
+      // Upload manual inline images and inject into H2 sections that don't already have images
       let finalHtml = html;
-      console.log('🔍 Inline image path received:', request.inlineImagePath || '(none)');
-      if (request.inlineImagePath) {
-        if (!fs.existsSync(request.inlineImagePath)) {
-          console.warn('⚠️ Inline image path not found:', request.inlineImagePath);
-        } else {
-          console.log('🖼️ Uploading inline image:', request.inlineImagePath);
-          const inlineUploaded = await this.uploadImageToWordPress(request.inlineImagePath, credentials, title);
+      const inlinePaths = request.inlineImagePaths || [];
+      let manualInlineCount = 0;
+      console.log(`🔍 Inline image paths received: ${inlinePaths.length || '(none)'}`);
+      if (inlinePaths.length > 0) {
+        const uploadedUrls: string[] = [];
+        for (const imgPath of inlinePaths) {
+          if (!fs.existsSync(imgPath)) {
+            console.warn('⚠️ Inline image path not found, skipping:', imgPath);
+            continue;
+          }
+          console.log('🖼️ Uploading inline image:', imgPath);
+          const inlineUploaded = await this.uploadImageToWordPress(imgPath, credentials, title);
           if (inlineUploaded?.source_url) {
             console.log('✅ Inline image uploaded, URL:', inlineUploaded.source_url);
-            finalHtml = this.injectInlineImage(html, inlineUploaded.source_url, title);
-            console.log('✅ Inline image injected after first H2');
+            uploadedUrls.push(inlineUploaded.source_url);
           }
+        }
+        if (uploadedUrls.length > 0) {
+          finalHtml = this.injectInlineImagesAtEmptyH2s(html, uploadedUrls, title);
+          manualInlineCount = uploadedUrls.length;
+          console.log(`✅ Injected ${manualInlineCount} inline image(s) into empty H2 sections`);
         }
       }
 
@@ -216,7 +229,7 @@ export class WordPressUploadService {
         status: wpResponse.status,
         title: wpResponse.title.rendered,
         ...(featuredMediaId != null && { featured_media_id: featuredMediaId }),
-        ...(inlineImages.length > 0 && { inline_image_count: inlineImages.length })
+        ...((manualInlineCount + inlineImages.length) > 0 && { inline_image_count: manualInlineCount + inlineImages.length })
       };
     } catch (error) {
       return {
@@ -406,18 +419,24 @@ export class WordPressUploadService {
   }
 
   /**
-   * Injects an <img> tag after the first H2 in the HTML, if no image already exists there (manual path).
+   * Scans HTML for all H2 sections, skips any that already have an <img> immediately after,
+   * and injects the provided image URLs into the first available empty H2 slots.
    */
-  private injectInlineImage(html: string, imageUrl: string, altText: string): string {
-    let injected = false;
-    return html.replace(/<\/h2>/i, (match) => {
-      if (injected) return match;
-      injected = true;
-      const afterH2 = html.slice(html.indexOf(match) + match.length, html.indexOf(match) + match.length + 100);
+  private injectInlineImagesAtEmptyH2s(html: string, imageUrls: string[], altText: string): string {
+    let urlIndex = 0;
+    let h2Count = 0;
+    return html.replace(/<\/h2>/g, (match, offset) => {
+      if (urlIndex >= imageUrls.length) return match;
+      h2Count++;
+      // Check if an <img> already exists within the next 200 chars after this </h2>
+      const afterH2 = html.slice(offset + match.length, offset + match.length + 200);
       if (/<img\s/i.test(afterH2.trim())) {
+        console.log(`  ⏭️ H2 #${h2Count} already has an image, skipping`);
         return match;
       }
-      return `${match}\n<img src="${imageUrl}" alt="${altText}" style="width:100%;height:auto;margin:1rem 0;" />`;
+      const url = imageUrls[urlIndex++];
+      console.log(`  ✅ H2 #${h2Count} is empty, injecting image ${urlIndex}/${imageUrls.length}`);
+      return `${match}\n<img src="${url}" alt="${altText}" class="wp-inline-image" style="width:100%;height:auto;margin:1rem 0;" />`;
     });
   }
 

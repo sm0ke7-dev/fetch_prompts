@@ -27,9 +27,11 @@ export class FourStepImageDescriptionService {
       console.log('📝 Keyword:', keyword);
       console.log('⏰ Start Time:', new Date().toISOString());
 
-      // Bypass steps 1-4 for bat keywords — prompt is hardcoded, no AI needed
-      if (/\bbat\b/i.test(keyword)) {
-        console.log('🦇 Bat keyword detected — skipping steps 1-4, going straight to Ideogram');
+      // Bypass steps 1-4 for known animal keywords — prompt is hardcoded, no AI needed
+      const bypassMatch = keyword.match(/\b(bat|squirrel|raccoon)\b/i);
+      if (bypassMatch) {
+        const animal = bypassMatch[1].toLowerCase();
+        console.log(`🐾 ${animal} keyword detected — skipping steps 1-4, going straight to Ideogram`);
         const stubStep4: Step4Result = {
           ideogram_prompt: '',
           image_title: keyword,
@@ -52,7 +54,7 @@ export class FourStepImageDescriptionService {
             saved_image_path: imageResult.data?.saved_image_path,
             processing_time: processingTime
           },
-          message: 'Image generation completed successfully (bat bypass)'
+          message: `Image generation completed successfully (${animal} bypass)`
         };
       }
 
@@ -219,14 +221,20 @@ export class FourStepImageDescriptionService {
     try {
       console.log('🎨 Ideogram Service: Starting image generation...');
       
-      // For bat keywords, use a simple prompt to avoid AI over-engineering anatomy
-      const isBatKeyword = /\bbat\b/i.test(keyword);
+      // For known animal keywords, use a simple prompt to avoid AI over-engineering anatomy
+      const animalPrompts: Record<string, string> = {
+        bat: 'big brown bat, photorealistic, wildlife photography, DSLR, natural lighting, shallow depth of field',
+        squirrel: 'gray squirrel, photorealistic, wildlife photography, DSLR, natural lighting, shallow depth of field',
+        raccoon: 'raccoon, photorealistic, wildlife photography, DSLR, natural lighting, shallow depth of field'
+      };
+      const animalMatch = keyword.match(/\b(bat|squirrel|raccoon)\b/i);
+      const matchedAnimal = animalMatch ? animalMatch[1].toLowerCase() : null;
       let imageDescription: string;
-      if (isBatKeyword) {
-        const basePrompt = 'big brown bat, photorealistic, wildlife photography, DSLR, natural lighting, shallow depth of field';
-        // Extract setting context from keyword — strip "bat" and generic filler terms
+      if (matchedAnimal && animalPrompts[matchedAnimal]) {
+        const basePrompt = animalPrompts[matchedAnimal];
+        // Extract setting context from keyword — strip animal name and generic filler terms
         const settingContext = keyword
-          .replace(/\bbat\b/gi, '')
+          .replace(new RegExp(`\\b${matchedAnimal}\\b`, 'gi'), '')
           .replace(/\b(removal|control|extermination|service|services|pest|wildlife|tx|ca|fl|ny|nj|ga|in|the|a|an|and|or|of|for)\b/gi, '')
           .replace(/\s+/g, ' ')
           .trim();
@@ -239,10 +247,10 @@ export class FourStepImageDescriptionService {
       console.log(imageDescription);
       console.log('━'.repeat(80));
 
-      // Load style reference images for bat keywords
+      // Load style reference images for known animal keywords
       let styleReferenceImages: Buffer[] | undefined;
-      if (isBatKeyword) {
-        const refDir = path.join(__dirname, '..', '..', 'repositories', 'images', 'references', 'bat');
+      if (matchedAnimal) {
+        const refDir = path.join(__dirname, '..', '..', '..', 'src', 'repositories', 'images', 'references', matchedAnimal);
         if (fs.existsSync(refDir)) {
           const refFiles = fs.readdirSync(refDir).filter(f => /\.(png|jpg|jpeg|webp)$/i.test(f));
           if (refFiles.length > 0) {
@@ -250,15 +258,15 @@ export class FourStepImageDescriptionService {
             const shuffled = [...refFiles].sort(() => Math.random() - 0.5);
             const selected = shuffled.slice(0, Math.min(2, shuffled.length));
             styleReferenceImages = selected.map(f => fs.readFileSync(path.join(refDir, f)));
-            console.log(`🦇 Loaded ${styleReferenceImages.length}/${refFiles.length} bat style reference image(s) (random subset)`);
+            console.log(`🐾 Loaded ${styleReferenceImages.length}/${refFiles.length} ${matchedAnimal} style reference image(s) (random subset)`);
           }
         }
       }
 
-      // Generate image (skip style_type when using reference images; use TURBO for bat keywords)
+      // Generate image (skip style_type when using reference images; use TURBO for known animals)
       const generateResult = await ideogramImageGeneratorService.generateImage({
         prompt: imageDescription + ' No text, no words, no letters, no watermarks, no overlays.',
-        rendering_speed: isBatKeyword ? 'TURBO' : undefined,
+        rendering_speed: matchedAnimal ? 'TURBO' : undefined,
         ...(styleReferenceImages ? { style_reference_images: styleReferenceImages } : { style_type: 'REALISTIC' as const })
       });
       

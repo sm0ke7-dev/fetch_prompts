@@ -7,7 +7,7 @@ export const wordpressUploadController = {
    */
   async uploadContent(req: Request, res: Response): Promise<void> {
     try {
-      const { keyword, pageType: rawPageType, site, slug, parent, inlineImagePath } = req.body;
+      const { keyword, pageType: rawPageType, site, slug, parent, featuredImagePath, inlineImagePaths } = req.body;
 
       // Resolve default page type: site-specific env var → 'service_page' fallback
       const defaultPageType = site
@@ -32,7 +32,8 @@ export const wordpressUploadController = {
         site,
         slug,
         parent,
-        inlineImagePath,
+        featuredImagePath,
+        inlineImagePaths,
         status: 'draft'
       });
 

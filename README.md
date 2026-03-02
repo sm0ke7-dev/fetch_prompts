@@ -147,8 +147,8 @@ fetch_prompts/
 - **Quality Assessment**: PASS on body proportions, limb count, facial features (QA uses local saved PNG via base64, not expiring Ideogram URL)
 - **File Output**: All images saved at 600×400px with EXIF stripped to `src/repositories/images/featured/`
 - **Integration**: Seamless pipeline from keyword → concept validation → generation → QA → post-processing
-- **Style References (Bat Variation)**: When keyword contains "bat", the image pipeline injects context from the keyword into the Ideogram prompt and attaches 1-2 randomly selected style reference images from `src/repositories/images/references/bat/` for consistent photorealistic bat imagery
-- **Test**: "squirrel" → gray squirrel perched on tree branch, DSLR-style — passes as real wildlife photo
+- **Animal Bypass (Bat, Squirrel, Raccoon)**: Keywords containing "bat", "squirrel", or "raccoon" skip the 4-step GPT pipeline and go straight to Ideogram with a hardcoded wildlife photography prompt + TURBO rendering (~8-10s vs 45-90s). Each animal loads 1-2 random style reference images from `src/repositories/images/references/<animal>/` for visual variety.
+- **Test**: "squirrel removal" → gray squirrel, DSLR-style, ~9s generation — passes as real wildlife photo
 
 ### ✅ **WORDPRESS UPLOAD - PHASE 6 COMPLETE**
 
@@ -159,8 +159,9 @@ fetch_prompts/
 - **Multi-Site Support**: Target any office via `site` field (e.g. `charlotte`, `dallas`); falls back to `WP_BASE_URL` if omitted
 - **Authentication**: WordPress Application Passwords
 - **Featured Image**: Automatically uploads the latest matching image from `images/featured/` and sets it as the post's featured media
-- **Inline Images**: Generates and injects AI images after each of the first 3 H2 sections; uploaded to WP media library and embedded as `<img>` tags in the article body (controlled by `INLINE_IMAGE_SECTION_COUNT` constant — set to `0` to disable)
-- **Claude Command**: `/create-location-page` updated with upload confirmation flow
+- **Inline Images**: Pass `inlineImagePaths` (array of local file paths) to upload and inject images after H2 sections that don't already have images. Smart scan skips H2s with existing `<img>` tags.
+- **Featured Image Path**: Pass `featuredImagePath` to specify an exact image for the featured/hero slot (skips auto-detection when provided)
+- **Claude Command**: `/create-location-page` — full pipeline: text generation → 4 images (1 featured + 3 inline using H2 context) → user review → WordPress upload
 
 ## 📚 API Documentation
 
@@ -256,7 +257,8 @@ Upload a previously generated article to WordPress as a draft.
 | `site` | string | ❌ | Office key (e.g. `charlotte`, `dallas`). Falls back to `WP_BASE_URL` if omitted. |
 | `slug` | string | ❌ | Custom URL slug. Auto-generated from keyword if omitted. |
 | `parent` | number | ❌ | WordPress post ID of the parent page (for hierarchical post types). |
-| `inlineImagePath` | string | ❌ | Local file path to an image to inject after the first H2 heading in the article body. |
+| `featuredImagePath` | string | ❌ | Local path to featured/hero image. Skips auto-detection when provided. |
+| `inlineImagePaths` | string[] | ❌ | Array of local image paths to inject after H2 sections (skips H2s that already have images). |
 
 ```json
 {
@@ -415,7 +417,7 @@ WP_DALLAS_APP_PASSWORD=your_wp_app_password
 - **Multi-site support**: Pass `site: "charlotte"` (or any office key) to target that office's credentials; new offices only require 3 env var additions
 - **Claude command**: `/create-location-page` updated with upload confirmation flow
 - **Featured Image Upload**: Automatically finds the latest generated featured image for the keyword and uploads it to the WP media library, setting it as the post's `featured_media`
-- **Inline Image Injection**: Two modes — (1) pass `inlineImagePath` to manually inject a specific image after the first H2, or (2) auto-generates AI images for the first N H2 sections via the 4-step pipeline, controlled by `INLINE_IMAGE_SECTION_COUNT` constant (set to `0` to disable)
+- **Inline Image Injection**: Pass `inlineImagePaths` (array) to upload multiple images and inject them into H2 sections that don't already have images. Smart scan checks for existing `<img>` tags after each `</h2>` and skips occupied slots.
 - **ACF Hero Fields**: Extracts `hero_title` (from H1) and `hero_text` (first paragraph after first H2) and sends them as ACF custom fields
 
 **Files added:**
@@ -488,5 +490,5 @@ When collaborating with AI assistants on this project:
 
 ---
 
-**Last Updated:** March 2026 - Featured image upload, inline image injection (manual path + auto-generation), ACF hero fields, bat image style reference variation. Next: URL structure and content formatting fixes.
+**Last Updated:** March 2026 - Multi-image inline injection (inlineImagePaths[]), featuredImagePath, animal bypass (bat/squirrel/raccoon → TURBO), full /create-location-page pipeline (text → 4 images → review → upload). Next: URL structure and content formatting fixes.
 **Version:** 1.0.0
