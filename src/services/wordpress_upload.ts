@@ -43,7 +43,7 @@ export class WordPressUploadService {
    * Configured with html:true to preserve inline HTML blocks from Phase 5 output.
    */
   convertToHtml(markdown: string): string {
-    return this.md.render(markdown);
+    return this.md.render(markdown).replace(/Aaac/g, 'AAAC');
   }
 
   /**

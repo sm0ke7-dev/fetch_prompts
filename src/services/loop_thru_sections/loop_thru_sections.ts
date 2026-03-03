@@ -109,7 +109,7 @@ export class LoopThruSectionsService {
   /**
    * Generate content for a single section
    */
-  private async generateSectionContent(section: any, pageType?: 'blog' | 'service_page', keyword?: string, sectionContext?: string): Promise<SubmitSectionResponse> {
+  private async generateSectionContent(section: any, pageType?: 'blog' | 'service_page' | 'location', keyword?: string, sectionContext?: string): Promise<SubmitSectionResponse> {
     try {
       // 1. Process section input
       const processResult = await this.processSectionInput({
@@ -169,7 +169,7 @@ export class LoopThruSectionsService {
       // Use the existing processInputs service for variable substitution
       const { processInputs } = require('../process_input');
       
-      const promptName = request.pageType === 'service_page'
+      const promptName = (request.pageType === 'service_page' || request.pageType === 'location')
         ? 'location_service_loop_prompt'
         : 'loop_prompt';
 
@@ -323,11 +323,11 @@ export class LoopThruSectionsService {
   /**
    * Load loop prompt configuration from JSON
    */
-  private async loadLoopPromptConfig(pageType?: 'blog' | 'service_page'): Promise<any> {
+  private async loadLoopPromptConfig(pageType?: 'blog' | 'service_page' | 'location'): Promise<any> {
     const fs = require('fs');
     const path = require('path');
 
-    const promptFileName = pageType === 'service_page'
+    const promptFileName = (pageType === 'service_page' || pageType === 'location')
       ? 'location_service_loop_prompt.json'
       : 'loop_prompt.json';
     const promptPath = path.join(__dirname, '..', '..', '..', 'src', 'repositories', 'data', promptFileName);
