@@ -94,12 +94,12 @@ Loads a generated article, converts markdown to HTML, uploads images, and create
 
 - **5-Phase Text Pipeline**: NeuronWriter SEO terms → outline → term merge → section generation → markdown render
 - **4-Step Image Pipeline**: Concept validation → Ideogram generation → GPT Vision QA → sharp post-processing
-- **Animal Bypass**: Bat, squirrel, and raccoon keywords skip the 4-step GPT pipeline — go straight to Ideogram with TURBO rendering and style reference images for visual variety
+- **Animal Bypass**: Bat, squirrel, and raccoon keywords skip the 4-step GPT pipeline — go straight to Ideogram with TURBO rendering, camera-specific prompts (Sony/Nikon/Canon telephoto), and style reference images for visual variety
 - **Smart Inline Injection**: Uploads images and injects `<img>` tags after H2 sections, skipping any that already have images
 - **Multi-Site WordPress**: Target any office with `site` field — credentials resolved from `WP_{SITE}_*` env vars
 - **Custom Post Types**: `pageType` maps to WP REST bases (`service_page` → pages, `blog` → posts, anything else passed through directly)
-- **ACF Integration**: Extracts `hero_title` (from H1) and `hero_text` (first paragraph after first H2) as custom fields
-- **Claude Skill**: `/create-location-page` runs the full pipeline — text → 4 images → user review → WordPress upload
+- **ACF Integration**: Sets `hero_title` (from keyword, no H1 in markdown) and `hero_text` (first paragraph after first H2) as custom fields
+- **Claude Skill**: `/create-location-page` runs the full pipeline — text → 4 images (visual scene descriptors for variety) → user review → WordPress upload
 
 ## Environment Variables
 
@@ -126,7 +126,6 @@ Pattern: `WP_{SITE}_BASE_URL`, `WP_{SITE}_USERNAME`, `WP_{SITE}_APP_PASSWORD` �
 ## Known Issues
 
 - **URL structure**: Uploaded pages use `?page_id=` instead of clean permalinks — need to verify WP permalink settings
-- **Phase 5 formatting**: Occasional JSON artifact leaks, double H2 tags, repetitive CTAs
 - **Outline style**: Generates informational blog sections instead of conversion-focused service page sections
 - **Image QA**: Limited to 3 basic categories — no quality score or structured function calls
 

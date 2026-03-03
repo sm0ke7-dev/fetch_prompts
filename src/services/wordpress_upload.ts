@@ -175,7 +175,7 @@ export class WordPressUploadService {
         ...(request.parent != null && { parent: request.parent }),
         featured_media: featuredMediaId,
         acf: {
-          hero_title: heroTitle,
+          hero_title: heroTitle || title,
           hero_text: heroText,
           ...(featuredMediaId != null && { image_caption: title })
         }

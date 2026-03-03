@@ -223,9 +223,9 @@ export class FourStepImageDescriptionService {
       
       // For known animal keywords, use a simple prompt to avoid AI over-engineering anatomy
       const animalPrompts: Record<string, string> = {
-        bat: 'big brown bat, photorealistic, wildlife photography, DSLR, natural lighting, shallow depth of field',
-        squirrel: 'gray squirrel, photorealistic, wildlife photography, DSLR, natural lighting, shallow depth of field',
-        raccoon: 'raccoon, photorealistic, wildlife photography, DSLR, natural lighting, shallow depth of field'
+        bat: 'big brown bat, Sony Alpha 7S III 300mm f/4 telephoto lens, dusk lighting, bokeh background, photorealistic, National Geographic wildlife photography, hyperrealistic, 8K, shallow depth of field',
+        squirrel: 'gray squirrel, Nikon D850 600mm f/4 telephoto lens, golden hour lighting, bokeh background, photorealistic, National Geographic wildlife photography, hyperrealistic, 8K, shallow depth of field',
+        raccoon: 'raccoon, Canon EOS 5D Mark IV 300mm f/4 telephoto lens, natural lighting, bokeh background, photorealistic, National Geographic wildlife photography, hyperrealistic, 8K, shallow depth of field'
       };
       const animalMatch = keyword.match(/\b(bat|squirrel|raccoon)\b/i);
       const matchedAnimal = animalMatch ? animalMatch[1].toLowerCase() : null;

@@ -48,15 +48,29 @@ Then proceed to Step 5 (image generation).
 
 ### Step 5: Generate 4 images (1 featured + 3 inline)
 
-1. **Read the generated markdown file** to extract the first 3 H2 headings.
+1. **Build 4 image keywords** using visual scene descriptors — NOT H2 headings.
 
-2. **Build 4 image keywords**:
-   - Featured: `<keyword>` (just the main keyword)
-   - Inline 1: `<keyword> — <H2 heading 1>`
-   - Inline 2: `<keyword> — <H2 heading 2>`
-   - Inline 3: `<keyword> — <H2 heading 3>`
+   The image pipeline uses a fast shortcut for known animals (squirrel, raccoon, bat) that strips
+   filler words (removal, service, tx, etc.) and appends whatever remains to a base prompt sent
+   directly to Ideogram. So the inline keywords must contain visual scene words that survive
+   stripping. H2 headings contain non-visual words ("Expert", "Why Act Now") that get stripped
+   away, causing all 4 images to look identical.
 
-3. **Call the image-media endpoint 4 times**, once per keyword:
+   **Keyword format:**
+   - Featured: `<pest name> <original keyword location>` (e.g. `squirrel removal addison tx`) — clean portrait, no scene/action
+   - Inline 1: `<pest name> <action> <scene> <city> <state>`
+   - Inline 2: `<pest name> <action> <scene> <city> <state>`
+   - Inline 3: `<pest name> <action> <scene> <city> <state>`
+
+   Combine **scene** + **action** for each inline to maximize visual variety. Each inline should have a unique scene AND a unique action so no two images look the same.
+
+   **Scene + action reference by pest type:**
+   - **Squirrel**: running on roof | jumping wooden fence | climbing tree branch | leaping between branches | alert on deck railing | scrambling near attic vent
+   - **Raccoon**: rummaging through trash can | climbing wooden fence | running across roof | crouching in yard at night | pawing at house foundation
+   - **Bat**: swooping from roof eave | hanging from attic rafter | clinging to exterior brick wall | roosting under porch overhang
+   - **Other pests**: use realistic actions + surfaces relevant to their behavior
+
+2. **Call the image-media endpoint 4 times**, once per keyword:
 
 ```bash
 curl -s -X POST http://localhost:3000/api/v1/image-media \
@@ -67,7 +81,7 @@ curl -s -X POST http://localhost:3000/api/v1/image-media \
 
 Let the user know progress (e.g. "Generating image 1/4 (featured)...", "Generating image 2/4 (inline)...").
 
-4. **Collect the saved image paths** from each response (`saved_image_path` field in `data.content_summary`).
+3. **Collect the saved image paths** from each response (`saved_image_path` field in `data.content_summary`).
 
 ### Step 6: Review images
 
@@ -75,9 +89,9 @@ Let the user know progress (e.g. "Generating image 1/4 (featured)...", "Generati
 
 2. **Display a summary** labeling each image:
    - **Featured**: `<file path>`
-   - Inline 1 (H2: `<heading>`): `<file path>`
-   - Inline 2 (H2: `<heading>`): `<file path>`
-   - Inline 3 (H2: `<heading>`): `<file path>`
+   - Inline 1 (scene: `<scene descriptor>`): `<file path>`
+   - Inline 2 (scene: `<scene descriptor>`): `<file path>`
+   - Inline 3 (scene: `<scene descriptor>`): `<file path>`
 
 3. **Ask the user**: "Do these look good? You can approve all, reject specific ones for regeneration, or skip images entirely."
 

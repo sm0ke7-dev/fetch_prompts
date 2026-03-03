@@ -35,15 +35,13 @@ export class RenderArticleService {
   private buildMarkdown(phase4: any): string {
     const lines: string[] = [];
 
-    // Title
-    lines.push(`# ${this.escapeMd(phase4.keyword)}`);
-    lines.push('');
+    // Title removed — redundant with WordPress ACF hero title
 
     // Sections
     phase4.sections.forEach((section: any, idx: number) => {
       const sectionHeadline = section.content?.headline || section.headline;
       const cleanHeadline = this.toTitleCase(this.stripHtml(sectionHeadline));
-      lines.push(`## ${idx + 1}. ${cleanHeadline}`);
+      lines.push(`## ${cleanHeadline}`);
       lines.push('');
 
       // Render blocks
