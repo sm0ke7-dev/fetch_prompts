@@ -222,16 +222,33 @@ export class FourStepImageDescriptionService {
       console.log('🎨 Ideogram Service: Starting image generation...');
       
       // For known animal keywords, use a simple prompt to avoid AI over-engineering anatomy
-      const animalPrompts: Record<string, string> = {
-        bat: 'big brown bat, Sony Alpha 7S III 300mm f/4 telephoto lens, dusk lighting, bokeh background, photorealistic, National Geographic wildlife photography, hyperrealistic, 8K, shallow depth of field',
-        squirrel: 'gray squirrel, Nikon D850 600mm f/4 telephoto lens, golden hour lighting, bokeh background, photorealistic, National Geographic wildlife photography, hyperrealistic, 8K, shallow depth of field',
-        raccoon: 'raccoon, Canon EOS 5D Mark IV 300mm f/4 telephoto lens, natural lighting, bokeh background, photorealistic, National Geographic wildlife photography, hyperrealistic, 8K, shallow depth of field'
+      // Multiple prompt variants per animal rotate randomly for visual variety
+      const animalPromptVariants: Record<string, string[]> = {
+        bat: [
+          'big brown bat, Sony Alpha 7S III 300mm f/4 telephoto lens, dusk lighting, bokeh background, photorealistic, National Geographic wildlife photography, hyperrealistic, 8K, shallow depth of field',
+          'big brown bat hanging upside down, Nikon D6 200mm f/2.8 telephoto lens, twilight blue hour, cave entrance background, photorealistic, BBC Wildlife photography, hyperrealistic, 8K, dramatic rim lighting',
+          'big brown bat in flight wings spread, Canon EOS R5 400mm f/5.6 telephoto lens, moonlit night sky, motion frozen, photorealistic, Smithsonian wildlife photography, hyperrealistic, 8K, side lighting'
+        ],
+        squirrel: [
+          'gray squirrel, Nikon D850 600mm f/4 telephoto lens, golden hour lighting, bokeh background, photorealistic, National Geographic wildlife photography, hyperrealistic, 8K, shallow depth of field',
+          'gray squirrel on tree branch, Sony Alpha 1 200mm f/2.8 telephoto lens, morning sunlight, leafy canopy background, photorealistic, BBC Wildlife photography, hyperrealistic, 8K, backlit rim lighting',
+          'gray squirrel foraging on ground, Canon EOS R3 300mm f/4 telephoto lens, overcast soft light, suburban yard background, photorealistic, Audubon wildlife photography, hyperrealistic, 8K, even diffused lighting'
+        ],
+        raccoon: [
+          'raccoon, Canon EOS 5D Mark IV 300mm f/4 telephoto lens, natural lighting, bokeh background, photorealistic, National Geographic wildlife photography, hyperrealistic, 8K, shallow depth of field',
+          'raccoon peering from tree hollow, Sony Alpha 7R V 200mm f/2.8 telephoto lens, warm golden hour, forest background, photorealistic, BBC Wildlife photography, hyperrealistic, 8K, dappled sunlight',
+          'raccoon near suburban home at dusk, Nikon Z9 105mm f/2.8 macro lens, blue hour ambient light, residential setting, photorealistic, Smithsonian wildlife photography, hyperrealistic, 8K, moody low-key lighting',
+          'raccoon close-up face portrait, Canon EOS R5 400mm f/5.6 telephoto lens, overcast diffused light, soft green foliage background, photorealistic, National Geographic wildlife photography, hyperrealistic, 8K, catchlight in eyes',
+          'raccoon on residential driveway at night, Nikon Z8 70-200mm f/2.8 telephoto lens, security light harsh top-down lighting, concrete and garage background, photorealistic, National Geographic wildlife photography, hyperrealistic, 8K, dramatic shadows',
+          'raccoon in backyard garden among vegetables, Sony Alpha 9 III 135mm f/1.8 telephoto lens, early morning soft light, raised garden beds and green plants background, photorealistic, BBC Wildlife photography, hyperrealistic, 8K, shallow depth of field'
+        ]
       };
       const animalMatch = keyword.match(/\b(bat|squirrel|raccoon)\b/i);
       const matchedAnimal = animalMatch ? animalMatch[1].toLowerCase() : null;
       let imageDescription: string;
-      if (matchedAnimal && animalPrompts[matchedAnimal]) {
-        const basePrompt = animalPrompts[matchedAnimal];
+      if (matchedAnimal && animalPromptVariants[matchedAnimal]) {
+        const variants = animalPromptVariants[matchedAnimal];
+        const basePrompt = variants[Math.floor(Math.random() * variants.length)];
         // Extract setting context from keyword — strip animal name and generic filler terms
         const settingContext = keyword
           .replace(new RegExp(`\\b${matchedAnimal}\\b`, 'gi'), '')
@@ -239,6 +256,7 @@ export class FourStepImageDescriptionService {
           .replace(/\s+/g, ' ')
           .trim();
         imageDescription = settingContext ? `${basePrompt}, ${settingContext}` : basePrompt;
+        console.log(`🎲 Prompt variant selected (1 of ${variants.length} for ${matchedAnimal})`);
       } else {
         imageDescription = step4Data.ideogram_prompt;
       }
