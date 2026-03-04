@@ -11,8 +11,8 @@ export const wordpressUploadController = {
 
       // Resolve default page type: site-specific env var → 'service_page' fallback
       const defaultPageType = site
-        ? process.env[`WP_${(site as string).toUpperCase()}_DEFAULT_PAGE_TYPE`] || 'service_page'
-        : 'service_page';
+        ? process.env[`WP_${(site as string).toUpperCase()}_DEFAULT_PAGE_TYPE`] || 'location'
+        : 'location';
       const pageType = rawPageType || defaultPageType;
 
       if (!keyword || typeof keyword !== 'string') {

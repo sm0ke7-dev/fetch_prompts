@@ -1,0 +1,4537 @@
+{
+  "generated": "2026-03-04T00:00:00Z",
+  "market": "dallas",
+  "url_pattern": "https://dallas.aaacwildliferemoval.com/service-area/{location}/{service}/",
+  "total_locations": 20,
+  "total_pages": 80,
+  "services": [
+    "wildlife_removal",
+    "raccoon_removal",
+    "squirrel_removal",
+    "bat_removal"
+  ],
+  "locations": {
+    "sunnyvale_tx": {
+      "city": "Sunnyvale",
+      "state": "TX",
+      "city_slug": "sunnyvale",
+      "lat": 32.7957,
+      "lng": -96.5588,
+      "nearest_neighbors": [
+        {
+          "location_key": "mesquite_tx",
+          "city": "Mesquite",
+          "distance_miles": 3.09
+        },
+        {
+          "location_key": "rowlett_tx",
+          "city": "Rowlett",
+          "distance_miles": 7.41
+        },
+        {
+          "location_key": "garland_tx",
+          "city": "Garland",
+          "distance_miles": 9.32
+        }
+      ]
+    },
+    "mesquite_tx": {
+      "city": "Mesquite",
+      "state": "TX",
+      "city_slug": "mesquite",
+      "lat": 32.7665,
+      "lng": -96.5991,
+      "nearest_neighbors": [
+        {
+          "location_key": "sunnyvale_tx",
+          "city": "Sunnyvale",
+          "distance_miles": 3.09
+        },
+        {
+          "location_key": "rowlett_tx",
+          "city": "Rowlett",
+          "distance_miles": 9.64
+        },
+        {
+          "location_key": "garland_tx",
+          "city": "Garland",
+          "distance_miles": 10.36
+        }
+      ]
+    },
+    "cedar_hill_tx": {
+      "city": "Cedar Hill",
+      "state": "TX",
+      "city_slug": "cedar-hill",
+      "lat": 32.5885,
+      "lng": -96.9561,
+      "nearest_neighbors": [
+        {
+          "location_key": "duncanville_tx",
+          "city": "Duncanville",
+          "distance_miles": 5.18
+        },
+        {
+          "location_key": "desoto_tx",
+          "city": "DeSoto",
+          "distance_miles": 5.82
+        },
+        {
+          "location_key": "grand_prairie_tx",
+          "city": "Grand Prairie",
+          "distance_miles": 11.14
+        }
+      ]
+    },
+    "university_park_tx": {
+      "city": "University Park",
+      "state": "TX",
+      "city_slug": "university-park",
+      "lat": 32.8501,
+      "lng": -96.7979,
+      "nearest_neighbors": [
+        {
+          "location_key": "highland_park_tx",
+          "city": "Highland Park",
+          "distance_miles": 1.28
+        },
+        {
+          "location_key": "farmers_branch_tx",
+          "city": "Farmers Branch",
+          "distance_miles": 7.08
+        },
+        {
+          "location_key": "richardson_tx",
+          "city": "Richardson",
+          "distance_miles": 7.85
+        }
+      ]
+    },
+    "highland_park_tx": {
+      "city": "Highland Park",
+      "state": "TX",
+      "city_slug": "highland-park",
+      "lat": 32.8318,
+      "lng": -96.8009,
+      "nearest_neighbors": [
+        {
+          "location_key": "university_park_tx",
+          "city": "University Park",
+          "distance_miles": 1.28
+        },
+        {
+          "location_key": "farmers_branch_tx",
+          "city": "Farmers Branch",
+          "distance_miles": 7.96
+        },
+        {
+          "location_key": "irving_tx",
+          "city": "Irving",
+          "distance_miles": 8.69
+        }
+      ]
+    },
+    "sachse_tx": {
+      "city": "Sachse",
+      "state": "TX",
+      "city_slug": "sachse",
+      "lat": 32.9757,
+      "lng": -96.5891,
+      "nearest_neighbors": [
+        {
+          "location_key": "garland_tx",
+          "city": "Garland",
+          "distance_miles": 5.23
+        },
+        {
+          "location_key": "rowlett_tx",
+          "city": "Rowlett",
+          "distance_miles": 5.24
+        },
+        {
+          "location_key": "rockwall_tx",
+          "city": "Rockwall",
+          "distance_miles": 8.09
+        }
+      ]
+    },
+    "rowlett_tx": {
+      "city": "Rowlett",
+      "state": "TX",
+      "city_slug": "rowlett",
+      "lat": 32.9029,
+      "lng": -96.5638,
+      "nearest_neighbors": [
+        {
+          "location_key": "garland_tx",
+          "city": "Garland",
+          "distance_miles": 4.41
+        },
+        {
+          "location_key": "sachse_tx",
+          "city": "Sachse",
+          "distance_miles": 5.24
+        },
+        {
+          "location_key": "rockwall_tx",
+          "city": "Rockwall",
+          "distance_miles": 6.36
+        }
+      ]
+    },
+    "rockwall_tx": {
+      "city": "Rockwall",
+      "state": "TX",
+      "city_slug": "rockwall",
+      "lat": 32.9318,
+      "lng": -96.4597,
+      "nearest_neighbors": [
+        {
+          "location_key": "fate_tx",
+          "city": "Fate",
+          "distance_miles": 4.48
+        },
+        {
+          "location_key": "rowlett_tx",
+          "city": "Rowlett",
+          "distance_miles": 6.36
+        },
+        {
+          "location_key": "sachse_tx",
+          "city": "Sachse",
+          "distance_miles": 8.09
+        }
+      ]
+    },
+    "richardson_tx": {
+      "city": "Richardson",
+      "state": "TX",
+      "city_slug": "richardson",
+      "lat": 32.9483,
+      "lng": -96.7299,
+      "nearest_neighbors": [
+        {
+          "location_key": "garland_tx",
+          "city": "Garland",
+          "distance_miles": 5.83
+        },
+        {
+          "location_key": "addison_tx",
+          "city": "Addison",
+          "distance_miles": 5.83
+        },
+        {
+          "location_key": "university_park_tx",
+          "city": "University Park",
+          "distance_miles": 7.85
+        }
+      ]
+    },
+    "lancaster_tx": {
+      "city": "Lancaster",
+      "state": "TX",
+      "city_slug": "lancaster",
+      "lat": 32.5921,
+      "lng": -96.7561,
+      "nearest_neighbors": [
+        {
+          "location_key": "desoto_tx",
+          "city": "DeSoto",
+          "distance_miles": 5.9
+        },
+        {
+          "location_key": "duncanville_tx",
+          "city": "Duncanville",
+          "distance_miles": 9.77
+        },
+        {
+          "location_key": "cedar_hill_tx",
+          "city": "Cedar Hill",
+          "distance_miles": 11.65
+        }
+      ]
+    },
+    "irving_tx": {
+      "city": "Irving",
+      "state": "TX",
+      "city_slug": "irving",
+      "lat": 32.814,
+      "lng": -96.949,
+      "nearest_neighbors": [
+        {
+          "location_key": "grand_prairie_tx",
+          "city": "Grand Prairie",
+          "distance_miles": 5.49
+        },
+        {
+          "location_key": "highland_park_tx",
+          "city": "Highland Park",
+          "distance_miles": 8.69
+        },
+        {
+          "location_key": "farmers_branch_tx",
+          "city": "Farmers Branch",
+          "distance_miles": 8.72
+        }
+      ]
+    },
+    "grand_prairie_tx": {
+      "city": "Grand Prairie",
+      "state": "TX",
+      "city_slug": "grand-prairie",
+      "lat": 32.7459,
+      "lng": -96.9978,
+      "nearest_neighbors": [
+        {
+          "location_key": "irving_tx",
+          "city": "Irving",
+          "distance_miles": 5.49
+        },
+        {
+          "location_key": "duncanville_tx",
+          "city": "Duncanville",
+          "distance_miles": 8.33
+        },
+        {
+          "location_key": "cedar_hill_tx",
+          "city": "Cedar Hill",
+          "distance_miles": 11.14
+        }
+      ]
+    },
+    "garland_tx": {
+      "city": "Garland",
+      "state": "TX",
+      "city_slug": "garland",
+      "lat": 32.9126,
+      "lng": -96.6389,
+      "nearest_neighbors": [
+        {
+          "location_key": "rowlett_tx",
+          "city": "Rowlett",
+          "distance_miles": 4.41
+        },
+        {
+          "location_key": "sachse_tx",
+          "city": "Sachse",
+          "distance_miles": 5.23
+        },
+        {
+          "location_key": "richardson_tx",
+          "city": "Richardson",
+          "distance_miles": 5.83
+        }
+      ]
+    },
+    "fate_tx": {
+      "city": "Fate",
+      "state": "TX",
+      "city_slug": "fate",
+      "lat": 32.9418,
+      "lng": -96.3833,
+      "nearest_neighbors": [
+        {
+          "location_key": "rockwall_tx",
+          "city": "Rockwall",
+          "distance_miles": 4.48
+        },
+        {
+          "location_key": "rowlett_tx",
+          "city": "Rowlett",
+          "distance_miles": 10.81
+        },
+        {
+          "location_key": "sachse_tx",
+          "city": "Sachse",
+          "distance_miles": 12.16
+        }
+      ]
+    },
+    "farmers_branch_tx": {
+      "city": "Farmers Branch",
+      "state": "TX",
+      "city_slug": "farmers-branch",
+      "lat": 32.926,
+      "lng": -96.8799,
+      "nearest_neighbors": [
+        {
+          "location_key": "carrollton_tx",
+          "city": "Carrollton",
+          "distance_miles": 2.01
+        },
+        {
+          "location_key": "addison_tx",
+          "city": "Addison",
+          "distance_miles": 3.82
+        },
+        {
+          "location_key": "university_park_tx",
+          "city": "University Park",
+          "distance_miles": 7.08
+        }
+      ]
+    },
+    "duncanville_tx": {
+      "city": "Duncanville",
+      "state": "TX",
+      "city_slug": "duncanville",
+      "lat": 32.6518,
+      "lng": -96.9083,
+      "nearest_neighbors": [
+        {
+          "location_key": "desoto_tx",
+          "city": "DeSoto",
+          "distance_miles": 4.68
+        },
+        {
+          "location_key": "cedar_hill_tx",
+          "city": "Cedar Hill",
+          "distance_miles": 5.18
+        },
+        {
+          "location_key": "grand_prairie_tx",
+          "city": "Grand Prairie",
+          "distance_miles": 8.33
+        }
+      ]
+    },
+    "desoto_tx": {
+      "city": "DeSoto",
+      "state": "TX",
+      "city_slug": "desoto",
+      "lat": 32.5996,
+      "lng": -96.857,
+      "nearest_neighbors": [
+        {
+          "location_key": "duncanville_tx",
+          "city": "Duncanville",
+          "distance_miles": 4.68
+        },
+        {
+          "location_key": "cedar_hill_tx",
+          "city": "Cedar Hill",
+          "distance_miles": 5.82
+        },
+        {
+          "location_key": "lancaster_tx",
+          "city": "Lancaster",
+          "distance_miles": 5.9
+        }
+      ]
+    },
+    "coppell_tx": {
+      "city": "Coppell",
+      "state": "TX",
+      "city_slug": "coppell",
+      "lat": 32.9543,
+      "lng": -97.0146,
+      "nearest_neighbors": [
+        {
+          "location_key": "carrollton_tx",
+          "city": "Carrollton",
+          "distance_miles": 7.21
+        },
+        {
+          "location_key": "farmers_branch_tx",
+          "city": "Farmers Branch",
+          "distance_miles": 8.05
+        },
+        {
+          "location_key": "irving_tx",
+          "city": "Irving",
+          "distance_miles": 10.41
+        }
+      ]
+    },
+    "carrollton_tx": {
+      "city": "Carrollton",
+      "state": "TX",
+      "city_slug": "carrollton",
+      "lat": 32.9537,
+      "lng": -96.8903,
+      "nearest_neighbors": [
+        {
+          "location_key": "farmers_branch_tx",
+          "city": "Farmers Branch",
+          "distance_miles": 2.01
+        },
+        {
+          "location_key": "addison_tx",
+          "city": "Addison",
+          "distance_miles": 3.58
+        },
+        {
+          "location_key": "coppell_tx",
+          "city": "Coppell",
+          "distance_miles": 7.21
+        }
+      ]
+    },
+    "addison_tx": {
+      "city": "Addison",
+      "state": "TX",
+      "city_slug": "addison",
+      "lat": 32.9612,
+      "lng": -96.8292,
+      "nearest_neighbors": [
+        {
+          "location_key": "carrollton_tx",
+          "city": "Carrollton",
+          "distance_miles": 3.58
+        },
+        {
+          "location_key": "farmers_branch_tx",
+          "city": "Farmers Branch",
+          "distance_miles": 3.82
+        },
+        {
+          "location_key": "richardson_tx",
+          "city": "Richardson",
+          "distance_miles": 5.83
+        }
+      ]
+    }
+  },
+  "pages": {
+    "wildlife_removal_sunnyvale_tx": {
+      "file": "phase5_article_wildlife_removal_sunnyvale_tx.md",
+      "service": "wildlife_removal",
+      "service_slug": "wildlife-removal",
+      "location_key": "sunnyvale_tx",
+      "city": "Sunnyvale",
+      "city_slug": "sunnyvale",
+      "state": "TX",
+      "page_type": "parent",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/",
+      "links_needed": [
+        {
+          "target_page": "raccoon_removal_sunnyvale_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "raccoon removal in Sunnyvale",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_sunnyvale_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "squirrel removal in Sunnyvale",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_sunnyvale_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "bat removal in Sunnyvale",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "wildlife_removal_mesquite_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Mesquite",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/mesquite/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_rowlett_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_garland_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "raccoon_removal_sunnyvale_tx": {
+      "file": "phase5_article_raccoon_removal_sunnyvale_tx.md",
+      "service": "raccoon_removal",
+      "service_slug": "raccoon-removal",
+      "location_key": "sunnyvale_tx",
+      "city": "Sunnyvale",
+      "city_slug": "sunnyvale",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_sunnyvale_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/raccoon-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_sunnyvale_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Sunnyvale",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_sunnyvale_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Sunnyvale",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_sunnyvale_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Sunnyvale",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_mesquite_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Mesquite",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/mesquite/raccoon-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "raccoon_removal_rowlett_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/raccoon-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "squirrel_removal_sunnyvale_tx": {
+      "file": "phase5_article_squirrel_removal_sunnyvale_tx.md",
+      "service": "squirrel_removal",
+      "service_slug": "squirrel-removal",
+      "location_key": "sunnyvale_tx",
+      "city": "Sunnyvale",
+      "city_slug": "sunnyvale",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_sunnyvale_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/squirrel-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_sunnyvale_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Sunnyvale",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_sunnyvale_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Sunnyvale",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_sunnyvale_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Sunnyvale",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_mesquite_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Mesquite",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/mesquite/squirrel-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "squirrel_removal_rowlett_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/squirrel-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "bat_removal_sunnyvale_tx": {
+      "file": "phase5_article_bat_removal_sunnyvale_tx.md",
+      "service": "bat_removal",
+      "service_slug": "bat-removal",
+      "location_key": "sunnyvale_tx",
+      "city": "Sunnyvale",
+      "city_slug": "sunnyvale",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_sunnyvale_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/bat-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_sunnyvale_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Sunnyvale",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_sunnyvale_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Sunnyvale",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_sunnyvale_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Sunnyvale",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_mesquite_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Mesquite",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/mesquite/bat-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "bat_removal_rowlett_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/bat-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "wildlife_removal_mesquite_tx": {
+      "file": "phase5_article_wildlife_removal_mesquite_tx.md",
+      "service": "wildlife_removal",
+      "service_slug": "wildlife-removal",
+      "location_key": "mesquite_tx",
+      "city": "Mesquite",
+      "city_slug": "mesquite",
+      "state": "TX",
+      "page_type": "parent",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/mesquite/",
+      "links_needed": [
+        {
+          "target_page": "raccoon_removal_mesquite_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "raccoon removal in Mesquite",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/mesquite/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_mesquite_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "squirrel removal in Mesquite",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/mesquite/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_mesquite_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "bat removal in Mesquite",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/mesquite/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "wildlife_removal_sunnyvale_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Sunnyvale",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_rowlett_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_garland_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "raccoon_removal_mesquite_tx": {
+      "file": "phase5_article_raccoon_removal_mesquite_tx.md",
+      "service": "raccoon_removal",
+      "service_slug": "raccoon-removal",
+      "location_key": "mesquite_tx",
+      "city": "Mesquite",
+      "city_slug": "mesquite",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_mesquite_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/mesquite/raccoon-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_mesquite_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Mesquite",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/mesquite/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_mesquite_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Mesquite",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/mesquite/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_mesquite_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Mesquite",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/mesquite/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_sunnyvale_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Sunnyvale",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/raccoon-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "raccoon_removal_rowlett_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/raccoon-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "squirrel_removal_mesquite_tx": {
+      "file": "phase5_article_squirrel_removal_mesquite_tx.md",
+      "service": "squirrel_removal",
+      "service_slug": "squirrel-removal",
+      "location_key": "mesquite_tx",
+      "city": "Mesquite",
+      "city_slug": "mesquite",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_mesquite_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/mesquite/squirrel-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_mesquite_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Mesquite",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/mesquite/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_mesquite_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Mesquite",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/mesquite/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_mesquite_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Mesquite",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/mesquite/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_sunnyvale_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Sunnyvale",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/squirrel-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "squirrel_removal_rowlett_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/squirrel-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "bat_removal_mesquite_tx": {
+      "file": "phase5_article_bat_removal_mesquite_tx.md",
+      "service": "bat_removal",
+      "service_slug": "bat-removal",
+      "location_key": "mesquite_tx",
+      "city": "Mesquite",
+      "city_slug": "mesquite",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_mesquite_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/mesquite/bat-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_mesquite_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Mesquite",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/mesquite/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_mesquite_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Mesquite",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/mesquite/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_mesquite_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Mesquite",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/mesquite/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_sunnyvale_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Sunnyvale",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/bat-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "bat_removal_rowlett_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/bat-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "wildlife_removal_cedar_hill_tx": {
+      "file": "phase5_article_wildlife_removal_cedar_hill_tx.md",
+      "service": "wildlife_removal",
+      "service_slug": "wildlife-removal",
+      "location_key": "cedar_hill_tx",
+      "city": "Cedar Hill",
+      "city_slug": "cedar-hill",
+      "state": "TX",
+      "page_type": "parent",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/",
+      "links_needed": [
+        {
+          "target_page": "raccoon_removal_cedar_hill_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "raccoon removal in Cedar Hill",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_cedar_hill_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "squirrel removal in Cedar Hill",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_cedar_hill_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "bat removal in Cedar Hill",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "wildlife_removal_duncanville_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_desoto_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_grand_prairie_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Grand Prairie",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "raccoon_removal_cedar_hill_tx": {
+      "file": "phase5_article_raccoon_removal_cedar_hill_tx.md",
+      "service": "raccoon_removal",
+      "service_slug": "raccoon-removal",
+      "location_key": "cedar_hill_tx",
+      "city": "Cedar Hill",
+      "city_slug": "cedar-hill",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_cedar_hill_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/raccoon-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_cedar_hill_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Cedar Hill",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_cedar_hill_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Cedar Hill",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_cedar_hill_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Cedar Hill",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_duncanville_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/raccoon-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "raccoon_removal_desoto_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/raccoon-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "squirrel_removal_cedar_hill_tx": {
+      "file": "phase5_article_squirrel_removal_cedar_hill_tx.md",
+      "service": "squirrel_removal",
+      "service_slug": "squirrel-removal",
+      "location_key": "cedar_hill_tx",
+      "city": "Cedar Hill",
+      "city_slug": "cedar-hill",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_cedar_hill_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/squirrel-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_cedar_hill_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Cedar Hill",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_cedar_hill_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Cedar Hill",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_cedar_hill_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Cedar Hill",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_duncanville_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/squirrel-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "squirrel_removal_desoto_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/squirrel-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "bat_removal_cedar_hill_tx": {
+      "file": "phase5_article_bat_removal_cedar_hill_tx.md",
+      "service": "bat_removal",
+      "service_slug": "bat-removal",
+      "location_key": "cedar_hill_tx",
+      "city": "Cedar Hill",
+      "city_slug": "cedar-hill",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_cedar_hill_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/bat-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_cedar_hill_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Cedar Hill",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_cedar_hill_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Cedar Hill",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_cedar_hill_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Cedar Hill",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_duncanville_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/bat-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "bat_removal_desoto_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/bat-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "wildlife_removal_university_park_tx": {
+      "file": "phase5_article_wildlife_removal_university_park_tx.md",
+      "service": "wildlife_removal",
+      "service_slug": "wildlife-removal",
+      "location_key": "university_park_tx",
+      "city": "University Park",
+      "city_slug": "university-park",
+      "state": "TX",
+      "page_type": "parent",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/university-park/",
+      "links_needed": [
+        {
+          "target_page": "raccoon_removal_university_park_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "raccoon removal in University Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/university-park/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_university_park_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "squirrel removal in University Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/university-park/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_university_park_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "bat removal in University Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/university-park/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "wildlife_removal_highland_park_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Highland Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_farmers_branch_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_richardson_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "raccoon_removal_university_park_tx": {
+      "file": "phase5_article_raccoon_removal_university_park_tx.md",
+      "service": "raccoon_removal",
+      "service_slug": "raccoon-removal",
+      "location_key": "university_park_tx",
+      "city": "University Park",
+      "city_slug": "university-park",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_university_park_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/university-park/raccoon-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_university_park_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in University Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/university-park/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_university_park_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in University Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/university-park/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_university_park_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in University Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/university-park/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_highland_park_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Highland Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/raccoon-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "raccoon_removal_farmers_branch_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/raccoon-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "squirrel_removal_university_park_tx": {
+      "file": "phase5_article_squirrel_removal_university_park_tx.md",
+      "service": "squirrel_removal",
+      "service_slug": "squirrel-removal",
+      "location_key": "university_park_tx",
+      "city": "University Park",
+      "city_slug": "university-park",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_university_park_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/university-park/squirrel-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_university_park_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in University Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/university-park/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_university_park_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in University Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/university-park/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_university_park_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in University Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/university-park/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_highland_park_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Highland Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/squirrel-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "squirrel_removal_farmers_branch_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/squirrel-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "bat_removal_university_park_tx": {
+      "file": "phase5_article_bat_removal_university_park_tx.md",
+      "service": "bat_removal",
+      "service_slug": "bat-removal",
+      "location_key": "university_park_tx",
+      "city": "University Park",
+      "city_slug": "university-park",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_university_park_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/university-park/bat-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_university_park_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in University Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/university-park/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_university_park_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in University Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/university-park/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_university_park_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in University Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/university-park/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_highland_park_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Highland Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/bat-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "bat_removal_farmers_branch_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/bat-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "wildlife_removal_highland_park_tx": {
+      "file": "phase5_article_wildlife_removal_highland_park_tx.md",
+      "service": "wildlife_removal",
+      "service_slug": "wildlife-removal",
+      "location_key": "highland_park_tx",
+      "city": "Highland Park",
+      "city_slug": "highland-park",
+      "state": "TX",
+      "page_type": "parent",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/",
+      "links_needed": [
+        {
+          "target_page": "raccoon_removal_highland_park_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "raccoon removal in Highland Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_highland_park_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "squirrel removal in Highland Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_highland_park_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "bat removal in Highland Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "wildlife_removal_university_park_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby University Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/university-park/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_farmers_branch_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_irving_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Irving",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "raccoon_removal_highland_park_tx": {
+      "file": "phase5_article_raccoon_removal_highland_park_tx.md",
+      "service": "raccoon_removal",
+      "service_slug": "raccoon-removal",
+      "location_key": "highland_park_tx",
+      "city": "Highland Park",
+      "city_slug": "highland-park",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_highland_park_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/raccoon-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_highland_park_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Highland Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_highland_park_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Highland Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_highland_park_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Highland Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_university_park_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in University Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/university-park/raccoon-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "raccoon_removal_farmers_branch_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/raccoon-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "squirrel_removal_highland_park_tx": {
+      "file": "phase5_article_squirrel_removal_highland_park_tx.md",
+      "service": "squirrel_removal",
+      "service_slug": "squirrel-removal",
+      "location_key": "highland_park_tx",
+      "city": "Highland Park",
+      "city_slug": "highland-park",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_highland_park_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/squirrel-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_highland_park_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Highland Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_highland_park_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Highland Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_highland_park_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Highland Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_university_park_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in University Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/university-park/squirrel-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "squirrel_removal_farmers_branch_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/squirrel-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "bat_removal_highland_park_tx": {
+      "file": "phase5_article_bat_removal_highland_park_tx.md",
+      "service": "bat_removal",
+      "service_slug": "bat-removal",
+      "location_key": "highland_park_tx",
+      "city": "Highland Park",
+      "city_slug": "highland-park",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_highland_park_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/bat-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_highland_park_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Highland Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_highland_park_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Highland Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_highland_park_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Highland Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_university_park_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in University Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/university-park/bat-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "bat_removal_farmers_branch_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/bat-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "wildlife_removal_sachse_tx": {
+      "file": "phase5_article_wildlife_removal_sachse_tx.md",
+      "service": "wildlife_removal",
+      "service_slug": "wildlife-removal",
+      "location_key": "sachse_tx",
+      "city": "Sachse",
+      "city_slug": "sachse",
+      "state": "TX",
+      "page_type": "parent",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/",
+      "links_needed": [
+        {
+          "target_page": "raccoon_removal_sachse_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "raccoon removal in Sachse",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_sachse_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "squirrel removal in Sachse",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_sachse_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "bat removal in Sachse",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "wildlife_removal_garland_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_rowlett_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_rockwall_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Rockwall",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rockwall/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "raccoon_removal_sachse_tx": {
+      "file": "phase5_article_raccoon_removal_sachse_tx.md",
+      "service": "raccoon_removal",
+      "service_slug": "raccoon-removal",
+      "location_key": "sachse_tx",
+      "city": "Sachse",
+      "city_slug": "sachse",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_sachse_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/raccoon-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_sachse_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Sachse",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_sachse_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Sachse",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_sachse_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Sachse",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_garland_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/raccoon-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "raccoon_removal_rowlett_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/raccoon-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "squirrel_removal_sachse_tx": {
+      "file": "phase5_article_squirrel_removal_sachse_tx.md",
+      "service": "squirrel_removal",
+      "service_slug": "squirrel-removal",
+      "location_key": "sachse_tx",
+      "city": "Sachse",
+      "city_slug": "sachse",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_sachse_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/squirrel-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_sachse_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Sachse",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_sachse_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Sachse",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_sachse_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Sachse",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_garland_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/squirrel-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "squirrel_removal_rowlett_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/squirrel-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "bat_removal_sachse_tx": {
+      "file": "phase5_article_bat_removal_sachse_tx.md",
+      "service": "bat_removal",
+      "service_slug": "bat-removal",
+      "location_key": "sachse_tx",
+      "city": "Sachse",
+      "city_slug": "sachse",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_sachse_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/bat-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_sachse_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Sachse",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_sachse_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Sachse",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_sachse_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Sachse",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_garland_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/bat-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "bat_removal_rowlett_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/bat-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "wildlife_removal_rowlett_tx": {
+      "file": "phase5_article_wildlife_removal_rowlett_tx.md",
+      "service": "wildlife_removal",
+      "service_slug": "wildlife-removal",
+      "location_key": "rowlett_tx",
+      "city": "Rowlett",
+      "city_slug": "rowlett",
+      "state": "TX",
+      "page_type": "parent",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/",
+      "links_needed": [
+        {
+          "target_page": "raccoon_removal_rowlett_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "raccoon removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_rowlett_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "squirrel removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_rowlett_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "bat removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "wildlife_removal_garland_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_sachse_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Sachse",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_rockwall_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Rockwall",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rockwall/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "raccoon_removal_rowlett_tx": {
+      "file": "phase5_article_raccoon_removal_rowlett_tx.md",
+      "service": "raccoon_removal",
+      "service_slug": "raccoon-removal",
+      "location_key": "rowlett_tx",
+      "city": "Rowlett",
+      "city_slug": "rowlett",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_rowlett_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/raccoon-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_rowlett_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_rowlett_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_rowlett_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_garland_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/raccoon-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "raccoon_removal_sachse_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Sachse",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/raccoon-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "squirrel_removal_rowlett_tx": {
+      "file": "phase5_article_squirrel_removal_rowlett_tx.md",
+      "service": "squirrel_removal",
+      "service_slug": "squirrel-removal",
+      "location_key": "rowlett_tx",
+      "city": "Rowlett",
+      "city_slug": "rowlett",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_rowlett_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/squirrel-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_rowlett_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_rowlett_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_rowlett_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_garland_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/squirrel-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "squirrel_removal_sachse_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Sachse",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/squirrel-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "bat_removal_rowlett_tx": {
+      "file": "phase5_article_bat_removal_rowlett_tx.md",
+      "service": "bat_removal",
+      "service_slug": "bat-removal",
+      "location_key": "rowlett_tx",
+      "city": "Rowlett",
+      "city_slug": "rowlett",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_rowlett_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/bat-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_rowlett_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_rowlett_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_rowlett_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_garland_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/bat-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "bat_removal_sachse_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Sachse",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/bat-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "wildlife_removal_rockwall_tx": {
+      "file": "phase5_article_wildlife_removal_rockwall_tx.md",
+      "service": "wildlife_removal",
+      "service_slug": "wildlife-removal",
+      "location_key": "rockwall_tx",
+      "city": "Rockwall",
+      "city_slug": "rockwall",
+      "state": "TX",
+      "page_type": "parent",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/rockwall/",
+      "links_needed": [
+        {
+          "target_page": "raccoon_removal_rockwall_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "raccoon removal in Rockwall",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rockwall/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_rockwall_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "squirrel removal in Rockwall",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rockwall/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_rockwall_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "bat removal in Rockwall",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rockwall/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "wildlife_removal_fate_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Fate",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/fate/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_rowlett_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_sachse_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Sachse",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "raccoon_removal_rockwall_tx": {
+      "file": "phase5_article_raccoon_removal_rockwall_tx.md",
+      "service": "raccoon_removal",
+      "service_slug": "raccoon-removal",
+      "location_key": "rockwall_tx",
+      "city": "Rockwall",
+      "city_slug": "rockwall",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_rockwall_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/rockwall/raccoon-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_rockwall_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Rockwall",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rockwall/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_rockwall_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Rockwall",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rockwall/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_rockwall_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Rockwall",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rockwall/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_fate_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Fate",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/fate/raccoon-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "raccoon_removal_rowlett_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/raccoon-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "squirrel_removal_rockwall_tx": {
+      "file": "phase5_article_squirrel_removal_rockwall_tx.md",
+      "service": "squirrel_removal",
+      "service_slug": "squirrel-removal",
+      "location_key": "rockwall_tx",
+      "city": "Rockwall",
+      "city_slug": "rockwall",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_rockwall_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/rockwall/squirrel-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_rockwall_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Rockwall",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rockwall/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_rockwall_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Rockwall",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rockwall/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_rockwall_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Rockwall",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rockwall/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_fate_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Fate",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/fate/squirrel-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "squirrel_removal_rowlett_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/squirrel-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "bat_removal_rockwall_tx": {
+      "file": "phase5_article_bat_removal_rockwall_tx.md",
+      "service": "bat_removal",
+      "service_slug": "bat-removal",
+      "location_key": "rockwall_tx",
+      "city": "Rockwall",
+      "city_slug": "rockwall",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_rockwall_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/rockwall/bat-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_rockwall_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Rockwall",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rockwall/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_rockwall_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Rockwall",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rockwall/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_rockwall_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Rockwall",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rockwall/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_fate_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Fate",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/fate/bat-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "bat_removal_rowlett_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/bat-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "wildlife_removal_richardson_tx": {
+      "file": "phase5_article_wildlife_removal_richardson_tx.md",
+      "service": "wildlife_removal",
+      "service_slug": "wildlife-removal",
+      "location_key": "richardson_tx",
+      "city": "Richardson",
+      "city_slug": "richardson",
+      "state": "TX",
+      "page_type": "parent",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/",
+      "links_needed": [
+        {
+          "target_page": "raccoon_removal_richardson_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "raccoon removal in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_richardson_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "squirrel removal in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_richardson_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "bat removal in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "wildlife_removal_garland_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_addison_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_university_park_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby University Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/university-park/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "raccoon_removal_richardson_tx": {
+      "file": "phase5_article_raccoon_removal_richardson_tx.md",
+      "service": "raccoon_removal",
+      "service_slug": "raccoon-removal",
+      "location_key": "richardson_tx",
+      "city": "Richardson",
+      "city_slug": "richardson",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_richardson_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/raccoon-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_richardson_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_richardson_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_richardson_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_garland_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/raccoon-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "raccoon_removal_addison_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/raccoon-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "squirrel_removal_richardson_tx": {
+      "file": "phase5_article_squirrel_removal_richardson_tx.md",
+      "service": "squirrel_removal",
+      "service_slug": "squirrel-removal",
+      "location_key": "richardson_tx",
+      "city": "Richardson",
+      "city_slug": "richardson",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_richardson_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/squirrel-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_richardson_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_richardson_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_richardson_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_garland_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/squirrel-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "squirrel_removal_addison_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/squirrel-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "bat_removal_richardson_tx": {
+      "file": "phase5_article_bat_removal_richardson_tx.md",
+      "service": "bat_removal",
+      "service_slug": "bat-removal",
+      "location_key": "richardson_tx",
+      "city": "Richardson",
+      "city_slug": "richardson",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_richardson_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/bat-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_richardson_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_richardson_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_richardson_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_garland_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/bat-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "bat_removal_addison_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/bat-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "wildlife_removal_lancaster_tx": {
+      "file": "phase5_article_wildlife_removal_lancaster_tx.md",
+      "service": "wildlife_removal",
+      "service_slug": "wildlife-removal",
+      "location_key": "lancaster_tx",
+      "city": "Lancaster",
+      "city_slug": "lancaster",
+      "state": "TX",
+      "page_type": "parent",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/lancaster/",
+      "links_needed": [
+        {
+          "target_page": "raccoon_removal_lancaster_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "raccoon removal in Lancaster",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/lancaster/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_lancaster_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "squirrel removal in Lancaster",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/lancaster/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_lancaster_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "bat removal in Lancaster",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/lancaster/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "wildlife_removal_desoto_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_duncanville_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_cedar_hill_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Cedar Hill",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "raccoon_removal_lancaster_tx": {
+      "file": "phase5_article_raccoon_removal_lancaster_tx.md",
+      "service": "raccoon_removal",
+      "service_slug": "raccoon-removal",
+      "location_key": "lancaster_tx",
+      "city": "Lancaster",
+      "city_slug": "lancaster",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_lancaster_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/lancaster/raccoon-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_lancaster_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Lancaster",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/lancaster/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_lancaster_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Lancaster",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/lancaster/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_lancaster_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Lancaster",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/lancaster/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_desoto_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/raccoon-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "raccoon_removal_duncanville_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/raccoon-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "squirrel_removal_lancaster_tx": {
+      "file": "phase5_article_squirrel_removal_lancaster_tx.md",
+      "service": "squirrel_removal",
+      "service_slug": "squirrel-removal",
+      "location_key": "lancaster_tx",
+      "city": "Lancaster",
+      "city_slug": "lancaster",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_lancaster_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/lancaster/squirrel-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_lancaster_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Lancaster",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/lancaster/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_lancaster_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Lancaster",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/lancaster/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_lancaster_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Lancaster",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/lancaster/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_desoto_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/squirrel-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "squirrel_removal_duncanville_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/squirrel-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "bat_removal_lancaster_tx": {
+      "file": "phase5_article_bat_removal_lancaster_tx.md",
+      "service": "bat_removal",
+      "service_slug": "bat-removal",
+      "location_key": "lancaster_tx",
+      "city": "Lancaster",
+      "city_slug": "lancaster",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_lancaster_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/lancaster/bat-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_lancaster_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Lancaster",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/lancaster/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_lancaster_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Lancaster",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/lancaster/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_lancaster_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Lancaster",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/lancaster/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_desoto_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/bat-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "bat_removal_duncanville_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/bat-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "wildlife_removal_irving_tx": {
+      "file": "phase5_article_wildlife_removal_irving_tx.md",
+      "service": "wildlife_removal",
+      "service_slug": "wildlife-removal",
+      "location_key": "irving_tx",
+      "city": "Irving",
+      "city_slug": "irving",
+      "state": "TX",
+      "page_type": "parent",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/",
+      "links_needed": [
+        {
+          "target_page": "raccoon_removal_irving_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "raccoon removal in Irving",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_irving_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "squirrel removal in Irving",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_irving_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "bat removal in Irving",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "wildlife_removal_grand_prairie_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Grand Prairie",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_highland_park_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Highland Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_farmers_branch_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "raccoon_removal_irving_tx": {
+      "file": "phase5_article_raccoon_removal_irving_tx.md",
+      "service": "raccoon_removal",
+      "service_slug": "raccoon-removal",
+      "location_key": "irving_tx",
+      "city": "Irving",
+      "city_slug": "irving",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_irving_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/raccoon-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_irving_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Irving",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_irving_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Irving",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_irving_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Irving",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_grand_prairie_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Grand Prairie",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/raccoon-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "raccoon_removal_highland_park_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Highland Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/raccoon-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "squirrel_removal_irving_tx": {
+      "file": "phase5_article_squirrel_removal_irving_tx.md",
+      "service": "squirrel_removal",
+      "service_slug": "squirrel-removal",
+      "location_key": "irving_tx",
+      "city": "Irving",
+      "city_slug": "irving",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_irving_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/squirrel-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_irving_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Irving",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_irving_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Irving",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_irving_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Irving",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_grand_prairie_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Grand Prairie",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/squirrel-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "squirrel_removal_highland_park_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Highland Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/squirrel-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "bat_removal_irving_tx": {
+      "file": "phase5_article_bat_removal_irving_tx.md",
+      "service": "bat_removal",
+      "service_slug": "bat-removal",
+      "location_key": "irving_tx",
+      "city": "Irving",
+      "city_slug": "irving",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_irving_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/bat-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_irving_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Irving",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_irving_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Irving",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_irving_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Irving",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_grand_prairie_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Grand Prairie",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/bat-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "bat_removal_highland_park_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Highland Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/highland-park/bat-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "wildlife_removal_grand_prairie_tx": {
+      "file": "phase5_article_wildlife_removal_grand_prairie_tx.md",
+      "service": "wildlife_removal",
+      "service_slug": "wildlife-removal",
+      "location_key": "grand_prairie_tx",
+      "city": "Grand Prairie",
+      "city_slug": "grand-prairie",
+      "state": "TX",
+      "page_type": "parent",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/",
+      "links_needed": [
+        {
+          "target_page": "raccoon_removal_grand_prairie_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "raccoon removal in Grand Prairie",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_grand_prairie_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "squirrel removal in Grand Prairie",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_grand_prairie_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "bat removal in Grand Prairie",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "wildlife_removal_irving_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Irving",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_duncanville_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_cedar_hill_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Cedar Hill",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "raccoon_removal_grand_prairie_tx": {
+      "file": "phase5_article_raccoon_removal_grand_prairie_tx.md",
+      "service": "raccoon_removal",
+      "service_slug": "raccoon-removal",
+      "location_key": "grand_prairie_tx",
+      "city": "Grand Prairie",
+      "city_slug": "grand-prairie",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_grand_prairie_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/raccoon-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_grand_prairie_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Grand Prairie",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_grand_prairie_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Grand Prairie",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_grand_prairie_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Grand Prairie",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_irving_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Irving",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/raccoon-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "raccoon_removal_duncanville_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/raccoon-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "squirrel_removal_grand_prairie_tx": {
+      "file": "phase5_article_squirrel_removal_grand_prairie_tx.md",
+      "service": "squirrel_removal",
+      "service_slug": "squirrel-removal",
+      "location_key": "grand_prairie_tx",
+      "city": "Grand Prairie",
+      "city_slug": "grand-prairie",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_grand_prairie_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/squirrel-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_grand_prairie_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Grand Prairie",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_grand_prairie_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Grand Prairie",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_grand_prairie_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Grand Prairie",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_irving_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Irving",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/squirrel-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "squirrel_removal_duncanville_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/squirrel-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "bat_removal_grand_prairie_tx": {
+      "file": "phase5_article_bat_removal_grand_prairie_tx.md",
+      "service": "bat_removal",
+      "service_slug": "bat-removal",
+      "location_key": "grand_prairie_tx",
+      "city": "Grand Prairie",
+      "city_slug": "grand-prairie",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_grand_prairie_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/bat-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_grand_prairie_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Grand Prairie",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_grand_prairie_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Grand Prairie",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_grand_prairie_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Grand Prairie",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_irving_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Irving",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/bat-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "bat_removal_duncanville_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/bat-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "wildlife_removal_garland_tx": {
+      "file": "phase5_article_wildlife_removal_garland_tx.md",
+      "service": "wildlife_removal",
+      "service_slug": "wildlife-removal",
+      "location_key": "garland_tx",
+      "city": "Garland",
+      "city_slug": "garland",
+      "state": "TX",
+      "page_type": "parent",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/",
+      "links_needed": [
+        {
+          "target_page": "raccoon_removal_garland_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "raccoon removal in Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_garland_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "squirrel removal in Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_garland_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "bat removal in Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "wildlife_removal_rowlett_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_sachse_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Sachse",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_richardson_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "raccoon_removal_garland_tx": {
+      "file": "phase5_article_raccoon_removal_garland_tx.md",
+      "service": "raccoon_removal",
+      "service_slug": "raccoon-removal",
+      "location_key": "garland_tx",
+      "city": "Garland",
+      "city_slug": "garland",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_garland_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/raccoon-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_garland_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_garland_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_garland_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_rowlett_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/raccoon-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "raccoon_removal_sachse_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Sachse",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/raccoon-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "squirrel_removal_garland_tx": {
+      "file": "phase5_article_squirrel_removal_garland_tx.md",
+      "service": "squirrel_removal",
+      "service_slug": "squirrel-removal",
+      "location_key": "garland_tx",
+      "city": "Garland",
+      "city_slug": "garland",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_garland_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/squirrel-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_garland_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_garland_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_garland_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_rowlett_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/squirrel-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "squirrel_removal_sachse_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Sachse",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/squirrel-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "bat_removal_garland_tx": {
+      "file": "phase5_article_bat_removal_garland_tx.md",
+      "service": "bat_removal",
+      "service_slug": "bat-removal",
+      "location_key": "garland_tx",
+      "city": "Garland",
+      "city_slug": "garland",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_garland_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/bat-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_garland_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_garland_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_garland_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_rowlett_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/bat-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "bat_removal_sachse_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Sachse",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/bat-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "wildlife_removal_fate_tx": {
+      "file": "phase5_article_wildlife_removal_fate_tx.md",
+      "service": "wildlife_removal",
+      "service_slug": "wildlife-removal",
+      "location_key": "fate_tx",
+      "city": "Fate",
+      "city_slug": "fate",
+      "state": "TX",
+      "page_type": "parent",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/fate/",
+      "links_needed": [
+        {
+          "target_page": "raccoon_removal_fate_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "raccoon removal in Fate",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/fate/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_fate_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "squirrel removal in Fate",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/fate/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_fate_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "bat removal in Fate",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/fate/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "wildlife_removal_rockwall_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Rockwall",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rockwall/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_rowlett_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_sachse_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Sachse",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sachse/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "raccoon_removal_fate_tx": {
+      "file": "phase5_article_raccoon_removal_fate_tx.md",
+      "service": "raccoon_removal",
+      "service_slug": "raccoon-removal",
+      "location_key": "fate_tx",
+      "city": "Fate",
+      "city_slug": "fate",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_fate_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/fate/raccoon-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_fate_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Fate",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/fate/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_fate_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Fate",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/fate/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_fate_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Fate",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/fate/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_rockwall_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Rockwall",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rockwall/raccoon-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "raccoon_removal_rowlett_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/raccoon-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "squirrel_removal_fate_tx": {
+      "file": "phase5_article_squirrel_removal_fate_tx.md",
+      "service": "squirrel_removal",
+      "service_slug": "squirrel-removal",
+      "location_key": "fate_tx",
+      "city": "Fate",
+      "city_slug": "fate",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_fate_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/fate/squirrel-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_fate_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Fate",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/fate/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_fate_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Fate",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/fate/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_fate_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Fate",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/fate/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_rockwall_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Rockwall",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rockwall/squirrel-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "squirrel_removal_rowlett_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/squirrel-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "bat_removal_fate_tx": {
+      "file": "phase5_article_bat_removal_fate_tx.md",
+      "service": "bat_removal",
+      "service_slug": "bat-removal",
+      "location_key": "fate_tx",
+      "city": "Fate",
+      "city_slug": "fate",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_fate_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/fate/bat-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_fate_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Fate",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/fate/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_fate_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Fate",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/fate/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_fate_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Fate",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/fate/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_rockwall_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Rockwall",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rockwall/bat-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "bat_removal_rowlett_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Rowlett",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/rowlett/bat-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "wildlife_removal_farmers_branch_tx": {
+      "file": "phase5_article_wildlife_removal_farmers_branch_tx.md",
+      "service": "wildlife_removal",
+      "service_slug": "wildlife-removal",
+      "location_key": "farmers_branch_tx",
+      "city": "Farmers Branch",
+      "city_slug": "farmers-branch",
+      "state": "TX",
+      "page_type": "parent",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/",
+      "links_needed": [
+        {
+          "target_page": "raccoon_removal_farmers_branch_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "raccoon removal in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_farmers_branch_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "squirrel removal in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_farmers_branch_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "bat removal in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "wildlife_removal_carrollton_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_addison_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_university_park_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby University Park",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/university-park/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "raccoon_removal_farmers_branch_tx": {
+      "file": "phase5_article_raccoon_removal_farmers_branch_tx.md",
+      "service": "raccoon_removal",
+      "service_slug": "raccoon-removal",
+      "location_key": "farmers_branch_tx",
+      "city": "Farmers Branch",
+      "city_slug": "farmers-branch",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_farmers_branch_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/raccoon-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_farmers_branch_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_farmers_branch_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_farmers_branch_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_carrollton_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/raccoon-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "raccoon_removal_addison_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/raccoon-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "squirrel_removal_farmers_branch_tx": {
+      "file": "phase5_article_squirrel_removal_farmers_branch_tx.md",
+      "service": "squirrel_removal",
+      "service_slug": "squirrel-removal",
+      "location_key": "farmers_branch_tx",
+      "city": "Farmers Branch",
+      "city_slug": "farmers-branch",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_farmers_branch_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/squirrel-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_farmers_branch_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_farmers_branch_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_farmers_branch_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_carrollton_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/squirrel-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "squirrel_removal_addison_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/squirrel-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "bat_removal_farmers_branch_tx": {
+      "file": "phase5_article_bat_removal_farmers_branch_tx.md",
+      "service": "bat_removal",
+      "service_slug": "bat-removal",
+      "location_key": "farmers_branch_tx",
+      "city": "Farmers Branch",
+      "city_slug": "farmers-branch",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_farmers_branch_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/bat-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_farmers_branch_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_farmers_branch_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_farmers_branch_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_carrollton_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/bat-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "bat_removal_addison_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/bat-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "wildlife_removal_duncanville_tx": {
+      "file": "phase5_article_wildlife_removal_duncanville_tx.md",
+      "service": "wildlife_removal",
+      "service_slug": "wildlife-removal",
+      "location_key": "duncanville_tx",
+      "city": "Duncanville",
+      "city_slug": "duncanville",
+      "state": "TX",
+      "page_type": "parent",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/",
+      "links_needed": [
+        {
+          "target_page": "raccoon_removal_duncanville_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "raccoon removal in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_duncanville_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "squirrel removal in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_duncanville_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "bat removal in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "wildlife_removal_desoto_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_cedar_hill_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Cedar Hill",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_grand_prairie_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Grand Prairie",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "raccoon_removal_duncanville_tx": {
+      "file": "phase5_article_raccoon_removal_duncanville_tx.md",
+      "service": "raccoon_removal",
+      "service_slug": "raccoon-removal",
+      "location_key": "duncanville_tx",
+      "city": "Duncanville",
+      "city_slug": "duncanville",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_duncanville_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/raccoon-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_duncanville_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_duncanville_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_duncanville_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_desoto_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/raccoon-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "raccoon_removal_cedar_hill_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Cedar Hill",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/raccoon-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "squirrel_removal_duncanville_tx": {
+      "file": "phase5_article_squirrel_removal_duncanville_tx.md",
+      "service": "squirrel_removal",
+      "service_slug": "squirrel-removal",
+      "location_key": "duncanville_tx",
+      "city": "Duncanville",
+      "city_slug": "duncanville",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_duncanville_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/squirrel-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_duncanville_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_duncanville_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_duncanville_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_desoto_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/squirrel-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "squirrel_removal_cedar_hill_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Cedar Hill",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/squirrel-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "bat_removal_duncanville_tx": {
+      "file": "phase5_article_bat_removal_duncanville_tx.md",
+      "service": "bat_removal",
+      "service_slug": "bat-removal",
+      "location_key": "duncanville_tx",
+      "city": "Duncanville",
+      "city_slug": "duncanville",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_duncanville_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/bat-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_duncanville_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_duncanville_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_duncanville_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_desoto_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/bat-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "bat_removal_cedar_hill_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Cedar Hill",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/bat-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "wildlife_removal_desoto_tx": {
+      "file": "phase5_article_wildlife_removal_desoto_tx.md",
+      "service": "wildlife_removal",
+      "service_slug": "wildlife-removal",
+      "location_key": "desoto_tx",
+      "city": "DeSoto",
+      "city_slug": "desoto",
+      "state": "TX",
+      "page_type": "parent",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/",
+      "links_needed": [
+        {
+          "target_page": "raccoon_removal_desoto_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "raccoon removal in DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_desoto_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "squirrel removal in DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_desoto_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "bat removal in DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "wildlife_removal_duncanville_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_cedar_hill_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Cedar Hill",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_lancaster_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Lancaster",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/lancaster/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "raccoon_removal_desoto_tx": {
+      "file": "phase5_article_raccoon_removal_desoto_tx.md",
+      "service": "raccoon_removal",
+      "service_slug": "raccoon-removal",
+      "location_key": "desoto_tx",
+      "city": "DeSoto",
+      "city_slug": "desoto",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_desoto_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/raccoon-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_desoto_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_desoto_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_desoto_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_duncanville_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/raccoon-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "raccoon_removal_cedar_hill_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Cedar Hill",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/raccoon-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "squirrel_removal_desoto_tx": {
+      "file": "phase5_article_squirrel_removal_desoto_tx.md",
+      "service": "squirrel_removal",
+      "service_slug": "squirrel-removal",
+      "location_key": "desoto_tx",
+      "city": "DeSoto",
+      "city_slug": "desoto",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_desoto_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/squirrel-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_desoto_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_desoto_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_desoto_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_duncanville_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/squirrel-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "squirrel_removal_cedar_hill_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Cedar Hill",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/squirrel-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "bat_removal_desoto_tx": {
+      "file": "phase5_article_bat_removal_desoto_tx.md",
+      "service": "bat_removal",
+      "service_slug": "bat-removal",
+      "location_key": "desoto_tx",
+      "city": "DeSoto",
+      "city_slug": "desoto",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_desoto_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/bat-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_desoto_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_desoto_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_desoto_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in DeSoto",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/desoto/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_duncanville_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Duncanville",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/duncanville/bat-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "bat_removal_cedar_hill_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Cedar Hill",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/cedar-hill/bat-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "wildlife_removal_coppell_tx": {
+      "file": "phase5_article_wildlife_removal_coppell_tx.md",
+      "service": "wildlife_removal",
+      "service_slug": "wildlife-removal",
+      "location_key": "coppell_tx",
+      "city": "Coppell",
+      "city_slug": "coppell",
+      "state": "TX",
+      "page_type": "parent",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/coppell/",
+      "links_needed": [
+        {
+          "target_page": "raccoon_removal_coppell_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "raccoon removal in Coppell",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/coppell/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_coppell_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "squirrel removal in Coppell",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/coppell/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_coppell_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "bat removal in Coppell",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/coppell/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "wildlife_removal_carrollton_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_farmers_branch_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_irving_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Irving",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "raccoon_removal_coppell_tx": {
+      "file": "phase5_article_raccoon_removal_coppell_tx.md",
+      "service": "raccoon_removal",
+      "service_slug": "raccoon-removal",
+      "location_key": "coppell_tx",
+      "city": "Coppell",
+      "city_slug": "coppell",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_coppell_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/coppell/raccoon-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_coppell_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Coppell",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/coppell/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_coppell_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Coppell",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/coppell/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_coppell_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Coppell",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/coppell/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_carrollton_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/raccoon-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "raccoon_removal_farmers_branch_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/raccoon-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "squirrel_removal_coppell_tx": {
+      "file": "phase5_article_squirrel_removal_coppell_tx.md",
+      "service": "squirrel_removal",
+      "service_slug": "squirrel-removal",
+      "location_key": "coppell_tx",
+      "city": "Coppell",
+      "city_slug": "coppell",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_coppell_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/coppell/squirrel-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_coppell_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Coppell",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/coppell/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_coppell_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Coppell",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/coppell/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_coppell_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Coppell",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/coppell/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_carrollton_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/squirrel-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "squirrel_removal_farmers_branch_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/squirrel-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "bat_removal_coppell_tx": {
+      "file": "phase5_article_bat_removal_coppell_tx.md",
+      "service": "bat_removal",
+      "service_slug": "bat-removal",
+      "location_key": "coppell_tx",
+      "city": "Coppell",
+      "city_slug": "coppell",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_coppell_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/coppell/bat-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_coppell_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Coppell",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/coppell/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_coppell_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Coppell",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/coppell/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_coppell_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Coppell",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/coppell/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_carrollton_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/bat-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "bat_removal_farmers_branch_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/bat-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "wildlife_removal_carrollton_tx": {
+      "file": "phase5_article_wildlife_removal_carrollton_tx.md",
+      "service": "wildlife_removal",
+      "service_slug": "wildlife-removal",
+      "location_key": "carrollton_tx",
+      "city": "Carrollton",
+      "city_slug": "carrollton",
+      "state": "TX",
+      "page_type": "parent",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/",
+      "links_needed": [
+        {
+          "target_page": "raccoon_removal_carrollton_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "raccoon removal in Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_carrollton_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "squirrel removal in Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_carrollton_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "bat removal in Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "wildlife_removal_farmers_branch_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_addison_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_coppell_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Coppell",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/coppell/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "raccoon_removal_carrollton_tx": {
+      "file": "phase5_article_raccoon_removal_carrollton_tx.md",
+      "service": "raccoon_removal",
+      "service_slug": "raccoon-removal",
+      "location_key": "carrollton_tx",
+      "city": "Carrollton",
+      "city_slug": "carrollton",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_carrollton_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/raccoon-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_carrollton_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_carrollton_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_carrollton_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_farmers_branch_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/raccoon-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "raccoon_removal_addison_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/raccoon-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "squirrel_removal_carrollton_tx": {
+      "file": "phase5_article_squirrel_removal_carrollton_tx.md",
+      "service": "squirrel_removal",
+      "service_slug": "squirrel-removal",
+      "location_key": "carrollton_tx",
+      "city": "Carrollton",
+      "city_slug": "carrollton",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_carrollton_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/squirrel-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_carrollton_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_carrollton_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_carrollton_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_farmers_branch_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/squirrel-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "squirrel_removal_addison_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/squirrel-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "bat_removal_carrollton_tx": {
+      "file": "phase5_article_bat_removal_carrollton_tx.md",
+      "service": "bat_removal",
+      "service_slug": "bat-removal",
+      "location_key": "carrollton_tx",
+      "city": "Carrollton",
+      "city_slug": "carrollton",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_carrollton_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/bat-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_carrollton_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_carrollton_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_carrollton_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_farmers_branch_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/bat-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "bat_removal_addison_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/bat-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "wildlife_removal_addison_tx": {
+      "file": "phase5_article_wildlife_removal_addison_tx.md",
+      "service": "wildlife_removal",
+      "service_slug": "wildlife-removal",
+      "location_key": "addison_tx",
+      "city": "Addison",
+      "city_slug": "addison",
+      "state": "TX",
+      "page_type": "parent",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/",
+      "links_needed": [
+        {
+          "target_page": "raccoon_removal_addison_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "raccoon removal in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_addison_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "squirrel removal in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_addison_tx",
+          "link_type": "parent_to_child",
+          "anchor_text_suggestion": "bat removal in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "wildlife_removal_carrollton_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_farmers_branch_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "wildlife_removal_richardson_tx",
+          "link_type": "geographic_parent",
+          "anchor_text_suggestion": "wildlife removal in nearby Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "raccoon_removal_addison_tx": {
+      "file": "phase5_article_raccoon_removal_addison_tx.md",
+      "service": "raccoon_removal",
+      "service_slug": "raccoon-removal",
+      "location_key": "addison_tx",
+      "city": "Addison",
+      "city_slug": "addison",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_addison_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/raccoon-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_addison_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_addison_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_addison_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_carrollton_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/raccoon-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "raccoon_removal_farmers_branch_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "raccoon removal in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/raccoon-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "squirrel_removal_addison_tx": {
+      "file": "phase5_article_squirrel_removal_addison_tx.md",
+      "service": "squirrel_removal",
+      "service_slug": "squirrel-removal",
+      "location_key": "addison_tx",
+      "city": "Addison",
+      "city_slug": "addison",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_addison_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/squirrel-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_addison_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_addison_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_addison_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "bat removal services in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/bat-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_carrollton_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/squirrel-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "squirrel_removal_farmers_branch_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "squirrel removal in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/squirrel-removal/",
+          "priority": "medium"
+        }
+      ]
+    },
+    "bat_removal_addison_tx": {
+      "file": "phase5_article_bat_removal_addison_tx.md",
+      "service": "bat_removal",
+      "service_slug": "bat-removal",
+      "location_key": "addison_tx",
+      "city": "Addison",
+      "city_slug": "addison",
+      "state": "TX",
+      "page_type": "child",
+      "parent_page": "wildlife_removal_addison_tx",
+      "published_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/bat-removal/",
+      "links_needed": [
+        {
+          "target_page": "wildlife_removal_addison_tx",
+          "link_type": "child_to_parent",
+          "anchor_text_suggestion": "professional wildlife removal in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/",
+          "priority": "high"
+        },
+        {
+          "target_page": "raccoon_removal_addison_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "raccoon removal services in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/raccoon-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "squirrel_removal_addison_tx",
+          "link_type": "sibling",
+          "anchor_text_suggestion": "squirrel removal services in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/squirrel-removal/",
+          "priority": "high"
+        },
+        {
+          "target_page": "bat_removal_carrollton_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/bat-removal/",
+          "priority": "medium"
+        },
+        {
+          "target_page": "bat_removal_farmers_branch_tx",
+          "link_type": "cross_geographic",
+          "anchor_text_suggestion": "bat removal in Farmers Branch",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/farmers-branch/bat-removal/",
+          "priority": "medium"
+        }
+      ]
+    }
+  }
+}

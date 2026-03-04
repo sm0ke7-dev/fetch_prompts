@@ -1,0 +1,137 @@
+{
+  "generated": "2026-03-04T00:00:00Z",
+  "scope": "richardson_tx",
+  "pages": {
+    "raccoon_removal_richardson_tx": {
+      "links_inserted": 5,
+      "links_deferred": 0,
+      "status": "complete",
+      "insertions": [
+        {
+          "order": 1,
+          "anchor_text": "wildlife removal services in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/wildlife-removal/",
+          "section": "Why Act Now? Protect Your Home and Family from Nuisance Wildlife in Richardson, Tx",
+          "status": "inserted"
+        },
+        {
+          "order": 2,
+          "anchor_text": "squirrel removal in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/squirrel-removal/",
+          "section": "Signs You Need Raccoon Removal Services",
+          "status": "inserted"
+        },
+        {
+          "order": 3,
+          "anchor_text": "bat removal services in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/bat-removal/",
+          "section": "Why Choose Aaac Wildlife Removal? Experienced Removal Specialists & Wildlife Removal Experts in Richardson, Tx",
+          "status": "inserted"
+        },
+        {
+          "order": 4,
+          "anchor_text": "raccoon removal in nearby Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/raccoon-removal/",
+          "section": "Your Local Raccoon Removal Experts in Richardson, Tx",
+          "status": "inserted"
+        },
+        {
+          "order": 5,
+          "anchor_text": "raccoon removal team in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/raccoon-removal/",
+          "section": "Our Humane Raccoon Removal Process",
+          "status": "inserted"
+        }
+      ]
+    },
+    "squirrel_removal_richardson_tx": {
+      "links_inserted": 5,
+      "links_deferred": 0,
+      "status": "complete",
+      "insertions": [
+        {
+          "order": 1,
+          "anchor_text": "wildlife removal professionals in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/wildlife-removal/",
+          "section": "Why Act Now: Protect Your Home from Squirrel Damage",
+          "status": "inserted"
+        },
+        {
+          "order": 2,
+          "anchor_text": "Raccoon removal in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/raccoon-removal/",
+          "section": "Local Service Area: Removal in Richardson — Services in Richardson and the Dallas Area",
+          "status": "inserted"
+        },
+        {
+          "order": 3,
+          "anchor_text": "bat removal in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/bat-removal/",
+          "section": "Signs You Need Squirrel Removal Services in Richardson, Tx — Nest, Dropping & Squirrel Activity",
+          "status": "inserted"
+        },
+        {
+          "order": 4,
+          "anchor_text": "squirrel removal in nearby Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/squirrel-removal/",
+          "section": "Why Choose Us: Trusted Wildlife Experts in Richardson",
+          "status": "inserted"
+        },
+        {
+          "order": 5,
+          "anchor_text": "squirrel removal services in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/squirrel-removal/",
+          "section": "Our Removal Process: Humane and Effective Squirrel Control",
+          "status": "inserted"
+        }
+      ]
+    },
+    "bat_removal_richardson_tx": {
+      "links_inserted": 4,
+      "links_deferred": 1,
+      "status": "complete",
+      "insertions": [
+        {
+          "order": 1,
+          "anchor_text": "comprehensive wildlife removal in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/wildlife-removal/",
+          "section": "Wildlife Removal Services in Richardson, Tx",
+          "status": "inserted"
+        },
+        {
+          "order": 2,
+          "anchor_text": "raccoon removal in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/raccoon-removal/",
+          "section": "Conclusion: Ensuring a Bat-free Home in Richardson, Tx",
+          "status": "inserted"
+        },
+        {
+          "order": 3,
+          "anchor_text": "bat removal team serving Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/bat-removal/",
+          "section": "Choosing the Right Critter Control Service in Richardson",
+          "status": "inserted"
+        },
+        {
+          "order": 4,
+          "anchor_text": "bat removal services in nearby Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/bat-removal/",
+          "section": "The Importance of Bat Removal in Richardson",
+          "status": "inserted"
+        }
+      ],
+      "deferred": [
+        {
+          "target_page": "squirrel_removal_richardson_tx",
+          "link_type": "sibling",
+          "reason": "The only natural reference to squirrels in the file is inside the Conclusion section's CTA-adjacent list item ('raccoon removal and squirrel removal'). The raccoon_removal_richardson_tx link has already claimed that sentence. The Signs of a Bat Infestation section has no squirrel reference. Inserting a second link into Conclusion would violate the max-1-link-per-H2 rule. No remaining section offers a natural, non-forced spot for a squirrel sibling link."
+        }
+      ]
+    }
+  },
+  "summary": {
+    "total_inserted": 14,
+    "total_deferred": 1,
+    "pages_complete": 3
+  }
+}

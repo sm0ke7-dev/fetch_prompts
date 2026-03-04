@@ -1,0 +1,558 @@
+{
+  "generated": "2026-03-04T00:00:00Z",
+  "pages_with_existing_content": [
+    "raccoon_removal_richardson_tx",
+    "squirrel_removal_richardson_tx",
+    "bat_removal_richardson_tx",
+    "raccoon_removal_addison_tx",
+    "squirrel_removal_addison_tx",
+    "bat_removal_addison_tx",
+    "bat_removal_irving_tx",
+    "squirrel_removal_sunnyvale_tx"
+  ],
+  "pages_without_content": [
+    "wildlife_removal_sunnyvale_tx",
+    "raccoon_removal_sunnyvale_tx",
+    "bat_removal_sunnyvale_tx",
+    "wildlife_removal_mesquite_tx",
+    "raccoon_removal_mesquite_tx",
+    "squirrel_removal_mesquite_tx",
+    "bat_removal_mesquite_tx",
+    "wildlife_removal_cedar_hill_tx",
+    "raccoon_removal_cedar_hill_tx",
+    "squirrel_removal_cedar_hill_tx",
+    "bat_removal_cedar_hill_tx",
+    "wildlife_removal_university_park_tx",
+    "raccoon_removal_university_park_tx",
+    "squirrel_removal_university_park_tx",
+    "bat_removal_university_park_tx",
+    "wildlife_removal_highland_park_tx",
+    "raccoon_removal_highland_park_tx",
+    "squirrel_removal_highland_park_tx",
+    "bat_removal_highland_park_tx",
+    "wildlife_removal_richardson_tx",
+    "squirrel_removal_richardson_tx",
+    "wildlife_removal_lancaster_tx",
+    "raccoon_removal_lancaster_tx",
+    "squirrel_removal_lancaster_tx",
+    "bat_removal_lancaster_tx",
+    "wildlife_removal_irving_tx",
+    "raccoon_removal_irving_tx",
+    "squirrel_removal_irving_tx",
+    "wildlife_removal_grand_prairie_tx",
+    "raccoon_removal_grand_prairie_tx",
+    "squirrel_removal_grand_prairie_tx",
+    "bat_removal_grand_prairie_tx",
+    "wildlife_removal_garland_tx",
+    "raccoon_removal_garland_tx",
+    "squirrel_removal_garland_tx",
+    "bat_removal_garland_tx",
+    "wildlife_removal_fate_tx",
+    "raccoon_removal_fate_tx",
+    "squirrel_removal_fate_tx",
+    "bat_removal_fate_tx",
+    "wildlife_removal_farmers_branch_tx",
+    "raccoon_removal_farmers_branch_tx",
+    "squirrel_removal_farmers_branch_tx",
+    "bat_removal_farmers_branch_tx",
+    "wildlife_removal_duncanville_tx",
+    "raccoon_removal_duncanville_tx",
+    "squirrel_removal_duncanville_tx",
+    "bat_removal_duncanville_tx",
+    "wildlife_removal_desoto_tx",
+    "raccoon_removal_desoto_tx",
+    "squirrel_removal_desoto_tx",
+    "bat_removal_desoto_tx",
+    "wildlife_removal_coppell_tx",
+    "raccoon_removal_coppell_tx",
+    "squirrel_removal_coppell_tx",
+    "bat_removal_coppell_tx",
+    "wildlife_removal_carrollton_tx",
+    "raccoon_removal_carrollton_tx",
+    "squirrel_removal_carrollton_tx",
+    "bat_removal_carrollton_tx",
+    "wildlife_removal_addison_tx",
+    "wildlife_removal_sachse_tx",
+    "raccoon_removal_sachse_tx",
+    "squirrel_removal_sachse_tx",
+    "bat_removal_sachse_tx",
+    "wildlife_removal_rowlett_tx",
+    "raccoon_removal_rowlett_tx",
+    "squirrel_removal_rowlett_tx",
+    "bat_removal_rowlett_tx",
+    "wildlife_removal_rockwall_tx",
+    "raccoon_removal_rockwall_tx",
+    "squirrel_removal_rockwall_tx",
+    "bat_removal_rockwall_tx"
+  ],
+  "pages": {
+    "raccoon_removal_richardson_tx": {
+      "file": "phase5_article_raccoon_removal_richardson_tx.md",
+      "total_links_planned": 5,
+      "total_links_deferred": 0,
+      "insertions": [
+        {
+          "order": 1,
+          "target_page": "wildlife_removal_richardson_tx",
+          "link_type": "child_to_parent",
+          "section": "Why Act Now? Protect Your Home and Family from Nuisance Wildlife in Richardson, Tx",
+          "strategy": "rewrite",
+          "context_quote": "In Richardson and surrounding communities such as Plano, Garland and Addison, AAAC Wildlife Removal responds with fast, legal and humane solutions that prevent repeat visits.",
+          "anchor_text": "wildlife removal services in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/",
+          "modified_text": "In Richardson and surrounding communities such as Plano, Garland and Addison, our [wildlife removal services in Richardson](https://dallas.aaacwildliferemoval.com/service-area/richardson/) respond with fast, legal and humane solutions that prevent repeat visits."
+        },
+        {
+          "order": 2,
+          "target_page": "squirrel_removal_richardson_tx",
+          "link_type": "sibling",
+          "section": "Signs You Need Raccoon Removal Services",
+          "strategy": "rewrite",
+          "context_quote": "Many of these signs overlap with other wildlife issues. Squirrel activity can mimic raccoon noises in attics, and small droppings or gnaw marks may be caused by rats and mice.",
+          "anchor_text": "squirrel removal in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/squirrel-removal/",
+          "modified_text": "Many of these signs overlap with other wildlife issues. Squirrel activity can mimic raccoon noises in attics — if you suspect squirrels, our [squirrel removal in Richardson](https://dallas.aaacwildliferemoval.com/service-area/richardson/squirrel-removal/) team can confirm the species — and small droppings or gnaw marks may be caused by rats and mice."
+        },
+        {
+          "order": 3,
+          "target_page": "bat_removal_richardson_tx",
+          "link_type": "sibling",
+          "section": "Why Choose Aaac Wildlife Removal? Experienced Removal Specialists & Wildlife Removal Experts in Richardson, Tx",
+          "strategy": "extend",
+          "context_quote": "Repairs & prevention: sealing entry points, installing one‑way exclusion devices and ongoing control services to stop reentry\n- Pest solutions integration: combined wildlife removal and pest control to resolve related rodent, insect or nesting issues",
+          "anchor_text": "bat removal services in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/bat-removal/",
+          "modified_text": "- Pest solutions integration: combined wildlife removal and pest control to resolve related rodent, insect or nesting issues — and when bats are the concern, our [bat removal services in Richardson](https://dallas.aaacwildliferemoval.com/service-area/richardson/bat-removal/) provide the same humane, code-compliant approach."
+        },
+        {
+          "order": 4,
+          "target_page": "raccoon_removal_garland_tx",
+          "link_type": "cross_geographic",
+          "section": "Your Local Raccoon Removal Experts in Richardson, Tx",
+          "strategy": "rewrite",
+          "context_quote": "We know Richardson and the surrounding communities across Dallas County and parts of Collin County — including Plano, Garland, Addison, Murphy and Sachse.",
+          "anchor_text": "raccoon removal in nearby Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/raccoon-removal/",
+          "modified_text": "We know Richardson and the surrounding communities across Dallas County and parts of Collin County — including Plano, [raccoon removal in nearby Garland](https://dallas.aaacwildliferemoval.com/service-area/garland/raccoon-removal/), Addison, Murphy and Sachse."
+        },
+        {
+          "order": 5,
+          "target_page": "raccoon_removal_addison_tx",
+          "link_type": "cross_geographic",
+          "section": "Our Humane Raccoon Removal Process",
+          "strategy": "rewrite",
+          "context_quote": "We document entry points and give a clear estimate so homeowners in Richardson and nearby Plano, Garland and Dallas understand the scope before any work begins.",
+          "anchor_text": "raccoon removal team in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/raccoon-removal/",
+          "modified_text": "We document entry points and give a clear estimate so homeowners in Richardson and nearby Plano, Garland, Dallas, and our [raccoon removal team in Addison](https://dallas.aaacwildliferemoval.com/service-area/addison/raccoon-removal/) understand the scope before any work begins."
+        }
+      ],
+      "deferred": []
+    },
+    "squirrel_removal_richardson_tx": {
+      "file": "phase5_article_squirrel_removal_richardson_tx.md",
+      "total_links_planned": 5,
+      "total_links_deferred": 0,
+      "insertions": [
+        {
+          "order": 1,
+          "target_page": "wildlife_removal_richardson_tx",
+          "link_type": "child_to_parent",
+          "section": "Why Act Now: Protect Your Home from Squirrel Damage",
+          "strategy": "rewrite",
+          "context_quote": "AAAC Wildlife Removal in Richardson provides targeted exclusion and exclusion work to seal entry points, removes nests and nesting sites, and performs attic cleanup so you don't pay for avoidable attic restoration later.",
+          "anchor_text": "wildlife removal professionals in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/",
+          "modified_text": "Our [wildlife removal professionals in Richardson](https://dallas.aaacwildliferemoval.com/service-area/richardson/) provide targeted exclusion and exclusion work to seal entry points, remove nests and nesting sites, and perform attic cleanup so you don't pay for avoidable attic restoration later."
+        },
+        {
+          "order": 2,
+          "target_page": "raccoon_removal_richardson_tx",
+          "link_type": "sibling",
+          "section": "Local Service Area: Removal in Richardson — Services in Richardson and the Dallas Area",
+          "strategy": "rewrite",
+          "context_quote": "Raccoon removal and den cleanup across Richardson and nearby Garland and Plano",
+          "anchor_text": "raccoon removal in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/raccoon-removal/",
+          "modified_text": "- [Raccoon removal in Richardson](https://dallas.aaacwildliferemoval.com/service-area/richardson/raccoon-removal/) and den cleanup across Richardson and nearby Garland and Plano"
+        },
+        {
+          "order": 3,
+          "target_page": "bat_removal_richardson_tx",
+          "link_type": "sibling",
+          "section": "Signs You Need Squirrel Removal Services in Richardson, Tx — Nest, Dropping & Squirrel Activity",
+          "strategy": "extend",
+          "context_quote": "Squirrel activity can also create openings that invite other nuisance wildlife such as rats or mice into your attic or walls, turning a single squirrel problem into a broader infestation.",
+          "anchor_text": "bat removal in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/bat-removal/",
+          "modified_text": "Squirrel activity can also create openings that invite other nuisance wildlife such as rats or mice into your attic or walls, turning a single squirrel problem into a broader infestation — and if bats are also entering through those gaps, our [bat removal in Richardson](https://dallas.aaacwildliferemoval.com/service-area/richardson/bat-removal/) team can assess both issues at the same time."
+        },
+        {
+          "order": 4,
+          "target_page": "squirrel_removal_garland_tx",
+          "link_type": "cross_geographic",
+          "section": "Why Choose Us: Trusted Wildlife Experts in Richardson",
+          "strategy": "extend",
+          "context_quote": "Local expertise: Deep knowledge of Richardson, Dallas County, and surrounding communities like Plano, Garland, and Addison.",
+          "anchor_text": "squirrel removal in nearby Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/squirrel-removal/",
+          "modified_text": "- Local expertise: Deep knowledge of Richardson, Dallas County, and surrounding communities like Plano, Garland, and Addison — and we're the same team behind [squirrel removal in nearby Garland](https://dallas.aaacwildliferemoval.com/service-area/garland/squirrel-removal/) when neighbors across the city line need help."
+        },
+        {
+          "order": 5,
+          "target_page": "squirrel_removal_addison_tx",
+          "link_type": "cross_geographic",
+          "section": "Our Removal Process: Humane and Effective Squirrel Control",
+          "strategy": "extend",
+          "context_quote": "We also provide practical advice on trimming trees, securing bird feeders and other control solutions to reduce the chance of future calls from nearby communities like Addison, Murphy or Sachse.",
+          "anchor_text": "squirrel removal services in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/squirrel-removal/",
+          "modified_text": "We also provide practical advice on trimming trees, securing bird feeders and other control solutions to reduce the chance of future calls from nearby communities like Addison — where our [squirrel removal services in Addison](https://dallas.aaacwildliferemoval.com/service-area/addison/squirrel-removal/) team handles the same issues — Murphy or Sachse."
+        }
+      ],
+      "deferred": []
+    },
+    "bat_removal_richardson_tx": {
+      "file": "phase5_article_bat_removal_richardson_tx.md",
+      "total_links_planned": 4,
+      "total_links_deferred": 1,
+      "insertions": [
+        {
+          "order": 1,
+          "target_page": "wildlife_removal_richardson_tx",
+          "link_type": "child_to_parent",
+          "section": "Wildlife Removal Services in Richardson, Tx",
+          "strategy": "rewrite",
+          "context_quote": "Choosing a reputable removal company in Richardson can make all the difference. Many full-service companies provide comprehensive wildlife control services, ensuring that not only are the animals removed, but also that measures are taken to prevent future invasions.",
+          "anchor_text": "comprehensive wildlife removal in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/",
+          "modified_text": "Choosing a reputable removal company in Richardson can make all the difference. Many full-service companies provide [comprehensive wildlife removal in Richardson](https://dallas.aaacwildliferemoval.com/service-area/richardson/), ensuring that not only are the animals removed, but also that measures are taken to prevent future invasions."
+        },
+        {
+          "order": 2,
+          "target_page": "raccoon_removal_richardson_tx",
+          "link_type": "sibling",
+          "section": "Conclusion: Ensuring a Bat-free Home in Richardson, Tx",
+          "strategy": "rewrite",
+          "context_quote": "Address any additional wildlife issues, such as raccoon removal and squirrel removal, to create a comprehensive control plan.",
+          "anchor_text": "raccoon removal in Richardson",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/richardson/raccoon-removal/",
+          "modified_text": "- Address any additional wildlife issues, such as [raccoon removal in Richardson](https://dallas.aaacwildliferemoval.com/service-area/richardson/raccoon-removal/) and squirrel removal, to create a comprehensive control plan."
+        },
+        {
+          "order": 3,
+          "target_page": "bat_removal_garland_tx",
+          "link_type": "cross_geographic",
+          "section": "Choosing the Right Critter Control Service in Richardson",
+          "strategy": "extend",
+          "context_quote": "In addition to these factors, consider the company's experience in handling specific types of wildlife common in the Richardson area. Wildlife specialists will have the knowledge and tools required to address the unique challenges posed by local critters.",
+          "anchor_text": "bat removal team serving Garland",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/garland/bat-removal/",
+          "modified_text": "In addition to these factors, consider the company's experience in handling specific types of wildlife common in the Richardson area. The same [bat removal team serving Garland](https://dallas.aaacwildliferemoval.com/service-area/garland/bat-removal/) operates throughout the region, so local specialists will have the knowledge and tools required to address the unique challenges posed by local critters."
+        },
+        {
+          "order": 4,
+          "target_page": "bat_removal_addison_tx",
+          "link_type": "cross_geographic",
+          "section": "The Importance of Bat Removal in Richardson",
+          "strategy": "extend",
+          "context_quote": "Ultimately, addressing bat removal is not just about removing the animals; it's also about restoring your home to a safe and healthy environment. Whether it's through repairs or preventive strategies, professional bat removal is vital for your peace of mind.",
+          "anchor_text": "bat removal services in nearby Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/bat-removal/",
+          "modified_text": "Ultimately, addressing bat removal is not just about removing the animals; it's also about restoring your home to a safe and healthy environment. Whether it's through repairs or preventive strategies, professional bat removal is vital for your peace of mind — the same team also provides [bat removal services in nearby Addison](https://dallas.aaacwildliferemoval.com/service-area/addison/bat-removal/) for homeowners just across the city line."
+        }
+      ],
+      "deferred": [
+        {
+          "target_page": "squirrel_removal_richardson_tx",
+          "link_type": "sibling",
+          "reason": "The only natural reference to squirrels in the file is inside the Conclusion section's CTA-adjacent list item ('raccoon removal and squirrel removal'). The raccoon_removal_richardson_tx link has already claimed that sentence. The Signs of a Bat Infestation section has no squirrel reference. Inserting a second link into Conclusion would violate the max-1-link-per-H2 rule. No remaining section offers a natural, non-forced spot for a squirrel sibling link."
+        }
+      ]
+    },
+    "raccoon_removal_addison_tx": {
+      "file": "phase5_article_raccoon_removal_addison_tx.md",
+      "total_links_planned": 4,
+      "total_links_deferred": 1,
+      "insertions": [
+        {
+          "order": 1,
+          "target_page": "wildlife_removal_addison_tx",
+          "link_type": "child_to_parent",
+          "section": "Understanding the Raccoon Problem in Addison",
+          "strategy": "rewrite",
+          "context_quote": "If you notice signs of raccoons or any other nuisance wildlife like squirrels or opossums, it's vital to contact animal control immediately.",
+          "anchor_text": "professional wildlife removal in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/",
+          "modified_text": "If you notice signs of raccoons or any other nuisance wildlife like squirrels or opossums, it's vital to seek [professional wildlife removal in Addison](https://dallas.aaacwildliferemoval.com/service-area/addison/) immediately."
+        },
+        {
+          "order": 2,
+          "target_page": "squirrel_removal_addison_tx",
+          "link_type": "sibling",
+          "section": "Wildlife Control Services in Dallas and Addison",
+          "strategy": "rewrite",
+          "context_quote": "From snake removal to rat control, a professional wildlife control company can provide tailored solutions to meet your needs.",
+          "anchor_text": "squirrel removal in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/squirrel-removal/",
+          "modified_text": "From snake removal to rat control — and [squirrel removal in Addison](https://dallas.aaacwildliferemoval.com/service-area/addison/squirrel-removal/) when those critters take over an attic — a professional wildlife control company can provide tailored solutions to meet your needs."
+        },
+        {
+          "order": 3,
+          "target_page": "bat_removal_addison_tx",
+          "link_type": "sibling",
+          "section": "Attic Critter Management: Keeping Raccoons Out",
+          "strategy": "extend",
+          "context_quote": "Raccoons, squirrels, and opossums often seek shelter in attics, especially during colder months. Spotting these intruders early can help in implementing effective raccoon control and ensuring your home remains critter-free.",
+          "anchor_text": "bat removal in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/bat-removal/",
+          "modified_text": "Raccoons, squirrels, and opossums often seek shelter in attics, especially during colder months — bats do as well, so if you find guano alongside raccoon droppings, our [bat removal in Addison](https://dallas.aaacwildliferemoval.com/service-area/addison/bat-removal/) team can assess both issues. Spotting these intruders early can help in implementing effective raccoon control and ensuring your home remains critter-free."
+        },
+        {
+          "order": 4,
+          "target_page": "raccoon_removal_carrollton_tx",
+          "link_type": "cross_geographic",
+          "section": "Long-term Solutions for Raccoon Issues in Addison",
+          "strategy": "extend",
+          "context_quote": "Routine inspections are also crucial in the control process. Regular checks around your property can help identify potential entry points where raccoons might gain access to your home or yard.",
+          "anchor_text": "raccoon removal in nearby Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/raccoon-removal/",
+          "modified_text": "Routine inspections are also crucial in the control process. Regular checks around your property can help identify potential entry points where raccoons might gain access to your home or yard — and if you're near the city border, our [raccoon removal in nearby Carrollton](https://dallas.aaacwildliferemoval.com/service-area/carrollton/raccoon-removal/) team covers that corridor as well."
+        }
+      ],
+      "deferred": [
+        {
+          "target_page": "raccoon_removal_farmers_branch_tx",
+          "link_type": "cross_geographic",
+          "reason": "All viable sections already have a planned link. The remaining sections (Raccoon Removal Comprehensive Guide intro, Wildlife Exclusion Techniques, Importance of Professional Pest Control, DIY Raccoon Removal) either contain CTA-style sentences ('contact us', 'reach out') in their most natural spots, are too short with only list items, or would require forcing a Farmers Branch reference where the text does not naturally reference any neighboring city. Deferred to avoid unnatural geographic insertion."
+        }
+      ]
+    },
+    "squirrel_removal_addison_tx": {
+      "file": "phase5_article_squirrel_removal_addison_tx.md",
+      "total_links_planned": 4,
+      "total_links_deferred": 1,
+      "insertions": [
+        {
+          "order": 1,
+          "target_page": "wildlife_removal_addison_tx",
+          "link_type": "child_to_parent",
+          "section": "2. The Importance of Pest Control in Addison",
+          "strategy": "rewrite",
+          "context_quote": "Whether you're dealing with a minor issue or a significant infestation, contacting a pest control company in Addison can provide you with the expertise and support needed to resolve the situation effectively.",
+          "anchor_text": "wildlife removal experts in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/",
+          "modified_text": "Whether you're dealing with a minor issue or a significant infestation, contacting [wildlife removal experts in Addison](https://dallas.aaacwildliferemoval.com/service-area/addison/) can provide you with the expertise and support needed to resolve the situation effectively."
+        },
+        {
+          "order": 2,
+          "target_page": "raccoon_removal_addison_tx",
+          "link_type": "sibling",
+          "section": "4. Effective Squirrel Control Services in Addison",
+          "strategy": "extend",
+          "context_quote": "Additionally, if you have concerns about other wildlife, such as raccoons, our wildlife control services can assist with those issues as well.",
+          "anchor_text": "raccoon removal services in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/raccoon-removal/",
+          "modified_text": "Additionally, if you have concerns about other wildlife, such as raccoons, our [raccoon removal services in Addison](https://dallas.aaacwildliferemoval.com/service-area/addison/raccoon-removal/) can assist with those issues as well."
+        },
+        {
+          "order": 3,
+          "target_page": "bat_removal_addison_tx",
+          "link_type": "sibling",
+          "section": "5. The Benefits of Professional Wildlife Removal",
+          "strategy": "extend",
+          "context_quote": "Whether you're dealing with a raccoon in your attic or a family of squirrels in your garden, the advantages of hiring a wildlife expert are clear.",
+          "anchor_text": "bat removal services in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/bat-removal/",
+          "modified_text": "Whether you're dealing with a raccoon in your attic, a family of squirrels in your garden, or bats roosting in your eaves, the advantages of hiring a wildlife expert are clear — including our [bat removal services in Addison](https://dallas.aaacwildliferemoval.com/service-area/addison/bat-removal/) for those nighttime colony issues."
+        },
+        {
+          "order": 4,
+          "target_page": "squirrel_removal_carrollton_tx",
+          "link_type": "cross_geographic",
+          "section": "6. Preventing Future Squirrel Problems in Addison",
+          "strategy": "extend",
+          "context_quote": "Modifying your yard can also help deter squirrels from approaching your home. Trim back tree branches that are close to your roof, and remove any bird feeders or other food sources that might attract them.",
+          "anchor_text": "squirrel removal in nearby Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/squirrel-removal/",
+          "modified_text": "Modifying your yard can also help deter squirrels from approaching your home. Trim back tree branches that are close to your roof, and remove any bird feeders or other food sources that might attract them — the same pressure affects properties across the border, where our [squirrel removal in nearby Carrollton](https://dallas.aaacwildliferemoval.com/service-area/carrollton/squirrel-removal/) team sees identical patterns."
+        }
+      ],
+      "deferred": [
+        {
+          "target_page": "squirrel_removal_farmers_branch_tx",
+          "link_type": "cross_geographic",
+          "reason": "The sections 1, 3, and 7 that remain after other insertions either contain only introductory or conclusion CTA language ('contact us', 'get professional squirrel removal assistance today') or are too generic to naturally name a neighboring city. Section 7 Conclusion is a CTA section. Section 3 Choosing the Right Pest Control Company focuses on selecting criteria with no geographic neighbor mentions. Adding Farmers Branch would feel forced in any remaining paragraph. Deferred to avoid unnatural insertion."
+        }
+      ]
+    },
+    "bat_removal_addison_tx": {
+      "file": "phase5_article_bat_removal_addison_tx.md",
+      "total_links_planned": 4,
+      "total_links_deferred": 1,
+      "insertions": [
+        {
+          "order": 1,
+          "target_page": "wildlife_removal_addison_tx",
+          "link_type": "child_to_parent",
+          "section": "4. Wildlife Removal Services in Addison",
+          "strategy": "rewrite",
+          "context_quote": "In Addison, the process of wildlife removal typically begins with an extensive inspection. This allows the removal company to create a tailored plan for effective removal and control.",
+          "anchor_text": "full-service wildlife removal in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/",
+          "modified_text": "In Addison, [full-service wildlife removal in Addison](https://dallas.aaacwildliferemoval.com/service-area/addison/) typically begins with an extensive inspection, allowing the removal company to create a tailored plan for effective removal and control."
+        },
+        {
+          "order": 2,
+          "target_page": "raccoon_removal_addison_tx",
+          "link_type": "sibling",
+          "section": "7. Signs of a Bat Infestation in Your Home",
+          "strategy": "rewrite",
+          "context_quote": "Additionally, if there are dead bats or other animals like raccoons or squirrels in your attic, prompt dead animal removal is necessary to avoid further complications.",
+          "anchor_text": "raccoon removal in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/raccoon-removal/",
+          "modified_text": "Additionally, if there are dead bats or other animals like squirrels in your attic — or if raccoons are also present, our [raccoon removal in Addison](https://dallas.aaacwildliferemoval.com/service-area/addison/raccoon-removal/) team can address that alongside the bat work — prompt dead animal removal is necessary to avoid further complications."
+        },
+        {
+          "order": 3,
+          "target_page": "bat_removal_carrollton_tx",
+          "link_type": "cross_geographic",
+          "section": "9. Post-removal: Keeping Bats Away for Good",
+          "strategy": "rewrite",
+          "context_quote": "In areas like Garland and Addison, they can assist with everything from dead animal removal to ongoing pest control measures.",
+          "anchor_text": "bat removal in nearby Carrollton",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/bat-removal/",
+          "modified_text": "In areas like Garland, Addison, and [bat removal in nearby Carrollton](https://dallas.aaacwildliferemoval.com/service-area/carrollton/bat-removal/), they can assist with everything from dead animal removal to ongoing pest control measures."
+        },
+        {
+          "order": 4,
+          "target_page": "squirrel_removal_addison_tx",
+          "link_type": "sibling",
+          "section": "2. Why Bats Are Considered Pests in Addison",
+          "strategy": "extend",
+          "context_quote": "A single bat can lead to an infestation, attracting other pests like raccoons and squirrels, compounding the problem.",
+          "anchor_text": "squirrel removal experts in Addison",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/addison/squirrel-removal/",
+          "modified_text": "A single bat can lead to an infestation, attracting other pests like raccoons and squirrels, compounding the problem — if squirrels are already a concern, our [squirrel removal experts in Addison](https://dallas.aaacwildliferemoval.com/service-area/addison/squirrel-removal/) can handle both issues in the same visit."
+        }
+      ],
+      "deferred": [
+        {
+          "target_page": "bat_removal_farmers_branch_tx",
+          "link_type": "cross_geographic",
+          "reason": "After assigning one link per H2 section across the ten sections in this article, all sections with natural neighbor-city mentions have been used. Remaining sections (1, 3, 5, 6, 8, 10) either focus on procedural detail with no geographic openings, contain conclusion/CTA language, or already carry a link. Inserting a Farmers Branch reference in any of these would require fabricating a geographic context that doesn't exist in the copy. Deferred to avoid forced insertion."
+        }
+      ]
+    },
+    "bat_removal_irving_tx": {
+      "file": "phase5_article_bat_removal_irving_tx.md",
+      "total_links_planned": 4,
+      "total_links_deferred": 1,
+      "insertions": [
+        {
+          "order": 1,
+          "target_page": "wildlife_removal_irving_tx",
+          "link_type": "child_to_parent",
+          "section": "2. Why You Need to Act Now: Health Risks of Bat Infestation and Wildlife Problems in Irving, Tx",
+          "strategy": "rewrite",
+          "context_quote": "Secondary wildlife problems: The smell of guano and the access points bats use can attract other nuisance animals like raccoon and skunk, escalating the infestation and disease risk.",
+          "anchor_text": "wildlife removal services in Irving",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/",
+          "modified_text": "- Secondary wildlife problems: The smell of guano and the access points bats use can attract other nuisance animals like raccoon and skunk — for a full assessment, our [wildlife removal services in Irving](https://dallas.aaacwildliferemoval.com/service-area/irving/) cover all species under one inspection, escalating the infestation and disease risk if left unaddressed."
+        },
+        {
+          "order": 2,
+          "target_page": "raccoon_removal_irving_tx",
+          "link_type": "sibling",
+          "section": "5. Proudly Serving Irving, Tx — Irving Wildlife Removal Around Your Irving and Across Dallas County",
+          "strategy": "rewrite",
+          "context_quote": "Our services in Irving handle bat exclusions, attic cleanups and restoration as well as related work like raccoon removal and snake removal.",
+          "anchor_text": "raccoon removal services in Irving",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/raccoon-removal/",
+          "modified_text": "Our services in Irving handle bat exclusions, attic cleanups and restoration as well as related work like [raccoon removal services in Irving](https://dallas.aaacwildliferemoval.com/service-area/irving/raccoon-removal/) and snake removal."
+        },
+        {
+          "order": 3,
+          "target_page": "squirrel_removal_irving_tx",
+          "link_type": "sibling",
+          "section": "4. Why Choose Us for Bat Removal in Irving? Wildlife Removal Services, Animal Control & Removal Services in Irving",
+          "strategy": "rewrite",
+          "context_quote": "We also address secondary issues caused by bats and other critter problems like squirrel intrusions, offering comprehensive removal services in Irving that stop repeat visits and protect insulation and ductwork.",
+          "anchor_text": "squirrel removal in Irving",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/irving/squirrel-removal/",
+          "modified_text": "We also address secondary issues caused by bats and other critter problems — including [squirrel removal in Irving](https://dallas.aaacwildliferemoval.com/service-area/irving/squirrel-removal/) when squirrels share the same entry points — offering comprehensive removal services in Irving that stop repeat visits and protect insulation and ductwork."
+        },
+        {
+          "order": 4,
+          "target_page": "bat_removal_grand_prairie_tx",
+          "link_type": "cross_geographic",
+          "section": "6. Signs You Need Bat Removal Services: Attic Risks, Where Bats Roost in Attics, and Attic Restoration",
+          "strategy": "extend",
+          "context_quote": "In Irving and across Dallas County (serving zip codes like 75060, 75061, 75062 and 75063 and nearby cities such as Grand Prairie, Coppell and Carrollton), professionals trained in humane exclusion and attic restoration can assess seasonal factors like maternity behavior before performing exclusions to avoid harming nursing pups.",
+          "anchor_text": "bat removal in nearby Grand Prairie",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/bat-removal/",
+          "modified_text": "In Irving and across Dallas County (serving zip codes like 75060, 75061, 75062 and 75063 and nearby cities such as [bat removal in nearby Grand Prairie](https://dallas.aaacwildliferemoval.com/service-area/grand-prairie/bat-removal/), Coppell and Carrollton), professionals trained in humane exclusion and attic restoration can assess seasonal factors like maternity behavior before performing exclusions to avoid harming nursing pups."
+        }
+      ],
+      "deferred": [
+        {
+          "target_page": "bat_removal_highland_park_tx",
+          "link_type": "cross_geographic",
+          "reason": "Sections 1, 3, 7, and 8 remain after other links are placed. Section 1 intro paragraph ends with a CTA ('Call us today'). Section 3 (Humane Bat Removal Process) is a numbered procedural list with no geographic neighbor context — adding Highland Park would be forced. Section 7 FAQ contains CTA sentences throughout. Section 8 CTA section is entirely off-limits. Highland Park is not naturally referenced anywhere in the article's text. Deferred to avoid forced geographic insertion."
+        }
+      ]
+    },
+    "squirrel_removal_sunnyvale_tx": {
+      "file": "phase5_article_squirrel_removal_sunnyvale_tx.md",
+      "total_links_planned": 3,
+      "total_links_deferred": 2,
+      "insertions": [
+        {
+          "order": 1,
+          "target_page": "wildlife_removal_sunnyvale_tx",
+          "link_type": "child_to_parent",
+          "section": "3. Wildlife Removal Services in Sunnyvale",
+          "strategy": "rewrite",
+          "context_quote": "Humane wildlife control is the cornerstone of reliable wildlife removal services. Professionals utilize methods that not only effectively manage wildlife but also ensure the animals are treated with respect.",
+          "anchor_text": "wildlife removal services in Sunnyvale",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/",
+          "modified_text": "Humane wildlife control is the cornerstone of reliable [wildlife removal services in Sunnyvale](https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/). Professionals utilize methods that not only effectively manage wildlife but also ensure the animals are treated with respect."
+        },
+        {
+          "order": 2,
+          "target_page": "raccoon_removal_sunnyvale_tx",
+          "link_type": "sibling",
+          "section": "5. Dead Animal Removal: a Critical Service for Hygiene and Pest Prevention",
+          "strategy": "extend",
+          "context_quote": "Reduces the attraction of pests like flies, rats, and raccoons",
+          "anchor_text": "raccoon removal in Sunnyvale",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/raccoon-removal/",
+          "modified_text": "- Reduces the attraction of pests like flies, rats, and raccoons — if live raccoons are already active on your property, our [raccoon removal in Sunnyvale](https://dallas.aaacwildliferemoval.com/service-area/sunnyvale/raccoon-removal/) team should be your first call before carcass cleanup begins."
+        },
+        {
+          "order": 3,
+          "target_page": "squirrel_removal_mesquite_tx",
+          "link_type": "cross_geographic",
+          "section": "7. Choosing the Right Pest Control Company in Dfw",
+          "strategy": "extend",
+          "context_quote": "Opting for local pest control companies in the DFW area means you benefit from their knowledge of regional pest behavior and the most effective control services for your specific environment.",
+          "anchor_text": "squirrel removal in nearby Mesquite",
+          "target_url": "https://dallas.aaacwildliferemoval.com/service-area/mesquite/squirrel-removal/",
+          "modified_text": "Opting for local pest control companies in the DFW area means you benefit from their knowledge of regional pest behavior and the most effective control services for your specific environment — the same expertise powers our [squirrel removal in nearby Mesquite](https://dallas.aaacwildliferemoval.com/service-area/mesquite/squirrel-removal/) for Sunnyvale neighbors just across the city line."
+        }
+      ],
+      "deferred": [
+        {
+          "target_page": "bat_removal_sunnyvale_tx",
+          "link_type": "sibling",
+          "reason": "Section 3 (Wildlife Removal Services) already carries two links (wildlife_removal_sunnyvale_tx and raccoon_removal_sunnyvale_tx), exhausting the one-link-per-H2 rule for that section. The bat bullet point is in the same H2. No other section in this article naturally introduces bats beyond a single passing mention in Section 3's bullet list. All remaining sections (1, 2, 4, 5, 6) focus on squirrel-specific content, pest control generics, or dead animal removal with no bat context. Deferred to avoid forcing a bat link where no natural opening exists."
+        },
+        {
+          "target_page": "squirrel_removal_rowlett_tx",
+          "link_type": "cross_geographic",
+          "reason": "After assigning the Mesquite cross-geographic link to Section 7, the only remaining sections with geographic neighbor potential are Section 1 (intro with no city neighbors mentioned) and Section 6 (pest control tips with DFW generics). Section 6's most natural geographic sentence names 'Sunnyvale' itself with no room for Rowlett. Rowlett is not organically referenced anywhere in the copy, and inserting it in a second cross-geographic link would exceed the budget naturally available given the article structure. Deferred."
+        }
+      ]
+    }
+  }
+}
