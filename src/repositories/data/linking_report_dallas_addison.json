@@ -1,0 +1,147 @@
+{
+  "generated": "2026-03-04T00:00:00Z",
+  "office": "dallas",
+  "scope": "addison",
+  "summary": {
+    "pages_processed": 3,
+    "total_inserted": 12,
+    "total_deferred": 3
+  },
+  "pages": {
+    "raccoon_removal_addison_tx": {
+      "links_inserted": 4,
+      "links_deferred": 1,
+      "status": "complete",
+      "insertions": [
+        {
+          "order": 1,
+          "target_page": "wildlife_removal_addison_tx",
+          "anchor_text": "professional wildlife removal in Addison",
+          "url": "https://dallas.aaacwildliferemoval.com/service-area/addison/",
+          "section": "Understanding the Raccoon Problem in Addison",
+          "strategy": "rewrite"
+        },
+        {
+          "order": 2,
+          "target_page": "squirrel_removal_addison_tx",
+          "anchor_text": "squirrel removal in Addison",
+          "url": "https://dallas.aaacwildliferemoval.com/service-area/addison/squirrel-removal/",
+          "section": "Wildlife Control Services in Dallas and Addison",
+          "strategy": "rewrite"
+        },
+        {
+          "order": 3,
+          "target_page": "bat_removal_addison_tx",
+          "anchor_text": "bat removal in Addison",
+          "url": "https://dallas.aaacwildliferemoval.com/service-area/addison/bat-removal/",
+          "section": "Attic Critter Management: Keeping Raccoons Out",
+          "strategy": "extend"
+        },
+        {
+          "order": 4,
+          "target_page": "raccoon_removal_carrollton_tx",
+          "anchor_text": "raccoon removal in nearby Carrollton",
+          "url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/raccoon-removal/",
+          "section": "Long-term Solutions for Raccoon Issues in Addison",
+          "strategy": "extend"
+        }
+      ],
+      "deferred": [
+        {
+          "target_page": "raccoon_removal_farmers_branch_tx",
+          "reason": "All viable sections already have a planned link. The remaining sections either contain CTA-style sentences, are too short with only list items, or would require forcing a Farmers Branch reference where the text does not naturally reference any neighboring city. Deferred to avoid unnatural geographic insertion."
+        }
+      ]
+    },
+    "squirrel_removal_addison_tx": {
+      "links_inserted": 4,
+      "links_deferred": 1,
+      "status": "complete",
+      "insertions": [
+        {
+          "order": 1,
+          "target_page": "wildlife_removal_addison_tx",
+          "anchor_text": "wildlife removal experts in Addison",
+          "url": "https://dallas.aaacwildliferemoval.com/service-area/addison/",
+          "section": "2. The Importance of Pest Control in Addison",
+          "strategy": "rewrite"
+        },
+        {
+          "order": 2,
+          "target_page": "raccoon_removal_addison_tx",
+          "anchor_text": "raccoon removal services in Addison",
+          "url": "https://dallas.aaacwildliferemoval.com/service-area/addison/raccoon-removal/",
+          "section": "4. Effective Squirrel Control Services in Addison",
+          "strategy": "rewrite"
+        },
+        {
+          "order": 3,
+          "target_page": "bat_removal_addison_tx",
+          "anchor_text": "bat removal services in Addison",
+          "url": "https://dallas.aaacwildliferemoval.com/service-area/addison/bat-removal/",
+          "section": "5. The Benefits of Professional Wildlife Removal",
+          "strategy": "extend"
+        },
+        {
+          "order": 4,
+          "target_page": "squirrel_removal_carrollton_tx",
+          "anchor_text": "squirrel removal in nearby Carrollton",
+          "url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/squirrel-removal/",
+          "section": "6. Preventing Future Squirrel Problems in Addison",
+          "strategy": "extend"
+        }
+      ],
+      "deferred": [
+        {
+          "target_page": "squirrel_removal_farmers_branch_tx",
+          "reason": "The sections remaining after other insertions either contain only introductory or conclusion CTA language ('contact us', 'get professional squirrel removal assistance today') or are too generic to naturally name a neighboring city. Section 7 Conclusion is a CTA section. Adding Farmers Branch would feel forced in any remaining paragraph. Deferred to avoid unnatural insertion."
+        }
+      ]
+    },
+    "bat_removal_addison_tx": {
+      "links_inserted": 4,
+      "links_deferred": 1,
+      "status": "complete",
+      "insertions": [
+        {
+          "order": 1,
+          "target_page": "wildlife_removal_addison_tx",
+          "anchor_text": "full-service wildlife removal in Addison",
+          "url": "https://dallas.aaacwildliferemoval.com/service-area/addison/",
+          "section": "4. Wildlife Removal Services in Addison",
+          "strategy": "rewrite"
+        },
+        {
+          "order": 2,
+          "target_page": "raccoon_removal_addison_tx",
+          "anchor_text": "raccoon removal in Addison",
+          "url": "https://dallas.aaacwildliferemoval.com/service-area/addison/raccoon-removal/",
+          "section": "7. Signs of a Bat Infestation in Your Home",
+          "strategy": "rewrite"
+        },
+        {
+          "order": 3,
+          "target_page": "bat_removal_carrollton_tx",
+          "anchor_text": "bat removal in nearby Carrollton",
+          "url": "https://dallas.aaacwildliferemoval.com/service-area/carrollton/bat-removal/",
+          "section": "9. Post-removal: Keeping Bats Away for Good",
+          "strategy": "rewrite"
+        },
+        {
+          "order": 4,
+          "target_page": "squirrel_removal_addison_tx",
+          "anchor_text": "squirrel removal experts in Addison",
+          "url": "https://dallas.aaacwildliferemoval.com/service-area/addison/squirrel-removal/",
+          "section": "2. Why Bats Are Considered Pests in Addison",
+          "strategy": "extend"
+        }
+      ],
+      "deferred": [
+        {
+          "target_page": "bat_removal_farmers_branch_tx",
+          "reason": "After assigning one link per H2 section across the ten sections in this article, all sections with natural neighbor-city mentions have been used. Remaining sections either focus on procedural detail with no geographic openings, contain conclusion/CTA language, or already carry a link. Inserting a Farmers Branch reference in any of these would require fabricating a geographic context that doesn't exist in the copy. Deferred to avoid forced insertion."
+        }
+      ]
+    }
+  }
+}
